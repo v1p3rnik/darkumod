@@ -1,5 +1,5 @@
 ﻿name="Darku mod"
-path="mod/Darku mod"
+path="mod/darkumod"
 tags= {
 		"Alternative History"
 	}

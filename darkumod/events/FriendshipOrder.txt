@@ -1,0 +1,699 @@
+﻿# Friendship Order Events #
+
+add_namespace = fso
+
+# Order 69 - Begins
+country_event = {
+	id = fso.1
+	title = fso.1.t
+	desc = fso.1.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_order_69 }
+		focus_progress = {
+			focus = FSO_order_69
+			progress > 0.01
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fso.1.a
+	}
+}
+
+# Order 69 - issue of Gathering Crowds
+country_event = {
+	id = fso.2
+	title = fso.2.t
+	desc = fso.2.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set 
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_order_69 }
+		focus_progress = {
+			focus = FSO_order_69
+			progress > 0.20
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { # commie
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.2.a
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.11 } }
+		}
+	}
+	option = { # fascist
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.2.b
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.12 } }
+		}
+	}
+	option = { # democracy
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.2.c
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.13 } }
+		}
+	}
+	option = { # non aligned
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.2.dd
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.14 } }
+		}
+	}
+}
+
+# Order 69 - issue of the Friendship Festival
+country_event = {
+	id = fso.3
+	title = fso.3.t
+	desc = fso.3.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set 
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_order_69 }
+		focus_progress = {
+			focus = FSO_order_69
+			progress > 0.40
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { # non aligned
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.3.a
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.18 } }
+		}
+	}
+	option = { # communism
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.3.b
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.15 } }
+		}
+	}
+	option = { # democracy
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.3.c
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.17 } }
+		}
+	}
+	option = { # fascism
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.3.dd
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.16 } }
+		}
+	}
+}
+
+# Order 69 - issue of the Foreign Recognition
+country_event = {
+	id = fso.4
+	title = fso.4.t
+	desc = fso.4.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set 
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_order_69 }
+		focus_progress = {
+			focus = FSO_order_69
+			progress > 0.60
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { # democracy
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.4.a
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.21 } }
+		}
+	}
+	option = { # non aligned
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.4.b
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.22 } }
+		}
+	}
+	option = { # fascism
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.4.c
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.20 } }
+		}
+	}
+	option = { # communism
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.4.dd
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.19 } }
+		}
+	}
+}
+
+# Order 69 - issue of the Investigation
+country_event = {
+	id = fso.5
+	title = fso.5.t
+	desc = fso.5.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set 
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_order_69 }
+		focus_progress = {
+			focus = FSO_order_69
+			progress > 0.80
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { # fascism
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.5.a
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.24 } }
+		}
+	}
+	option = { # democracy
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.5.b
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.25 } }
+		}
+	}
+	option = { # non aligned
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.5.c
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.26 } }
+		}
+	}
+	option = { # communism
+		ai_chance = {
+			factor = 25
+		}
+		name = fso.5.dd
+		hidden_effect = { 
+			CZE = { country_event = { id = fso.23 } }
+		}
+	}
+}
+
+# Order 69 - Over
+country_event = {
+	id = fso.6
+	title = fso.6.t
+	desc = fso.6.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = fso.6.a
+	}
+}
+
+# Order 69 - Communist Victory
+country_event = {
+	id = fso.7
+	title = fso.7.t
+	desc = fso.7.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		communism > 0.39
+		has_completed_focus = FSO_order_69
+		NOT = { has_country_flag = order_69_complete }
+	}
+	
+	immediate = {
+		set_country_flag = order_69_complete
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fso.7.a
+		set_politics = {
+			ruling_party = communism
+		}
+		add_ideas = FSO_communist
+	}
+}
+# Order 69 - Fascist Victory
+country_event = {
+	id = fso.8
+	title = fso.8.t
+	desc = fso.8.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		fascism > 0.39
+		has_completed_focus = FSO_order_69
+		NOT = { has_country_flag = order_69_complete }
+	}
+	
+	immediate = {
+		set_country_flag = order_69_complete
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fso.8.a
+		set_politics = {
+			ruling_party = fascism
+		}
+		add_ideas = FSO_fascist
+	}
+}
+# Order 69 - Royalist Victory
+country_event = {
+	id = fso.9
+	title = fso.9.t
+	desc = fso.9.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = FSO_order_69
+		has_government = neutrality
+		NOT = { has_country_flag = order_69_complete }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = order_69_complete
+	}
+	
+	option = {
+		name = fso.9.a
+		add_ideas = FSO_royalist
+	}
+}
+# Order 69 - Democratic Victory
+country_event = {
+	id = fso.10
+	title = fso.10.t
+	desc = fso.10.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		democratic > 0.39
+		has_completed_focus = FSO_order_69
+		NOT = { has_country_flag = order_69_complete }
+	}
+	
+	immediate = {
+		set_country_flag = order_69_complete
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fso.10.a
+		set_politics = {
+			ruling_party = democratic
+		}
+		add_ideas = FSO_democratic
+	}
+}
+# Order 69 - Crowds Gather - Communist
+country_event = {
+	id = fso.11
+	title = fso.11.t
+	desc = fso.11.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.11.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		set_party_name = { ideology = communism long_name = CZE_assembly_long name = CZE_assembly }
+	}
+}
+# Order 69 - Crowds Gather - Fascist
+country_event = {
+	id = fso.12
+	title = fso.12.t
+	desc = fso.12.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.12.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+		set_party_name = { ideology = communism long_name = CZE_assembly_long name = CZE_assembly }
+	}
+}
+# Order 69 - Crowds Gather - Democratic
+country_event = {
+	id = fso.13
+	title = fso.13.t
+	desc = fso.13.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.13.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		set_party_name = { ideology = communism long_name = CZE_assembly_long name = CZE_assembly }
+	}
+}
+# Order 69 - Crowds Gather - Unaligned
+country_event = {
+	id = fso.14
+	title = fso.14.t
+	desc = fso.14.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.14.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		set_party_name = { ideology = communism long_name = CZE_assembly_long name = CZE_assembly }
+	}
+}
+# Order 69 - Friendship Festival - Communist
+country_event = {
+	id = fso.15
+	title = fso.15.t
+	desc = fso.15.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.15.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+	}
+}
+# Order 69 - Friendship Festival - Fascist
+country_event = {
+	id = fso.16
+	title = fso.16.t
+	desc = fso.16.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.16.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+# Order 69 - Friendship Festival - Democratic
+country_event = {
+	id = fso.17
+	title = fso.17.t
+	desc = fso.17.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.17.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+# Order 69 - Friendship Festival - Unaligned
+country_event = {
+	id = fso.18
+	title = fso.18.t
+	desc = fso.18.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.18.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+}
+# Order 69 - Foreign Recognition - Communist
+country_event = {
+	id = fso.19
+	title = fso.19.t
+	desc = fso.19.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.19.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+# Order 69 - Foreign Recognition - Fascist
+country_event = {
+	id = fso.20
+	title = fso.20.t
+	desc = fso.20.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.20.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+# Order 69 - Foreign Recognition - Democratic
+country_event = {
+	id = fso.21
+	title = fso.21.t
+	desc = fso.21.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.21.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+	}
+}
+# Order 69 - Foreign Recognition - Unaligned
+country_event = {
+	id = fso.22
+	title = fso.22.t
+	desc = fso.22.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.22.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+}
+# Order 69 - Investigation - Communist
+country_event = {
+	id = fso.23
+	title = fso.23.t
+	desc = fso.23.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.23.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.07
+		}
+	}
+}
+# Order 69 - Investigation - Fascist
+country_event = {
+	id = fso.24
+	title = fso.24.t
+	desc = fso.24.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.24.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.07
+		}
+	}
+}
+# Order 69 - Investigation - Democratic
+country_event = {
+	id = fso.25
+	title = fso.25.t
+	desc = fso.25.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.25.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.07
+		}
+	}
+}
+# Order 69 - Investigation - Unaligned
+country_event = {
+	id = fso.26
+	title = fso.26.t
+	desc = fso.26.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.26.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.07
+		}
+	}
+}
