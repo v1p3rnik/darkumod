@@ -1,4 +1,4 @@
-﻿# Friendship Order Events
+﻿# Friendship Order Events #
 
 add_namespace = fso
 
