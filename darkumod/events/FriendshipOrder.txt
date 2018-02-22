@@ -727,7 +727,7 @@ country_event = {
 			}
 		}
 	}
-	option = {
+	option = { # talk
 		name = fso.27.b 
 		hidden_effect = { 
 			random_list = {
