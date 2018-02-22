@@ -12,6 +12,9 @@ ideologies = {
 		
 			socialism = {
 			}
+			
+			republicanism = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -73,6 +76,9 @@ ideologies = {
 			
 			anarchist_communism = {
 			}
+			
+			cutie_marxism = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -120,6 +126,9 @@ ideologies = {
 			}
 			
 			rexism = {
+			}
+			
+			freundschaftism = {
 			}
 		}
 		
@@ -177,7 +186,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 		
-		color = { 124 124 124 }
+		color = { 102 2 60 }
 		
 		
 		war_impact_on_world_tension = 0.25		#no major danger

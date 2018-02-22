@@ -697,3 +697,405 @@ country_event = {
 		}
 	}
 }
+# Darku Question - Initiate
+country_event = {
+	id = fso.27
+	title = fso.27.t
+	desc = fso.27.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = darku_crisis_active
+	}
+	
+	option = { # kill
+		name = fso.27.a
+		hidden_effect = { 
+			random_list = {
+				30 = { # dead, peetry civil war
+					CZE = { country_event = { id = fso.28 } }
+				}
+				40 = { # fail, civil war major
+					CZE = { country_event = { id = fso.29 } }
+				}
+				30 = { # dead, no war
+					CZE = { country_event = { id = fso.30 } }
+				}
+			}
+		}
+	}
+	option = {
+		name = fso.27.b 
+		hidden_effect = { 
+			random_list = {
+				30 = { # succeed, Dark resigns
+					CZE = { country_event = { id = fso.31 } }
+				}
+				40 = { # succeed, Dark is icon
+					CZE = { country_event = { id = fso.32 } }
+				}
+				30 = { # fail, cause civil war with Dark 
+					CZE = { country_event = { id = fso.33 } }
+				}
+			}
+		}
+	}
+}
+# Darku Question - Dark dead, peetry leads civil war 
+country_event = {
+	id = fso.28
+	title = fso.28.t
+	desc = fso.28.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.28.a
+		hidden_effect = { retire_country_leader = yes }
+		create_country_leader = {
+			name = "Peetry"
+			desc = "PEETRY_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = { }
+		}
+		add_national_unity = -0.1
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.6
+		}
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Polekov"
+				desc = "POLEKOV_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Arische Ehefrau"
+				desc = "ARISCHE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Zimmerson"
+				desc = "ZIMMERSON_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = { }
+			}
+		}
+	}
+}
+# Darku Question - Dark survives, leads civil war 
+country_event = {
+	id = fso.29
+	title = fso.29.t
+	desc = fso.29.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.29.a
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.6
+		}
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		add_national_unity = -0.2
+		hidden_effect = {
+			create_country_leader = {
+				name = "Polekov"
+				desc = "POLEKOV_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Arische Ehefrau"
+				desc = "ARISCHE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = { }
+			}
+		}
+	}
+}
+# Darku Question - Dark dead, no war 
+country_event = {
+	id = fso.30
+	title = fso.30.t
+	desc = fso.30.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.30.a
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		add_national_unity = 0.05
+		hidden_effect = {
+			create_country_leader = {
+				name = "Polekov"
+				desc = "POLEKOV_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Arische Ehefrau"
+				desc = "ARISCHE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = { }
+			}
+		}
+		set_country_flag = darku_question_solved_gone
+		clr_country_flag = darku_crisis_active
+	}
+}
+# Darku Question - negotiations successful, Dark resigns
+country_event = {
+	id = fso.31
+	title = fso.31.t
+	desc = fso.31.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.31.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		add_national_unity = 0.05
+		hidden_effect = {
+			create_country_leader = {
+				name = "Polekov"
+				desc = "POLEKOV_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Arische Ehefrau"
+				desc = "ARISCHE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = { }
+			}
+		}
+		set_country_flag = darku_question_solved_gone
+		clr_country_flag = darku_crisis_active
+	}
+}
+# Darku Question - negotiations successful, Dark is icon
+country_event = {
+	id = fso.32
+	title = fso.32.t
+	desc = fso.32.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.32.a
+		hidden_effect = { retire_country_leader = yes }
+		create_country_leader = {
+			name = "Visionary Prime Minister Dark Buddhist"
+			desc = "DARK_COMMIE_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = cutie_marxism
+			traits = { 
+				triumphant_revolutionary # PLACEHOLDER
+			}
+		}
+		add_national_unity = 0.15
+		set_country_flag = darku_question_solved_stay
+		clr_country_flag = darku_crisis_active
+	}
+}
+# Darku Question - negotiations fail Dark leads civil war 
+country_event = {
+	id = fso.33
+	title = fso.33.t
+	desc = fso.33.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.33.a
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.6
+		}
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		add_national_unity = -0.2
+		hidden_effect = {
+			create_country_leader = {
+				name = "Polekov"
+				desc = "POLEKOV_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Arische Ehefrau"
+				desc = "ARISCHE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = { }
+			}
+		}
+	}
+}
+# Darku Question - event when start civil war
+country_event = {
+	id = fso.34
+	title = fso.34.t
+	desc = fso.34.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_civil_war = yes
+		has_government = communism
+		has_completed_focus = FSO_darku_question
+		has_country_flag = darku_crisis_active
+	}
+	
+	mean_time_to_happen = {
+		hours = 6
+	}
+	
+	option = {
+		name = fso.34.a
+		hidden_effect = { set_country_flag = darku_crisis_civil_war }
+	}
+}
+# Darku Question - event to clear crisis when civil war ends
+country_event = {
+	id = fso.35
+	title = fso.35.t
+	desc = fso.35.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_civil_war = no
+		has_government = communism
+		has_completed_focus = FSO_darku_question
+		has_country_flag = darku_crisis_active
+		has_country_flag = darku_crisis_civil_war
+	}
+	
+	mean_time_to_happen = {
+		hours = 6
+	}
+	
+	option = {
+		name = fso.35.a
+		clr_country_flag = darku_crisis_active
+		clr_country_flag = darku_crisis_civil_war
+		set_country_flag = darku_question_solved_gone
+	}
+}

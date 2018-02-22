@@ -47,7 +47,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Dark Buddhist"
+	name = "Emperor Dark Buddhist"
 	desc = "POLITICS_DARK_BUDDHIST_DESC"
 	picture = "Portrait_FSO_DarkBuddhist.dds"
 	expire = "1965.1.1"
@@ -58,33 +58,33 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Edvard Beneš"
-	desc = "POLITICS_EDVARD_BENES_DESC"
-	picture = "Portrait_Czech_Edvard_Benes.dds"
+	name = "Emperor Dark Buddhist"
+	desc = "POLITICS_DARK_BUDDHIST_DESC"
+	picture = "Portrait_FSO_DarkBuddhist.dds"
 	expire = "1965.1.1"
-	ideology = conservatism
+	ideology = cutie_marxism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Jaroslav Krejčí"
-	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_Czech_Jaroslav_Krejci.dds"
+	name = "Emperor Dark Buddhist"
+	desc = "POLITICS_DARK_BUDDHIST_DESC"
+	picture = "Portrait_FSO_DarkBuddhist.dds"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = freundschaftism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Klement Gottwald"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Czech_Klement_Gottwald.dds"
+	name = "Emperor Dark Buddhist"
+	desc = "POLITICS_DARK_BUDDHIST_DESC"
+	picture = "Portrait_FSO_DarkBuddhist.dds"
 	expire = "1965.1.1"
-	ideology = stalinism
+	ideology = republicanism
 	traits = {
 		#
 	}
