@@ -978,7 +978,7 @@ country_event = {
 		name = fso.32.a
 		hidden_effect = { retire_country_leader = yes }
 		create_country_leader = {
-			name = "Visionary Prime Minister Dark Buddhist"
+			name = "Supreme Leader Dark Buddhist"
 			desc = "DARK_COMMIE_DESC"
 			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 			expire = "1965.1.1"
