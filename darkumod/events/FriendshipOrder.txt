@@ -797,8 +797,8 @@ country_event = {
 				traits = { }
 			}
 			create_country_leader = {
-				name = "Zimmerson"
-				desc = "ZIMMERSON_DESC"
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -984,7 +984,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = cutie_marxism
 			traits = { 
-				triumphant_revolutionary # PLACEHOLDER
+				dark_buddhist_commie
 			}
 		}
 		add_national_unity = 0.15

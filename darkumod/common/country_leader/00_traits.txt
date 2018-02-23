@@ -10,6 +10,51 @@ leader_traits = {
 		}
 	}
 	
+	dark_buddhist_commie = {
+		random = no
+		production_speed_buildings_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dark_buddhist_democratic = {
+		random = no
+		trade_opinion_factor = 0.5
+		send_volunteer_size = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dark_buddhist_darker = {
+		random = no
+		political_power_gain = 0.25
+		justify_war_goal_time = -0.25
+		consumer_goods_factor = -0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dark_buddhist_darkest = { # super bonus, hated by all, no factions allowed
+		random = no
+		political_power_gain = 2
+		consumer_goods_factor = -0.2
+		justify_war_goal_time = -0.9
+		opinion_gain_monthly_same_ideology_factor = -10
+		enemy_justify_war_goal_time = -0.9
+		trade_opinion_factor = -1
+		join_faction_tension = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	dictator = {
 		random = no
 		political_power_factor = 0.25
