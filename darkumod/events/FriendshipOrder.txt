@@ -344,6 +344,7 @@ country_event = {
 			ruling_party = fascism
 		}
 		add_ideas = FSO_fascist
+		# set_cosmetic_tag = CZE_DARKEST # TEST TEST TEST TEST TEST
 	}
 }
 # Order 69 - Royalist Victory
@@ -357,7 +358,7 @@ country_event = {
 	
 	trigger = {
 		has_completed_focus = FSO_order_69
-		has_government = neutrality
+		has_government = friendship
 		NOT = { has_country_flag = order_69_complete }
 	}
 	
@@ -475,7 +476,7 @@ country_event = {
 	option = {
 		name = fso.14.a
 		add_popularity = {
-			ideology = neutrality
+			ideology = friendship
 			popularity = 0.05
 		}
 		set_party_name = { ideology = communism long_name = CZE_assembly_long name = CZE_assembly }
@@ -548,7 +549,7 @@ country_event = {
 	option = {
 		name = fso.18.a
 		add_popularity = {
-			ideology = neutrality
+			ideology = friendship
 			popularity = 0.05
 		}
 	}
@@ -620,7 +621,7 @@ country_event = {
 	option = {
 		name = fso.22.a
 		add_popularity = {
-			ideology = neutrality
+			ideology = friendship
 			popularity = 0.05
 		}
 	}
@@ -692,7 +693,7 @@ country_event = {
 	option = {
 		name = fso.26.a
 		add_popularity = {
-			ideology = neutrality
+			ideology = friendship
 			popularity = 0.07
 		}
 	}
@@ -762,13 +763,13 @@ country_event = {
 			desc = "PEETRY_DESC"
 			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 			expire = "1965.1.1"
-			ideology = despotism
+			ideology = fascism_ideology
 			traits = { }
 		}
 		add_national_unity = -0.1
 		start_civil_war = {
 			ruling_party = communism
-			ideology = neutrality
+			ideology = fascism
 			size = 0.6
 		}
 		create_country_leader = {
@@ -781,8 +782,8 @@ country_event = {
 		}
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
+				name = "Wanuke"
+				desc = "WANUKE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
@@ -799,6 +800,14 @@ country_event = {
 			create_country_leader = {
 				name = "Lamatrepide"
 				desc = "LAMATREPIDE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Zimmerson"
+				desc = "MODEMI_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -819,9 +828,20 @@ country_event = {
 	
 	option = {
 		name = fso.29.a
+		hidden_effect = { 
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Darkest Buddhist"
+				desc = "DARKEST_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = freundschaftism
+				traits = { dark_buddhist_darkest }
+			}
+		}
 		start_civil_war = {
 			ruling_party = communism
-			ideology = neutrality
+			ideology = fascism
 			size = 0.6
 		}
 		create_country_leader = {
@@ -835,8 +855,8 @@ country_event = {
 		add_national_unity = -0.2
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
+				name = "Wanuke"
+				desc = "WANUKE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
@@ -853,6 +873,14 @@ country_event = {
 			create_country_leader = {
 				name = "Peetry"
 				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Zimmerson"
+				desc = "MODEMI_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -884,8 +912,8 @@ country_event = {
 		add_national_unity = 0.05
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
+				name = "Wanuke"
+				desc = "WANUKE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
@@ -902,6 +930,14 @@ country_event = {
 			create_country_leader = {
 				name = "Peetry"
 				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Zimmerson"
+				desc = "MODEMI_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -936,8 +972,8 @@ country_event = {
 		add_national_unity = 0.05
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
+				name = "Wanuke"
+				desc = "WANUKE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
@@ -954,6 +990,14 @@ country_event = {
 			create_country_leader = {
 				name = "Peetry"
 				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Zimmerson"
+				desc = "MODEMI_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -992,7 +1036,7 @@ country_event = {
 		clr_country_flag = darku_crisis_active
 	}
 }
-# Darku Question - negotiations fail Dark leads civil war 
+# Darku Question - negotiations fail, Dark leads civil war 
 country_event = {
 	id = fso.33
 	title = fso.33.t
@@ -1004,9 +1048,20 @@ country_event = {
 	
 	option = {
 		name = fso.33.a
+		hidden_effect = { 
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Darkest Buddhist"
+				desc = "DARKEST_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = freundschaftism
+				traits = { dark_buddhist_darkest }
+			}
+		}
 		start_civil_war = {
 			ruling_party = communism
-			ideology = neutrality
+			ideology = fascism
 			size = 0.6
 		}
 		create_country_leader = {
@@ -1020,8 +1075,8 @@ country_event = {
 		add_national_unity = -0.2
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
+				name = "Wanuke"
+				desc = "WANUKE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
@@ -1038,6 +1093,14 @@ country_event = {
 			create_country_leader = {
 				name = "Peetry"
 				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Zimmerson"
+				desc = "MODEMI_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism

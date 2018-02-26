@@ -27,7 +27,7 @@ set_politics = {
 			popularity = 20
 		}
 
-		neutrality = { 
+		friendship = { 
 			popularity = 40
 		}
 
@@ -40,7 +40,7 @@ set_politics = {
 		}
 	}
 	
-	ruling_party = neutrality
+	ruling_party = friendship
 	last_election = "1935.5.19"
 	election_frequency = 60
 	elections_allowed = no
@@ -85,6 +85,17 @@ create_country_leader = {
 	picture = "Portrait_FSO_DarkBuddhist.dds"
 	expire = "1965.1.1"
 	ideology = republicanism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Emperor Dark Buddhist"
+	desc = "POLITICS_DARK_BUDDHIST_DESC"
+	picture = "Portrait_FSO_DarkBuddhist.dds"
+	expire = "1965.1.1"
+	ideology = centrism
 	traits = {
 		#
 	}
