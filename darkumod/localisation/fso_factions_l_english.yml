@@ -1,6 +1,7 @@
 ﻿l_english:
  union_faction:0 "Union of Friendly Socialist Republics"
  internationale_faction:0 "First Friendship Internationale"
+ cutiemarx_faction:0 "Cutie-Marx Crusaders"
  FACTION_NAME_FRIENDSHIP_1:0 "$CONTINENT_ADJ$ Friendly Accord"
  FACTION_NAME_FRIENDSHIP_2:0 "The $LEADER_COUNTRY_ADJ$ Friends List"
  FACTION_NAME_FRIENDSHIP_3:0 "United Friends of $CONTINENT$"

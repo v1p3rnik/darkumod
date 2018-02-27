@@ -1394,7 +1394,7 @@ country_event = {
 	option = {
 		name = fso.43.a
 		set_rule = { can_create_factions = yes }
-		create_faction = union_faction
+		create_faction = cutiemarx_faction
 	}
 }
 # Autonomous Revolution - Trotsky Found
