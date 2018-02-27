@@ -1,7 +1,11 @@
 ﻿l_english:
+ can_force_government:0 "Can force government form change in other countries after war."
+ can_declare_war_on_same_ideology:0 "Can fabricate war goals to declare war on the same ideology."
  FSO_royalist:0 "Loyalist Supremacy"
  FSO_fascist:0 "Nationalist Dreams"
  FSO_communist:0 "The Friendship Commune"
  FSO_democratic:0 "Freedom Order"
  FSO_wondercolts:0 "Wondercolts"
  FSO_wondercolts_desc:0 "Wondercolts are 'boni' who support the Order's economy with personal investments. They allow us to save a lot of money and buy food for Darku."
+ FSO_trotsky:0 "Leon Trotsky"
+ FSO_trotsky_desc:0 "We found him! With Trotsky's support our ideology is empowered - and we have to prove it to the other communists too."

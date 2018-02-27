@@ -1,0 +1,71 @@
+﻿# FSO mod News #
+
+add_namespace = fsonews
+
+# FSO joined Comintern
+news_event = {
+	id = fsonews.1
+	title = fsonews.1.t
+	desc = fsonews.1.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.1.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				tag = SOV
+			}
+		}
+	}
+	option = {
+		name = fsonews.1.b 
+		trigger = {
+			tag = SOV
+		}
+	}
+	option = {
+		name = fsonews.1.c 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# FSO founds the Friendship Internationale
+news_event = {
+	id = fsonews.2
+	title = fsonews.2.t 
+	desc = fsonews.2.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.2.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				tag = SOV
+			}
+		}
+	}
+	option = {
+		name = fsonews.2.b 
+		trigger = {
+			tag = SOV
+		}
+	}
+	option = {
+		name = fsonews.2.c 
+		trigger = {
+			tag = CZE
+		}
+	}
+}

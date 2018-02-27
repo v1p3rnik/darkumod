@@ -304,7 +304,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		hours = 1
 	}
 	
 	option = {
@@ -335,7 +335,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		hours = 1
 	}
 	
 	option = {
@@ -363,7 +363,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		hours = 1
 	}
 	
 	immediate = {
@@ -395,7 +395,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		hours = 1
 	}
 	
 	option = {
@@ -1160,5 +1160,291 @@ country_event = {
 		clr_country_flag = darku_crisis_active
 		clr_country_flag = darku_crisis_civil_war
 		set_country_flag = darku_question_solved_gone
+	}
+}
+# Delegation to Moscow - Into the Heart of Darkness
+country_event = {
+	id = fso.36
+	title = fso.36.t
+	desc = fso.36.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_delegation_to_moscow }
+		focus_progress = {
+			focus = FSO_delegation_to_moscow
+			progress > 0.01
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = fso.36.a
+		hidden_effect = { SOV = { country_event = { id = fso.37 } } }
+	}
+}
+# Delegation to Moscow - Soviet Union event
+country_event = {
+	id = fso.37
+	title = fso.37.t
+	desc = fso.37.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # accept
+		ai_chance = {
+			factor = 80
+		}
+		name = fso.37.a
+		CZE = { set_country_flag = moscow_agrees }
+	}
+	option = { # decline
+		ai_chance = {
+			factor = 20
+		}
+		name = fso.37.b
+		CZE = { set_country_flag = moscow_declines }
+	}
+}
+# Delegation to Moscow - Moscow Accepted
+country_event = {
+	id = fso.38
+	title = fso.38.t
+	desc = fso.38.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_completed_focus = FSO_delegation_to_moscow
+		has_country_flag = moscow_agrees
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = fso.38.a
+		SOV = { add_to_faction = CZE }
+		SOV = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CZE"
+				value = 200
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 1 id = fsonews.1 }
+		}
+	}
+}
+# Delegation to Moscow - Moscow Declined
+country_event = {
+	id = fso.39
+	title = fso.39.t
+	desc = fso.39.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_completed_focus = FSO_delegation_to_moscow
+		has_country_flag = moscow_declines
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = fso.39.a
+		set_rule = { can_create_factions = yes }
+		create_faction = union_faction
+	}
+}
+# Autonomous Revolution - Pick Side
+country_event = {
+	id = fso.40
+	title = fso.40.t
+	desc = fso.40.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_autonomous_revolution }
+		focus_progress = {
+			focus = FSO_autonomous_revolution
+			progress > 0.01
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # Stalin
+		name = fso.40.a
+		hidden_effect = { SOV = { country_event = { id = fso.41 } } }
+	}
+	option = { # Trotsky
+		trigger = {
+			NOT = { has_global_flag = trotsky_dead }
+		}
+		name = fso.40.b 
+		hidden_effect = { set_country_flag = searching_for_trotsky }
+	}
+}
+# Autonomous Revolution - Soviet Path
+country_event = {
+	id = fso.41
+	title = fso.41.t
+	desc = fso.41.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # accept
+		ai_chance = {
+			factor = 80
+		}
+		name = fso.41.a
+		CZE = { set_country_flag = moscow_agrees }
+	}
+	option = { # decline
+		ai_chance = {
+			factor = 20
+		}
+		name = fso.41.b
+		CZE = { set_country_flag = moscow_declines }
+	}
+}
+# Autonomous Revolution - Moscow Accepted
+country_event = {
+	id = fso.42
+	title = fso.42.t
+	desc = fso.42.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_completed_focus = FSO_autonomous_revolution
+		has_country_flag = moscow_agrees
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = fso.42.a
+		SOV = { 
+			country_event = { id = fso.45 }
+		}
+		diplomatic_relation = { country = SOV relation = non_aggression_pact }
+		give_guarantee = SOV
+		set_rule = { can_create_factions = yes }
+		hidden_effect = {
+			news_event = { hours = 1 id = fsonews.2 }
+		}
+	}
+}
+# Autonomous Revolution - Moscow Declined
+country_event = {
+	id = fso.43
+	title = fso.43.t
+	desc = fso.43.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_completed_focus = FSO_autonomous_revolution
+		has_country_flag = moscow_declines
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = fso.43.a
+		set_rule = { can_create_factions = yes }
+		create_faction = union_faction
+	}
+}
+# Autonomous Revolution - Trotsky Found
+country_event = {
+	id = fso.44
+	title = fso.44.t
+	desc = fso.44.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_completed_focus = FSO_autonomous_revolution
+		has_country_flag = searching_for_trotsky
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = fso.44.a
+		set_rule = { can_create_factions = yes }
+		create_faction = internationale_faction
+		add_ideas = FSO_trotsky
+		hidden_effect = {
+			set_rule = { can_declare_war_on_same_ideology = yes }
+			set_rule = { can_force_government = yes }
+		}
+		custom_effect_tooltip = fso.44.tt
+		hidden_effect = {
+			news_event = { hours = 1 id = fsonews.2 }
+		}
+		set_global_flag = trotsky_safe_fso
+	}
+}
+# Autonomous Revolution - Event for Soviets to guarantee FU
+country_event = {
+	id = fso.45
+	title = fso.45.t
+	desc = fso.45.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.45.a
+		give_guarantee = CZE
 	}
 }

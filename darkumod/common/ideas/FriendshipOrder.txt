@@ -105,5 +105,25 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		
+		FSO_trotsky = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.3
+				encryption_factor = 0.2
+			}
+		}
 	}
 }

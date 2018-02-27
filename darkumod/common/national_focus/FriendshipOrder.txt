@@ -100,7 +100,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = order_69_complete
+			custom_trigger_tooltip = {
+				tooltip = FSO_political_open_tt
+				has_country_flag = order_69_complete
+			}
 		}
 		
 		bypass = {
@@ -131,7 +134,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = order_69_complete
+			custom_trigger_tooltip = {
+				tooltip = FSO_political_open_tt
+				has_country_flag = order_69_complete
+			}
 		}
 		
 		bypass = {
@@ -179,6 +185,85 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_darku_question_effect
 			hidden_effect = { CZE = { country_event = { id = fso.27 } } }
+		}
+	}
+	
+	# Delegation to Moscow
+	focus = {
+		id = FSO_delegation_to_moscow
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_darku_question }
+		x = 3
+		y = 3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_delegation_to_moscow_tt
+				has_country_flag = darku_question_solved_gone
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_delegation_to_moscow_effect
+		}
+	}
+	
+	# Autonomous Revolution
+	focus = {
+		id = FSO_autonomous_revolution
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_darku_question }
+		x = 1
+		y = 3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_autonomous_revolution_tt
+				has_country_flag = darku_question_solved_stay
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_autonomous_revolution_effect
+			hidden_effect = { CZE = { country_event = { id = fso.40 } } }
 		}
 	}
 	
