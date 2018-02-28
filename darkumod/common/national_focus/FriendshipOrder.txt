@@ -14,7 +14,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1100 }
+	continuous_focus_position = { x = 50 y = 2500 }
 
 #	focus = {
 #		id = FSO_
@@ -264,6 +264,205 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_autonomous_revolution_effect
 			hidden_effect = { CZE = { country_event = { id = fso.40 } } }
+		}
+	}
+	
+	# Scientific Greatness
+	focus = {
+		id = FSO_scientific_greatness
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_autonomous_revolution }
+		x = 1
+		y = 4
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_scientific_greatness_effect
+			if = {
+				limit = {
+					has_country_flag = research_speed
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.46 } } }
+			}
+			if = {
+				limit = {
+					has_country_flag = research_slot
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.47 } } }
+			}
+		}
+	}
+	
+	# Anti-Imperialist Propaganda
+	focus = {
+		id = FSO_commie_propaganda
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_scientific_greatness }
+		x = 1
+		y = 6
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_commie_propaganda_effect
+			hidden_effect = { CZE = { country_event = { id = fso.50 } } }
+		}
+	}
+	
+	# Faster, Higher, Stronger
+	focus = {
+		id = FSO_faster_higher_stronger
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_commie_propaganda }
+		x = 1
+		y = 8
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_faster_higher_stronger_effect
+			hidden_effect = { CZE = { country_event = { id = fso.52 } } }
+		}
+	}
+	
+	# Rebuilding The Nation
+	focus = {
+		id = FSO_rebuilding_alone
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_delegation_to_moscow }
+		x = 3
+		y = 4
+		
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_rebuilding_alone_tt
+				has_country_flag = moscow_declines
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_rebuilding_alone_effect
+			hidden_effect = { CZE = { country_event = { id = fso.54 } } }
+		}
+	}
+	
+	# Aid from Soviets
+	focus = {
+		id = FSO_rebuilding_comintern
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_delegation_to_moscow }
+		x = 2
+		y = 5
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_rebuilding_comintern_tt
+				has_country_flag = moscow_agrees
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_rebuilding_comintern_effect
+			hidden_effect = { CZE = { country_event = { id = fso.56 } } }
 		}
 	}
 	

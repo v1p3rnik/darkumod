@@ -21,7 +21,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		hours = 1
 	}
 	
 	option = {
@@ -312,7 +312,7 @@ country_event = {
 		set_politics = {
 			ruling_party = communism
 		}
-		add_ideas = FSO_communist
+		add_ideas = FSO_communist_base
 	}
 }
 # Order 69 - Fascist Victory
@@ -1328,6 +1328,18 @@ country_event = {
 	option = { # accept
 		ai_chance = {
 			factor = 80
+			modifier = {
+				has_country_flag = stalin_angry
+				factor = 0.1
+			}
+			modifier = {
+				has_country_flag = stalin_not_bad
+				factor = 1.1
+			}
+			modifier = {
+				has_country_flag = stalin_happy
+				factor = 1.5
+			}
 		}
 		name = fso.41.a
 		CZE = { set_country_flag = moscow_agrees }
@@ -1367,9 +1379,6 @@ country_event = {
 		diplomatic_relation = { country = SOV relation = non_aggression_pact }
 		give_guarantee = SOV
 		set_rule = { can_create_factions = yes }
-		hidden_effect = {
-			news_event = { hours = 1 id = fsonews.2 }
-		}
 	}
 }
 # Autonomous Revolution - Moscow Declined
@@ -1424,6 +1433,7 @@ country_event = {
 		hidden_effect = {
 			set_rule = { can_declare_war_on_same_ideology = yes }
 			set_rule = { can_force_government = yes }
+			set_rule = { can_puppet = no }
 		}
 		custom_effect_tooltip = fso.44.tt
 		hidden_effect = {
@@ -1446,5 +1456,332 @@ country_event = {
 	option = {
 		name = fso.45.a
 		give_guarantee = CZE
+	}
+}
+# Scientific Greatness - End, picked research slot
+country_event = {
+	id = fso.46
+	title = fso.46.t
+	desc = fso.46.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.46.a
+		add_ideas = FSO_communist_research
+	}
+}
+# Scientific Greatness - End, picked research slot
+country_event = {
+	id = fso.47
+	title = fso.47.t
+	desc = fso.47.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.47.a
+		add_research_slot = 1
+	}
+}
+# Scientific Greatness - Start, pick the funding
+country_event = {
+	id = fso.48
+	title = fso.48.t
+	desc = fso.48.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_scientific_greatness }
+		focus_progress = {
+			focus = FSO_scientific_greatness
+			progress > 0.01
+		}
+	}
+	
+	option = {
+		name = fso.48.a
+		set_country_flag = research_speed
+	}
+	option = {
+		name = fso.48.b 
+		set_country_flag = research_slot
+	}
+}
+# Anti-Imperialist Propaganda - Start
+country_event = {
+	id = fso.49
+	title = fso.49.t
+	desc = fso.49.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_commie_propaganda }
+		focus_progress = {
+			focus = FSO_commie_propaganda
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.49.a
+	}
+}
+# Anti-Imperialist Propaganda - End
+country_event = {
+	id = fso.50
+	title = fso.50.t
+	desc = fso.50.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.50.a
+		remove_ideas = FSO_communist_base
+		add_ideas = FSO_communist_exp_1
+	}
+}
+# Faster, Higher, Stronger - Start
+country_event = {
+	id = fso.51
+	title = fso.51.t
+	desc = fso.51.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_higher_faster_stronger }
+		focus_progress = {
+			focus = FSO_higher_faster_stronger
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.51.a
+	}
+}
+# Faster, Higher, Stronger - End
+country_event = {
+	id = fso.52
+	title = fso.52.t
+	desc = fso.52.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.52.a
+		remove_ideas = FSO_communist_exp_1
+		add_ideas = FSO_communist_exp_2
+	}
+}
+# Rebuilding Alone - Start
+country_event = {
+	id = fso.53
+	title = fso.53.t
+	desc = fso.53.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_rebuilding_alone }
+		focus_progress = {
+			focus = FSO_rebuilding_alone
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.53.a
+	}
+}
+# Rebuilding Alone - End
+country_event = {
+	id = fso.54
+	title = fso.54.t
+	desc = fso.54.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.54.a
+		remove_ideas = FSO_communist_base
+		add_ideas = FSO_communist_iso_1
+	}
+}
+# Aid from Soviets - Start
+country_event = {
+	id = fso.55
+	title = fso.55.t
+	desc = fso.55.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_rebuilding_comintern }
+		focus_progress = {
+			focus = FSO_rebuilding_comintern
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.53.a
+	}
+}
+# Aid from Soviets - End
+country_event = {
+	id = fso.56
+	title = fso.56.t
+	desc = fso.56.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.56.a
+		remove_ideas = FSO_communist_base
+		add_ideas = FSO_communist_mod_1
+		every_country = { 
+			limit = {
+				NOT = { is_in_faction_with = CZE }
+			}
+			add_opinion_modifier = { target = CZE modifier = minor_sanctions } 
+		}
+	}
+}
+# Autonomous Revolution - Statue Trigger
+country_event = {
+	id = fso.57
+	title = fso.57.t
+	desc = fso.57.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		NOT = { has_completed_focus = FSO_autonomous_revolution }
+		NOT = { has_country_flag = searching_for_trotsky }
+		focus_progress = {
+			focus = FSO_autonomous_revolution
+			progress > 0.5
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # huge huge expensive statue
+		name = fso.57.a
+		set_country_flag = built_statue_big
+	}
+	option = { # a moderate size
+		name = fso.57.b 
+		set_country_flag = built_statue_medium
+	}
+	option = { # a small humble statue
+		name = fso.57.c 
+		set_country_flag = built_statue_small
+	}
+	option = { # no statue
+		name = fso.57.dd 
+		add_political_power = 10
+	}
+}
+# Autonomous Revolution - Statue too big
+country_event = {
+	id = fso.58
+	title = fso.58.t
+	desc = fso.58.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = built_statue_big
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # Okay
+		name = fso.58.a
+		SOV = { set_country_flag = stalin_angry }
+	}
+}
+# Autonomous Revolution - Statue ok
+country_event = {
+	id = fso.59
+	title = fso.59.t
+	desc = fso.59.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = built_statue_medium
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # Okay
+		name = fso.59.a
+		SOV = { set_country_flag = stalin_not_bad }
+	}
+}
+# Autonomous Revolution - Statue small, stalin happy
+country_event = {
+	id = fso.60
+	title = fso.60.t
+	desc = fso.60.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = built_statue_small
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # Okay
+		name = fso.60.a
+		SOV = { set_country_flag = stalin_happy }
 	}
 }
