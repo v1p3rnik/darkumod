@@ -770,7 +770,7 @@ country_event = {
 		start_civil_war = {
 			ruling_party = communism
 			ideology = fascism
-			size = 0.6
+			size = 0.4
 		}
 		create_country_leader = {
 			name = "Ladifour"
@@ -842,7 +842,7 @@ country_event = {
 		start_civil_war = {
 			ruling_party = communism
 			ideology = fascism
-			size = 0.6
+			size = 0.4
 		}
 		create_country_leader = {
 			name = "Ladifour"
@@ -1062,7 +1062,7 @@ country_event = {
 		start_civil_war = {
 			ruling_party = communism
 			ideology = fascism
-			size = 0.6
+			size = 0.4
 		}
 		create_country_leader = {
 			name = "Ladifour"
@@ -1160,6 +1160,7 @@ country_event = {
 		clr_country_flag = darku_crisis_active
 		clr_country_flag = darku_crisis_civil_war
 		set_country_flag = darku_question_solved_gone
+		set_country_flag = darku_question_had_war
 	}
 }
 # Delegation to Moscow - Into the Heart of Darkness
@@ -1606,6 +1607,7 @@ country_event = {
 	
 	trigger = {
 		has_government = communism
+		has_country_flag = darku_question_had_war
 		NOT = { has_completed_focus = FSO_rebuilding_alone }
 		focus_progress = {
 			focus = FSO_rebuilding_alone
@@ -1615,6 +1617,29 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.53.a
+	}
+}
+# No War, Alone - Start
+country_event = {
+	id = fso.63
+	title = fso.63.t
+	desc = fso.63.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_country_flag = darku_question_had_war }
+		NOT = { has_completed_focus = FSO_rebuilding_alone }
+		focus_progress = {
+			focus = FSO_rebuilding_alone
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.63.a
 	}
 }
 # Rebuilding Alone - End
@@ -1634,6 +1659,23 @@ country_event = {
 		add_ideas = FSO_communist_iso_1
 	}
 }
+# No War, Alone - End
+country_event = {
+	id = fso.61
+	title = fso.61.t
+	desc = fso.61.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.61.a
+		remove_ideas = FSO_communist_base
+		add_ideas = FSO_communist_iso_1
+	}
+}
 # Aid from Soviets - Start
 country_event = {
 	id = fso.55
@@ -1645,6 +1687,7 @@ country_event = {
 	
 	trigger = {
 		has_government = communism
+		has_country_flag = darku_question_had_war
 		NOT = { has_completed_focus = FSO_rebuilding_comintern }
 		focus_progress = {
 			focus = FSO_rebuilding_comintern
@@ -1653,7 +1696,30 @@ country_event = {
 	}
 	
 	option = { # Okay
-		name = fso.53.a
+		name = fso.55.a
+	}
+}
+# Aid from Soviets, no war - Start
+country_event = {
+	id = fso.64
+	title = fso.64.t
+	desc = fso.64.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_country_flag = darku_question_had_war }
+		NOT = { has_completed_focus = FSO_rebuilding_comintern }
+		focus_progress = {
+			focus = FSO_rebuilding_comintern
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.64.a
 	}
 }
 # Aid from Soviets - End
@@ -1676,6 +1742,29 @@ country_event = {
 				NOT = { is_in_faction_with = CZE }
 			}
 			add_opinion_modifier = { target = CZE modifier = minor_sanctions } 
+		}
+	}
+}
+# Aid from Soviets - End
+country_event = {
+	id = fso.62
+	title = fso.62.t
+	desc = fso.62.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.62.a
+		remove_ideas = FSO_communist_base
+		add_ideas = FSO_communist_mod_1
+		every_country = { 
+			limit = {
+				NOT = { is_in_faction_with = CZE }
+			}
+			add_opinion_modifier = { target = CZE modifier = sanctions } 
 		}
 	}
 }
@@ -1783,5 +1872,485 @@ country_event = {
 	option = { # Okay
 		name = fso.60.a
 		SOV = { set_country_flag = stalin_happy }
+	}
+}
+# Send Friends - Start
+country_event = {
+	id = fso.65
+	title = fso.65.t
+	desc = fso.65.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_friend_requests }
+		focus_progress = {
+			focus = FSO_friend_requests
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.65.a
+	}
+}
+# Send Friends - Delegation from Austria
+country_event = {
+	id = fso.66
+	title = fso.66.t
+	desc = fso.66.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # protect austria
+		name = fso.66.a
+		if = {
+			NOT = { has_global_flag = trotsky_safe_fso }
+			custom_effect_tooltip = fso.66.tt2
+		}
+		create_wargoal = { type = protect_austria target = AUS }
+		set_country_flag = fso_protects_against_fascism
+	}
+	option = { # don't piss off Germany
+		name = fso.66.b
+		custom_effect_tooltip = fso.66.tt
+		hidden_effect = {
+			add_opinion_modifier = { target = GER modifier = fso_germany_approves }
+			GER = { add_opinion_modifier = { target = CZE modifier = fso_germany_approves } }
+		}
+		set_country_flag = neglected_austria
+	}
+}
+# Send Friends - post war resolution
+country_event = {
+	id = fso.75
+	title = fso.75.t
+	desc = fso.75.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			has_country_flag = fso_protects_against_fascism
+			OR = {
+				AUS = { exists = no }
+				AUS = { is_puppet_of = CZE }
+				AUS = {
+					has_government = communism
+					is_puppet = no
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # if took all states, release as free, make commie and join faction
+		name = fso.75.a
+		trigger = {
+			AUS = { exists = no }
+		}
+		AUS = {
+			transfer_state = 4
+			transfer_state = 152
+			transfer_state = 153
+			create_country_leader = {
+				name = "Alfred Klahr"
+				desc = "POLITICS_ALFRED_KLAHR_DESC"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				expire = "1965.1.1"
+				ideology = cutie_marxism
+				traits = {
+					#
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				add_popularity = {
+					ideology = communism
+					popularity = 0.4
+				}
+			}
+		}
+		add_to_faction = AUS
+		set_country_flag = protected_austria
+	}
+	option = { # if puppeted, annex and release
+		name = fso.75.b 
+		trigger = {
+			AUS = { is_puppet = yes }
+		}
+		annex_country = { target = AUS transfer_troops = no }
+		AUS = {
+			transfer_state = 4
+			transfer_state = 152
+			transfer_state = 153
+			create_country_leader = {
+				name = "Alfred Klahr"
+				desc = "POLITICS_ALFRED_KLAHR_DESC"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				expire = "1965.1.1"
+				ideology = cutie_marxism
+				traits = {
+					#
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				add_popularity = {
+					ideology = communism
+					popularity = 0.4
+				}
+			}
+		}
+		add_to_faction = AUS
+		set_country_flag = protected_austria
+	}
+	option = { # if forced government, turn cutie marxist and join faction
+		name = fso.75.c 
+		trigger = {
+			AUS = { 
+			exists = yes
+			is_puppet = no 
+		}
+		}
+		AUS = {
+			create_country_leader = {
+				name = "Alfred Klahr"
+				desc = "POLITICS_ALFRED_KLAHR_DESC"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				expire = "1965.1.1"
+				ideology = cutie_marxism
+				traits = {
+					#
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				add_popularity = {
+					ideology = communism
+					popularity = 0.4
+				}
+			}
+		}
+		add_to_faction = AUS
+		set_country_flag = protected_austria
+	}
+}
+
+# Defend Austria - Start
+country_event = {
+	id = fso.67
+	title = fso.67.t
+	desc = fso.67.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_defend_austria }
+		focus_progress = {
+			focus = FSO_defend_austria
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.67.a
+	}
+}
+# Defend Austria - Completed
+country_event = {
+	id = fso.68
+	title = fso.68.t
+	desc = fso.68.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fso.68.a
+		custom_effect_tooltip = fso.68.tt
+		if = {
+			limit = { controls_state = 69 }
+			69 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 4
+					}
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 9 }
+			9 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 4
+					}
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 74 }
+			74 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 4
+					}
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 72 }
+			72 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 4
+					}
+				}
+			}
+		}
+		AUS = {
+			if = {
+			limit = { controls_state = 152 }
+			152 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 4
+						}
+					}
+				}
+			}
+			if = {
+			limit = { controls_state = 153 }
+			153 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 4
+						}
+					}
+				}
+			}
+		}
+		}
+	}
+}
+# Appease Germany - Start
+country_event = {
+	id = fso.69
+	title = fso.69.t
+	desc = fso.69.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_appease_germany }
+		focus_progress = {
+			focus = FSO_appease_germany
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.69.a
+	}
+}
+# Appease Germany - Done
+country_event = {
+	id = fso.70
+	title = fso.70.t
+	desc = fso.70.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.70.a
+		custom_effect_tooltip = fso.70.tt
+		hidden_effect = {
+			remove_opinion_modifier = { target = GER modifier = fso_germany_approves }
+			add_opinion_modifier = { target = GER modifier = fso_germany_appeased }
+			GER = {
+				remove_opinion_modifier = { target = CZE modifier = fso_germany_approves }
+				add_opinion_modifier = { target = CZE modifier = fso_germany_appeased }
+			}
+		}
+	}
+}
+# Event for countries to plea for help if protected Austria
+country_event = {
+	id = fso.71
+	title = fso.71.t
+	desc = fso.71.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		CZE = { has_country_flag = fso_protects_against_fascism }
+		AND = {
+			OR = {
+				AND = {
+					is_neighbor_of = GER
+					has_defensive_war_with = GER
+				}
+				AND = {
+					is_neighbor_of = ITA
+					ITA = { is_in_faction_with = GER }
+					has_defensive_war_with = ITA
+				}
+			}		
+			NOT = {
+				has_government = fascism
+				has_government = democratic
+				has_government = communism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # plea for protection
+		name = fso.71.a
+		add_ai_strategy = {
+			type = alliance
+			id = "CZE"
+			value = 400
+		}
+		ai_strategy = {
+			type = befriend
+			id = "CZE"			
+			value = 400
+		}
+	}
+}
+# Home And Beyond - Start
+country_event = {
+	id = fso.72
+	title = fso.72.t
+	desc = fso.72.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.72.a
+	}
+}
+# Home And Beyond - Done
+country_event = {
+	id = fso.73
+	title = fso.73.t
+	desc = fso.73.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # available if helped austria
+		name = fso.73.a
+		trigger = {
+			has_country_flag = fso_protects_against_fascism
+		}
+		custom_effect_tooltip = fso.73.tt
+		HUN = {
+			create_country_leader = {
+				name = "Mátyás Rákosi"
+				desc = "POLITICS_MATYAS_RAKOSKI_DESC"
+				picture = "Portrait_Hungary_Matyas_Rakoski.dds"
+				expire = "1965.1.1"
+				ideology = cutie_marxism
+				traits = {
+					#
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				add_popularity = {
+					ideology = communism
+					popularity = 0.4
+				}
+			}
+			country_event = { id = fso.74 }
+		}
+	}
+	option = { # available if not helped austria
+		name = fso.73.b 
+		trigger = {
+			NOT = { has_country_flag = fso_protects_against_fascism }
+		}
+		create_wargoal = { type = annex_everything target = HUN }
+	}
+}
+# Home And Beyond - Hungary event to join faction
+country_event = {
+	id = fso.74
+	title = fso.74.t
+	desc = fso.74.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.74.a
+		add_ai_strategy = {
+			type = alliance
+			id = "CZE"
+			value = 400
+		}
+		ai_strategy = {
+			type = befriend
+			id = "CZE"			
+			value = 400
+		}
+		CZE = { add_to_faction = HUN }
 	}
 }

@@ -118,7 +118,7 @@ ideas = {
 			
 			modifier = {
 				communism_drift = 0.1
-				army_org_Factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 		
@@ -138,7 +138,7 @@ ideas = {
 			
 			modifier = {
 				communism_drift = 0.1
-				army_org_Factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 				conscription = 0.05
 			}
 		}

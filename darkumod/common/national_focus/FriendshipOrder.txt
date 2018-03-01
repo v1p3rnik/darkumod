@@ -386,7 +386,159 @@ focus_tree = {
 		}
 	}
 	
-	# Rebuilding The Nation
+	# Send Friend Requests
+	focus = {
+		id = FSO_friend_requests
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_faster_higher_stronger }
+		x = 1
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_friend_requests
+			hidden_effect = { CZE = { country_event = { id = fso.66 } } }
+		}
+	}
+	
+	# We Got This Together
+	focus = {
+		id = FSO_defend_austria
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_friend_requests }
+		x = -1
+		y = 12
+		
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_defend_austria_tt
+				has_country_flag = protected_austria
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_defend_austria_effect
+			hidden_effect = { CZE = { country_event = { id = fso.68 } } }
+		}
+	}
+	
+	# Choose Your Friends Wisely
+	focus = {
+		id = FSO_appease_germany
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_friend_requests }
+		x = 1
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_appease_germany_tt
+				has_country_flag = neglected_austria
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_appease_germany_effect
+			hidden_effect = { CZE = { country_event = { id = fso.70 } } }
+		}
+	}
+	
+	# Home and Beyond
+	focus = {
+		id = FSO_home_and_beyond
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_defend_austria focus = FSO_appease_germany }
+		x = 1
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_home_and_beyond_effect
+			hidden_effect = { CZE = { country_event = { id = fso.73 } } }
+		}
+	}
+	
+	# Cast Alone
 	focus = {
 		id = FSO_rebuilding_alone
 		icon = GFX_goal_generic_construction2
@@ -422,7 +574,15 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FSO_rebuilding_alone_effect
-			hidden_effect = { CZE = { country_event = { id = fso.54 } } }
+			if = {
+				limit = {
+					NOT = { has_country_flag = darku_question_had_war }
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.61 } } }
+				else = {
+					hidden_effect = { CZE = { country_event = { id = fso.54 } } }
+				}
+			}
 		}
 	}
 	
@@ -462,8 +622,18 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FSO_rebuilding_comintern_effect
-			hidden_effect = { CZE = { country_event = { id = fso.56 } } }
+			if = {
+				limit = {
+					NOT = { has_country_flag = darku_question_had_war }
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.62 } } }
+				else = {
+					hidden_effect = { CZE = { country_event = { id = fso.56 } } }
+				}
+			}
 		}
 	}
+	
+	
 	
 }
