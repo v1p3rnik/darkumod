@@ -235,4 +235,23 @@ wargoal_types = {
 		
 	}
 	
+	cutie_crusade = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		
+		war_name = WAR_CUTIE_CRUSADE
+		
+		allowed = {
+			always = no 
+		}
+
+		take_states = {
+			
+		}
+		
+		take_states_cost = -50
+		
+		threat = 2
+	}
+	
 }

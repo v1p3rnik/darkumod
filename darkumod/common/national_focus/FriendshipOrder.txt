@@ -14,7 +14,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 2500 }
+	continuous_focus_position = { x = 50 y = 3500 }
 
 #	focus = {
 #		id = FSO_
@@ -431,7 +431,7 @@ focus_tree = {
 		y = 12
 		
 
-		cost = 15
+		cost = 20
 
 		ai_will_do = {
 			factor = 1
@@ -508,7 +508,183 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_defend_austria focus = FSO_appease_germany }
 		x = 1
-		y = 12
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			HUN = { exists = no }
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_home_and_beyond_effect
+			hidden_effect = { CZE = { country_event = { id = fso.73 } } }
+		}
+	}
+	
+	# Cutie Crusade
+	focus = {
+		id = FSO_cutie_crusade
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_home_and_beyond }
+		x = 1
+		y = 16
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_cutie_crusade_tt
+				OR = {
+					AND = {
+						HUN = { exists = no }
+						CZE = { owns_state = 43 }
+					}
+					HUN = { is_in_faction_with = CZE }
+				}
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_cutie_crusade_effect
+			hidden_effect = { CZE = { country_event = { id = fso.77 } } }
+			hidden_effect = {
+				set_technology = { tech_engineers = 1 }
+				set_technology = { tech_recon = 1 }
+				set_technology = { tech_maintenance_company = 1 }
+				set_technology = { tech_signal_company = 1 }
+				set_technology = { mechanised_infantry = 1 }
+				set_technology = { basic_heavy_tank = 1 }
+				set_technology = { basic_heavy_art = 1 }
+				division_template = {
+					name = "Cutie Crusaders"
+					priority = 2
+	
+					regiments = {
+						heavy_armor = { x = 0 y = 0 }
+						heavy_armor = { x = 0 y = 1 }
+						heavy_sp_artillery_brigade = { x = 0 y = 2 }
+			
+	    	   		 	heavy_armor = { x = 1 y = 0 }
+						heavy_armor = { x = 1 y = 1 }
+						heavy_sp_artillery_brigade = { x = 1 y = 2 }
+			
+	    	   		 	mechanized = { x = 2 y = 0 }
+						mechanized = { x = 2 y = 1 }
+						mechanized = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						signal_company = { x = 0 y = 3 }
+						maintenance_company = { x = 0 y = 4 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 9 }
+					create_unit = {
+						division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+						owner = CZE
+					}
+				}
+			}
+		}
+	}
+	
+	# Our Legacy
+	focus = {
+		id = FSO_our_legacy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_cutie_crusade }
+		x = 1
+		y = 18
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			OR = {
+				AND = {
+					owns_state = 48
+					owns_state = 46
+					owns_state = 341
+					owns_state = 49
+					owns_state = 454
+					owns_state = 554
+				}
+				AND = {
+					owns_state = 16
+					owns_state = 64
+					owns_state = 2
+					owns_state = 126
+				}
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_our_legacy
+			hidden_effect = { CZE = { country_event = { id = fso.79 } } }
+		}
+	}
+	
+	# Dream of Power
+	focus = {
+		id = FSO_dream_of_power
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_our_legacy }
+		x = 1
+		y = 20
 		
 
 		cost = 10
@@ -533,8 +709,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_home_and_beyond_effect
-			hidden_effect = { CZE = { country_event = { id = fso.73 } } }
+			custom_effect_tooltip = FSO_dream_of_power
+			hidden_effect = { CZE = { country_event = { id = fso.81 } } }
 		}
 	}
 	
@@ -547,7 +723,7 @@ focus_tree = {
 		y = 4
 		
 
-		cost = 15
+		cost = 20
 
 		ai_will_do = {
 			factor = 1

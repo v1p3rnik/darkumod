@@ -1909,10 +1909,6 @@ country_event = {
 	
 	option = { # protect austria
 		name = fso.66.a
-		if = {
-			NOT = { has_global_flag = trotsky_safe_fso }
-			custom_effect_tooltip = fso.66.tt2
-		}
 		create_wargoal = { type = protect_austria target = AUS }
 		set_country_flag = fso_protects_against_fascism
 	}
@@ -1975,10 +1971,10 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = communism
-				add_popularity = {
-					ideology = communism
-					popularity = 0.4
-				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
 			}
 		}
 		add_to_faction = AUS
@@ -2006,10 +2002,10 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = communism
-				add_popularity = {
-					ideology = communism
-					popularity = 0.4
-				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
 			}
 		}
 		add_to_faction = AUS
@@ -2036,10 +2032,10 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = communism
-				add_popularity = {
-					ideology = communism
-					popularity = 0.4
-				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
 			}
 		}
 		add_to_faction = AUS
@@ -2169,7 +2165,6 @@ country_event = {
 				}
 			}
 		}
-		}
 	}
 }
 # Appease Germany - Start
@@ -2260,7 +2255,7 @@ country_event = {
 			id = "CZE"
 			value = 400
 		}
-		ai_strategy = {
+		add_ai_strategy = {
 			type = befriend
 			id = "CZE"			
 			value = 400
@@ -2276,7 +2271,14 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	is_triggered_only = yes
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_home_and_beyond }
+		focus_progress = {
+			focus = FSO_home_and_beyond
+			progress > 0.01
+		}
+	}
 	
 	option = { # Okay
 		name = fso.72.a
@@ -2312,10 +2314,10 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = communism
-				add_popularity = {
-					ideology = communism
-					popularity = 0.4
-				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
 			}
 			country_event = { id = fso.74 }
 		}
@@ -2346,11 +2348,401 @@ country_event = {
 			id = "CZE"
 			value = 400
 		}
-		ai_strategy = {
+		add_ai_strategy = {
 			type = befriend
 			id = "CZE"			
 			value = 400
 		}
 		CZE = { add_to_faction = HUN }
+	}
+}
+# Cutie Crusade - Start
+country_event = {
+	id = fso.76
+	title = fso.76.t
+	desc = fso.76.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_cutie_crusade }
+		focus_progress = {
+			focus = FSO_cutie_crusade
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.76.a
+	}
+}
+# Cutie Crusade - Done
+country_event = {
+	id = fso.77
+	title = fso.77.t
+	desc = fso.77.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # help yes
+		name = fso.77.a
+		trigger = { has_country_flag = fso_protects_against_fascism }
+		custom_effect_tooltip = fso.77.tt
+		create_wargoal = { type = cutie_crusade target = GER }
+		create_wargoal = { type = cutie_crusade target = FRA }
+		create_wargoal = { type = cutie_crusade target = ITA }
+		create_wargoal = { type = cutie_crusade target = ENG }
+	}
+	option = { # help no
+		name = fso.77.b
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+		custom_effect_tooltip = fso.77.tt2
+		create_wargoal = { type = cutie_crusade target = ROM }
+		create_wargoal = { type = cutie_crusade target = BUL }
+		create_wargoal = { type = cutie_crusade target = TUR }
+		create_wargoal = { type = cutie_crusade target = IRQ }
+		create_wargoal = { type = cutie_crusade target = ENG }
+		create_wargoal = { type = cutie_crusade target = FRA }
+		create_wargoal = { type = cutie_crusade target = SAU }
+	}
+}
+# Our Legacy - Start
+country_event = {
+	id = fso.78
+	title = fso.78.t
+	desc = fso.78.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_our_legacy }
+		focus_progress = {
+			focus = FSO_our_legacy
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.78.a
+	}
+}
+# Our Legacy - Done
+country_event = {
+	id = fso.79
+	title = fso.79.t
+	desc = fso.79.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # help yes
+		name = fso.79.a
+		trigger = { has_country_flag = fso_protects_against_fascism }
+		custom_effect_tooltip = fso.79.tt
+		# Germany 
+		if = {
+			limit = { 50 = { is_owned_by = ROOT } }
+			add_state_core = 50
+		}
+		if = {
+			limit = { 52 = { is_owned_by = ROOT } }
+			add_state_core = 52
+		}
+		if = {
+			limit = { 53 = { is_owned_by = ROOT } }
+			add_state_core = 53
+		}
+		if = {
+			limit = { 54 = { is_owned_by = ROOT } }
+			add_state_core = 54
+		}
+		if = {
+			limit = { 65 = { is_owned_by = ROOT } }
+			add_state_core = 65
+		}
+		if = {
+			limit = { 66 = { is_owned_by = ROOT } }
+			add_state_core = 66
+		}
+		if = {
+			limit = { 67 = { is_owned_by = ROOT } }
+			add_state_core = 67
+		}
+	}
+	option = { # help no
+		name = fso.79.b
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+		custom_effect_tooltip = fso.79.tt2
+		# Hungary
+		if = {
+			limit = { 43 = { is_owned_by = ROOT } }
+			add_state_core = 43
+		}
+		if = {
+			limit = { 154 = { is_owned_by = ROOT } }
+			add_state_core = 154
+		}
+		if = {
+			limit = { 155 = { is_owned_by = ROOT } }
+			add_state_core = 155
+		}
+		# Romania
+		if = {
+			limit = { 46 = { is_owned_by = ROOT } }
+			add_state_core = 46
+		}
+		if = {
+			limit = { 76 = { is_owned_by = ROOT } }
+			add_state_core = 76
+		}
+		if = {
+			limit = { 77 = { is_owned_by = ROOT } }
+			add_state_core = 77
+		}
+		if = {
+			limit = { 78 = { is_owned_by = ROOT } }
+			add_state_core = 78
+		}
+		if = {
+			limit = { 79 = { is_owned_by = ROOT } }
+			add_state_core = 79
+		}
+		if = {
+			limit = { 80 = { is_owned_by = ROOT } }
+			add_state_core = 80
+		}
+		if = {
+			limit = { 81 = { is_owned_by = ROOT } }
+			add_state_core = 81
+		}
+		if = {
+			limit = { 82 = { is_owned_by = ROOT } }
+			add_state_core = 82
+		}
+		if = {
+			limit = { 83 = { is_owned_by = ROOT } }
+			add_state_core = 83
+		}
+		if = {
+			limit = { 84 = { is_owned_by = ROOT } }
+			add_state_core = 84
+		}
+		# Palestine
+		if = {
+			limit = { 454 = { is_owned_by = ROOT } }
+			add_state_core = 454
+		}
+	}
+}
+# Dream of Power - Start
+country_event = {
+	id = fso.80
+	title = fso.80.t
+	desc = fso.80.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_dream_of_power }
+		focus_progress = {
+			focus = FSO_dream_of_power
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.80.a
+	}
+}
+# Dream of Power - Done
+country_event = {
+	id = fso.81
+	title = fso.81.t
+	desc = fso.81.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.81.a
+		custom_effect_tooltip = fso.81.tt
+		every_country = {
+			limit = {
+				capital_scope = { is_on_continent = europe }
+				NOT = { is_in_faction_with = CZE }
+				NOT = { tag = CZE }
+				NOT = { tag = SOV }
+				NOT = { is_in_faction_with = SOV }
+			}
+			CZE = { 
+				create_wargoal = {
+					type = cutie_crusade
+					target = PREV
+				}
+			}
+		}
+	}
+}
+# Dream of Power - End Game Start
+country_event = {
+	id = fso.82
+	title = fso.82.t
+	desc = fso.82.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = FSO_dream_of_power
+		has_government = communism
+		NOT = {
+			any_country = {
+				capital_scope = { is_on_continent = europe }
+				NOT = { is_in_faction_with = CZE }
+				NOT = { tag = CZE }
+				NOT = { tag = SOV }
+				NOT = { is_in_faction_with = SOV }
+				exists = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # It is on
+		name = fso.82.a
+		create_wargoal = {
+			type = cutie_crusade
+			target = SOV
+		}
+	}
+}
+# Dream of Power - Soviets Conquered
+country_event = {
+	id = fso.83
+	title = fso.83.t
+	desc = fso.83.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane # to be set
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			OR = {
+				SOV = { exists = no }
+				SOV = { is_puppet_of = CZE }
+				SOV = {
+					has_government = communism
+					is_puppet = no
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = { # if took all states, trotsky alive, release as free, make commie and join faction
+		name = fso.83.a
+		trigger = {
+			SOV = { exists = no }
+			has_global_flag = trotsky_safe_fso
+		}
+		every_state = {
+			limit = {
+				is_core_of = SOV
+			}
+			SOV = { transfer_state = PREV }
+		}
+		SOV = {
+			create_country_leader = {
+				name = "Leon Trotsky"
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				picture = "Portrait_Leon_Trotsky.dds"
+				expire = "1965.1.1"
+				ideology = cutie_marxism
+				traits = {
+					permanent_revolutionary
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+		}
+		add_to_faction = SOV
+	}
+	option = { # if puppeted, and trotsky alive, annex and release
+		name = fso.83.b 
+		trigger = {
+			SOV = { is_puppet = yes }
+			has_global_flag = trotsky_safe_fso
+		}
+		annex_country = { target = SOV transfer_troops = no }
+		every_state = {
+			limit = {
+				is_core_of = SOV
+			}
+			SOV = { transfer_state = PREV }
+		}
+		SOV = {
+			create_country_leader = {
+				name = "Leon Trotsky"
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				picture = "Portrait_Leon_Trotsky.dds"
+				expire = "1965.1.1"
+				ideology = cutie_marxism
+				traits = {
+					permanent_revolutionary
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+		}
+		add_to_faction = SOV
+	}
+	option = { # if not with trotsky, unify
+		name = fso.83.c
+		trigger = {
+			OR = {
+				SOV = { exists = no }
+				SOV = { is_puppet_of = CZE }
+			}
+			NOT = { has_global_flag = trotsky_safe_fso }
+		}
+		hidden_effect = { annex_country = { target = SOV transfer_troops = no } }
+		custom_effect_tooltip = fso.83.tt
+		every_country = {
+			limit = {
+				is_in_faction_with = CZE
+			}
+			CZE = { annex_country = { target = PREV transfer_troops = no } }
+		}
+		set_cosmetic_tag = CZE_SOVIET
 	}
 }
