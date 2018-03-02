@@ -2217,7 +2217,7 @@ country_event = {
 				add_opinion_modifier = { target = CZE modifier = fso_germany_appeased }
 			}
 		}
-		diplomatic_relation = { country = CZE relation = non_aggression_pact }
+		diplomatic_relation = { country = GER relation = non_aggression_pact }
 	}
 }
 # Event for countries to plea for help if protected Austria
