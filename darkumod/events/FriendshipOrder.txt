@@ -2669,10 +2669,6 @@ country_event = {
 			OR = {
 				SOV = { exists = no }
 				SOV = { is_puppet_of = CZE }
-				SOV = {
-					has_government = communism
-					is_puppet = no
-				}
 			}
 		}
 	}
