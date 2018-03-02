@@ -417,7 +417,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_friend_requests
+			custom_effect_tooltip = FSO_friend_requests_effect
 			hidden_effect = { CZE = { country_event = { id = fso.66 } } }
 		}
 	}
@@ -673,7 +673,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_our_legacy
+			custom_effect_tooltip = FSO_our_legacy_effect
 			hidden_effect = { CZE = { country_event = { id = fso.79 } } }
 		}
 	}
@@ -709,7 +709,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_dream_of_power
+			custom_effect_tooltip = FSO_dream_of_power_effect
 			hidden_effect = { CZE = { country_event = { id = fso.81 } } }
 		}
 	}

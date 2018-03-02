@@ -1379,7 +1379,6 @@ country_event = {
 		}
 		diplomatic_relation = { country = SOV relation = non_aggression_pact }
 		give_guarantee = SOV
-		set_rule = { can_create_factions = yes }
 	}
 }
 # Autonomous Revolution - Moscow Declined
@@ -1909,6 +1908,7 @@ country_event = {
 	
 	option = { # protect austria
 		name = fso.66.a
+		custom_effect_tooltip = fso.66.tt2
 		create_wargoal = { type = protect_austria target = AUS }
 		set_country_flag = fso_protects_against_fascism
 	}
@@ -1977,6 +1977,8 @@ country_event = {
 				popularity = 0.4
 			}
 		}
+		set_rule = { can_create_factions = yes }
+		create_faction = cutiemarx_faction
 		add_to_faction = AUS
 		set_country_flag = protected_austria
 	}
@@ -2008,6 +2010,8 @@ country_event = {
 				popularity = 0.4
 			}
 		}
+		set_rule = { can_create_factions = yes }
+		create_faction = cutiemarx_faction
 		add_to_faction = AUS
 		set_country_flag = protected_austria
 	}
@@ -2015,9 +2019,9 @@ country_event = {
 		name = fso.75.c 
 		trigger = {
 			AUS = { 
-			exists = yes
-			is_puppet = no 
-		}
+				exists = yes
+				is_puppet = no 
+			}
 		}
 		AUS = {
 			create_country_leader = {
@@ -2038,6 +2042,8 @@ country_event = {
 				popularity = 0.4
 			}
 		}
+		set_rule = { can_create_factions = yes }
+		create_faction = cutiemarx_faction
 		add_to_faction = AUS
 		set_country_flag = protected_austria
 	}
@@ -2211,6 +2217,7 @@ country_event = {
 				add_opinion_modifier = { target = CZE modifier = fso_germany_appeased }
 			}
 		}
+		diplomatic_relation = { country = CZE relation = non_aggression_pact }
 	}
 }
 # Event for countries to plea for help if protected Austria
@@ -2626,6 +2633,21 @@ country_event = {
 	
 	option = { # It is on
 		name = fso.82.a
+		trigger = {
+			is_faction_leader = yes
+		}
+		create_wargoal = {
+			type = cutie_crusade
+			target = SOV
+		}
+	}
+	option = { # It is on, no faction tho
+		name = fso.82.b 
+		trigger = {
+			is_faction_leader = no
+		}
+		set_rule = { can_create_factions = yes }
+		create_faction = cutiemarx_faction
 		create_wargoal = {
 			type = cutie_crusade
 			target = SOV
