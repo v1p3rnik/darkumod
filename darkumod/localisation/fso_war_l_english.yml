@@ -1,0 +1,8 @@
+﻿l_english:
+ WAR_CUTIE_CRUSADE:0 "$ORDER$$FIRST$ Crusade on $SECOND$ Lands"
+ protect_austria:0 "Protective Intervention"
+ protect_austria_desc:0 "Install a friendly government to defend against German aggression."
+ protect_austria_short_desc:0 "Conquer their states."
+ cutie_crusade:0 "Cutie Crusade"
+ cutie_crusade_desc:0 "Submit dictators, destroy bourgeoisie!"
+ cutie_crusade_short_desc:0 "Take e v e r y t h i n g."

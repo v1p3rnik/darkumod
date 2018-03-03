@@ -222,15 +222,6 @@ wargoal_types = {
 			always = no
 		}
 		
-		force_government_cost = -50
-		
-		take_states_limit = 0
-		take_states_cost = 10000
-		
-		puppet_cost = -50
-		
-		annex_cost = 10000
-		
 		threat = 0.1
 		
 	}

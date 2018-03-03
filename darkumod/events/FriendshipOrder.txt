@@ -2615,6 +2615,7 @@ country_event = {
 	trigger = {
 		has_completed_focus = FSO_dream_of_power
 		has_government = communism
+		NOT = { is_in_faction_with = SOV }
 		NOT = {
 			any_country = {
 				capital_scope = { is_on_continent = europe }
@@ -2644,7 +2645,7 @@ country_event = {
 	option = { # It is on, no faction tho
 		name = fso.82.b 
 		trigger = {
-			is_faction_leader = no
+			is_in_faction = no
 		}
 		set_rule = { can_create_factions = yes }
 		create_faction = cutiemarx_faction
@@ -2762,5 +2763,481 @@ country_event = {
 			CZE = { annex_country = { target = PREV transfer_troops = no } }
 		}
 		set_cosmetic_tag = CZE_SOVIET
+	}
+}
+# Allies offer peace
+country_event = {
+	id = fso.84
+	title = fso.84.t
+	desc = {
+		text = fso.84.d
+		trigger = {
+			AND = { # Allies Fra and Eng together
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				FRA = { is_in_faction_with = ENG } # making sure player fighting allies together
+				has_war_with = ENG
+				has_war_with = FRA
+				677 = { is_controlled_by = CZE }
+				680 = { is_controlled_by = CZE } # controls Syria and Jordan and Palestine
+				554 = { is_controlled_by = CZE }
+				553 = { is_controlled_by = CZE }
+				454 = { is_controlled_by = CZE }
+				455 = { is_controlled_by = CZE }
+			}
+		}
+	}
+	desc = {
+		text = fso.84.dd
+		trigger = {
+			AND = { # only fighting France
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				has_war_with = FRA
+				NOT = { has_war_with = ENG }
+				677 = { is_controlled_by = CZE }
+				680 = { is_controlled_by = CZE } # controls Syria
+				554 = { is_controlled_by = CZE }
+				553 = { is_controlled_by = CZE }
+			}
+		}
+	}
+	desc = {
+		text = fso.84.ddd
+		trigger = {
+			AND = { # only fighting Britain
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				has_war_with = ENG
+				NOT = { has_war_with = FRA }
+				454 = { is_controlled_by = CZE }
+				455 = { is_controlled_by = CZE } # controls Jordan and Palestine
+			}
+		}
+	}
+
+	trigger = {
+		OR = {
+			AND = { # Allies Fra and Eng together
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				FRA = { is_in_faction_with = ENG } # making sure player fighting allies together
+				has_war_with = ENG
+				has_war_with = FRA
+				677 = { is_controlled_by = CZE }
+				680 = { is_controlled_by = CZE } # controls Syria and Jordan and Palestine
+				554 = { is_controlled_by = CZE }
+				553 = { is_controlled_by = CZE }
+				454 = { is_controlled_by = CZE }
+				455 = { is_controlled_by = CZE }
+			}
+			AND = { # only fighting France
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				has_war_with = FRA
+				NOT = { has_war_with = ENG }
+				677 = { is_controlled_by = CZE }
+				680 = { is_controlled_by = CZE } # controls Syria
+				554 = { is_controlled_by = CZE }
+				553 = { is_controlled_by = CZE }
+			}
+			AND = { # only fighting Britain
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				has_war_with = ENG
+				NOT = { has_war_with = FRA }
+				454 = { is_controlled_by = CZE }
+				455 = { is_controlled_by = CZE } # controls Jordan and Palestine
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+
+	option = {
+		name = fso.84.a # England and France 
+		trigger = {
+			AND = { # Allies Fra and Eng together
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				FRA = { is_in_faction_with = ENG } # making sure player fighting allies together
+				has_war_with = ENG
+				has_war_with = FRA
+				677 = { is_controlled_by = CZE }
+				680 = { is_controlled_by = CZE } # controls Syria and Jordan and Palestine
+				554 = { is_controlled_by = CZE }
+				553 = { is_controlled_by = CZE }
+				454 = { is_controlled_by = CZE }
+				455 = { is_controlled_by = CZE }
+			}
+		}
+		
+		every_country = {
+			limit = {
+				is_in_faction_with = ENG
+			}
+			white_peace = CZE
+		}
+		
+		# Syria
+		transfer_state = 677
+		transfer_state = 680
+		transfer_state = 554
+		transfer_state = 553
+		
+		# Jordan + Palestine
+		transfer_state = 454
+		transfer_state = 455
+		
+		custom_effect_tooltip = fso.84.tt
+		hidden_effect = { # make sure allies pull out the guarantees from the middle east
+			
+			# transfer colonies to other tags
+			if = {
+				limit = {
+					IRQ = { exists = yes }
+				}
+				IRQ = { transfer_state = 656 } 
+			}
+			if = {
+				limit = {
+					YEM = { exists = yes }
+				}
+				YEM = { transfer_state = 659 }
+			}
+			if = {
+				limit = {
+					SAU = { exists = yes }
+				}
+				SAU = { transfer_state = 658 }
+			}
+			
+			# kill tags if theyre at war with you
+			if = {
+				limit = {
+					IRQ = { is_in_faction_with = ENG }
+				}
+				IRQ = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					SAU = { is_in_faction_with = ENG }
+				}
+				SAU = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					YEM = { is_in_faction_with = ENG }
+				}
+				YEM = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					OMN = { is_in_faction_with = ENG }
+				}
+				OMN = { set_country_flag = marked_for_death }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = marked_for_death
+				}
+				clr_country_flag = marked_for_death
+				CZE = { annex_country = { target = PREV transfer_troops = no } }
+			}
+			
+			every_country = {
+				limit = { 
+					OR = {
+						is_guaranteed_by = ENG
+						is_guaranteed_by = FRA
+					}
+					NOT = { tag = GRE } # Greece is not in our way
+					capital_scope = { is_on_continent = middle_east }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+					}
+					diplomatic_relation = { country = PREV relation = guarantee active = no }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = "PREV"			
+						value = 400
+					}
+				}
+			}
+		}
+	}
+	option = { 
+		name = fso.84.a # Only England
+		trigger = {
+			AND = { # only fighting Britain
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				NOT = { has_war_with = FRA }
+				has_war_with = ENG
+				454 = { is_controlled_by = CZE }
+				455 = { is_controlled_by = CZE } # controls Jordan and Palestine
+			}
+		}
+		
+		every_country = {
+			limit = {
+				is_in_faction_with = ENG
+			}
+			white_peace = CZE
+		}
+		
+		# Jordan + Palestine
+		transfer_state = 454
+		transfer_state = 455
+		
+		custom_effect_tooltip = fso.84.tt2
+		hidden_effect = { # make sure allies pull out the guarantees from the middle east
+			
+			# transfer colonies to other tags
+			if = {
+				limit = {
+					IRQ = { exists = yes }
+				}
+				IRQ = { transfer_state = 656 } 
+			}
+			if = {
+				limit = {
+					YEM = { exists = yes }
+				}
+				YEM = { transfer_state = 659 }
+			}
+			if = {
+				limit = {
+					SAU = { exists = yes }
+				}
+				SAU = { transfer_state = 658 }
+			}
+			
+			# kill tags if theyre at war with you
+			if = {
+				limit = {
+					IRQ = { is_in_faction_with = ENG }
+				}
+				IRQ = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					SAU = { is_in_faction_with = ENG }
+				}
+				SAU = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					YEM = { is_in_faction_with = ENG }
+				}
+				YEM = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					OMN = { is_in_faction_with = ENG }
+				}
+				OMN = { set_country_flag = marked_for_death }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = marked_for_death
+				}
+				clr_country_flag = marked_for_death
+				CZE = { annex_country = { target = PREV transfer_troops = no } }
+			}
+			
+			every_country = {
+				limit = { 
+					OR = {
+						is_guaranteed_by = ENG
+					}
+					NOT = { tag = GRE } # Greece is not in our way
+					capital_scope = { is_on_continent = middle_east }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+					}
+					diplomatic_relation = { country = PREV relation = guarantee active = no }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = "PREV"			
+						value = 400
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = fso.84.a # Only France 
+		trigger = {
+			AND = { # only fighting France
+				tag = CZE
+				has_government = communism
+				has_completed_focus = FSO_cutie_crusade
+				NOT = { has_war_with = ENG }
+				has_war_with = FRA
+				677 = { is_controlled_by = CZE }
+				680 = { is_controlled_by = CZE } # controls Syria
+				554 = { is_controlled_by = CZE }
+				553 = { is_controlled_by = CZE }
+			}
+		}
+		
+		every_country = {
+			limit = {
+				is_in_faction_with = FRA
+			}
+			white_peace = CZE
+		}
+		
+		# Syria
+		transfer_state = 677
+		transfer_state = 680
+		transfer_state = 554
+		transfer_state = 553
+		
+		custom_effect_tooltip = fso.84.tt3
+		hidden_effect = { # make sure allies pull out the guarantees from the middle east
+			
+			# kill tags if theyre at war with you
+			if = {
+				limit = {
+					IRQ = { is_in_faction_with = FRA }
+				}
+				IRQ = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					SAU = { is_in_faction_with = FRA }
+				}
+				SAU = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					YEM = { is_in_faction_with = FRA }
+				}
+				YEM = { set_country_flag = marked_for_death }
+			}
+			if = {
+				limit = {
+					OMN = { is_in_faction_with = FRA }
+				}
+				OMN = { set_country_flag = marked_for_death }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = marked_for_death
+				}
+				clr_country_flag = marked_for_death
+				CZE = { annex_country = { target = PREV transfer_troops = no } }
+			}
+			
+			every_country = {
+				limit = { 
+					OR = {
+						is_guaranteed_by = FRA
+					}
+					NOT = { tag = GRE } # Greece is not in our way
+					capital_scope = { is_on_continent = middle_east }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = FRA
+					}
+					diplomatic_relation = { country = PREV relation = guarantee active = no }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = FRA
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = "PREV"			
+						value = 400
+					}
+				}
+			}
+		}
+	}
+}
+# Faction is beaten in Europe
+country_event = {
+	id = fso.85
+	title = fso.85.t
+	desc = fso.85.d
+
+	trigger = {
+		tag = CZE
+		has_war = yes
+		has_government = communism
+		has_completed_focus = FSO_cutie_crusade
+		any_country = { # condition - any country in faction in europe is at war with us
+			is_in_faction = yes
+			has_war_with = CZE
+			capital_scope = { is_on_continent = europe }
+			exists = yes
+		}
+		NOT = { # condition - no country in europe has not capitulated while at war with us
+			any_country = {
+				is_in_faction = yes
+				has_war_with = CZE
+				capital_scope = { is_on_continent = europe }
+				NOT = { has_capitulated = yes }
+				exists = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+
+	option = {
+		name = fso.85.a # We win! mark capitulated countries for annexation
+		
+		every_country = {
+			limit = {
+				has_war_with = CZE
+				has_capitulated = yes
+			}
+			set_country_flag = marked_for_death
+		}
+		every_country = {
+			limit = {
+				is_in_faction = yes
+				has_war_with = CZE 
+			}
+			white_peace = CZE
+		}
+		every_country = {
+			limit = {
+				has_country_flag = marked_for_death
+			}
+			clr_country_flag = marked_for_death
+			CZE = { annex_country = { target = PREV transfer_troops = no } }
+		}
 	}
 }

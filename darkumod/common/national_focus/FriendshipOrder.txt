@@ -651,6 +651,8 @@ focus_tree = {
 					owns_state = 49
 					owns_state = 454
 					owns_state = 554
+					owns_state = 292
+					owns_state = 291
 				}
 				AND = {
 					owns_state = 16

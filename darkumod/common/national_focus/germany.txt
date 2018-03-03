@@ -1820,6 +1820,7 @@ focus_tree = {
 					has_war = yes
 				}
 			}
+			NOT = { has_opinion_modifier = fso_germany_appeased }
 		}
 		bypass = {
 			OR = {
