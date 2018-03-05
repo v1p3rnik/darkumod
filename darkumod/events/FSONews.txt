@@ -69,3 +69,209 @@ news_event = {
 		}
 	}
 }
+
+# FSO protects Austria
+news_event = {
+	id = fsonews.3
+	title = fsonews.3.t 
+	desc = fsonews.3.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.3.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				tag = AUS
+			}
+		}
+	}
+	option = {
+		name = fsonews.3.b 
+		trigger = {
+			tag = AUS
+		}
+	}
+	option = {
+		name = fsonews.3.c 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# FSO and Germany announce mutual support
+news_event = {
+	id = fsonews.4
+	title = fsonews.4.t 
+	desc = fsonews.4.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.4.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = fsonews.4.a 
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = fsonews.4.a 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# FSO proclaims their manifest destiny
+news_event = {
+	id = fsonews.5
+	title = fsonews.5.t 
+	desc = fsonews.5.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.5.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				capital_scope = { is_on_continent = europe }
+			}
+		}
+	}
+	option = {
+		name = fsonews.5.b
+		trigger = {
+			tag = CZE
+		}
+	}
+	option = {
+		name = fsonews.5.c 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+			capital_scope = { is_on_continent = europe }
+		}
+	}
+}
+
+# FSO has prevailed, no trotsky
+news_event = {
+	id = fsonews.6
+	title = fsonews.6.t 
+	desc = fsonews.6.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.6.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.6.b
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# FSO triumphant in Europe, trotsky back
+news_event = {
+	id = fsonews.7
+	title = fsonews.7.t 
+	desc = fsonews.7.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.7.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				tag = SOV
+			}
+		}
+	}
+	option = {
+		name = fsonews.7.b 
+		trigger = {
+			tag = SOV
+		}
+	}
+	option = {
+		name = fsonews.7.c 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# Allies signed peace
+news_event = {
+	id = fsonews.8
+	title = fsonews.8.t 
+	desc = fsonews.8.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.8.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				OR = {
+					is_in_faction_with = ENG
+					is_in_faction_with = FRA
+				}
+			}
+		}
+	}
+	option = {
+		name = fsonews.8.b 
+		trigger = {
+			OR = {
+				is_in_faction_with = ENG
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	option = {
+		name = fsonews.8.c 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
