@@ -21,7 +21,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -304,7 +304,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -335,7 +335,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -363,7 +363,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	immediate = {
@@ -395,7 +395,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1126,7 +1126,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 6
+		days = 1
 	}
 	
 	option = {
@@ -1152,7 +1152,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 6
+		days = 1
 	}
 	
 	option = {
@@ -1182,7 +1182,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1201,7 +1201,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # accept
@@ -1235,7 +1235,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1269,7 +1269,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1297,7 +1297,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # Stalin
@@ -1323,7 +1323,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # accept
@@ -1369,7 +1369,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1397,7 +1397,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1422,7 +1422,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -1787,7 +1787,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # huge huge expensive statue
@@ -1821,7 +1821,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # Okay
@@ -1843,7 +1843,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # Okay
@@ -1865,7 +1865,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # Okay
@@ -1947,7 +1947,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # if took all states, release as free, make commie and join faction
@@ -2256,7 +2256,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # plea for protection
@@ -2634,7 +2634,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # It is on
@@ -2680,7 +2680,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = { # if took all states, trotsky alive, release as free, make commie and join faction
@@ -2869,8 +2869,10 @@ country_event = {
 		}
 	}
 	
+	fire_only_once = yes
+	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 
 	option = {
@@ -2953,9 +2955,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					OMN = { is_in_faction_with = ENG }
+					OMA = { is_in_faction_with = ENG }
 				}
-				OMN = { set_country_flag = marked_for_death }
+				OMA = { set_country_flag = marked_for_death }
 			}
 			every_country = {
 				limit = {
@@ -3063,9 +3065,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					OMN = { is_in_faction_with = ENG }
+					OMA = { is_in_faction_with = ENG }
 				}
-				OMN = { set_country_flag = marked_for_death }
+				OMA = { set_country_flag = marked_for_death }
 			}
 			every_country = {
 				limit = {
@@ -3156,9 +3158,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					OMN = { is_in_faction_with = FRA }
+					OMA = { is_in_faction_with = FRA }
 				}
-				OMN = { set_country_flag = marked_for_death }
+				OMA = { set_country_flag = marked_for_death }
 			}
 			every_country = {
 				limit = {
@@ -3226,7 +3228,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 
 	option = {
