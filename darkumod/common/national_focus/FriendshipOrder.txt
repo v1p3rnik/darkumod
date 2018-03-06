@@ -847,7 +847,7 @@ focus_tree = {
 			hidden_effect = { country_event = { id = fso.87 } }
 		}
 	}
-	# Patavonia-Mesopotamia Roads Project
+	# Great Patavonia Project
 	focus = {
 		id = FSO_roads_project
 		icon = GFX_goal_generic_construction2

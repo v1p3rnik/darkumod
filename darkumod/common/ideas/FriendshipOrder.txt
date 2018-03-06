@@ -63,6 +63,27 @@ ideas = {
 			}
 		}
 		
+		FSO_communist_mod_2 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.2
+			}
+		}
+		
 		FSO_communist_iso_1 = {
 		
 			allowed = {
