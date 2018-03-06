@@ -59,7 +59,7 @@ ideas = {
 			
 			modifier = {
 				communism_drift = 0.1
-				industry_free_repair_factor = 1
+				production_speed_buildings_factor = 0.15
 			}
 		}
 		
@@ -80,6 +80,7 @@ ideas = {
 			modifier = {
 				communism_drift = 0.1
 				industry_repair_factor = 0.5
+				industry_free_repair_factor = 1
 			}
 		}
 		

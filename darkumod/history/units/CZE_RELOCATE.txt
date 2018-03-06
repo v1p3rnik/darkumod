@@ -1,0 +1,196 @@
+﻿units = {
+	#### Èeskoslovenská Vojenská Hednotka #####
+	# directly subordinate
+	division = {
+		name = "1. Jezdecká Brigáda"
+		location = 12364
+		division_template = "Jezdecká Brigáda"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "4. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "12. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "16. Divize"
+		location = 12364
+		division_template = "Horská Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# VIII Sbor
+	division = {
+		name = "9. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "15. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "21. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	### I Armády ###
+	division = {
+		name = "18. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# I Sbor
+	division = {
+		name = "2. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "15. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# II Sbor
+	division = {
+		name = "3. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "17. Divize"
+		location = 12364
+		division_template = "Horská Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	### II Armády ###
+	division = {
+		name = "8. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# IV Sbor
+	division = {
+		name = "7. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	### III Armády ###
+	# VII Sbor
+	division = {
+		name = "10. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "11. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "3. Jezdecká Brigáda"
+		location = 12364
+		division_template = "Jezdecká Brigáda"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	### IV Armády ###
+	division = {
+		name = "2. Jezdecká Brigáda"
+		location = 12364
+		division_template = "Jezdecká Brigáda"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# III Sbor
+	division = {
+		name = "19. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# V Sbor
+	division = {
+		name = "6. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "20. Divize"
+		location = 12364
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	# VI Sbor
+	division = {
+		name = "4. Jezdecká Brigáda"
+		location = 12364
+		division_template = "Jezdecká Brigáda"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+}

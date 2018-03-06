@@ -151,7 +151,7 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	
+	########################### COMMIE TREE #################################
 	# Dark Buddhist question
 	focus = {
 		id = FSO_darku_question
@@ -266,7 +266,7 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.40 } } }
 		}
 	}
-	
+	############################# SUPREME LEADER PATH ####################################
 	# Scientific Greatness
 	focus = {
 		id = FSO_scientific_greatness
@@ -763,7 +763,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+	############################# COMINTERN PATH ###############################
 	# Aid from Soviets
 	focus = {
 		id = FSO_rebuilding_comintern
@@ -811,7 +811,80 @@ focus_tree = {
 			}
 		}
 	}
-	
+	# Secure Our Future
+	focus = {
+		id = FSO_secure_future
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_rebuilding_comintern }
+		x = 2
+		y = 7
+		
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_secure_future_effect
+			set_country_flag = fso_generallplan_czechia
+			hidden_effect = { country_event = { id = fso.87 } }
+		}
+	}
+	# Patavonia-Mesopotamia Roads Project
+	focus = {
+		id = FSO_roads_project
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_secure_future }
+		x = 2
+		y = 9
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_roads_project_tt
+				has_country_flag = fso_generallplan_czechia
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_roads_project_effect
+			hidden_effect = { country_event = { id = fso.89 } }
+		}
+	}
 	
 	
 }

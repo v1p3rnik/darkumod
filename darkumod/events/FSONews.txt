@@ -275,3 +275,37 @@ news_event = {
 		}
 	}
 }
+
+# Munich Diktat, FSO is relocated to Argentina, USA is not happy
+news_event = {
+	id = fsonews.9
+	title = fsonews.9.t 
+	desc = fsonews.9.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.9.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+				tag = USA
+			}
+		}
+	}
+	option = {
+		name = fsonews.9.b 
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = fsonews.9.c 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
