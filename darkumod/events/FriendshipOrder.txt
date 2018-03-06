@@ -766,6 +766,7 @@ country_event = {
 			ideology = fascism_ideology
 			traits = { }
 		}
+		hidden_effect = { set_country_flag = darku_crisis_civil_war }
 		add_national_unity = -0.1
 		start_civil_war = {
 			ruling_party = communism
@@ -839,6 +840,7 @@ country_event = {
 				traits = { dark_buddhist_darkest }
 			}
 		}
+		hidden_effect = { set_country_flag = darku_crisis_civil_war }
 		start_civil_war = {
 			ruling_party = communism
 			ideology = fascism
@@ -1059,6 +1061,7 @@ country_event = {
 				traits = { dark_buddhist_darkest }
 			}
 		}
+		hidden_effect = { set_country_flag = darku_crisis_civil_war }
 		start_civil_war = {
 			ruling_party = communism
 			ideology = fascism
@@ -1131,7 +1134,7 @@ country_event = {
 	
 	option = {
 		name = fso.34.a
-		hidden_effect = { set_country_flag = darku_crisis_civil_war }
+		
 	}
 }
 # Darku Question - event to clear crisis when civil war ends
