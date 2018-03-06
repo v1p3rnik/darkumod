@@ -2969,30 +2969,19 @@ country_event = {
 				CZE = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
-			every_country = {
-				limit = { 
-					OR = {
-						is_guaranteed_by = ENG
-						is_guaranteed_by = FRA
-					}
-					NOT = { tag = GRE } # Greece is not in our way
+			random_country = {
+				limit = {
+					NOT = { tag = GRE }
+					is_puppet = no
 					capital_scope = { is_on_continent = middle_east }
 				}
+				create_faction = peninsular_defense_faction
 				every_country = {
 					limit = {
-						is_in_faction_with = ENG
+						NOT = { tag = GRE }
+						capital_scope = { is_on_continent = middle_east }
 					}
-					diplomatic_relation = { country = PREV relation = guarantee active = no }
-				}
-				every_country = {
-					limit = {
-						is_in_faction_with = ENG
-					}
-					add_ai_strategy = {
-						type = antagonize
-						id = "PREV"			
-						value = 400
-					}
+					PREV = { add_to_faction = PREV }
 				}
 			}
 		}
@@ -3079,29 +3068,19 @@ country_event = {
 				CZE = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
-			every_country = {
-				limit = { 
-					OR = {
-						is_guaranteed_by = ENG
-					}
-					NOT = { tag = GRE } # Greece is not in our way
+			random_country = {
+				limit = {
+					NOT = { tag = GRE }
+					is_puppet = no
 					capital_scope = { is_on_continent = middle_east }
 				}
+				create_faction = peninsular_defense_faction
 				every_country = {
 					limit = {
-						is_in_faction_with = ENG
+						NOT = { tag = GRE }
+						capital_scope = { is_on_continent = middle_east }
 					}
-					diplomatic_relation = { country = PREV relation = guarantee active = no }
-				}
-				every_country = {
-					limit = {
-						is_in_faction_with = ENG
-					}
-					add_ai_strategy = {
-						type = antagonize
-						id = "PREV"			
-						value = 400
-					}
+					PREV = { add_to_faction = THIS }
 				}
 			}
 		}
@@ -3172,29 +3151,19 @@ country_event = {
 				CZE = { annex_country = { target = PREV transfer_troops = no } }
 			}
 			
-			every_country = {
-				limit = { 
-					OR = {
-						is_guaranteed_by = FRA
-					}
-					NOT = { tag = GRE } # Greece is not in our way
+			random_country = {
+				limit = {
+					NOT = { tag = GRE }
+					is_puppet = no
 					capital_scope = { is_on_continent = middle_east }
 				}
+				create_faction = peninsular_defense_faction
 				every_country = {
 					limit = {
-						is_in_faction_with = FRA
+						NOT = { tag = GRE }
+						capital_scope = { is_on_continent = middle_east }
 					}
-					diplomatic_relation = { country = PREV relation = guarantee active = no }
-				}
-				every_country = {
-					limit = {
-						is_in_faction_with = FRA
-					}
-					add_ai_strategy = {
-						type = antagonize
-						id = "PREV"			
-						value = 400
-					}
+					PREV = { add_to_faction = THIS }
 				}
 			}
 		}

@@ -7,3 +7,4 @@
  FACTION_NAME_FRIENDSHIP_3:0 "United Friends of $CONTINENT$"
  FACTION_NAME_FRIENDSHIP_4:0 "$CONTINENT_ADJ$ Luvsies"
  FACTION_NAME_FRIENDSHIP_5:0 "Harmonious Collective of $CONTINENT$"
+ peninsular_defense_faction:0 "Middle East Defense Axis"
