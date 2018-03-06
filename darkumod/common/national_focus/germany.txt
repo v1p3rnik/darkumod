@@ -2024,6 +2024,7 @@ focus_tree = {
 						is_puppet_of = PREV
 					}
 				}
+				CZE = { has_completed_focus = FSO_secure_future }
 			}
 		}
 
