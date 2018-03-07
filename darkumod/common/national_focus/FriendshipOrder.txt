@@ -885,6 +885,41 @@ focus_tree = {
 			hidden_effect = { country_event = { id = fso.89 } }
 		}
 	}
+	# Our New Subjects
+	focus = {
+		id = FSO_argentinians_question
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_roads_project }
+		x = 2
+		y = 9
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_argentinians_question_effect
+			hidden_effect = { country_event = { id = fso.91 } }
+		}
+	}
 	
 	
 }

@@ -84,6 +84,44 @@ ideas = {
 			}
 		}
 		
+		FSO_purged_argentinians = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		FSO_integrated_argentinians = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
 		FSO_communist_iso_1 = {
 		
 			allowed = {

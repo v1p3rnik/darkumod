@@ -3454,3 +3454,74 @@ country_event = {
 		add_ideas = FSO_communist_mod_2
 	}
 }
+# Our New Subjects - Start
+country_event = {
+	id = fso.90
+	title = fso.90.t
+	desc = fso.90.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_argentinians_question }
+		focus_progress = {
+			focus = FSO_argentinians_question
+			progress > 0.01
+		}
+	}
+	
+	option = { # Purge
+		name = fso.90.a
+		set_country_flag = argentinians_purge
+	}
+	option = { # Integrate
+		name = fso.90.a
+		set_country_flag = argentinians_integrate
+	}
+}
+# Our New Subjects - End
+country_event = {
+	id = fso.91
+	title = fso.91.t
+	desc = {
+		text = fso.91.d1
+		trigger = { has_country_flag = argentinians_purge }
+	}
+	desc = {
+		text = fso.91.d2
+		trigger = { has_country_flag = argentinians_integrate }
+	}
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Purge
+		name = fso.91.a
+		trigger = { has_country_flag = argentinians_purge }
+		278 = { add_manpower = -5600000 }
+		hidden_effect = { sound_effect = breaking_upon_wheel_male_01 }
+		add_ideas = FSO_purged_argentinians
+		hidden_effect = { ARG = { add_opinion_modifier = { target = CZE modifier = embargo } } }
+		ARG = { add_opinion_modifier = { target = CZE modifier = fso_purged_argentinians } }
+		every_other_country = {
+			limit = {
+				NOT = {
+					tag = CZE
+					tag = ARG
+					is_in_faction_with = CZE
+				}
+			}
+			hidden_effect = { remove_opinion_modifier = { target = CZE modifier = minor_sanctions } }
+			add_opinion_modifier = { target = CZE modifier = sanctions }
+		}
+	}
+	option = { # Integrate 
+		name = fso.91.b
+		trigger = { has_country_flag = argentinians_integrate }
+		add_ideas = FSO_integrated_argentinians
+	}
+}

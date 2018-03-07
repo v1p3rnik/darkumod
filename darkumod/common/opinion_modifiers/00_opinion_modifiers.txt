@@ -17,6 +17,10 @@ opinion_modifiers = {
 	fso_germany_appeased = {
 		value = 50
 	}
+	
+	fso_purged_argentinians = {
+		value = -200
+	}
 
 	hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
 		value = -100
