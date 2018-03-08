@@ -767,7 +767,7 @@ country_event = {
 			traits = { }
 		}
 		hidden_effect = { set_country_flag = darku_crisis_civil_war }
-		add_national_unity = -0.1
+		add_stability = -0.2
 		start_civil_war = {
 			ruling_party = communism
 			ideology = fascism
@@ -854,7 +854,7 @@ country_event = {
 			ideology = marxism
 			traits = { }
 		}
-		add_national_unity = -0.2
+		add_stability = -0.4
 		hidden_effect = {
 			create_country_leader = {
 				name = "Wanuke"
@@ -911,7 +911,7 @@ country_event = {
 			ideology = marxism
 			traits = { }
 		}
-		add_national_unity = 0.05
+		add_stability = 0.10
 		hidden_effect = {
 			create_country_leader = {
 				name = "Wanuke"
@@ -971,7 +971,7 @@ country_event = {
 			ideology = marxism
 			traits = { }
 		}
-		add_national_unity = 0.05
+		add_stability = 0.10
 		hidden_effect = {
 			create_country_leader = {
 				name = "Wanuke"
@@ -1033,7 +1033,7 @@ country_event = {
 				dark_buddhist_commie
 			}
 		}
-		add_national_unity = 0.15
+		add_stability = 0.3
 		set_country_flag = darku_question_solved_stay
 		clr_country_flag = darku_crisis_active
 	}
@@ -1075,7 +1075,7 @@ country_event = {
 			ideology = marxism
 			traits = { }
 		}
-		add_national_unity = -0.2
+		add_stability = -0.2
 		hidden_effect = {
 			create_country_leader = {
 				name = "Wanuke"
@@ -1570,7 +1570,7 @@ country_event = {
 	
 	trigger = {
 		has_government = communism
-		NOT = { has_completed_focus = FSO_higher_faster_stronger }
+		NOT = { has_completed_focus = FSO_faster_higher_stronger }
 		focus_progress = {
 			focus = FSO_higher_faster_stronger
 			progress > 0.01
@@ -2279,8 +2279,22 @@ country_event = {
 # Home And Beyond - Start
 country_event = {
 	id = fso.72
-	title = fso.72.t
-	desc = fso.72.d
+	title = {
+		text = fso.72.t1
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+	}
+	title = {
+		text = fso.72.t2
+		trigger = { has_country_flag = fso_protects_against_fascism }
+	}
+	desc = {
+		text = fso.72.d1
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+	}
+	desc = {
+		text = fso.72.d2
+		trigger = { has_country_flag = fso_protects_against_fascism }
+	}
 	
 	
 	fire_only_once = yes
@@ -2296,13 +2310,32 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.72.a
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+	}
+	option = { # Okay
+		name = fso.72.b
+		trigger = { has_country_flag = fso_protects_against_fascism }
 	}
 }
 # Home And Beyond - Done
 country_event = {
 	id = fso.73
-	title = fso.73.t
-	desc = fso.73.d
+	title = {
+		text = fso.73.t1
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+	}
+	title = {
+		text = fso.73.t2
+		trigger = { has_country_flag = fso_protects_against_fascism }
+	}
+	desc = {
+		text = fso.73.d1
+		trigger = { NOT = { has_country_flag = fso_protects_against_fascism } }
+	}
+	desc = {
+		text = fso.73.d2
+		trigger = { has_country_flag = fso_protects_against_fascism }
+	}
 	
 	
 	fire_only_once = yes
@@ -2333,7 +2366,18 @@ country_event = {
 				ideology = communism
 				popularity = 0.4
 			}
-			country_event = { id = fso.74 }
+			#country_event = { id = fso.74 }
+			add_ai_strategy = {
+				type = alliance
+				id = "CZE"
+				value = 400
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "CZE"			
+				value = 400
+			}
+			CZE = { add_to_faction = HUN }
 		}
 	}
 	option = { # available if not helped austria
@@ -2345,31 +2389,31 @@ country_event = {
 	}
 }
 # Home And Beyond - Hungary event to join faction
-country_event = {
-	id = fso.74
-	title = fso.74.t
-	desc = fso.74.d
-	
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = { # Okay
-		name = fso.74.a
-		add_ai_strategy = {
-			type = alliance
-			id = "CZE"
-			value = 400
-		}
-		add_ai_strategy = {
-			type = befriend
-			id = "CZE"			
-			value = 400
-		}
-		CZE = { add_to_faction = HUN }
-	}
-}
+#country_event = {
+#	id = fso.74
+#	title = fso.74.t
+#	desc = fso.74.d
+#	
+#	
+#	fire_only_once = yes
+#	
+#	is_triggered_only = yes
+#	
+#	option = { # Okay
+#		name = fso.74.a
+#		add_ai_strategy = {
+#			type = alliance
+#			id = "CZE"
+#			value = 400
+#		}
+#		add_ai_strategy = {
+#			type = befriend
+#			id = "CZE"			
+#			value = 400
+#		}
+#		CZE = { add_to_faction = HUN }
+#	}
+#}
 # Cutie Crusade - Start
 country_event = {
 	id = fso.76

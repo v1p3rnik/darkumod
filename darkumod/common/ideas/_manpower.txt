@@ -65,6 +65,7 @@ ideas = {
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.025 group = mobilization_laws }
+				has_war_support > 0.1
 				NOT = { has_idea = undisturbed_isolation }
 				NOT = { has_idea = isolation }
 				NOT = { has_government = friendship }
@@ -122,6 +123,7 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
+					NOT = { has_government = friendship }
 					AND = {
 						has_war = yes
 						enemies_strength_ratio > 0.5
@@ -133,7 +135,7 @@ ideas = {
 						#}
 					}					
 				}
-				NOT = { has_government = friendship }
+				has_war_support > 0.2
 				#Special rules AST in TFV
 				if = {
 					limit = {
@@ -206,6 +208,7 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
+					NOT = { has_government = friendship }
 					AND = {
 						has_war = yes
 						enemies_strength_ratio > 0.6
@@ -217,7 +220,10 @@ ideas = {
 						#}
 					}
 				}
-				NOT = { has_government = friendship }
+				OR = {
+					has_war_support > 0.6
+					surrender_progress > 0
+				}
 
 				if = {
 					limit = {
@@ -303,6 +309,11 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.2 group = mobilization_laws }
 				has_war = yes
+				NOT = { has_government = friendship }
+				OR = {
+					has_war_support > 0.7
+					surrender_progress > 0
+				}
 				enemies_strength_ratio > 0.75
 				#any_enemy_country = {
 				#	strength_ratio = {
@@ -310,7 +321,6 @@ ideas = {
 				#		ratio > 0.75
 				#	}
 				#}
-				NOT = { has_government = friendship }
 
 				if = {
 					limit = {
@@ -397,7 +407,11 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.25 group = mobilization_laws }
 				has_war = yes
-				
+				NOT = { has_government = friendship }
+				OR = {
+					has_war_support > 0.85
+					surrender_progress > 0.25
+				}
 				enemies_strength_ratio > 1
 				#any_enemy_country = {
 				#	strength_ratio = {
@@ -405,7 +419,6 @@ ideas = {
 				#		ratio > 1
 				#	}
 				#}
-				NOT = { has_government = friendship }
 				if = {
 					limit = {
 						original_tag = AST
