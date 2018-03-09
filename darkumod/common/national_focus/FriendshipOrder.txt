@@ -891,7 +891,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_roads_project }
 		x = 2
-		y = 9
+		y = 11
 		
 		cost = 10
 
@@ -920,6 +920,40 @@ focus_tree = {
 			hidden_effect = { country_event = { id = fso.91 } }
 		}
 	}
-	
+	# Expand The Frontier
+	focus = {
+		id = FSO_expand_frontier
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_argentinians_question }
+		x = 2
+		y = 13
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_expand_frontier_effect
+			hidden_effect = { country_event = { id = fso.93 } }
+		}
+	}
 	
 }

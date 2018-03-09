@@ -257,6 +257,8 @@
  fso.76.t:0 "The Cutie Speech"
  fso.76.d:0 "A passionate speech resonated both throughout the walls of the Assembly and within the hearts of all listeners. In utter silence, audience listened as if under a spell to the speech about an epic journey:\n'How long will we hold the jewels of our newfound freedom just for ourselves and our kin? How long will we act like the Soviets, just waiting around, whilst lower classes suffer all around the globe? Comrades, I can't watch people being enslaved for work for their masters, being dehumanized to a level of mere cattle. My friends, it is time for us to strike at the heart of the corrupt machinery, and travel far, freeing all peoples on the way.'\n'Iam a crusader, and a son of Marx. I say, one last war to end all wars! One last blood to save all! One last crusade, to connect all... So who's with me?!' - shouted the Supreme Leader.\n'I am a crusader!' - yelled back, cutting through the silence, one of the plebeians. 'Iam a crusader!' - stood up another.\nAnd just like that, war fervour quickly spread all across Prague. The crusade is about to begin!"
  
+ 
+ 
  fso.80.t:0 "Final Preparations"
  fso.80.d:0 "The supreme leader Dark Buddhist leaned closer to the map of Europe laid on the big table in front of him, surrounded by his loyal generals. 'The Soviets are plotting against us, I am sure of it. They have been quiet. Too quiet.' He paused, as if thinking about something. But not a few moments later, continued. 'Comrades, war with the russian bear is inevitable. There can be only one Union. But for now... for now we must secure our position firmly in Europe. Prepare our army, for the final act begins.'"
  fso.80.a:0 "Glory to comrade Dark!"
@@ -297,3 +299,19 @@
  fso.89.t:0 "Great Patavonia Project"
  fso.89.d:0 "Local communes report that the plan has been completed! New factories and roads are ready, and using the most advanced Comintern technology the facilities take less room, allowing us to build more compact industrial complexes! Our prospectors report steel veins were found in the mountanous areas we received, which should offset our loss of steel mines in Czechoslovakia. We have established an industrial base and can now consider further tasks ahead..."
  fso.89.a:0 "Yes, indeed."
+ fso.90.t:0 "Comrades Or Enemies Of The People?"
+ fso.90.d:0 "Over five million argentinians now end up living with us, under our rule, just like Slovakians used to be once. However, where once we were limited by being in the center of the world's attention, now we are remote and can practically do as we please... To a degree. Things do not have to be grim, however - we can always use more numbers, and Argentinians may prove to be useful allies should be convince them to join the right cause."
+ fso.90.a:0 "We cannot trust them. Off to the gulags with them all!"
+ fso.90.b:0 "Integrating the population is better in the long run."
+ fso.91.t:0 "Argentinian Question"
+ fso.91.d1:0 "Over the past two months, a series of purges occured in and around former Buenos Aires. Thousands of argentinian families were executed, lynch mobs burned, raped and pillaged, and so did the soldiers of our army. But that was merely the first step of 'Buenos Noches', as this operation was called by our ideologists. The remaining Argentinian population under our rule was arrested and directed into work camps, where they were meant to die from excruciating and harsh work conditions, including but not limited to: barely any food, 12 hour work days, hard labour in quarries and mines, disregard of safety conditions for Argentinians, and so on. The 'enemies of the Friendship Union' was the official label of these people.\nAlmost religious fervour inspired in our non-Argentinian populace, caused by this avalanche of violence, has unified them and our government's military actions find a lot more support now that the blood is spilled.\nHowever, not all Argentinians were purged. Some of them managed to slip away from the country, and our gruesome genocide is now widely known. Argentinian government in exile has closed all diplomatic relations, and our trade with almost all of the remaining world is limited."
+ fso.91.d2:0 "A series of laws were passed by the Assembly, granting various rights and priviliges to our Argentinian population. Within these past months, our society took a friendly approach towards them, and they now seem eager to be a core part of our armed forces. This will definitely cause more sympathizers to join our armies as we progress, but will make it easier for spies and saboteurs to infiltrate our ranks."
+ fso.91.a:0 "Buenos Noches, pigs!"
+ fso.91.b:0 "'Friendship' in our nation's name is there for a reason."
+ fso.92.t:0 "Expanding Our Borders"
+ fso.92.d:0 "Our base in South America is firmly established, now is the time to strike further out and begin the liberation of this continent! First we will subjugate the remainder of the Argentine and Chile, and we might as well take out Uruguay and ensure the safety of our capital while we are at it. The military is already planning the invasion!"
+ fso.92.a:0 "These are the first steps towards the Red Americas."
+ fso.93.t:0 "Removing Obstacles"
+ fso.93.d:0 "The plans are ready, and the army is mobilized. All we need to do is give an order to attack, and the Plebeian Assembly to issue the formal declaration of war."
+ fso.93.a:0 "War it is, then!"
+ fso.93.tt:0 "\n\nUnited States is not willing to commit to a war with us yet as it means a war with the Soviet Union."

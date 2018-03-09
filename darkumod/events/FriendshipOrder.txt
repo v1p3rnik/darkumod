@@ -3569,3 +3569,56 @@ country_event = {
 		add_ideas = FSO_integrated_argentinians
 	}
 }
+# Expand The Frontier - Start
+country_event = {
+	id = fso.92
+	title = fso.92.t
+	desc = fso.92.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_expand_frontier }
+		focus_progress = {
+			focus = FSO_expand_frontier
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.92.a
+		
+	}
+}
+# Expand The Frontier - End
+country_event = {
+	id = fso.93
+	title = fso.93.t
+	desc = fso.93.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # USA will pull guarantees if world tension is < 50
+		name = fso.91.a
+		create_wargoal = { type = annex_everything target = ARG }
+		create_wargoal = { type = annex_everything target = CHL }
+		create_wargoal = { type = annex_everything target = URG }
+		
+		if = {
+			limit = {
+				threat < 50
+			}
+			custom_effect_tooltip = fso.93.tt
+			USA = {
+				diplomatic_relation = { country = ARG relation = guarantee active = no }
+				diplomatic_relation = { country = CHL relation = guarantee active = no }
+				diplomatic_relation = { country = URG relation = guarantee active = no }
+			}
+		}
+	}
+}
