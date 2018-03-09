@@ -81,6 +81,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_order_69_effect
 			hidden_effect = { CZE = { country_event = { id = fso.6 } } }
+			complete_national_focus = FSO_political_open
+			complete_national_focus = FSO_economic_open
 		}
 	}
 	
