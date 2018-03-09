@@ -3321,10 +3321,10 @@ country_event = {
 			limit = {
 				NOT = { is_core_of = CZE }
 			}
-			add_manpower = 858250
-			add_manpower = 858250
-			add_manpower = 858250
-			add_manpower = 858250
+			#add_manpower = 858250
+			add_manpower = 1716500
+			#add_manpower = 858250
+			add_manpower = 1716500
 			CZE = { add_state_core = PREV }
 		}
 		transfer_state = 299
@@ -3406,14 +3406,14 @@ country_event = {
 						}
 					}
 				}
-				add_manpower = -625000
-				add_manpower = -625000
-				add_manpower = -625000
-				add_manpower = -625000
-				add_manpower = -625000
-				add_manpower = -625000
-				add_manpower = -625000
-				add_manpower = -625000
+				add_manpower = -1250000
+				add_manpower = -1250000
+				#add_manpower = -625000
+				#add_manpower = -625000
+				add_manpower = -1250000
+				add_manpower = -1250000
+				#add_manpower = -625000
+				#add_manpower = -625000
 			}
 			CZE = { remove_state_core = PREV }
 		}
@@ -3557,14 +3557,14 @@ country_event = {
 		name = fso.91.a
 		trigger = { has_country_flag = argentinians_purge }
 		278 = { 
-			add_manpower = -700000
-			add_manpower = -700000
-			add_manpower = -700000
-			add_manpower = -700000
-			add_manpower = -700000
-			add_manpower = -700000
-			add_manpower = -700000
-			add_manpower = -700000
+			add_manpower = -1400000
+			#add_manpower = -700000
+			#add_manpower = -700000
+			add_manpower = -1400000
+			#add_manpower = -700000
+			#add_manpower = -700000
+			add_manpower = -1400000
+			add_manpower = -1400000
 		}
 		hidden_effect = { sound_effect = breaking_upon_wheel_male_01 }
 		add_ideas = FSO_purged_argentinians
