@@ -1,0 +1,103 @@
+form_ussa_category = {
+	
+	form_ussa = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CZE
+			}
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = form_country_ussa_fso
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+			}
+			NOT = { has_global_flag = form_ussa_flag }
+			has_country_flag = fso_potential_ussa
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = CZE_USSA
+			
+			custom_effect_tooltip = form_ussa_cores_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_core_of = CZE }
+					}
+					CZE = { add_state_core = PREV }
+				}
+			}
+			hidden_effect = {
+				news_event = { id = fsonews.10 days = 1 }
+				set_global_flag = form_ussa_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+form_united_union_category = {
+	
+	form_united_union = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CZE
+			}
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = form_country_united_union_fso
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+			}
+			NOT = { has_global_flag = form_united_union_flag }
+			has_country_flag = fso_potential_united_union
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = CZE_SOVIET
+			
+			custom_effect_tooltip = form_united_union_cores_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_core_of = CZE }
+					}
+					CZE = { add_state_core = PREV }
+				}
+			}
+			hidden_effect = {
+				news_event = { id = fsonews.6 days = 1 }
+				set_global_flag = form_united_union_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

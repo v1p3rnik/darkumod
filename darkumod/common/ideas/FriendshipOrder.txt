@@ -2,6 +2,27 @@ ideas = {
 
 	country = {
 	
+		FSO_ai_not_call_help = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			picture = generic_victors_of_ww1
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_get_ally_desire_factor = -200
+				ai_call_ally_desire_factor = -200
+				ai_join_ally_desire_factor = -200
+			}
+		}
+	
 		FSO_royalist = {
 			
 			allowed = {

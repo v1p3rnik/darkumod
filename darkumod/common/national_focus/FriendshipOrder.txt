@@ -957,5 +957,145 @@ focus_tree = {
 			hidden_effect = { country_event = { id = fso.93 } }
 		}
 	}
+	# Para Bellum, Paraguay
+	focus = {
+		id = FSO_para_bellum_paraguay
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_expand_frontier }
+		x = 2
+		y = 15
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_para_bellum_paraguay_effect
+			hidden_effect = { country_event = { id = fso.95 } }
+		}
+	}
+	# Conquer North Andes
+	focus = {
+		id = FSO_conquer_north_andes
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_para_bellum_paraguay }
+		x = 2
+		y = 17
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_conquer_north_andes_effect
+			hidden_effect = { country_event = { id = fso.97 } }
+		}
+	}
+	# The Red Carnival
+	focus = {
+		id = FSO_red_carnival
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_conquer_north_andes }
+		x = 2
+		y = 19
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_red_carnival_effect
+			hidden_effect = { country_event = { id = fso.99 } }
+		}
+	}
+	# Dream of Revolution
+	focus = {
+		id = FSO_dream_of_revolution
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_red_carnival }
+		x = 2
+		y = 21
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_revolution_effect
+			hidden_effect = { country_event = { id = fso.102 } }
+		}
+	}
 	
 }

@@ -2725,6 +2725,7 @@ country_event = {
 				SOV = { exists = no }
 				SOV = { is_puppet_of = CZE }
 			}
+			has_completed_focus = FSO_dream_of_power
 		}
 	}
 	
@@ -2818,8 +2819,7 @@ country_event = {
 			}
 			CZE = { annex_country = { target = PREV transfer_troops = no } }
 		}
-		set_cosmetic_tag = CZE_SOVIET
-		news_event = { days = 2 id = fsonews.6 }
+		set_country_flag = fso_potential_united_union
 	}
 }
 # Allies offer peace
@@ -3623,21 +3623,419 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # USA will pull guarantees if world tension is < 50
-		name = fso.91.a
+		name = fso.93.a
 		create_wargoal = { type = annex_everything target = ARG }
 		create_wargoal = { type = annex_everything target = CHL }
 		create_wargoal = { type = annex_everything target = URG }
 		
 		if = {
 			limit = {
-				threat < 50
+				threat < 0.5
 			}
 			custom_effect_tooltip = fso.93.tt
 			USA = {
 				diplomatic_relation = { country = ARG relation = guarantee active = no }
 				diplomatic_relation = { country = CHL relation = guarantee active = no }
 				diplomatic_relation = { country = URG relation = guarantee active = no }
+				hidden_effect = {
+					ARG = {
+						add_ideas = FSO_ai_not_call_help
+						remove_ideas = american_protection_defence_democratic
+						remove_ideas = american_protection_drift_democratic
+						remove_ideas = american_protection_defence_communism
+						remove_ideas = american_protection_drift_communism
+						remove_ideas = american_protection_defence_fascism
+						remove_ideas = american_protection_drift_fascism
+					}
+					CHL = {
+						add_ideas = FSO_ai_not_call_help
+						remove_ideas = american_protection_defence_democratic
+						remove_ideas = american_protection_drift_democratic
+						remove_ideas = american_protection_defence_communism
+						remove_ideas = american_protection_drift_communism
+						remove_ideas = american_protection_defence_fascism
+						remove_ideas = american_protection_drift_fascism
+					}
+					URG = {
+						add_ideas = FSO_ai_not_call_help
+						remove_ideas = american_protection_defence_democratic
+						remove_ideas = american_protection_drift_democratic
+						remove_ideas = american_protection_defence_communism
+						remove_ideas = american_protection_drift_communism
+						remove_ideas = american_protection_defence_fascism
+						remove_ideas = american_protection_drift_fascism
+					}
+				}
 			}
 		}
+	}
+}
+# Para Bellum, Paraguay - Start
+country_event = {
+	id = fso.94
+	title = fso.94.t
+	desc = fso.94.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_para_bellum_paraguay }
+		focus_progress = {
+			focus = FSO_para_bellum_paraguay
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.94.a
+		
+	}
+}
+# Para Bellum, Paraguay - End
+country_event = {
+	id = fso.95
+	title = fso.95.t
+	desc = fso.95.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.95.a
+		annex_country = { target = PAR transfer_troops = yes }
+	}
+}
+# Conquer North Andes - Start
+country_event = {
+	id = fso.96
+	title = fso.96.t
+	desc = fso.96.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_conquer_north_andes }
+		focus_progress = {
+			focus = FSO_conquer_north_andes
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.96.a
+		
+	}
+}
+# Conquer North Andes - End
+country_event = {
+	id = fso.97
+	title = fso.97.t
+	desc = fso.97.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # USA will pull guarantees if world tension is < 70
+		name = fso.97.a
+		create_wargoal = { type = annex_everything target = BOL }
+		create_wargoal = { type = annex_everything target = PRU }
+		
+		if = {
+			limit = {
+				threat < 0.7
+			}
+			custom_effect_tooltip = fso.93.tt
+			USA = {
+				diplomatic_relation = { country = BOL relation = guarantee active = no }
+				diplomatic_relation = { country = PRU relation = guarantee active = no }
+				hidden_effect = {
+					BOL = {
+						add_ideas = FSO_ai_not_call_help
+						remove_ideas = american_protection_defence_democratic
+						remove_ideas = american_protection_drift_democratic
+						remove_ideas = american_protection_defence_communism
+						remove_ideas = american_protection_drift_communism
+						remove_ideas = american_protection_defence_fascism
+						remove_ideas = american_protection_drift_fascism
+					}
+					PRU = {
+						add_ideas = FSO_ai_not_call_help
+						remove_ideas = american_protection_defence_democratic
+						remove_ideas = american_protection_drift_democratic
+						remove_ideas = american_protection_defence_communism
+						remove_ideas = american_protection_drift_communism
+						remove_ideas = american_protection_defence_fascism
+						remove_ideas = american_protection_drift_fascism
+					}
+				}
+			}
+		}
+	}
+}
+# The Red Carnival - Start
+country_event = {
+	id = fso.98
+	title = fso.98.t
+	desc = fso.98.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_red_carnival }
+		focus_progress = {
+			focus = FSO_red_carnival
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.98.a
+		
+	}
+}
+# The Red Carnival - End
+country_event = {
+	id = fso.99
+	title = fso.99.t
+	desc = fso.99.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.99.a
+		BRA = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+			start_civil_war = {
+				ideology = communism
+				size = 0.5
+			}
+			random_country = {
+				limit = {
+					original_tag = BRA
+					has_civil_war = yes
+				}
+				SOV = { add_to_faction = PREV }
+			}
+			if = {
+				limit = {
+					threat < 0.75
+				}
+				add_ideas = FSO_ai_not_call_help
+			}
+		}
+	}
+}
+# The Red Carnival - Annex BRA if won civil war for commies
+country_event = {
+	id = fso.100
+	title = fso.100.t
+	desc = fso.100.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		tag = CZE
+		any_country = {
+			original_tag = BRA
+			has_civil_war = no
+		}
+	}
+	
+	option = { # Okay
+		name = fso.98.a
+		random_country = {
+			limit = {
+				original_tag = BRA
+			}
+			CZE = { annex_country = { target = PREV transfer_troops = yes } }
+		}
+	}
+}
+# Dream of Revolution - Start
+country_event = {
+	id = fso.101
+	title = fso.101.t
+	desc = fso.101.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_dream_of_revolution }
+		focus_progress = {
+			focus = FSO_dream_of_revolution
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.101.a
+		
+	}
+}
+# Dream of Revolution - End
+country_event = {
+	id = fso.102
+	title = fso.102.t
+	desc = fso.102.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # USA will pull guarantees if world tension is < 90
+		name = fso.102.a
+		
+		VEN = {
+			transfer_state = 687
+			transfer_state = 309
+			transfer_state = 310
+			transfer_state = 691
+		}
+		
+		DOM = {
+			transfer_state = 694
+			transfer_state = 308
+			transfer_state = 692
+		}
+		
+		CUB = {
+			transfer_state = 689
+			transfer_state = 690
+			transfer_state = 693
+		}
+		
+		GUA = {
+			transfer_state = 311
+		}
+		
+		every_country = {
+			limit = {
+				capital_scope = { is_on_continent = south_america }
+				NOT = { is_in_faction_with = CZE }
+				NOT = { tag = CZE }
+			}
+			add_ideas = FSO_ai_not_call_help
+			CZE = { 
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+			if = {
+				limit = {
+					threat < 0.9
+				}
+				USA = {
+					diplomatic_relation = { country = PREV relation = guarantee active = no }
+				}
+				THIS = {
+					remove_ideas = american_protection_defence_democratic
+					remove_ideas = american_protection_drift_democratic
+					remove_ideas = american_protection_defence_communism
+					remove_ideas = american_protection_drift_communism
+					remove_ideas = american_protection_defence_fascism
+					remove_ideas = american_protection_drift_fascism
+				}
+			}
+		}
+	}
+}
+# Dream of Revolution - End Game start
+country_event = {
+	id = fso.103
+	title = fso.103.t
+	desc = fso.103.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = FSO_dream_of_power
+		has_government = communism
+		NOT = { has_war_with = USA }
+		NOT = {
+			any_country = {
+				capital_scope = { is_on_continent = south_america }
+				NOT = { is_in_faction_with = CZE }
+				NOT = { tag = CZE }
+				exists = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # It is on
+		name = fso.103.a
+		USA = { 
+			annex_country = { target = MEX transfer_troops = no }
+			annex_country = { target = CAN transfer_troops = no }
+			transfer_state = 332
+			transfer_state = 331
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = USA
+		}
+	}
+}
+# Dream of Power - End of USA
+country_event = {
+	id = fso.104
+	title = fso.104.t
+	desc = fso.104.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			OR = {
+				USA = { exists = no }
+				USA = { is_puppet_of = CZE }
+			}
+			has_completed_focus = FSO_dream_of_revolution
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # unify into one state
+		name = fso.104.a
+		trigger = {
+			OR = {
+				USA = { exists = no }
+				USA = { is_puppet_of = CZE }
+			}
+		}
+		custom_effect_tooltip = fso.104.tt
+		set_country_flag = fso_potential_ussa
+		hidden_effect = { annex_country = { target = USA transfer_troops = no } }
 	}
 }

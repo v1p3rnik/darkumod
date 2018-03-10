@@ -309,3 +309,30 @@ news_event = {
 		}
 	}
 }
+
+# FSO forms USSA
+news_event = {
+	id = fsonews.10
+	title = fsonews.10.t 
+	desc = fsonews.10.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.10.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.10.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
