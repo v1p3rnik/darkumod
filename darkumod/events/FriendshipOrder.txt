@@ -3531,7 +3531,7 @@ country_event = {
 		set_country_flag = argentinians_purge
 	}
 	option = { # Integrate
-		name = fso.90.a
+		name = fso.90.b
 		set_country_flag = argentinians_integrate
 	}
 }
