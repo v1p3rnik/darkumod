@@ -3972,15 +3972,16 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_completed_focus = FSO_dream_of_power
+		has_completed_focus = FSO_dream_of_revolution
 		has_government = communism
 		NOT = { has_war_with = USA }
 		NOT = {
 			any_country = {
-				capital_scope = { is_on_continent = south_america }
-				NOT = { is_in_faction_with = CZE }
-				NOT = { tag = CZE }
-				exists = yes
+				OR = {
+					capital_scope = { is_on_continent = south_america }
+					is_in_faction_with = CZE
+					tag = CZE
+				}
 			}
 		}
 	}
