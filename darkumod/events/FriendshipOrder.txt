@@ -3853,6 +3853,7 @@ country_event = {
 	trigger = {
 		has_government = communism
 		tag = CZE
+		has_completed_focus = FSO_red_carnival
 		any_country = {
 			original_tag = BRA
 			has_civil_war = no
@@ -3860,7 +3861,7 @@ country_event = {
 	}
 	
 	option = { # Okay
-		name = fso.98.a
+		name = fso.100.a
 		random_country = {
 			limit = {
 				original_tag = BRA
