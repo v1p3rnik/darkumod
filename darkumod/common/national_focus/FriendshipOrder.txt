@@ -992,9 +992,9 @@ focus_tree = {
 			hidden_effect = { country_event = { id = fso.95 } }
 		}
 	}
-	# Conquer North Andes
+	# Conquer Central Andes
 	focus = {
-		id = FSO_conquer_north_andes
+		id = FSO_conquer_central_andes
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_para_bellum_paraguay }
 		x = 2
@@ -1023,7 +1023,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_conquer_north_andes_effect
+			custom_effect_tooltip = FSO_conquer_central_andes_effect
 			hidden_effect = { country_event = { id = fso.97 } }
 		}
 	}

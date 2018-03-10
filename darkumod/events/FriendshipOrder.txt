@@ -3709,7 +3709,7 @@ country_event = {
 		annex_country = { target = PAR transfer_troops = yes }
 	}
 }
-# Conquer North Andes - Start
+# Conquer Central Andes - Start
 country_event = {
 	id = fso.96
 	title = fso.96.t
@@ -3720,9 +3720,9 @@ country_event = {
 	
 	trigger = {
 		has_government = communism
-		NOT = { has_completed_focus = FSO_conquer_north_andes }
+		NOT = { has_completed_focus = FSO_conquer_central_andes }
 		focus_progress = {
-			focus = FSO_conquer_north_andes
+			focus = FSO_conquer_central_andes
 			progress > 0.01
 		}
 	}
@@ -3732,7 +3732,7 @@ country_event = {
 		
 	}
 }
-# Conquer North Andes - End
+# Conquer Central Andes - End
 country_event = {
 	id = fso.97
 	title = fso.97.t
