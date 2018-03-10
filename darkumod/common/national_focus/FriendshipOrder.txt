@@ -1031,7 +1031,7 @@ focus_tree = {
 	focus = {
 		id = FSO_red_carnival
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FSO_conquer_north_andes }
+		prerequisite = { focus = FSO_conquer_central_andes }
 		x = 2
 		y = 19
 		

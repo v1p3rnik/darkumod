@@ -16,6 +16,15 @@ form_ussa_category = {
 	}
 }
 
+form_united_union_category = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+}
+
 form_scandinavia_category = {
 
 	icon = generic_formable_nations

@@ -2670,14 +2670,13 @@ country_event = {
 		has_completed_focus = FSO_dream_of_power
 		has_government = communism
 		NOT = { is_in_faction_with = SOV }
-		NOT = {
-			any_country = {
-				capital_scope = { is_on_continent = europe }
-				NOT = { is_in_faction_with = CZE }
-				NOT = { tag = CZE }
-				NOT = { tag = SOV }
-				NOT = { is_in_faction_with = SOV }
-				exists = yes
+		NOT = { 
+			any_other_country = {
+				AND = {
+					capital_scope = { is_on_continent = south_america }
+					NOT = { is_in_faction_with = CZE }
+					NOT = { is_puppet_of = CZE }
+				}	
 			}
 		}
 	}
@@ -3912,6 +3911,7 @@ country_event = {
 			transfer_state = 309
 			transfer_state = 310
 			transfer_state = 691
+			transfer_state = 695
 		}
 		
 		DOM = {
@@ -3975,13 +3975,13 @@ country_event = {
 		has_completed_focus = FSO_dream_of_revolution
 		has_government = communism
 		NOT = { has_war_with = USA }
-		NOT = {
-			any_country = {
-				OR = {
+		NOT = { 
+			any_other_country = {
+				AND = {
 					capital_scope = { is_on_continent = south_america }
-					is_in_faction_with = CZE
-					tag = CZE
-				}
+					NOT = { is_in_faction_with = CZE }
+					NOT = { is_puppet_of = CZE }
+				}	
 			}
 		}
 	}
@@ -4004,7 +4004,7 @@ country_event = {
 		}
 	}
 }
-# Dream of Power - End of USA
+# Dream of Revolution - End of USA
 country_event = {
 	id = fso.104
 	title = fso.104.t
