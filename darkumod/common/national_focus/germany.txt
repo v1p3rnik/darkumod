@@ -3621,6 +3621,7 @@ focus_tree = {
 			OR = {
 				CZE = { is_puppet_of = GER }
 				CZE = { is_in_faction_with = GER }
+				CZE = { has_country_flag = fso_generallplan_czechia }
 				has_war_with = CZE
 				NOT = { country_exists = CZE }
 				any_other_country = {
