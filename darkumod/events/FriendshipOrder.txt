@@ -352,7 +352,7 @@ country_event = {
 	id = fso.9
 	title = fso.9.t
 	desc = fso.9.d
-	
+	picture = GFX_fso_guards_fountain
 	
 	fire_only_once = yes
 	
