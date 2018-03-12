@@ -1434,7 +1434,6 @@ country_event = {
 		create_faction = internationale_faction
 		add_ideas = FSO_trotsky
 		hidden_effect = {
-			set_rule = { can_declare_war_on_same_ideology = yes }
 			set_rule = { can_force_government = yes }
 			set_rule = { can_puppet = no }
 		}
