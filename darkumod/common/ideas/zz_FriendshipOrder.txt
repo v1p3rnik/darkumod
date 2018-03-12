@@ -147,6 +147,99 @@ ideas = {
 			}
 		}
 		
+		FSO_statue_of_equality_built = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.3
+				targeted_modifier = { tag = USA attack_bonus_against = 0.15 }
+			}
+		}
+		
+		FSO_church_of_revolution_accepted = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1
+				stability_factor = 0.2
+				mobilization_speed = 0.2
+				trade_laws_cost_factor = 0.25
+				political_advisor_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+			}
+		}
+		
+		FSO_church_of_revolution_dominates = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1
+				drift_defence_factor = 0.5
+				stability_factor = 0.6 # Religious fervour
+				no_supply_grace = 96
+				out_of_supply_factor = -0.1
+				army_morale_factor = 0.1
+			}
+		}
+		
+		FSO_church_of_revolution_shunned = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+				stability_factor = -0.2
+				trade_laws_cost_factor = -0.25
+				political_advisor_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+			}
+		}
+		
 		FSO_communist_iso_1 = {
 		
 			allowed = {

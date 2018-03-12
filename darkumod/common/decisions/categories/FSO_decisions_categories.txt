@@ -1,0 +1,26 @@
+form_ussa_category = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+}
+
+form_united_union_category = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+}
+
+fso_special_projects_category = {
+	
+	icon = generic_prospect_for_resources
+
+	allowed = {
+		always = yes
+	}
+}

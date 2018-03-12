@@ -7,20 +7,19 @@ form_ussa_category = {
 		allowed = {
 			OR = {
 				original_tag = CZE
+				tag = CZE
 			}
 		}
 
 		available = {
 			is_subject = no
 			
-			custom_trigger_tooltip = {
-				tooltip = form_country_ussa_fso
-			}
 		}
 
 		visible = {
 			OR = {
 				original_tag = CZE
+				tag = CZE
 			}
 			NOT = { has_global_flag = form_ussa_flag }
 			has_country_flag = fso_potential_ussa
@@ -65,14 +64,12 @@ form_united_union_category = {
 		available = {
 			is_subject = no
 			
-			custom_trigger_tooltip = {
-				tooltip = form_country_united_union_fso
-			}
 		}
 
 		visible = {
 			OR = {
 				original_tag = CZE
+				tag = CZE
 			}
 			NOT = { has_global_flag = form_united_union_flag }
 			has_country_flag = fso_potential_united_union
@@ -98,6 +95,52 @@ form_united_union_category = {
 
 		ai_will_do = {
 			factor = 200
+		}
+	}
+}
+
+fso_special_projects_category = {
+	
+	FSO_statue_of_equality = {
+
+		icon = generic_construction
+
+		available = {
+			controls_state = 500
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			has_government = communism
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			controls_state = 500
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			has_government = communism
+			has_country_flag = statue_of_equality
+			NOT = { has_global_flag = statue_of_equality_built }
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			add_ideas = FSO_statue_of_equality_built
+			set_global_flag = statue_of_equality_built
+			hidden_effect = { news_event = { days = 1 id = fsonews.12 } }
+		}
+		complete_effect = {
+			
 		}
 	}
 }

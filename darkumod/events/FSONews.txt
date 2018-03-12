@@ -336,3 +336,57 @@ news_event = {
 		}
 	}
 }
+
+# FSO annexes Paraguay
+news_event = {
+	id = fsonews.11
+	title = fsonews.11.t 
+	desc = fsonews.11.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.11.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.11.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# Statue of Equality
+news_event = {
+	id = fsonews.12
+	title = fsonews.12.t 
+	desc = fsonews.12.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.12.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.12.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}

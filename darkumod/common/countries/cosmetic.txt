@@ -8,6 +8,16 @@ CZE_DARKEST = {
 	color_ui = rgb { 255 255 255 }
 }
 
+CZE_SOVIET = {
+	color = rgb { 204 200 4 }
+	color_ui = rgb { 234 230 34 }
+}
+
+CZE_USSA = {
+	color = rgb { 198 51 110 }
+	color_ui = rgb { 228 81 140 }
+}
+
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

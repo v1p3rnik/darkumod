@@ -79,6 +79,9 @@ ideologies = {
 			
 			cutie_marxism = {
 			}
+			
+			revolution_r = {
+			}
 		}
 		
 		dynamic_faction_names = {

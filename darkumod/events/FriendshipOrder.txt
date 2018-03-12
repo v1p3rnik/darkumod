@@ -3706,6 +3706,7 @@ country_event = {
 	option = { 
 		name = fso.95.a
 		annex_country = { target = PAR transfer_troops = yes }
+		hidden_effect = { news_event = { days = 1 id = fsonews.11 } }
 	}
 }
 # Conquer Central Andes - Start
@@ -3813,31 +3814,37 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { 
-		name = fso.99.a
-		BRA = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.4
-			}
-			start_civil_war = {
-				ideology = communism
-				size = 0.5
-			}
-			random_country = {
-				limit = {
-					original_tag = BRA
-					has_civil_war = yes
+	immediate = {
+		hidden_effect = {
+			BRA = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.4
 				}
-				SOV = { add_to_faction = PREV }
-			}
-			if = {
-				limit = {
-					threat < 0.75
+				start_civil_war = {
+					ideology = communism
+					size = 0.4
 				}
-				add_ideas = FSO_ai_not_call_help
+				random_country = {
+					limit = {
+						original_tag = BRA
+						has_civil_war = yes
+					}
+					SOV = { add_to_faction = PREV }
+				}
+				if = {
+					limit = {
+						threat < 0.75
+					}
+					add_ideas = FSO_ai_not_call_help
+				}
 			}
 		}
+	}
+	
+	option = { 
+		name = fso.99.a
+		
 	}
 }
 # The Red Carnival - Annex BRA if won civil war for commies
@@ -3903,32 +3910,36 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			VEN = {
+				transfer_state = 687
+				transfer_state = 309
+				transfer_state = 310
+				transfer_state = 691
+				transfer_state = 695
+			}
+			
+			DOM = {
+				transfer_state = 694
+				transfer_state = 308
+				transfer_state = 692
+			}
+			
+			CUB = {
+				transfer_state = 689
+				transfer_state = 690
+				transfer_state = 693
+			}
+			
+			GUA = {
+				transfer_state = 311
+			}
+		}
+	}
+	
 	option = { # USA will pull guarantees if world tension is < 90
 		name = fso.102.a
-		
-		VEN = {
-			transfer_state = 687
-			transfer_state = 309
-			transfer_state = 310
-			transfer_state = 691
-			transfer_state = 695
-		}
-		
-		DOM = {
-			transfer_state = 694
-			transfer_state = 308
-			transfer_state = 692
-		}
-		
-		CUB = {
-			transfer_state = 689
-			transfer_state = 690
-			transfer_state = 693
-		}
-		
-		GUA = {
-			transfer_state = 311
-		}
 		
 		every_country = {
 			limit = {
@@ -3974,7 +3985,6 @@ country_event = {
 	trigger = {
 		has_completed_focus = FSO_dream_of_revolution
 		has_government = communism
-		NOT = { has_war_with = USA }
 		NOT = { 
 			any_other_country = {
 				AND = {
@@ -3990,14 +4000,20 @@ country_event = {
 		days = 1
 	}
 	
+	immediate = {
+		hidden_effect = {
+			USA = { 
+				annex_country = { target = MEX transfer_troops = no }
+				annex_country = { target = CAN transfer_troops = no }
+				transfer_state = 332
+				transfer_state = 331
+			}
+		}
+	}
+	
 	option = { # It is on
 		name = fso.103.a
-		USA = { 
-			annex_country = { target = MEX transfer_troops = no }
-			annex_country = { target = CAN transfer_troops = no }
-			transfer_state = 332
-			transfer_state = 331
-		}
+		
 		create_wargoal = {
 			type = annex_everything
 			target = USA
@@ -4039,5 +4055,241 @@ country_event = {
 		custom_effect_tooltip = fso.104.tt
 		set_country_flag = fso_potential_ussa
 		hidden_effect = { annex_country = { target = USA transfer_troops = no } }
+	}
+}
+# Statue in Rio
+country_event = {
+	id = fso.105
+	title = fso.105.t
+	desc = fso.105.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			500 = {
+				is_owned_by = CZE
+			}
+			has_completed_focus = FSO_red_carnival
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # 
+		name = fso.105.a
+		set_country_flag = statue_of_equality
+	}
+}
+
+# Church of Revolution
+country_event = {
+	id = fso.106
+	title = fso.106.t
+	desc = fso.106.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			310 = { # french guyana
+				is_owned_by = CZE
+			}
+			has_completed_focus = FSO_red_carnival
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Accept
+		name = fso.106.a
+		add_ideas = FSO_church_of_revolution_accepted
+		random_list = {
+			90 = { }
+			10 = { set_country_flag = fso_church_of_revolution_coup }
+		}
+	}
+	option = { # Decline
+		name = fso.106.b
+		add_ideas = FSO_church_of_revolution_shunned
+		random_list = {
+			70 = { set_country_flag = fso_church_of_revolution_oppressed }
+			30 = { set_country_flag = fso_church_of_revolution_rebellious }
+		}
+	}
+}
+
+# Church of Revolution Coup
+country_event = {
+	id = fso.107
+	title = fso.107.t
+	desc = fso.107.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			has_country_flag = fso_church_of_revolution_coup
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+	}
+	
+	option = { # Okay
+		name = fso.107.a
+		set_party_name = { ideology = communism long_name = CZE_revolution_church_long name = CZE_revolution_church }
+		set_capital = 500
+		set_province_name = { id = 10980 name = "Cathedral-City of Rio" }
+		hidden_effect = { retire_country_leader = yes }
+		create_country_leader = {
+			name = "The Church Committee"
+			desc = "HOLY_REVOLUTION_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = revolution_r
+			traits = { }
+		}
+		add_political_power = -200
+	}
+}
+
+# Church of Revolution Suicides
+country_event = {
+	id = fso.108
+	title = fso.108.t
+	desc = fso.108.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			has_country_flag = fso_church_of_revolution_oppressed
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+	}
+	
+	option = { # Okay
+		name = fso.108.a
+		remove_ideas = FSO_church_of_revolution_shunned
+		add_political_power = 150
+		500 = {
+			add_manpower = -4000
+		}
+	}
+}
+
+# Church of Revolution Civil War
+country_event = {
+	id = fso.109
+	title = fso.109.t
+	desc = fso.109.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = CZE
+			has_country_flag = fso_church_of_revolution_oppressed
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+	}
+	
+	option = { # Play as Assembly
+		name = fso.109.a
+		remove_ideas = FSO_church_of_revolution_shunned
+		start_civil_war = {
+			ideology = communism
+			size = 0.5
+		}
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		random_country = {
+			limit = {
+				AND = {
+					original_tag = CZE
+					has_war_with = CZE
+				}
+			}
+			set_state_controller = 500
+			set_capital = 500
+			set_party_name = { ideology = communism long_name = CZE_revolution_church_long name = CZE_revolution_church }
+			load_focus_tree = { tree = fso_focus keep_completed = yes }
+			add_ideas = FSO_church_of_revolution_dominates
+			hidden_effect = { retire_country_leader = yes }
+			create_country_leader = {
+				name = "The Church Committee"
+				desc = "HOLY_REVOLUTION_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = revolution_r
+				traits = { }
+			}
+		}
+	}
+	option = { # Play as Church
+		name = fso.109.b
+		remove_ideas = FSO_church_of_revolution_shunned
+		start_civil_war = {
+			ideology = communism
+			size = 0.5
+		}
+		create_country_leader = {
+			name = "Ladifour"
+			desc = "LADIFOUR_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { }
+		}
+		random_country = {
+			limit = {
+				AND = {
+					original_tag = CZE
+					has_war_with = CZE
+				}
+			}
+			set_state_controller = 500
+			set_capital = 500
+			set_party_name = { ideology = communism long_name = CZE_revolution_church_long name = CZE_revolution_church }
+			load_focus_tree = { tree = fso_focus keep_completed = yes }
+			add_ideas = FSO_church_of_revolution_dominates
+			hidden_effect = { retire_country_leader = yes }
+			create_country_leader = {
+				name = "The Church Committee"
+				desc = "HOLY_REVOLUTION_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = revolution_r
+				traits = { }
+			}
+		}
+		change_tag_from = CZE
 	}
 }
