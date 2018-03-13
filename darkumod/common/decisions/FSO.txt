@@ -144,3 +144,28 @@ fso_special_projects_category = {
 		}
 	}
 }
+
+fso_war_category = {
+	
+	FSO_glorious_counterattack = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = communism
+			has_country_flag = fso_war_active
+		}
+	
+		modifier = {
+			offence = 0.6
+			defence = -0.6
+		}
+	
+		days_remove = 90
+		cost = 150
+		
+		ai_will_do = {
+		
+		}
+	}
+}

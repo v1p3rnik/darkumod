@@ -2807,6 +2807,9 @@ country_event = {
 		has_war_with = FRA
 		has_war_with = ENG
 		has_country_flag = allies_support_czechs
+		CZE = {
+			NOT = { has_completed_focus = FSO_every_man_foe }
+		}
 	}
 	
 	mean_time_to_happen = {

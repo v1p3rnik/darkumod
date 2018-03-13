@@ -3427,7 +3427,9 @@ focus_tree = {
 					has_war = yes
 				}
 			}
-			NOT = { has_opinion_modifier = fso_germany_appeased }
+			hidden_trigger = {
+				NOT = { has_opinion_modifier = fso_germany_appeased }
+			}
 		}
 		bypass = {
 			OR = {
@@ -3623,6 +3625,7 @@ focus_tree = {
 				CZE = { is_in_faction_with = GER }
 				CZE = { has_country_flag = fso_generallplan_czechia }
 				has_war_with = CZE
+				GER = { controls_state = 9 }
 				NOT = { country_exists = CZE }
 				any_other_country = {
 					is_in_faction_with = GER

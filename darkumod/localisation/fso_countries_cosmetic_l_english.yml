@@ -11,3 +11,6 @@
  CZE_USSA_communism:0 "U.S.S.A."
  CZE_USSA_communism_DEF:0 "the U.S.S.A."
  CZE_USSA_communism_ADJ:0 "Soviet"
+ CZE_EUROPE_democratic:0 "European Defense Board"
+ CZE_EUROPE_democratic_DEF:0 "the European Defense Board"
+ CZE_EUROPE_democratic_ADJ:0 "European"
