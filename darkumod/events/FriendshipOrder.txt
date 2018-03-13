@@ -4292,3 +4292,816 @@ country_event = {
 		change_tag_from = CZE
 	}
 }
+# National Defense Act - Start
+country_event = {
+	id = fso.110
+	title = fso.110.t
+	desc = fso.110.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_national_defense }
+		focus_progress = {
+			focus = FSO_national_defense
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.110.a
+		
+	}
+}
+# National Defense Act - End
+country_event = {
+	id = fso.111
+	title = fso.111.t
+	desc = fso.111.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.111.a
+		if = {
+			limit = {
+				NOT = { has_idea = war_economy }
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
+			add_ideas = war_economy
+		}
+		if = {
+			limit = {
+				NOT = { has_idea = all_adults_serve }
+				NOT = { has_idea = scraping_the_barrel }
+			}
+			add_ideas = service_by_requirement
+		}
+		add_ideas = closed_economy
+	}
+}
+# Invisible Enemy - Start
+country_event = {
+	id = fso.112
+	title = fso.112.t
+	desc = fso.112.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_invisible_enemy }
+		focus_progress = {
+			focus = FSO_invisible_enemy
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.112.a
+	}
+}
+# Invisible Enemy - End
+country_event = {
+	id = fso.113
+	title = fso.113.t
+	desc = fso.113.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.113.a
+		add_ideas = FSO_uber_enigma
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = radar_tech }
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = encryption_tech }
+	}
+}
+# Every Man A Foe - Start
+country_event = {
+	id = fso.114
+	title = fso.114.t
+	desc = fso.114.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_every_man_foe }
+		focus_progress = {
+			focus = FSO_every_man_foe
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.114.a
+	}
+}
+# Every Man A Foe - End
+country_event = {
+	id = fso.115
+	title = fso.115.t
+	desc = fso.115.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.115.a
+		if = {
+			limit = { controls_state = 69 }
+			69 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 664 }
+			664 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 9 }
+			9 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 74 }
+			74 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 72 }
+			72 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 70 }
+			70 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 71 }
+			71 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 73 }
+			73 = {
+				set_building_level = {
+					type = bunker
+					level = 8
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 8
+					}
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+				add_building_construction = { type = radar_station level = 3 instant_build = yes }
+			}
+		}
+	}
+}
+# People's Army of Defense - Start
+country_event = {
+	id = fso.116
+	title = fso.116.t
+	desc = fso.116.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_people_army }
+		focus_progress = {
+			focus = FSO_people_army
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.116.a
+	}
+}
+# People's Army of Defense - End
+country_event = {
+	id = fso.117
+	title = fso.117.t
+	desc = fso.117.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.117.a
+		remove_ideas = FSO_communist_iso_1
+		add_ideas = FSO_communist_iso_2
+		add_ideas = tot_economic_mobilisation
+	}
+}
+# Self Sufficient Industry - Start
+country_event = {
+	id = fso.118
+	title = fso.118.t
+	desc = fso.118.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_self_sufficient }
+		focus_progress = {
+			focus = FSO_self_sufficient
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.118.a
+		
+	}
+}
+# Self Sufficient Industry - End
+country_event = {
+	id = fso.119
+	title = fso.119.t
+	desc = fso.119.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.119.a
+		69 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		9 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		74 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		75 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = synth_resources }
+		remove_ideas = FSO_communist_iso_2
+		add_ideas = FSO_communist_iso_3
+	}
+}
+# Deep Crust Drills - Start
+country_event = {
+	id = fso.120
+	title = fso.120.t
+	desc = fso.120.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_crust_drills }
+		focus_progress = {
+			focus = FSO_crust_drills
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.120.a
+		
+	}
+}
+# Deep Crust Drills - End
+country_event = {
+	id = fso.121
+	title = fso.121.t
+	desc = fso.121.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.121.a
+		custom_effect_tooltip = fso.121.tt
+		add_resource = { type = steel amount = 42 state = 69 }
+		add_resource = { type = tungsten amount = 16 state = 9 }
+		add_resource = { type = chromium amount = 8 state = 74 }
+		add_resource = { type = steel amount = 42 state = 75 }
+		add_resource = { type = aluminium amount = 56 state = 664 }
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = excavation_tech }
+	}
+}
+# Element of Harmony - Start
+country_event = {
+	id = fso.122
+	title = fso.122.t
+	desc = fso.122.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_element_harmony }
+		focus_progress = {
+			focus = FSO_element_harmony
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.122.a
+		
+	}
+}
+# Element of Harmony - 33%
+country_event = {
+	id = fso.123
+	title = fso.123.t
+	desc = fso.123.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_element_harmony }
+		focus_progress = {
+			focus = FSO_element_harmony
+			progress > 0.33
+		}
+	}
+	
+	option = { # Okay
+		name = fso.123.a
+		set_technology = { atomic_research = 1 }
+	}
+}
+# Element of Harmony - 66%
+country_event = {
+	id = fso.124
+	title = fso.124.t
+	desc = fso.124.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_element_harmony }
+		focus_progress = {
+			focus = FSO_element_harmony
+			progress > 0.66
+		}
+	}
+	
+	option = { # Okay
+		name = fso.124.a
+		set_technology = { nuclear_reactor = 1 }
+		9 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = nuclear_reactor level = 1 instant_build = yes }
+		}
+	}
+}
+# Element of Harmony - End
+country_event = {
+	id = fso.125
+	title = fso.125.t
+	desc = fso.125.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.125.a
+		custom_effect_tooltip = fso.125.tt
+		set_technology = { nukes = 1 }
+	}
+}
+# Dream of Unity - Start
+country_event = {
+	id = fso.126
+	title = fso.126.t
+	desc = fso.126.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		NOT = { has_completed_focus = FSO_dream_of_unity }
+		focus_progress = {
+			focus = FSO_dream_of_unity
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.126.a
+		
+	}
+}
+# Dream of Unity - End
+country_event = {
+	id = fso.127
+	title = fso.127.t
+	desc = fso.127.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.127.a
+		custom_effect_tooltip = fso.127.tt
+		division_template = {
+			name = "Elements of Harmony"
+			priority = 2
+	
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				artillery_brigade = { x = 0 y = 2 }
+			
+	    		infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				artillery_brigade = { x = 1 y = 2 }
+			
+	    	   	infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				artillery_brigade = { x = 3 y = 2 }
+			
+	    		infantry = { x = 4 y = 0 }
+				infantry = { x = 4 y = 1 }
+				artillery_brigade = { x = 4 y = 2 }
+			
+	    	   	infantry = { x = 5 y = 0 }
+				infantry = { x = 5 y = 1 }
+				infantry = { x = 5 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				recon = { x = 0 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 9 }
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+		}
+	}
+}
+# Dream of Unity - End Game Start
+country_event = {
+	id = fso.128
+	title = fso.128.t
+	desc = fso.128.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_completed_focus = FSO_dream_of_unity
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # Okay
+		name = fso.128.a
+		custom_effect_tooltip = fso.128.tt
+		set_country_flag = fso_war_trigger
+		sound_effect = nuke_fso
+		hidden_effect = { 
+			if = {
+				limit = {
+					any_neighbor_country = {
+						NOT = { has_war_with = CZE }
+					}
+				}
+				random_neighbor_country = {
+					limit = {
+						NOT = { has_war_with = CZE }
+					}
+					save_global_event_target_as = fso_nuked
+					news_event = { days = 7 id = fsonews.13 }
+					random_owned_state = {
+						add_manpower = -1500000
+						damage_building = { type = industrial_complex damage = 5 }
+						damage_building = { type = arms_factory damage = 5 }
+						damage_building = { type = infrastructure damage = 10 }
+						
+					}
+				}
+				else = {
+					random_neighbor_country = {
+						save_global_event_target_as = fso_nuked
+						news_event = { days = 7 id = fsonews.14 }
+						random_owned_state = {
+							add_manpower = -1500000
+							damage_building = { type = industrial_complex damage = 5 }
+							damage_building = { type = arms_factory damage = 5 }
+							damage_building = { type = infrastructure damage = 10 }
+							
+						}
+					}
+				}
+			}
+		}
+	}
+}
+# Dream of Unity - End Game, coalition declares war
+country_event = {
+	id = fso.129
+	title = fso.129.t
+	desc = fso.129.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_completed_focus = FSO_dream_of_unity
+		has_country_flag = fso_war_trigger
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # Okay
+		name = fso.129.a
+		custom_effect_tooltip = fso.129.tt
+		hidden_effect = {
+			random_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = SOV
+						tag = ENG
+						tag = USA
+					}
+				}
+				create_faction = earth_defense_force
+				every_country = {
+					limit = {
+						NOT = { tag = CZE }
+					}
+					PREV = { add_to_faction = PREV }
+				}
+				declare_war_on = { target = CZE type = annex_everything }
+			}					
+		}
+		clr_country_flag = fso_war_trigger
+		set_country_flag = fso_war_active
+	}
+}
+# Dream of Unity - End Game, white peace because of time
+country_event = {
+	id = fso.130
+	title = fso.130.t
+	desc = fso.130.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_completed_focus = FSO_dream_of_unity
+		has_country_flag = fso_war_active
+		date > 1949.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # Okay
+		name = fso.130.a
+		custom_effect_tooltip = fso.130.tt
+		every_country = { #white peace
+			limit = {
+				has_war_with = CZE
+			}
+			white_peace = CZE
+		}
+		every_owned_state = { #demilitarize our borders
+			every_neighbor_state = {
+				limit = {
+					NOT = { is_owned_by = CZE }
+				}
+				set_demilitarized_zone = yes
+			}
+		}
+		every_country = { #kill factions that would oppose us
+			limit = {
+				NOT = { tag = CZE }
+				is_faction_leader = yes
+			}
+			dismantle_faction = yes
+		}
+		clr_country_flag = fso_war_active # kill the flag so the other event wont trigger
+	}
+}
+# Dream of Unity - End Game, we win because we actually won somehow wtf
+country_event = {
+	id = fso.131
+	title = fso.131.t
+	desc = fso.131.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_completed_focus = FSO_dream_of_unity
+		has_country_flag = fso_war_active
+		NOT = { has_war = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # Okay
+		name = fso.131.a
+		custom_effect_tooltip = fso.131.tt
+		every_country = { #kill factions that would oppose us
+			limit = {
+				NOT = { tag = CZE }
+				is_faction_leader = yes
+			}
+			dismantle_faction = yes
+		}
+		every_other_country = { #annex world idk
+			CZE = { annex_country = { target = PREV transfer_troops = no }
+		}
+		remove_ideas = FSO_communist_iso_3
+		add_ideas = FSO_communist_iso_triumphant
+		add_political_power = 2000
+	}
+}

@@ -2669,3 +2669,8 @@ sound =
 	name = "breaking_upon_wheel_male_01"
 	file = "fsosounds/breaking_upon_wheel_male_01.wav"
 }
+sound =
+{
+	name = "nuke_fso"
+	file = "fsosounds/nuke_fso.wav"
+}

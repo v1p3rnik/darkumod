@@ -2432,3 +2432,13 @@ soundeffect =
 	max_audible = 1
 	max_audible_behaviour = fail
 }
+soundeffect =
+{
+	name = "nuke_fso"
+	volume = 1
+	sounds = {
+		sound = "nuke_fso"
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}

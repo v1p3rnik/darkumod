@@ -390,3 +390,55 @@ news_event = {
 		}
 	}
 }
+
+# FSO Nukes Neutral Neighbour
+news_event = {
+	id = fsonews.13
+	title = fsonews.13.t 
+	desc = fsonews.13.d 
+	picture = GFX_news_event_nuke
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.13.a 
+		trigger = {
+			NOT = { tag = CZE }
+		}
+	}
+	option = {
+		name = fsonews.13.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# FSO Nukes Enemy Neighbour
+news_event = {
+	id = fsonews.14
+	title = fsonews.14.t 
+	desc = fsonews.14.d 
+	picture = GFX_news_event_nuke
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.14.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.14.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}

@@ -717,7 +717,7 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.81 } } }
 		}
 	}
-	
+	################################# ISOLATION PATH ###################################
 	# Cast Alone
 	focus = {
 		id = FSO_rebuilding_alone
@@ -763,6 +763,294 @@ focus_tree = {
 					hidden_effect = { CZE = { country_event = { id = fso.54 } } }
 				}
 			}
+		}
+	}
+	# National Defense Act
+	focus = {
+		id = FSO_national_defense
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_rebuilding_alone }
+		x = 3
+		y = 6
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_national_defense_effect
+			hidden_effect = { CZE = { country_event = { id = fso.111 } } }
+		}
+	}
+	# Invisible Enemy
+	focus = {
+		id = FSO_invisible_enemy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_national_defense }
+		x = 3
+		y = 8
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_invisible_enemy_effect
+			hidden_effect = { CZE = { country_event = { id = fso.113 } } }
+		}
+	}
+	# Every Man A Foe
+	focus = {
+		id = FSO_every_man_foe
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_invisible_enemy }
+		x = 3
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_every_man_foe_effect
+			hidden_effect = { CZE = { country_event = { id = fso.115 } } }
+		}
+	}
+	# People's Army of Defense
+	focus = {
+		id = FSO_people_army
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_every_man_foe }
+		x = 3
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_people_army_effect
+			hidden_effect = { CZE = { country_event = { id = fso.117 } } }
+		}
+	}
+	# Self Sufficient Industry
+	focus = {
+		id = FSO_self_sufficient
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_people_army }
+		x = 3
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_self_sufficient_effect
+			hidden_effect = { CZE = { country_event = { id = fso.119 } } }
+		}
+	}
+	# Deep Crust Drills
+	focus = {
+		id = FSO_crust_drills
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_self_sufficient }
+		x = 3
+		y = 16
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_crust_drills_effect
+			hidden_effect = { CZE = { country_event = { id = fso.121 } } }
+		}
+	}
+	# Element of Harmony
+	focus = {
+		id = FSO_element_harmony
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_crust_drills }
+		x = 3
+		y = 18
+		
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_element_harmony_effect
+			hidden_effect = { CZE = { country_event = { id = fso.125 } } }
+		}
+	}
+	# Dream of Unity
+	focus = {
+		id = FSO_dream_of_unity
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_element_harmony }
+		x = 3
+		y = 20
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_unity_effect
+			hidden_effect = { CZE = { country_event = { id = fso.127 } } }
 		}
 	}
 	############################# COMINTERN PATH ###############################
