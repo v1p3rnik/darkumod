@@ -263,7 +263,11 @@ ideas = {
 				communism_drift = 0.1
 				industry_repair_factor = 0.5
 				industry_free_repair_factor = 1
-				join_faction_tension = 1
+				join_faction_tension = 1.01
+				generate_wargoal_tension = 1.01
+				send_volunteers_tension = 1.01
+				guarantee_tension = 1.01
+				lend_lease_tension = 1.01
 			}
 		}
 		
@@ -285,7 +289,11 @@ ideas = {
 				communism_drift = 0.1
 				industry_repair_factor = 0.5
 				industry_free_repair_factor = 1
-				join_faction_tension = 1
+				join_faction_tension = 1.01
+				generate_wargoal_tension = 1.01
+				send_volunteers_tension = 1.01
+				guarantee_tension = 1.01
+				lend_lease_tension = 1.01
 				offence = -0.3
 				defence = 0.3
 				conscription = 0.03
@@ -310,7 +318,11 @@ ideas = {
 				communism_drift = 0.1
 				industry_repair_factor = 0.5
 				industry_free_repair_factor = 1
-				join_faction_tension = 1
+				join_faction_tension = 1.01
+				generate_wargoal_tension = 1.01
+				send_volunteers_tension = 1.01
+				guarantee_tension = 1.01
+				lend_lease_tension = 1.01
 				offence = -0.3
 				defence = 0.3
 				conscription = 0.03
@@ -336,7 +348,11 @@ ideas = {
 				communism_drift = 0.1
 				industry_repair_factor = 0.5
 				industry_free_repair_factor = 1
-				join_faction_tension = 1
+				join_faction_tension = 1.01
+				generate_wargoal_tension = 1.01
+				send_volunteers_tension = 1.01
+				guarantee_tension = 1.01
+				lend_lease_tension = 1.01
 				offence = 0.3
 				defence = 0.3
 				conscription = 0.03
@@ -366,6 +382,27 @@ ideas = {
 				decryption_factor = -2
 				encryption_factor = 2
 				production_speed_radar_station_factor = 0.2
+			}
+		}
+		
+		FSO_depleted_uranium_rounds = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_intel_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_artillery_attack_factor = 0.1
+				army_armor_attack_factor = 0.1
+				research_time_factor = -0.1
 			}
 		}
 		
