@@ -5015,7 +5015,7 @@ country_event = {
 			dismantle_faction = yes
 		}
 		every_other_country = { #annex world idk
-			CZE = { annex_country = { target = PREV transfer_troops = no }
+			CZE = { annex_country = { target = PREV transfer_troops = no } }
 		}
 		remove_ideas = FSO_communist_iso_3
 		add_ideas = FSO_communist_iso_triumphant
