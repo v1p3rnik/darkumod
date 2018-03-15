@@ -19,8 +19,8 @@ CZE_USSA = {
 }
 
 CZE_EUROPE = {
-	color = rgb { 0 182 225 }
-	color_ui = { 30 212 255 }
+	color = rgb { 0 21 255 }
+	color_ui = { 0 12 153 }
 }
 
 MAL_UK = {
