@@ -101,32 +101,84 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "Vojtěch Luža"
-	gfx = "GFX_Portrait_czechoslovakia_vojtech_luza"
-	traits = { fast_planner offensive_doctrine }
-	skill = 3
-}
-
-create_field_marshal = {
-	name = "Josef Šnejdárek"
-	gfx = "GFX_Portrait_czechoslovakia_josef_snejdarek"
-	traits = { thorough_planner defensive_doctrine }
-	skill = 3
+create_navy_leader = {
+	name = "Admiral Hibiki"
+	picture = "Portrait_FSO_Hibiki.tga"
+	traits = { spotter air_controller ironside }
+	skill = 4
+	
 }
 
 create_corps_commander = {
-	name = "Richard Tesařík"
-	gfx = "GFX_Portrait_czechoslovakia_richard_tesarik"
-	traits = { panzer_leader }
-	skill = 2
+	name = "Spitty"
+	picture = "Portrait_FSO_Spitty.tga"
+	traits = { trait_reckless armor_officer brilliant_strategist media_personality }
+	skill = 4
+	
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 create_corps_commander = {
-	name = "Sergej Vojcechovský"
-	gfx = "GFX_Portrait_czechoslovakia_sergej_vojcechovsky"
-	traits = { winter_specialist }
-	skill = 3
+	name = "Polekov"
+	picture = "Portrait_FSO_Polekov.tga"
+	traits = { trait_reckless winter_specialist commando naval_invader }
+	skill = 4
+	
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Steven Universe"
+	picture = "Portrait_FSO_Steven_Universe.tga"
+	traits = { panzer_leader bearer_of_artillery urban_assault_specialist }
+	skill = 4
+	
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Zimmerson"
+	picture = "Portrait_FSO_Zimmerson.tga"
+	traits = { panzer_leader brilliant_strategist trait_engineer ranger }
+	skill = 4
+	
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ivvi"
+	picture = "Portrait_FSO_Ivvi.tga"
+	traits = { commando panzer_leader fortress_buster harsh_leader }
+	skill = 4
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "DobyvatelCZ"
+	picture = "Portrait_FSO_DobyvatelCZ.tga"
+	traits = { commando naval_invader bearer_of_artillery }
+	skill = 4
+	
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
 }
 
 add_ideas = {

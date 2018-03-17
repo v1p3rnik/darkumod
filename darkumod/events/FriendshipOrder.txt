@@ -3436,8 +3436,12 @@ country_event = {
 		}
 		hidden_effect = { load_oob = CZE_RELOCATE }
 		set_capital = 278
+		give_military_access = GER
+		give_military_access = HUN
+		give_military_access = POL
+		give_military_access = SLO
 		set_province_name = { id = 12364 name = "Nová Praha" }
-		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = GER }
+		add_equipment_to_stockpile = { type = convoy_1 amount = 200 producer = GER }
 		hidden_effect = { news_event = { days = 2 id = fsonews.9 } }
 	}
 }
