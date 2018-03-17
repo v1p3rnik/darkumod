@@ -757,6 +757,7 @@ country_event = {
 	
 	option = {
 		name = fso.28.a
+		custom_effect_tooltip = fso.crisis.war.tt
 		hidden_effect = { retire_country_leader = yes }
 		create_country_leader = {
 			name = "Peetry"
@@ -829,6 +830,7 @@ country_event = {
 	
 	option = {
 		name = fso.29.a
+		custom_effect_tooltip = fso.crisis.war.tt
 		hidden_effect = { 
 			retire_country_leader = yes
 			create_country_leader = {
@@ -1050,6 +1052,7 @@ country_event = {
 	
 	option = {
 		name = fso.33.a
+		custom_effect_tooltip = fso.crisis.war.tt
 		hidden_effect = { 
 			retire_country_leader = yes
 			create_country_leader = {
