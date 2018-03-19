@@ -187,13 +187,14 @@ ideologies = {
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = yes
+			can_lower_tension = yes
 		}
 		
 		modifiers = {
-			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4
-			lend_lease_tension = 0.4
-			send_volunteers_tension = 0.4
+			generate_wargoal_tension = 1.01
+			join_faction_tension = 1.01
+			lend_lease_tension = 0
+			send_volunteers_tension = 0.1
 			guarantee_tension = 0.4
 		}
 		
@@ -219,6 +220,9 @@ ideologies = {
 			}
 			
 			centrism = {
+			}
+			
+			imperium = {
 			}
 		}
 

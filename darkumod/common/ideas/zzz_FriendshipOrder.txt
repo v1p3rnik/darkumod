@@ -38,10 +38,26 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+		
+		FSO_royalist_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
 				friendship_drift = 0.1
-				drift_defence_factor = 0.3
-				generate_wargoal_tension = -0.5
-				send_volunteers_tension = -0.5
 			}
 		}
 		

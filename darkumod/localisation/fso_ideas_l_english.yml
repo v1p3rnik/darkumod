@@ -3,6 +3,7 @@
  can_declare_war_on_same_ideology:0 "Can fabricate war goals to declare war on the same ideology."
  FSO_ai_not_call_help:0 "Abandoned by the US"
  FSO_royalist:0 "Loyalist Supremacy"
+ FSO_royalist_2:0 "Friendship Reformation"
  FSO_fascist:0 "Nationalist Dreams"
  FSO_communist_base:0 "Communist Dawn"
  FSO_communist_base_desc:0 "The communist ideas are spreading gradually across the country. Further events are going to shape this worldview and our community."

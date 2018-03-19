@@ -81,8 +81,10 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_order_69_effect
 			hidden_effect = { CZE = { country_event = { id = fso.6 } } }
-			complete_national_focus = FSO_political_open
-			complete_national_focus = FSO_economic_open
+			hidden_effect = { 
+				complete_national_focus = FSO_political_open
+				complete_national_focus = FSO_economic_open
+			}
 		}
 	}
 	
@@ -1383,6 +1385,43 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_dream_of_revolution_effect
 			hidden_effect = { country_event = { id = fso.102 } }
+		}
+	}
+	
+	####################### FRIENDSHIP TREE ####################################
+	# A New Dawn
+	focus = {
+		id = FSO_new_dawn
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_political_open }
+		x = 7
+		y = 2
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = neutrality
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_new_dawn_effect
+			hidden_effect = { CZE = { country_event = { id = fso.137 } } }
 		}
 	}
 	

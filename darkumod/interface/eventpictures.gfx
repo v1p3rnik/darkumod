@@ -4,6 +4,14 @@ spriteTypes = {
 		name = "GFX_fso_guards_fountain"
 		texturefile = "gfx/event_pictures/fso_guards_fountain.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_senate_old"
+		texturefile = "gfx/event_pictures/fso_senate_old.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_tank_commie"
+		texturefile = "gfx/event_pictures/fso_tank_commie.tga"
+	}
 	
 	spriteType = {
 		name = "GFX_report_event_canada_ronnie"

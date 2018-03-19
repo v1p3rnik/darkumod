@@ -7,7 +7,7 @@ country_event = {
 	id = fso.1
 	title = fso.1.t
 	desc = fso.1.d
-	
+	picture = GFX_fso_senate_old
 	
 	fire_only_once = yes
 	
@@ -34,7 +34,7 @@ country_event = {
 	id = fso.2
 	title = fso.2.t
 	desc = fso.2.d
-	 
+	picture = GFX_fso_senate_old
 
 	fire_only_once = yes
 	
@@ -94,7 +94,7 @@ country_event = {
 	id = fso.3
 	title = fso.3.t
 	desc = fso.3.d
-	 
+	picture = GFX_fso_senate_old
 
 	fire_only_once = yes
 	
@@ -154,7 +154,7 @@ country_event = {
 	id = fso.4
 	title = fso.4.t
 	desc = fso.4.d
-	 
+	picture = GFX_fso_senate_old
 
 	fire_only_once = yes
 	
@@ -214,7 +214,7 @@ country_event = {
 	id = fso.5
 	title = fso.5.t
 	desc = fso.5.d
-	 
+	picture = GFX_fso_senate_old
 
 	fire_only_once = yes
 	
@@ -274,7 +274,7 @@ country_event = {
 	id = fso.6
 	title = fso.6.t
 	desc = fso.6.d
-	
+	picture = GFX_fso_senate_old
 	
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -358,7 +358,7 @@ country_event = {
 	
 	trigger = {
 		has_completed_focus = FSO_order_69
-		has_government = friendship
+		has_government = neutrality
 		NOT = { has_country_flag = order_69_complete }
 	}
 	
@@ -476,7 +476,7 @@ country_event = {
 	option = {
 		name = fso.14.a
 		add_popularity = {
-			ideology = friendship
+			ideology = neutrality
 			popularity = 0.05
 		}
 		set_party_name = { ideology = communism long_name = CZE_assembly_long name = CZE_assembly }
@@ -549,7 +549,7 @@ country_event = {
 	option = {
 		name = fso.18.a
 		add_popularity = {
-			ideology = friendship
+			ideology = neutrality
 			popularity = 0.05
 		}
 	}
@@ -621,7 +621,7 @@ country_event = {
 	option = {
 		name = fso.22.a
 		add_popularity = {
-			ideology = friendship
+			ideology = neutrality
 			popularity = 0.05
 		}
 	}
@@ -693,7 +693,7 @@ country_event = {
 	option = {
 		name = fso.26.a
 		add_popularity = {
-			ideology = friendship
+			ideology = neutrality
 			popularity = 0.07
 		}
 	}
@@ -808,8 +808,8 @@ country_event = {
 				traits = { }
 			}
 			create_country_leader = {
-				name = "Zimmerson"
-				desc = "MODEMI_DESC"
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -883,8 +883,8 @@ country_event = {
 				traits = { }
 			}
 			create_country_leader = {
-				name = "Zimmerson"
-				desc = "MODEMI_DESC"
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -940,8 +940,8 @@ country_event = {
 				traits = { }
 			}
 			create_country_leader = {
-				name = "Zimmerson"
-				desc = "MODEMI_DESC"
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -1000,8 +1000,8 @@ country_event = {
 				traits = { }
 			}
 			create_country_leader = {
-				name = "Zimmerson"
-				desc = "MODEMI_DESC"
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -1105,8 +1105,8 @@ country_event = {
 				traits = { }
 			}
 			create_country_leader = {
-				name = "Zimmerson"
-				desc = "MODEMI_DESC"
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
@@ -2443,7 +2443,7 @@ country_event = {
 	id = fso.77
 	title = fso.77.t
 	desc = fso.77.d
-	
+	picture = GFX_fso_tank_commie
 	
 	fire_only_once = yes
 	
@@ -5167,3 +5167,61 @@ country_event = {
 	}
 }
 ########## EVENT FSO.135 IS TAKEN
+# A New Dawn - Start
+country_event = {
+	id = fso.136
+	title = fso.136.t
+	desc = fso.136.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = neutrality
+		NOT = { has_completed_focus = FSO_new_dawn }
+		focus_progress = {
+			focus = FSO_new_dawn
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.136.a
+		
+	}
+}
+# Dream of Unity - End
+country_event = {
+	id = fso.137
+	title = fso.137.t
+	desc = fso.137.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.137.a
+		
+		add_popularity = {
+			ideology = unaligned
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = friendship
+			popularity = 0.5
+		}
+		
+		set_party_name = { ideology = friendship long_name = CZE_neutrality_party_long name = CZE_neutrality_party }
+		set_party_name = { ideology = neutrality long_name = CZE_friendship_party_long name = CZE_friendship_party }
+		
+		set_politics = {
+			ruling_party = friendship
+		}
+		
+		remove_ideas = FSO_royalist
+		add_ideas = FSO_royalist_2
+		
+	}
+}
