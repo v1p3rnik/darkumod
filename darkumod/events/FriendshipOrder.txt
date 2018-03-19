@@ -5205,7 +5205,7 @@ country_event = {
 		name = fso.137.a
 		
 		add_popularity = {
-			ideology = unaligned
+			ideology = neutrality
 			popularity = -1
 		}
 		add_popularity = {
