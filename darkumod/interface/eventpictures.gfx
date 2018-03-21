@@ -48,6 +48,10 @@ spriteTypes = {
 		name = "GFX_fso_dobypact"
 		texturefile = "gfx/event_pictures/fso_dobypact.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_news_germany_mutual_support"
+		texturefile = "gfx/event_pictures/fso_news_germany_mutual_support.tga"
+	}
 	
 	################################################## VANILLA
 	

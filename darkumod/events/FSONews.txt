@@ -109,7 +109,7 @@ news_event = {
 	id = fsonews.4
 	title = fsonews.4.t 
 	desc = fsonews.4.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_germany_mutual_support
 	
 	major = yes
 	
