@@ -124,7 +124,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Isak Stierngranat"
 	picture = "Portrait_FSO_Isak.tga"
-	traits = { trait_reckless winter_specialist commando }
+	traits = { trait_reckless winter_specialist trait_mountaineer }
 	skill = 4
 	
 	attack_skill = 3
