@@ -52,6 +52,11 @@ spriteTypes = {
 		name = "GFX_fso_news_germany_mutual_support"
 		texturefile = "gfx/event_pictures/fso_news_germany_mutual_support.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_news_triumph_notrotsky"
+		texturefile = "gfx/event_pictures/fso_news_triumph_notrotsky.tga"
+	}
+	
 	
 	################################################## VANILLA
 	

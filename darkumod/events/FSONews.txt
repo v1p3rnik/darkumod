@@ -180,7 +180,7 @@ news_event = {
 	id = fsonews.6
 	title = fsonews.6.t 
 	desc = fsonews.6.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_triumph_notrotsky
 	
 	major = yes
 	
