@@ -1230,7 +1230,7 @@ country_event = {
 	id = fso.38
 	title = fso.38.t
 	desc = fso.38.d
-	
+	picture = GFX_fso_dobypact
 	
 	fire_only_once = yes
 	
@@ -1250,6 +1250,11 @@ country_event = {
 		SOV = {
 			add_ai_strategy = {
 				type = alliance
+				id = "CZE"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
 				id = "CZE"
 				value = 200
 			}
@@ -5178,9 +5183,9 @@ country_event = {
 	
 	trigger = {
 		has_government = neutrality
-		NOT = { has_completed_focus = FSO_new_dawn }
+		NOT = { has_completed_focus = FSO_worldly_spiritual }
 		focus_progress = {
-			focus = FSO_new_dawn
+			focus = FSO_worldly_spiritual
 			progress > 0.01
 		}
 	}

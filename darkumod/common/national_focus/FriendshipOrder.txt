@@ -1389,9 +1389,9 @@ focus_tree = {
 	}
 	
 	####################### FRIENDSHIP TREE ####################################
-	# A New Dawn
+	# Worldly And Spiritual Matters
 	focus = {
-		id = FSO_new_dawn
+		id = FSO_worldly_spiritual_matters
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_political_open }
 		x = 7

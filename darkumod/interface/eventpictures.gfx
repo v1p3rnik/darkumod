@@ -16,6 +16,40 @@ spriteTypes = {
 		name = "GFX_fso_senate_argument"
 		texturefile = "gfx/event_pictures/fso_senate_argument.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_news_allies_signed_peace"
+		texturefile = "gfx/event_pictures/fso_news_allies_signed_peace.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_annexes_paraguay"
+		texturefile = "gfx/event_pictures/fso_news_annexes_paraguay.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_forms_ussa"
+		texturefile = "gfx/event_pictures/fso_news_forms_ussa.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_found_trotsky"
+		texturefile = "gfx/event_pictures/fso_news_found_trotsky.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_protects_austria"
+		texturefile = "gfx/event_pictures/fso_news_protects_austria.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_relocated_argentina"
+		texturefile = "gfx/event_pictures/fso_news_relocated_argentina.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_triumph_europe_trotsky"
+		texturefile = "gfx/event_pictures/fso_news_triumph_europe_trotsky.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_dobypact"
+		texturefile = "gfx/event_pictures/fso_dobypact.tga"
+	}
+	
+	################################################## VANILLA
 	
 	spriteType = {
 		name = "GFX_report_event_canada_ronnie"

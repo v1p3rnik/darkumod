@@ -41,7 +41,7 @@ news_event = {
 	id = fsonews.2
 	title = fsonews.2.t 
 	desc = fsonews.2.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_found_trotsky
 	
 	major = yes
 	
@@ -75,7 +75,7 @@ news_event = {
 	id = fsonews.3
 	title = fsonews.3.t 
 	desc = fsonews.3.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_protects_austria
 	
 	major = yes
 	
@@ -207,7 +207,7 @@ news_event = {
 	id = fsonews.7
 	title = fsonews.7.t 
 	desc = fsonews.7.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_triumph_europe_trotsky
 	
 	major = yes
 	
@@ -241,7 +241,7 @@ news_event = {
 	id = fsonews.8
 	title = fsonews.8.t 
 	desc = fsonews.8.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_allies_signed_peace
 	
 	major = yes
 	
@@ -281,7 +281,7 @@ news_event = {
 	id = fsonews.9
 	title = fsonews.9.t 
 	desc = fsonews.9.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_relocated_argentina
 	
 	major = yes
 	
@@ -315,7 +315,7 @@ news_event = {
 	id = fsonews.10
 	title = fsonews.10.t 
 	desc = fsonews.10.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_forms_ussa
 	
 	major = yes
 	
@@ -342,7 +342,7 @@ news_event = {
 	id = fsonews.11
 	title = fsonews.11.t 
 	desc = fsonews.11.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_annexes_paraguay
 	
 	major = yes
 	

@@ -122,15 +122,15 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Polekov"
-	picture = "Portrait_FSO_Polekov.tga"
-	traits = { trait_reckless winter_specialist commando naval_invader }
+	name = "Isak Stierngranat"
+	picture = "Portrait_FSO_Isak.tga"
+	traits = { trait_reckless winter_specialist commando }
 	skill = 4
 	
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 5
 }
 
 create_corps_commander = {
