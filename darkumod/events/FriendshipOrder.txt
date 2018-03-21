@@ -5183,9 +5183,9 @@ country_event = {
 	
 	trigger = {
 		has_government = neutrality
-		NOT = { has_completed_focus = FSO_worldly_spiritual }
+		NOT = { has_completed_focus = FSO_what_matters }
 		focus_progress = {
-			focus = FSO_worldly_spiritual
+			focus = FSO_what_matters
 			progress > 0.01
 		}
 	}

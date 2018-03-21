@@ -1389,9 +1389,9 @@ focus_tree = {
 	}
 	
 	####################### FRIENDSHIP TREE ####################################
-	# Worldly And Spiritual Matters
+	# What Matters
 	focus = {
-		id = FSO_worldly_spiritual_matters
+		id = FSO_what_matters
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_political_open }
 		x = 7
@@ -1420,7 +1420,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_new_dawn_effect
+			custom_effect_tooltip = FSO_what_matters_effect
 			hidden_effect = { CZE = { country_event = { id = fso.137 } } }
 		}
 	}
