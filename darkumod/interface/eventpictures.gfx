@@ -56,6 +56,14 @@ spriteTypes = {
 		name = "GFX_fso_news_triumph_notrotsky"
 		texturefile = "gfx/event_pictures/fso_news_triumph_notrotsky.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_democratic_crowds"
+		texturefile = "gfx/event_pictures/fso_democratic_crowds.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_fascist_prosperity"
+		texturefile = "gfx/event_pictures/fso_fascist_prosperity.tga"
+	}
 	
 	
 	################################################## VANILLA
