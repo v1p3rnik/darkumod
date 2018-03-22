@@ -94,7 +94,7 @@ country_event = {
 	id = fso.3
 	title = fso.3.t
 	desc = fso.3.d
-	
+	picture = GFX_fso_friendship_festival_first
 
 	fire_only_once = yes
 	
@@ -5172,7 +5172,7 @@ country_event = {
 	}
 }
 ########## EVENT FSO.135 IS TAKEN
-# A New Dawn - Start
+# What Matters - Start
 country_event = {
 	id = fso.136
 	title = fso.136.t
@@ -5195,7 +5195,7 @@ country_event = {
 		
 	}
 }
-# Dream of Unity - End
+# What Matters - End
 country_event = {
 	id = fso.137
 	title = fso.137.t
@@ -5228,5 +5228,190 @@ country_event = {
 		remove_ideas = FSO_royalist
 		add_ideas = FSO_royalist_2
 		
+	}
+}
+# What Matters - Choice 1
+country_event = {
+	id = fso.138
+	title = fso.138.t
+	desc = fso.138.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = neutrality
+		NOT = { has_completed_focus = FSO_what_matters }
+		focus_progress = {
+			focus = FSO_what_matters
+			progress > 0.35
+		}
+	}
+	
+	option = { # Passive
+		name = fso.138.a
+		add_stability = 0.1
+		set_country_flag = fso_friendship_passive
+	}
+	option = { # Aggressive
+		name = fso.138.b
+		add_war_support = 0.1
+		set_country_flag = fso_friendship_aggressive
+	}
+}
+# What Matters - Choice 2
+country_event = {
+	id = fso.139
+	title = fso.139.t
+	desc = fso.139.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = neutrality
+		NOT = { has_completed_focus = FSO_what_matters }
+		focus_progress = {
+			focus = FSO_what_matters
+			progress > 0.65
+		}
+	}
+	
+	option = { # Passive
+		name = fso.139.a
+		
+	}
+	option = { # Aggressive
+		name = fso.139.b
+		
+	}
+}
+# Grand Embassy - Start
+country_event = {
+	id = fso.140
+	title = fso.140.t
+	desc = fso.140.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.140.a
+		
+	}
+}
+# Grand Embassy - End
+country_event = {
+	id = fso.141
+	title = fso.141.t
+	desc = fso.141.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.141.a
+		
+		
+		
+	}
+}
+# Perfect Couple - Start
+country_event = {
+	id = fso.142
+	title = fso.142.t
+	desc = fso.142.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_perfect_couple }
+		focus_progress = {
+			focus = FSO_perfect_couple
+			progress > 0.01
+		}
+	}
+	
+	option = { # Okay
+		name = fso.142.a
+		
+	}
+}
+# Perfect Couple - End
+country_event = {
+	id = fso.143
+	title = fso.143.t
+	desc = fso.143.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.143.a
+		
+		unlock_decision_category_tooltip = fso_friendship_relationships_category
+		
+	}
+}
+# Perfect Couple - Courting Target is Happy
+country_event = {
+	id = fso.144
+	title = fso.144.t
+	desc = fso.144.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.144.a
+		
+		fso_coup_target = {
+			add_popularity = {
+				ideology = friendship
+				popularity = 0.5
+			}
+			set_politics = {
+				ruling_party = friendship
+			}
+		}
+	}
+}
+# Perfect Couple - Courting Target is Not Super happy
+country_event = {
+	id = fso.145
+	title = fso.145.t
+	desc = fso.145.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.145.a
+		
+		fso_coup_target = {
+			start_civil_war = {
+				ideology = friendship
+				size = 0.5
+			}
+		}
 	}
 }

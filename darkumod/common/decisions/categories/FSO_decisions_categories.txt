@@ -26,10 +26,20 @@ fso_special_projects_category = {
 }
 
 fso_war_category = {
-	
-	icon = generic_prospect_for_resources
 
 	allowed = {
 		always = yes
+	}
+}
+
+fso_friendship_relationships_category = {
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		is_puppet = no
+		has_completed_focus = FSO_perfect_couple
 	}
 }

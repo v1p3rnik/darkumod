@@ -169,3 +169,152 @@ fso_war_category = {
 		}
 	}
 }
+
+fso_friendship_relationships_category = {
+
+	FSO_stalin_one = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			NOT = { has_country_flag = fso_courting_stalin }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = fso_courting_stalin
+				value = 0
+			}
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_stalin
+				value = 1
+			}
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_two = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = { flag = fso_courting_stalin value = 1 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_stalin
+				value = 1
+			}
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_three = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = { flag = fso_courting_stalin value = 2 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			clr_country_flag = fso_courting_stalin
+			set_country_flag = fso_stalin_courted
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_ask_out = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = { flag = fso_courting_stalin value = 3 }
+		}
+		
+		days_remove = 60
+		cost = 10
+		
+		complete_effect = {
+			SOV = { save_global_event_target_as = fso_coup_target }
+			if = {
+				
+				limit = {
+					CZE = { has_country_flag = { flag = fso_stalin_perfect_friend value = 3 } }
+				}
+				
+				country_event = { id = fso.144 } # Peacefully convert
+				
+				else = { 
+					country_event = { id = fso.145 } # Coup happens, you fail
+				} 
+			}
+		}
+		
+		remove_effect = {
+			
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+
+}
