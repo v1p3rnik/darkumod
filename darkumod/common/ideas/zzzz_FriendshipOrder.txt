@@ -61,6 +61,188 @@ ideas = {
 			}
 		}
 		
+		FSO_royalist_col_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				friendship_drift = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		FSO_royalist_ind_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				friendship_drift = 0.1
+				research_time_factor = -0.05
+			}
+		}
+		
+		FSO_royal_family_officer_corps = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.3
+				experience_gain_army = 0.05
+			}
+		}
+		
+		FSO_opened_italian_restaurants = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		FSO_spirit_of_friendship = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				war_support_factor = 0.4
+			}
+		}
+		
+		FSO_converted_to_shinto_buddhism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = state_shintoism
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		
+		FSO_friendship_austerity = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		FSO_maximum_purge = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = officers_purged
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.05
+				stability_factor = 0.3
+				drift_defence_factor = 0.5
+				enemy_partisan_effect = -0.4
+			}
+		}
+		
+		FSO_moderate_purge = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = officers_purged
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.025
+				stability_factor = 0.15
+				drift_defence_factor = 0.25
+				enemy_partisan_effect = -0.2
+			}
+		}
+		
 		FSO_communist_base = {
 		
 			allowed = {

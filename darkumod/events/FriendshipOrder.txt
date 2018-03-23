@@ -5225,8 +5225,7 @@ country_event = {
 			ruling_party = friendship
 		}
 		
-		remove_ideas = FSO_royalist
-		add_ideas = FSO_royalist_2
+		
 		
 	}
 }
@@ -5252,11 +5251,15 @@ country_event = {
 		name = fso.138.a
 		add_stability = 0.1
 		set_country_flag = fso_friendship_passive
+		remove_ideas = FSO_royalist
+		add_ideas = FSO_royalist_2
 	}
 	option = { # Aggressive
 		name = fso.138.b
 		add_war_support = 0.1
 		set_country_flag = fso_friendship_aggressive
+		remove_ideas = FSO_royalist
+		add_ideas = FSO_royalist_2
 	}
 }
 # What Matters - Choice 2
@@ -5277,12 +5280,16 @@ country_event = {
 		}
 	}
 	
-	option = { # Passive
+	option = { # Collectivism
 		name = fso.139.a
+		remove_ideas = FSO_royalist_2
+		add_ideas = FSO_royalist_col_1
 		
 	}
-	option = { # Aggressive
+	option = { # Individualism
 		name = fso.139.b
+		remove_ideas = FSO_royalist_2
+		add_ideas = FSO_royalist_ind_1
 		
 	}
 }
@@ -5323,9 +5330,328 @@ country_event = {
 	option = { # Okay
 		name = fso.141.a
 		
-		
+	}
+}
+# Grand Embassy - Germany
+country_event = {
+	id = fso.146
+	title = fso.146.t
+	desc = fso.146.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		NOT = { has_war_with = GER }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.2
+		}
+	}
+	
+	option = { # inspired by military engineering
+		name = fso.146.a
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+		add_tech_bonus = { ahead_reduction = 1 technology = basic_medium_tank }
+
+	}
+	option = { # inspired by rocketry
+		name = fso.146.b
+		trigger = {
+			has_country_flag = fso_friendship_passive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = rocketry }
+		add_tech_bonus = { ahead_reduction = 0.5 technology = experimental_rockets }
+
+	}
+	option = { # deal with Volkswagen
+		name = fso.146.c
+		trigger = {
+			has_idea = FSO_royalist_ind_1
+		}
+		add_offsite_building = { type = industrial_complex level = 2 }
 		
 	}
+	option = { # doctrine sharing
+		name = fso.146.dd
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mobile_warfare }
+		
+	}
+}
+# Grand Embassy - Soviet Union
+country_event = {
+	id = fso.147
+	title = fso.147.t
+	desc = fso.147.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		NOT = { has_war_with = SOV }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.4
+		}
+	}
+	
+	option = { # inspired by police state and purges
+		name = fso.147.a
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		custom_effect_tooltip = fso.147.tt
+		set_country_flag = fso_planning_purge
+
+	}
+	option = { # inspired by civilian industry
+		name = fso.147.b
+		trigger = {
+			has_country_flag = fso_friendship_passive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
+		add_tech_bonus = { ahead_reduction = 1 technology = dispersed_industry4 }
+
+	}
+	option = { # spread friendship in Soviet Communes
+		name = fso.147.c
+		trigger = {
+			has_idea = FSO_royalist_col_1
+		}
+		add_offsite_building = { type = industrial_complex level = 6 }
+		
+	}
+	option = { # doctrine sharing
+		name = fso.147.dd
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mass_assault }
+
+	}
+}
+# Grand Embassy - Italy
+country_event = {
+	id = fso.148
+	title = fso.148.t
+	desc = fso.148.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		NOT = { has_war_with = ITA }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.5
+		}
+	}
+	
+	option = { # inspired by the soldier king
+		name = fso.148.a
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_ideas = FSO_royal_family_officer_corps
+
+	}
+	option = { # inspired by cuisine
+		name = fso.148.b
+		trigger = {
+			has_country_flag = fso_friendship_passive
+		}
+		add_ideas = FSO_opened_italian_restaurants
+
+	}
+	option = { # deal with Fiat
+		name = fso.148.c
+		trigger = {
+			has_idea = FSO_royalist_ind_1
+		}
+		add_offsite_building = { type = industrial_complex level = 2 }
+		
+	}
+	option = { # doctrine sharing
+		name = fso.148.dd
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_fleet_in_being }
+
+	}
+}
+# Grand Embassy - USA
+country_event = {
+	id = fso.149
+	title = fso.149.t
+	desc = fso.149.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		NOT = { has_war_with = USA }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.6
+		}
+	}
+	
+	option = { # inspired by the american nationalism
+		name = fso.149.a
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_ideas = FSO_spirit_of_friendship
+		
+	}
+	option = { # inspired by the conveyor belts
+		name = fso.149.b
+		trigger = {
+			has_country_flag = fso_friendship_passive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
+		add_tech_bonus = { ahead_reduction = 1 technology = assembly_line_production }
+
+	}
+	option = { # deal with american scientific community
+		name = fso.149.c
+		trigger = {
+			has_idea = FSO_royalist_ind_1
+		}
+		add_research_slot = 1
+		
+	}
+	option = { # doctrine sharing
+		name = fso.149.dd
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_base_strike }
+
+	}
+}
+# Grand Embassy - Japan
+country_event = {
+	id = fso.150
+	title = fso.150.t
+	desc = fso.150.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		NOT = { has_war_with = JAP }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.8
+		}
+	}
+	
+	option = { # inspired by state shintoism
+		name = fso.150.a
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_ideas = FSO_converted_to_shinto_buddhism
+		
+	}
+	option = { # inspired by imperial austerity
+		name = fso.150.b
+		trigger = {
+			has_country_flag = fso_friendship_passive
+		}
+		add_ideas = FSO_friendship_austerity
+
+	}
+	option = { # deal with Zaibatsus
+		name = fso.150.c
+		trigger = {
+			has_idea = FSO_royalist_ind_1
+		}
+		add_offsite_building = { type = industrial_complex level = 2 }
+		
+	}
+	option = { # doctrine sharing
+		name = fso.150.dd
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_battlefield_support }
+
+	}
+}
+# Grand Embassy - Purges or no?
+country_event = {
+	id = fso.151
+	title = fso.151.t
+	desc = fso.151.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_grand_adventure
+		has_country_flag = fso_planning_purge
+	}
+	
+	option = { # purge everyone except for puritan friendshipists
+		name = fso.151.a
+		clr_country_flag = fso_planning_purge
+		add_ideas = FSO_maximum_purge
+		add_popularity = {
+			ideology = fascism
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -1
+		}
+	}
+	option = { # purge only the most notorious opposition
+		name = fso.151.b
+		clr_country_flag = fso_planning_purge
+		add_ideas = FSO_moderate_purge
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+	option = { # dont purge anyone, I reconsidered
+		name = fso.151.c
+		clr_country_flag = fso_planning_purge
+		
+	}
+	
 }
 # Perfect Couple - Start
 country_event = {
@@ -5368,6 +5694,24 @@ country_event = {
 		
 	}
 }
+# Perfect Couple - Save Event Target
+country_event = {
+	id = fso.152
+	title = fso.152.t
+	desc = fso.152.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Okay
+		name = fso.152.a
+		save_global_event_target_as = fso_coup_target
+		
+	}
+}
+
 # Perfect Couple - Courting Target is Happy
 country_event = {
 	id = fso.144
@@ -5382,7 +5726,7 @@ country_event = {
 	option = { # Okay
 		name = fso.144.a
 		
-		fso_coup_target = {
+		event_target:fso_coup_target = {
 			add_popularity = {
 				ideology = friendship
 				popularity = 0.5
@@ -5391,6 +5735,7 @@ country_event = {
 				ruling_party = friendship
 			}
 		}
+		clear_global_event_target = fso_coup_target
 	}
 }
 # Perfect Couple - Courting Target is Not Super happy
@@ -5407,11 +5752,13 @@ country_event = {
 	option = { # Okay
 		name = fso.145.a
 		
-		fso_coup_target = {
+		event_target:fso_coup_target = {
 			start_civil_war = {
 				ideology = friendship
 				size = 0.5
 			}
 		}
+		clear_global_event_target = fso_coup_target
 	}
 }
+############ EVENTS 146-152 TAKEN
