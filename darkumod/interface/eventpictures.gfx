@@ -68,7 +68,10 @@ spriteTypes = {
 		name = "GFX_fso_friendship_festival_first"
 		texturefile = "gfx/event_pictures/fso_friendship_festival_first.tga"
 	}
-	
+	spriteType = {
+		name = "GFX_fso_glorious_revolution"
+		texturefile = "gfx/event_pictures/fso_glorious_revolution.tga"
+	}
 	
 	################################################## VANILLA
 	

@@ -750,7 +750,7 @@ country_event = {
 	id = fso.28
 	title = fso.28.t
 	desc = fso.28.d
-	
+	picture = GFX_fso_glorious_revolution
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -898,7 +898,7 @@ country_event = {
 	id = fso.30
 	title = fso.30.t
 	desc = fso.30.d
-	
+	picture = GFX_fso_glorious_revolution
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1045,7 +1045,7 @@ country_event = {
 	id = fso.33
 	title = fso.33.t
 	desc = fso.33.d
-	
+	picture = GFX_fso_glorious_revolution
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3819,7 +3819,7 @@ country_event = {
 	id = fso.99
 	title = fso.99.t
 	desc = fso.99.d
-	
+	picture = GFX_fso_glorious_revolution
 	
 	fire_only_once = yes
 	
@@ -4143,7 +4143,7 @@ country_event = {
 	id = fso.107
 	title = fso.107.t
 	desc = fso.107.d
-	
+	picture = GFX_fso_glorious_revolution
 	
 	fire_only_once = yes
 	
@@ -4211,7 +4211,7 @@ country_event = {
 	id = fso.109
 	title = fso.109.t
 	desc = fso.109.d
-	
+	picture = GFX_fso_glorious_revolution
 	
 	fire_only_once = yes
 	
