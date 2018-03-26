@@ -7,7 +7,7 @@ news_event = {
 	id = fsonews.1
 	title = fsonews.1.t
 	desc = fsonews.1.d 
-	picture = GFX_news_event_001
+	picture = GFX_fso_news_join_comintern
 	
 	major = yes
 	
