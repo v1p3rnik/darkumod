@@ -72,6 +72,26 @@ spriteTypes = {
 		name = "GFX_fso_glorious_revolution"
 		texturefile = "gfx/event_pictures/fso_glorious_revolution.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_communist_crowds"
+		texturefile = "gfx/event_pictures/fso_communist_crowds.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_einstein"
+		texturefile = "gfx/event_pictures/fso_einstein.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_einstein_escaped"
+		texturefile = "gfx/event_pictures/fso_einstein_escaped.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_einstein_captured"
+		texturefile = "gfx/event_pictures/fso_einstein_captured.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_join_comintern"
+		texturefile = "gfx/event_pictures/fso_news_join_comintern.tga"
+	}
 	
 	################################################## VANILLA
 	
