@@ -308,6 +308,7 @@ fso_friendship_relationships_category = {
 				
 				limit = {
 					CZE = { has_country_flag = { flag = fso_stalin_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
 				}
 				
 				country_event = { id = fso.144 } # Peacefully convert
@@ -497,6 +498,7 @@ fso_friendship_relationships_category = {
 				
 				limit = {
 					CZE = { has_country_flag = { flag = fso_hitler_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
 				}
 				
 				country_event = { id = fso.144 } # Peacefully convert
@@ -649,6 +651,7 @@ fso_friendship_relationships_category = {
 				
 				limit = {
 					CZE = { has_country_flag = { flag = fso_mussolini_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
 				}
 				
 				country_event = { id = fso.144 } # Peacefully convert
@@ -801,6 +804,7 @@ fso_friendship_relationships_category = {
 				
 				limit = {
 					CZE = { has_country_flag = { flag = fso_roosevelt_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
 				}
 				
 				country_event = { id = fso.144 } # Peacefully convert
@@ -953,6 +957,7 @@ fso_friendship_relationships_category = {
 				
 				limit = {
 					CZE = { has_country_flag = { flag = fso_hirohito_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
 				}
 				
 				country_event = { id = fso.144 } # Peacefully convert

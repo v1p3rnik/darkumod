@@ -5689,7 +5689,7 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.143.a
-		
+		custom_effect_tooltip = fso.143.tt
 		unlock_decision_category_tooltip = fso_friendship_relationships_category
 		
 	}
@@ -5700,6 +5700,7 @@ country_event = {
 	title = fso.152.t
 	desc = fso.152.d
 	
+	hidden = yes
 	
 	fire_only_once = yes
 	
@@ -5725,7 +5726,7 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.144.a
-		
+		set_country_flag = fso_besties
 		event_target:fso_coup_target = {
 			start_civil_war = {
 				ideology = friendship
