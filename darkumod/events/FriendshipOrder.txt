@@ -777,10 +777,10 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
 			expire = "1965.1.1"
 			ideology = marxism
-			traits = { }
+			traits = { trap_master }
 		}
 		hidden_effect = {
 			create_country_leader = {
@@ -851,10 +851,10 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
 			expire = "1965.1.1"
 			ideology = marxism
-			traits = { }
+			traits = { trap_master }
 		}
 		add_stability = -0.4
 		hidden_effect = {
@@ -908,10 +908,10 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
 			expire = "1965.1.1"
 			ideology = marxism
-			traits = { }
+			traits = { trap_master }
 		}
 		add_stability = 0.10
 		hidden_effect = {
@@ -968,10 +968,10 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
 			expire = "1965.1.1"
 			ideology = marxism
-			traits = { }
+			traits = { trap_master }
 		}
 		add_stability = 0.10
 		hidden_effect = {
@@ -1073,10 +1073,10 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
 			expire = "1965.1.1"
 			ideology = marxism
-			traits = { }
+			traits = { trap_master }
 		}
 		add_stability = -0.2
 		hidden_effect = {
@@ -4233,13 +4233,15 @@ country_event = {
 			ideology = communism
 			size = 0.5
 		}
-		create_country_leader = {
-			name = "Ladifour"
-			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
-			expire = "1965.1.1"
-			ideology = marxism
-			traits = { }
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ladifour"
+				desc = "LADIFOUR_DESC"
+				picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = { trap_master }
+			}
 		}
 		random_country = {
 			limit = {
@@ -4266,18 +4268,21 @@ country_event = {
 	}
 	option = { # Play as Church
 		name = fso.109.b
+		custom_effect_tooltip = fso.109.tt
 		remove_ideas = FSO_church_of_revolution_shunned
 		start_civil_war = {
 			ideology = communism
 			size = 0.5
 		}
-		create_country_leader = {
-			name = "Ladifour"
-			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
-			expire = "1965.1.1"
-			ideology = marxism
-			traits = { }
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ladifour"
+				desc = "LADIFOUR_DESC"
+				picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = { trap_master }
+			}
 		}
 		random_country = {
 			limit = {
@@ -4300,8 +4305,9 @@ country_event = {
 				ideology = revolution_r
 				traits = { }
 			}
+			change_tag_from = CZE
 		}
-		change_tag_from = CZE
+		
 	}
 }
 # National Defense Act - Start
