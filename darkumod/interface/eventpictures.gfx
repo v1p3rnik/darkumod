@@ -92,6 +92,11 @@ spriteTypes = {
 		name = "GFX_fso_news_join_comintern"
 		texturefile = "gfx/event_pictures/fso_news_join_comintern.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_news_democratic_berlin"
+		texturefile = "gfx/event_pictures/fso_news_democratic_berlin.tga"
+	}
+	
 	
 	################################################## VANILLA
 	
