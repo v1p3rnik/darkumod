@@ -6027,7 +6027,7 @@ country_event = {
 	
 	option = { 
 		name = fso.162.a
-		custom_effect_tooltip = fso.162.tt
+		custom_effect_tooltip = fso.155.tt
 		modify_country_flag = {
 			flag = fso_hitler_perfect_friend
 			value = 1
@@ -6047,7 +6047,7 @@ country_event = {
 	
 	option = { 
 		name = fso.161.a
-		custom_effect_tooltip = fso.161.tt
+		custom_effect_tooltip = fso.156.tt
 		
 	}
 }
@@ -6064,7 +6064,7 @@ country_event = {
 	
 	option = { 
 		name = fso.163.a
-		custom_effect_tooltip = fso.163.tt
+		custom_effect_tooltip = fso.156.tt
 		
 	}
 }
@@ -6081,7 +6081,7 @@ country_event = {
 	
 	option = { 
 		name = fso.160.a
-		custom_effect_tooltip = fso.160.tt
+		custom_effect_tooltip = fso.158.tt
 		modify_country_flag = {
 			flag = fso_hitler_disgust
 			value = -1
@@ -6137,7 +6137,7 @@ country_event = {
 	
 	option = { 
 		name = fso.168.a
-		custom_effect_tooltip = fso.168.tt
+		custom_effect_tooltip = fso.155.tt
 		modify_country_flag = {
 			flag = fso_hitler_perfect_friend
 			value = 1
@@ -6157,7 +6157,7 @@ country_event = {
 	
 	option = { 
 		name = fso.165.a
-		custom_effect_tooltip = fso.165.tt
+		custom_effect_tooltip = fso.156.tt
 		
 	}
 }
@@ -6174,7 +6174,7 @@ country_event = {
 	
 	option = { 
 		name = fso.167.a
-		custom_effect_tooltip = fso.167.tt
+		custom_effect_tooltip = fso.156.tt
 		
 	}
 }
@@ -6191,7 +6191,7 @@ country_event = {
 	
 	option = { 
 		name = fso.166.a
-		custom_effect_tooltip = fso.166.tt
+		custom_effect_tooltip = fso.158.tt
 		modify_country_flag = {
 			flag = fso_hitler_disgust
 			value = -1
@@ -6247,7 +6247,7 @@ country_event = {
 	
 	option = { 
 		name = fso.171.a
-		custom_effect_tooltip = fso.171.tt
+		custom_effect_tooltip = fso.155.tt
 		modify_country_flag = {
 			flag = fso_hitler_perfect_friend
 			value = 1
@@ -6267,7 +6267,7 @@ country_event = {
 	
 	option = { 
 		name = fso.170.a
-		custom_effect_tooltip = fso.170.tt
+		custom_effect_tooltip = fso.156.tt
 		
 	}
 }
@@ -6284,7 +6284,7 @@ country_event = {
 	
 	option = { 
 		name = fso.173.a
-		custom_effect_tooltip = fso.173.tt
+		custom_effect_tooltip = fso.156.tt
 		
 	}
 }
@@ -6301,7 +6301,7 @@ country_event = {
 	
 	option = { 
 		name = fso.172.a
-		custom_effect_tooltip = fso.172.tt
+		custom_effect_tooltip = fso.158.tt
 		modify_country_flag = {
 			flag = fso_hitler_disgust
 			value = -1
@@ -6309,3 +6309,897 @@ country_event = {
 	}
 }
 ############ HITLER BLOCK END ################
+############ STALIN FRIENDSHIP BLOCK ###################
+# Perfect Couple - Stalin 1
+country_event = {
+	id = fso.174
+	title = fso.174.t
+	desc = fso.174.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = { flag = fso_stalin_disgust value = 2 }
+		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
+	}
+	
+	option = { # Perfect Option
+		name = fso.174.a
+		hidden_effect = {
+			country_event = { id = fso.175 }
+		}
+	}
+	option = { # OK
+		name = fso.174.b
+		hidden_effect = {
+			country_event = { id = fso.176 }
+		}
+	}
+	option = { # OK
+		name = fso.174.c
+		hidden_effect = {
+			country_event = { id = fso.177 }
+		}
+	}
+	option = { # Disgust
+		name = fso.174.dd
+		hidden_effect = {
+			country_event = { id = fso.178 }
+		}
+	}
+}
+# Perfect Couple - Stalin 1 perfect
+country_event = {
+	id = fso.175
+	title = fso.175.t
+	desc = fso.175.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.175.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_stalin_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Stalin 1 OK 1
+country_event = {
+	id = fso.176
+	title = fso.176.t
+	desc = fso.176.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.176.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 1 OK 2
+country_event = {
+	id = fso.177
+	title = fso.177.t
+	desc = fso.177.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.177.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 1 disgust
+country_event = {
+	id = fso.178
+	title = fso.178.t
+	desc = fso.178.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.178.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
+	}
+}
+# Perfect Couple - Stalin 2
+country_event = {
+	id = fso.179
+	title = fso.179.t
+	desc = fso.179.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Disgust
+		name = fso.179.a
+		hidden_effect = {
+			country_event = { id = fso.180 }
+		}
+	}
+	option = { # OK
+		name = fso.179.b
+		hidden_effect = {
+			country_event = { id = fso.181 }
+		}
+	}
+	option = { # Perfect
+		name = fso.179.c
+		hidden_effect = {
+			country_event = { id = fso.182 }
+		}
+	}
+	option = { # OK
+		name = fso.179.dd
+		hidden_effect = {
+			country_event = { id = fso.183 }
+		}
+	}
+}
+# Perfect Couple - Stalin 2 perfect
+country_event = {
+	id = fso.182
+	title = fso.182.t
+	desc = fso.182.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.182.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_stalin_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Stalin 2 OK 1
+country_event = {
+	id = fso.181
+	title = fso.181.t
+	desc = fso.181.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.181.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 2 OK 2
+country_event = {
+	id = fso.183
+	title = fso.183.t
+	desc = fso.183.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.183.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 2 disgust
+country_event = {
+	id = fso.180
+	title = fso.180.t
+	desc = fso.180.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.180.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
+	}
+}
+# Perfect Couple - Stalin 3
+country_event = {
+	id = fso.184
+	title = fso.184.t
+	desc = fso.184.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # OK
+		name = fso.184.a
+		hidden_effect = {
+			country_event = { id = fso.185 }
+		}
+	}
+	option = { # Disgust
+		name = fso.184.b
+		hidden_effect = {
+			country_event = { id = fso.186 }
+		}
+	}
+	option = { # OK
+		name = fso.184.c
+		hidden_effect = {
+			country_event = { id = fso.187 }
+		}
+	}
+	option = { # Perfect
+		name = fso.184.dd
+		hidden_effect = {
+			country_event = { id = fso.188 }
+		}
+	}
+}
+# Perfect Couple - Stalin 3 perfect
+country_event = {
+	id = fso.188
+	title = fso.188.t
+	desc = fso.188.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.188.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_stalin_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Stalin 3 OK 1
+country_event = {
+	id = fso.185
+	title = fso.185.t
+	desc = fso.185.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.185.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 3 OK 2
+country_event = {
+	id = fso.187
+	title = fso.187.t
+	desc = fso.187.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.187.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 3 disgust
+country_event = {
+	id = fso.186
+	title = fso.186.t
+	desc = fso.186.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.186.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
+	}
+}
+# Perfect Couple - Stalin 4
+country_event = {
+	id = fso.189
+	title = fso.189.t
+	desc = fso.189.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # OK
+		name = fso.189.a
+		hidden_effect = {
+			country_event = { id = fso.190 }
+		}
+	}
+	option = { # Perfect
+		name = fso.189.b
+		hidden_effect = {
+			country_event = { id = fso.191 }
+		}
+	}
+	option = { # Disgust
+		name = fso.189.c
+		hidden_effect = {
+			country_event = { id = fso.192 }
+		}
+	}
+	option = { # OK
+		name = fso.189.dd
+		hidden_effect = {
+			country_event = { id = fso.193 }
+		}
+	}
+}
+# Perfect Couple - Stalin 4 perfect
+country_event = {
+	id = fso.191
+	title = fso.191.t
+	desc = fso.191.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.191.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_stalin_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Stalin 4 OK 1
+country_event = {
+	id = fso.190
+	title = fso.190.t
+	desc = fso.190.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.190.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 4 OK 2
+country_event = {
+	id = fso.193
+	title = fso.193.t
+	desc = fso.193.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.193.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Stalin 4 disgust
+country_event = {
+	id = fso.192
+	title = fso.192.t
+	desc = fso.192.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.192.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
+	}
+}
+############ STALIN BLOCK END ################
+############ MUSSOLINI FRIENDSHIP BLOCK ###################
+# Perfect Couple - Mussolini 1
+country_event = {
+	id = fso.194
+	title = fso.194.t
+	desc = fso.194.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
+		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
+	}
+	
+	option = { # Perfect Option
+		name = fso.194.a
+		hidden_effect = {
+			country_event = { id = fso.195 }
+		}
+	}
+	option = { # OK
+		name = fso.194.b
+		hidden_effect = {
+			country_event = { id = fso.196 }
+		}
+	}
+	option = { # OK
+		name = fso.194.c
+		hidden_effect = {
+			country_event = { id = fso.197 }
+		}
+	}
+	option = { # Disgust
+		name = fso.194.dd
+		hidden_effect = {
+			country_event = { id = fso.198 }
+		}
+	}
+}
+# Perfect Couple - Mussolini 1 perfect
+country_event = {
+	id = fso.195
+	title = fso.195.t
+	desc = fso.195.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.195.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_mussolini_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Mussolini 1 OK 1
+country_event = {
+	id = fso.196
+	title = fso.196.t
+	desc = fso.196.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.196.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 1 OK 2
+country_event = {
+	id = fso.197
+	title = fso.197.t
+	desc = fso.197.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.197.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 1 disgust
+country_event = {
+	id = fso.198
+	title = fso.198.t
+	desc = fso.198.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.198.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
+	}
+}
+# Perfect Couple - Mussolini 2
+country_event = {
+	id = fso.199
+	title = fso.199.t
+	desc = fso.199.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Disgust
+		name = fso.199.a
+		hidden_effect = {
+			country_event = { id = fso.200 }
+		}
+	}
+	option = { # OK
+		name = fso.199.b
+		hidden_effect = {
+			country_event = { id = fso.201 }
+		}
+	}
+	option = { # Perfect
+		name = fso.199.c
+		hidden_effect = {
+			country_event = { id = fso.202 }
+		}
+	}
+	option = { # OK
+		name = fso.199.dd
+		hidden_effect = {
+			country_event = { id = fso.203 }
+		}
+	}
+}
+# Perfect Couple - Mussolini 2 perfect
+country_event = {
+	id = fso.202
+	title = fso.202.t
+	desc = fso.202.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.202.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_mussolini_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Mussolini 2 OK 1
+country_event = {
+	id = fso.201
+	title = fso.201.t
+	desc = fso.201.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.201.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 2 OK 2
+country_event = {
+	id = fso.203
+	title = fso.203.t
+	desc = fso.203.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.203.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 2 disgust
+country_event = {
+	id = fso.200
+	title = fso.200.t
+	desc = fso.200.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.200.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
+	}
+}
+# Perfect Couple - Mussolini 3
+country_event = {
+	id = fso.204
+	title = fso.204.t
+	desc = fso.204.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # OK
+		name = fso.204.a
+		hidden_effect = {
+			country_event = { id = fso.205 }
+		}
+	}
+	option = { # Disgust
+		name = fso.204.b
+		hidden_effect = {
+			country_event = { id = fso.206 }
+		}
+	}
+	option = { # OK
+		name = fso.204.c
+		hidden_effect = {
+			country_event = { id = fso.207 }
+		}
+	}
+	option = { # Perfect
+		name = fso.204.dd
+		hidden_effect = {
+			country_event = { id = fso.208 }
+		}
+	}
+}
+# Perfect Couple - Mussolini 3 perfect
+country_event = {
+	id = fso.208
+	title = fso.208.t
+	desc = fso.208.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.208.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_mussolini_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Mussolini 3 OK 1
+country_event = {
+	id = fso.205
+	title = fso.205.t
+	desc = fso.205.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.205.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 3 OK 2
+country_event = {
+	id = fso.207
+	title = fso.207.t
+	desc = fso.207.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.207.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 3 disgust
+country_event = {
+	id = fso.206
+	title = fso.206.t
+	desc = fso.206.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.206.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
+	}
+}
+# Perfect Couple - Mussolini 4
+country_event = {
+	id = fso.209
+	title = fso.209.t
+	desc = fso.209.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # OK
+		name = fso.209.a
+		hidden_effect = {
+			country_event = { id = fso.210 }
+		}
+	}
+	option = { # Perfect
+		name = fso.209.b
+		hidden_effect = {
+			country_event = { id = fso.211 }
+		}
+	}
+	option = { # Disgust
+		name = fso.209.c
+		hidden_effect = {
+			country_event = { id = fso.212 }
+		}
+	}
+	option = { # OK
+		name = fso.209.dd
+		hidden_effect = {
+			country_event = { id = fso.213 }
+		}
+	}
+}
+# Perfect Couple - Mussolini 4 perfect
+country_event = {
+	id = fso.211
+	title = fso.211.t
+	desc = fso.211.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.211.a
+		custom_effect_tooltip = fso.155.tt
+		modify_country_flag = {
+			flag = fso_mussolini_perfect_friend
+			value = 1
+		}
+	}
+}
+# Perfect Couple - Mussolini 4 OK 1
+country_event = {
+	id = fso.210
+	title = fso.210.t
+	desc = fso.210.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.210.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 4 OK 2
+country_event = {
+	id = fso.213
+	title = fso.213.t
+	desc = fso.213.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.213.a
+		custom_effect_tooltip = fso.156.tt
+		
+	}
+}
+# Perfect Couple - Mussolini 4 disgust
+country_event = {
+	id = fso.212
+	title = fso.212.t
+	desc = fso.212.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.212.a
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
+	}
+}
+############ MUSSOLINI BLOCK END ################
