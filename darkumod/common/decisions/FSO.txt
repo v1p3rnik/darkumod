@@ -587,6 +587,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_mussolini
 				value = 1
 			}
+			country_event = { id = fso.194 }
 		}
 		
 		ai_will_do = {
@@ -621,39 +622,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_mussolini
 				value = 1
 			}
-		}
-		
-		ai_will_do = {
-		
-		}
-	}
-	FSO_mussolini_three = {
-
-		icon = infiltrate_state
-
-		visible = {
-			has_government = friendship
-			has_completed_focus = FSO_perfect_couple
-			NOT = { has_country_flag = fso_mussolini_enemy }
-			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
-		}
-		
-		available = {
-			NOT = { has_war_with = ITA }
-			has_country_flag = { flag = fso_courting_mussolini value = 2 }
-		}
-	
-		days_remove = 30
-		cost = 10
-		
-		complete_effect = {
-			
-		}
-		
-		remove_effect = {
-			clr_country_flag = fso_courting_mussolini
-			set_country_flag = fso_mussolini_courted
-			
+			country_event = { id = fso.199 }
 		}
 		
 		ai_will_do = {
@@ -688,7 +657,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_mussolini
 				value = 1
 			}
-			country_event = { id = fso.164 }
+			country_event = { id = fso.204 }
 		}
 		
 		ai_will_do = {
@@ -721,7 +690,7 @@ fso_friendship_relationships_category = {
 		remove_effect = {
 			clr_country_flag = fso_courting_mussolini
 			set_country_flag = fso_mussolini_courted
-			country_event = { id = fso.169 }
+			country_event = { id = fso.209 }
 		}
 		
 		ai_will_do = {
@@ -808,6 +777,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_roosevelt
 				value = 1
 			}
+			country_event = { id = fso.214 }
 		}
 		
 		ai_will_do = {
@@ -842,6 +812,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_roosevelt
 				value = 1
 			}
+			country_event = { id = fso.219 }
 		}
 		
 		ai_will_do = {
@@ -872,9 +843,44 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_roosevelt
+				value = 1
+			}
+			country_event = { id = fso.224 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_roosevelt_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_roosevelt_enemy }
+			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+			has_country_flag = { flag = fso_courting_roosevelt value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
 			clr_country_flag = fso_courting_roosevelt
 			set_country_flag = fso_roosevelt_courted
-			
+			country_event = { id = fso.229 }
 		}
 		
 		ai_will_do = {
@@ -961,6 +967,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_hirohito
 				value = 1
 			}
+			country_event = { id = fso.234 }
 		}
 		
 		ai_will_do = {
@@ -995,6 +1002,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_hirohito
 				value = 1
 			}
+			country_event = { id = fso.239 }
 		}
 		
 		ai_will_do = {
@@ -1025,9 +1033,44 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hirohito
+				value = 1
+			}
+			country_event = { id = fso.243 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hirohito_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hirohito_enemy }
+			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = JAP }
+			has_country_flag = { flag = fso_courting_hirohito value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
 			clr_country_flag = fso_courting_hirohito
 			set_country_flag = fso_hirohito_courted
-			
+			country_event = { id = fso.249 }
 		}
 		
 		ai_will_do = {
