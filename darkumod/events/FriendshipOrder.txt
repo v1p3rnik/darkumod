@@ -8384,6 +8384,7 @@ country_event = {
 		name = fso.261.a
 		army_experience = 30
 		set_technology = { praetorians_tech = 1 }
+		custom_effect_tooltip = fso.261.tt
 		hidden_effect = { load_oob = CZE_PRAETORIANS }
 		add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 50 producer = CZE }
 	}
