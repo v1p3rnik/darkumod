@@ -8241,7 +8241,6 @@ country_event = {
 		}
 		add_timed_idea = { idea = FSO_war_fervour days = 140 }
 	}
-	}
 }
 # Project Destiny - Democrats
 country_event = {
@@ -8322,4 +8321,71 @@ country_event = {
 		add_stability = 0.1
 	}
 	
+} 
+# The Playa Achievement Event
+country_event = {
+	id = fso.259
+	title = fso.259.t
+	desc = fso.259.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			has_country_flag = fso_courting_stalin
+			has_country_flag = fso_courting_hitler
+			has_country_flag = fso_courting_mussolini
+			has_country_flag = fso_courting_roosevelt
+			has_country_flag = fso_courting_hirohito
+		}
+	}
+	
+	option = { 
+		name = fso.259.a
+		add_country_leader_trait = the_playa
+	}
 }
+# Long Distance Relations - Start
+country_event = {
+	id = fso.260
+	title = fso.260.t
+	desc = fso.260.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_long_distance }
+		focus_progress = {
+			focus = FSO_long_distance
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.260.a
+		
+	}
+}
+# Long Distance Relations - End
+country_event = {
+	id = fso.261
+	title = fso.261.t
+	desc = fso.261.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.261.a
+		army_experience = 30
+		set_technology = { praetorians_tech = 1 }
+		hidden_effect = { load_oob = CZE_PRAETORIANS }
+		add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 50 producer = CZE }
+	}
+	
+} 

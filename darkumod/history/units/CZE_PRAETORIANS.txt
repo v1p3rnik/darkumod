@@ -1,0 +1,100 @@
+﻿division_template = {
+	name = "Praetorian Guardsmen"
+	priority = 2
+
+	regiments = {
+		praetorian_guard = { x = 0 y = 0 }
+		praetorian_guard = { x = 0 y = 1 }
+		praetorian_guard = { x = 0 y = 2 }
+		praetorian_guard = { x = 0 y = 3 }
+			
+	    praetorian_guard = { x = 1 y = 0 }
+		praetorian_guard = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+			
+	    praetorian_guard = { x = 2 y = 0 }
+		praetorian_guard = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+
+	}
+	support = {
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Praetorians Airborne"
+	priority = 2
+
+	regiments = {
+		praetorian_paratroopers = { x = 0 y = 0 }
+		praetorian_paratroopers = { x = 0 y = 1 }
+		praetorian_paratroopers = { x = 0 y = 2 }
+		praetorian_paratroopers = { x = 0 y = 3 }
+		praetorian_paratroopers = { x = 0 y = 4 }
+	    
+	}
+	support = {
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "Praetorian Guardsmen I"
+		location = 11542  
+		division_template = "Praetorian Guardsmen"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Guardsmen II"
+		location = 11542  
+		division_template = "Praetorian Guardsmen"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Guardsmen III"
+		location = 11542  
+		division_template = "Praetorian Guardsmen"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Paratroopers"
+		location = 11542  
+		division_template = "Praetorians Airborne"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Paratroopers"
+		location = 11542  
+		division_template = "Praetorians Airborne"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Paratroopers"
+		location = 11542  
+		division_template = "Praetorians Airborne"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Paratroopers"
+		location = 11542  
+		division_template = "Praetorians Airborne"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Paratroopers"
+		location = 11542  
+		division_template = "Praetorians Airborne"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Praetorian Paratroopers"
+		location = 11542  
+		division_template = "Praetorians Airborne"
+		start_experience_factor = 1.0
+	}
+	
+}

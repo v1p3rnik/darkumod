@@ -1500,7 +1500,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_perfect_couple }
 		x = 7
-		y = 6
+		y = 8
 		
 
 		cost = 10
@@ -1526,7 +1526,42 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FSO_project_destiny_effect
-			hidden_effect = { CZE = { country_event = { id = fso.257 } } }
+			hidden_effect = { CZE = { country_event = { id = fso.258 } } }
+		}
+	}
+	# Long Distance Relations
+	focus = {
+		id = FSO_long_distance
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_project_destiny }
+		x = 7
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_long_distance_effect
+			hidden_effect = { CZE = { country_event = { id = fso.261 } } }
 		}
 	}
 	

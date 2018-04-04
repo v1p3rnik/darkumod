@@ -1,0 +1,20 @@
+technologies = {
+	
+	praetorians_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			praetorian_guard
+			praetorian_paratroopers
+		}
+		enable_equipments = {
+			praetorian_equipment_0
+		}
+	}
+}
