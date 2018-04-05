@@ -43,3 +43,15 @@ fso_friendship_relationships_category = {
 		has_completed_focus = FSO_perfect_couple
 	}
 }
+
+fso_noble_houses_category = {
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		is_puppet = no
+		has_completed_focus = FSO_three_heads
+	}
+}

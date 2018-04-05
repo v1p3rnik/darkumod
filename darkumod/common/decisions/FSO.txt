@@ -1124,3 +1124,136 @@ fso_friendship_relationships_category = {
 	}
 
 }
+fso_noble_houses_category = {
+
+	FSO_filiae_magia_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.264 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_of_spiders_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.265 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_hentai_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.266 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_tameria_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.267 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_proletariae_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.268 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+
+}

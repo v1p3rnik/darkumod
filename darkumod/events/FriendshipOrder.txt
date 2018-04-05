@@ -1562,8 +1562,7 @@ country_event = {
 	
 	option = {
 		name = fso.50.a
-		remove_ideas = FSO_communist_base
-		add_ideas = FSO_communist_exp_1
+		swap_ideas = { remove_idea = FSO_communist_base add_idea = FSO_communist_exp_1 }
 	}
 }
 # Faster, Higher, Stronger - Start
@@ -1601,8 +1600,7 @@ country_event = {
 	
 	option = {
 		name = fso.52.a
-		remove_ideas = FSO_communist_exp_1
-		add_ideas = FSO_communist_exp_2
+		swap_ideas = { remove_idea = FSO_communist_exp_1 add_idea = FSO_communist_exp_2 }
 	}
 }
 # Rebuilding Alone - Start
@@ -1664,8 +1662,7 @@ country_event = {
 	
 	option = {
 		name = fso.54.a
-		remove_ideas = FSO_communist_base
-		add_ideas = FSO_communist_iso_1
+		swap_ideas = { remove_idea = FSO_communist_base add_idea = FSO_communist_iso_1 }
 	}
 }
 # No War, Alone - End
@@ -1681,8 +1678,7 @@ country_event = {
 	
 	option = {
 		name = fso.61.a
-		remove_ideas = FSO_communist_base
-		add_ideas = FSO_communist_iso_1
+		swap_ideas = { remove_idea = FSO_communist_base add_idea = FSO_communist_iso_1 }
 	}
 }
 # Aid from Soviets - Start
@@ -1744,8 +1740,7 @@ country_event = {
 	
 	option = {
 		name = fso.56.a
-		remove_ideas = FSO_communist_base
-		add_ideas = FSO_communist_mod_1
+		swap_ideas = { remove_idea = FSO_communist_base add_idea = FSO_communist_mod_1 }
 		every_country = { 
 			limit = {
 				NOT = { is_in_faction_with = CZE }
@@ -1767,8 +1762,7 @@ country_event = {
 	
 	option = {
 		name = fso.62.a
-		remove_ideas = FSO_communist_base
-		add_ideas = FSO_communist_mod_1
+		swap_ideas = { remove_idea = FSO_communist_base add_idea = FSO_communist_mod_1 }
 		every_country = { 
 			limit = {
 				NOT = { is_in_faction_with = CZE }
@@ -3513,9 +3507,8 @@ country_event = {
 		add_resource = { type = tungsten amount = 8 state = 507 }
 		add_resource = { type = chromium amount = 4 state = 507 }
 		add_resource = { type = steel amount = 21 state = 512 }
+		swap_ideas = { remove_idea = FSO_communist_mod_1 add_idea = FSO_communist_mod_2 }
 		
-		remove_ideas = FSO_communist_mod_1
-		add_ideas = FSO_communist_mod_2
 	}
 }
 # Our New Subjects - Start
@@ -4611,8 +4604,7 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.117.a
-		remove_ideas = FSO_communist_iso_1
-		add_ideas = FSO_communist_iso_2
+		swap_ideas = { remove_idea = FSO_communist_iso_1 add_idea = FSO_communist_iso_2 }
 		add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_grand_battle_plan }
 	}
 }
@@ -4674,8 +4666,8 @@ country_event = {
 		}
 		add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
 		add_tech_bonus = { bonus = 0.5 uses = 2 category = synth_resources }
-		remove_ideas = FSO_communist_iso_2
-		add_ideas = FSO_communist_iso_3
+		swap_ideas = { remove_idea = FSO_communist_iso_2 add_idea = FSO_communist_iso_3 }
+		
 	}
 }
 # Deep Crust Drills - Start
@@ -5096,8 +5088,8 @@ country_event = {
 		every_other_country = { #annex world idk
 			CZE = { annex_country = { target = PREV transfer_troops = no } }
 		}
-		remove_ideas = FSO_communist_iso_3
-		add_ideas = FSO_communist_iso_triumphant
+		swap_ideas = { remove_idea = FSO_communist_iso_3 add_idea = FSO_communist_iso_triumphant }
+		
 		add_political_power = 2000
 		clr_country_flag = fso_war_active
 	}
@@ -5257,15 +5249,15 @@ country_event = {
 		name = fso.138.a
 		add_stability = 0.1
 		set_country_flag = fso_friendship_passive
-		remove_ideas = FSO_royalist
-		add_ideas = FSO_royalist_2
+		swap_ideas = { remove_idea = FSO_royalist add_idea = FSO_royalist_2 }
+		
 	}
 	option = { # Aggressive
 		name = fso.138.b
 		add_war_support = 0.1
 		set_country_flag = fso_friendship_aggressive
-		remove_ideas = FSO_royalist
-		add_ideas = FSO_royalist_2
+		swap_ideas = { remove_idea = FSO_royalist add_idea = FSO_royalist_2 }
+		
 	}
 }
 # What Matters - Choice 2
@@ -5288,14 +5280,14 @@ country_event = {
 	
 	option = { # Collectivism
 		name = fso.139.a
-		remove_ideas = FSO_royalist_2
-		add_ideas = FSO_royalist_col_1
+		swap_ideas = { remove_idea = FSO_royalist_2 add_idea = FSO_royalist_col_1 }
+		
 		
 	}
 	option = { # Individualism
 		name = fso.139.b
-		remove_ideas = FSO_royalist_2
-		add_ideas = FSO_royalist_ind_1
+		swap_ideas = { remove_idea = FSO_royalist_2 add_idea = FSO_royalist_ind_1 }
+		
 		
 	}
 }
@@ -8389,4 +8381,579 @@ country_event = {
 		add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 50 producer = CZE }
 	}
 	
-} 
+}
+# The Three Heads - Start
+country_event = {
+	id = fso.262
+	title = fso.262.t
+	desc = fso.262.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_three_heads }
+		focus_progress = {
+			focus = FSO_three_heads
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.262.a
+		
+	}
+}
+# The Three Heads - End
+country_event = {
+	id = fso.263
+	title = fso.263.t
+	desc = fso.263.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.263.a
+		unlock_decision_category_tooltip = fso_noble_houses_category
+	}
+	
+}
+# The Three Heads - House Filiae Magia Actions
+country_event = {
+	id = fso.264
+	title = fso.264.t
+	desc = fso.264.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Focus on memes technology
+		name = fso.264.a
+		add_timed_idea = { idea = FSO_meme_tech days = 360 }
+	}
+	
+	option = { # Try to figure out who in the family Aroze is
+		name = fso.264.b
+		add_timed_idea = { idea = FSO_legitimacy days = 360 }
+	}
+	
+	option = { # Play with the members
+		name = fso.264.c
+		add_timed_idea = { idea = FSO_meme_games days = 360 }
+	}
+	
+	option = { # Nevermind
+		name = fso.264.dd
+		add_political_power = -1
+	}
+	
+}
+# The Three Heads - House of Spiders Actions
+country_event = {
+	id = fso.265
+	title = fso.265.t
+	desc = fso.265.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Allow spider nationalism
+		name = fso.265.a
+		add_war_support = 0.15
+		add_stability = -0.15
+	}
+	
+	option = { # Force conscript members
+		name = fso.265.b
+		add_manpower = 50000
+		add_war_support = -0.05
+	}
+	
+	option = { # Elevate an advisor
+		name = fso.265.c
+		add_timed_idea = { idea = FSO_spider_advisor days = 360 }
+	}
+	
+	option = { # Nevermind
+		name = fso.265.dd
+		add_political_power = -1
+	}
+	
+}
+# The Three Heads - House Hentai Actions
+country_event = {
+	id = fso.266
+	title = fso.266.t
+	desc = fso.266.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Seize art workshops
+		name = fso.266.a
+		add_offsite_building = { type = industrial_complex level = 4 }
+		add_war_support = -0.15
+	}
+	
+	option = { # Invite advisors
+		name = fso.266.b
+		add_timed_idea = { idea = FSO_hentai_advisors days = 360 }
+	}
+	
+	option = { # Encourage genetic science
+		name = fso.266.c
+		add_timed_idea = { idea = FSO_hentai_genetics days = 360 }
+	}
+	
+	option = { # Nevermind
+		name = fso.266.dd
+		add_political_power = -1
+	}
+	
+}
+# The Three Heads - House Tameria Actions
+country_event = {
+	id = fso.267
+	title = fso.267.t
+	desc = fso.267.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Concessions to the old guard
+		name = fso.267.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_command_power = -100
+	}
+	
+	option = { # Seize military infrastructure
+		name = fso.267.b
+		add_offsite_building = { type = arms_factory level = 4 }
+		add_stability = -0.15
+	}
+	
+	option = { # Recruit officers
+		name = fso.267.c
+		add_timed_idea = { idea = FSO_tamerian_officers days = 360 }
+
+	}
+	
+	option = { # Nevermind
+		name = fso.267.dd
+		add_political_power = -1
+	}
+	
+}
+# The Three Heads - House Proletariae Actions
+country_event = {
+	id = fso.268
+	title = fso.268.t
+	desc = fso.268.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Allow limited self government
+		name = fso.268.a
+		add_timed_idea = { idea = FSO_proletariae_self_govern days = 360 }
+
+	}
+	
+	option = { # Demand militia's weapons
+		name = fso.268.b
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = CZE }
+		add_stability = -0.15
+	}
+	
+	option = { # Invite army commissars
+		name = fso.268.c
+		add_timed_idea = { idea = FSO_army_commissars days = 360 }
+	}
+	
+	option = { # Nevermind
+		name = fso.268.dd
+		add_political_power = -1
+	}
+	
+}
+################ 1 YEAR PULSE HOUSE EVENTS ######################
+# The Three Heads - 1 year pulse - a house gains temporary influence
+country_event = {
+	id = fso.269
+	title = fso.269.t
+	desc = fso.269.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = one_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_country_flag = { flag = one_year_pulse days = 365 }
+	
+	option = { 
+		name = fso.269.a
+		random_list = {
+			25 = {
+				custom_effect_tooltip = fso.268.spiders
+				add_political_power = -40
+			}
+			25 = {
+				custom_effect_tooltip = fso.268.hentai
+				add_manpower = -1000
+			}
+			25 = {
+				custom_effect_tooltip = fso.268.tameria
+				add_command_power = -30
+			}
+			25 = {
+				custom_effect_tooltip = fso.268.proletariae
+				add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
+			}
+		}
+	}
+	
+}
+
+# The Three Heads - 1 year pulse - interhouse rivalry
+country_event = {
+	id = fso.270
+	title = fso.270.t
+	desc = fso.270.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = one_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_country_flag = { flag = one_year_pulse days = 365 }
+	
+	option = { # support rivalry
+		name = fso.270.a
+		army_experience = 25
+	}
+	
+	option = { # kill it off
+		name = fso.270.b
+		add_stability = 0.03
+		add_war_support = -0.01
+	}
+	
+	option = { # Do not interfere
+		name = fso.270.c
+		add_war_support = 0.03
+		add_stability = -0.01
+	}
+	
+}
+
+# The Three Heads - 1 year pulse - Turncoats
+country_event = {
+	id = fso.271
+	title = fso.271.t
+	desc = fso.271.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = one_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_country_flag = { flag = one_year_pulse days = 365 }
+	
+	option = { # Why do we care?
+		name = fso.271.a
+		add_stability = -0.01
+	}
+	
+	option = { # Compensate the losing house
+		name = fso.271.b
+		add_stability = 0.05
+		add_timed_idea = { idea = FSO_lending_to_house days = 30 }
+	}
+	
+	option = { # Favour the winning house
+		name = fso.271.c
+		add_manpower = 5000
+	}
+	
+}
+
+################ 2 YEAR PULSE HOUSE EVENTS ######################
+# The Three Heads - 2 year pulse - House wins Industrial Charter
+country_event = {
+	id = fso.272
+	title = fso.272.t
+	desc = fso.272.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = two_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	immediate = {
+		set_country_flag = { flag = two_year_pulse days = 730 }
+	
+	option = { # Encourage civilian industry
+		name = fso.272.a
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+	
+	option = { # Favour military industry
+		name = fso.272.b
+		add_offsite_building = { type = arms_factory level = 2 }
+
+	}
+	
+	option = { # Invest into naval production
+		name = fso.272.c
+		trigger = {
+			any_owned_state = { is_coastal = yes }
+		}
+		add_offsite_building = { type = dockyard level = 2 }
+	}
+	
+}
+# The Three Heads - 2 year pulse - Jousting Tournament
+country_event = {
+	id = fso.273
+	title = fso.273.t
+	desc = fso.273.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = two_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	immediate = {
+		set_country_flag = { flag = two_year_pulse days = 730 }
+	
+	option = { # Stage recruitment campaign
+		name = fso.273.a
+		add_manpower = 100000
+	}
+	
+	option = { # Improve officer skills
+		name = fso.273.b
+		add_offsite_building = { type = arms_factory level = 2 }
+		every_army_leader = {
+			add_skill_level = 1
+		}
+	}
+	
+	option = { # Let the houses freeball the Tournament
+		name = fso.273.c
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+	
+}
+# The Three Heads - 2 year pulse - Houses offer research opportunities
+country_event = {
+	id = fso.274
+	title = fso.274.t
+	desc = fso.274.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = two_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	immediate = {
+		set_country_flag = { flag = two_year_pulse days = 730 }
+	
+	option = { # House Spiders
+		name = fso.274.a
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = mountaineers_tech }
+	}
+	
+	option = { # House Hentai
+		name = fso.274.b
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = rocketry }
+	}
+	
+	option = { # House Tameria
+		name = fso.274.c
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+	}
+	
+	option = { # House Proletariae
+		name = fso.274.dd
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = infantry_tech }
+	}
+	
+}
+################ 1/2 YEAR PULSE HOUSE EVENTS ######################
+# The Three Heads - 1/2 year pulse - Houses Bickering in Public
+country_event = {
+	id = fso.275
+	title = fso.275.t
+	desc = fso.275.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = half_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_country_flag = { flag = half_year_pulse days = 182 }
+	
+	option = { # Nobody cares
+		name = fso.275.a
+		add_stability = -0.02
+	}
+	
+	option = { # Pull the Strings
+		name = fso.275.b
+		add_political_power = -40
+	}
+	
+	option = { # Ban Bickering
+		name = fso.275.b
+		add_war_support = -0.02
+	}
+	
+}
+# The Three Heads - 1/2 year pulse - A gift from the nobles
+country_event = {
+	id = fso.276
+	title = fso.276.t
+	desc = fso.276.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = half_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_country_flag = { flag = half_year_pulse days = 182 }
+	
+	option = { # Thank them
+		name = fso.276.a
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = CZE }
+	}
+	
+	option = { # Spend the money on their needs
+		name = fso.276.b
+		add_political_power = 40
+	}
+	
+}
+# The Three Heads - 1/2 year pulse - Another noble asks permission to be adopted to Royal House
+country_event = {
+	id = fso.277
+	title = fso.277.t
+	desc = fso.277.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_three_heads
+		NOT = { has_country_flag = half_year_pulse }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_country_flag = { flag = half_year_pulse days = 182 }
+	
+	option = { # Accept him and his men
+		name = fso.277.a
+		add_manpower = 1000
+	}
+	
+	option = { # Exile him for breaking obligations
+		name = fso.277.b
+		add_stability = 0.02
+	}
+	
+	option = { # Turn the noble in to his house
+		name = fso.277.c
+		add_political_power = 40
+	}
+	
+}
