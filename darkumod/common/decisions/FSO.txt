@@ -1257,3 +1257,57 @@ fso_noble_houses_category = {
 	}
 
 }
+
+operations = {
+
+	FSO_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			69 = { has_border_war = no }
+			65 = { has_border_war = no }
+			67 = { has_border_war = no }
+			74 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 69
+				state = 65
+				state = 67
+				state = 74
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 69
+				attacker = 65
+			}
+			cancel_border_war = {
+				defender = 74
+				attacker = 67
+			}
+			
+		}
+	}
+}

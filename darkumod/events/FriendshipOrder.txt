@@ -8419,6 +8419,7 @@ country_event = {
 	option = { 
 		name = fso.263.a
 		unlock_decision_category_tooltip = fso_noble_houses_category
+		custom_effect_tooltip = fso.263.tt
 	}
 	
 }
@@ -8956,4 +8957,390 @@ country_event = {
 		add_political_power = 40
 	}
 	
+}
+################### PULSE EVENTS END #######################
+# A Sinister Minister - Start
+country_event = {
+	id = fso.278
+	title = fso.278.t
+	desc = fso.278.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_sinister_minister }
+		focus_progress = {
+			focus = FSO_sinister_minister
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.278.a
+		custom_effect_tooltip = fso.278.tt
+	}
+}
+# A Sinister Minister - End
+country_event = {
+	id = fso.279
+	title = fso.279.t
+	desc = fso.279.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.279.a
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 65
+				num_provinces = 4
+				on_win = fso.280
+				on_lose = fso.281
+				on_cancel = fso.282
+			}
+			
+			defender = {
+				state = 69
+				num_provinces = 4
+				on_win = fso.281
+				on_lose = fso.280
+				on_cancel = fso.282
+			}
+		}
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 67
+				num_provinces = 4
+				on_win = fso.283
+				on_lose = fso.284
+			}
+			
+			defender = {
+				state = 74
+				num_provinces = 4
+				on_win = fso.284
+				on_lose = fso.283
+			}
+		}
+		activate_targeted_decision = { target = GER decision = FSO_border_conflict_time_until_cancelled }
+		GER = {
+			activate_targeted_decision = { target = CZE decision = FSO_border_conflict_time_until_cancelled }
+		}
+	}
+	
+}
+# A Sinister Minister - Attacker Won Sudetenland
+country_event = {
+	id = fso.280
+	title = fso.280.t
+	desc = fso.280.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.280.a
+		set_country_flag = fso_lost_sudeten
+	}
+	
+}
+# A Sinister Minister - Defender Won Sudetenland
+country_event = {
+	id = fso.281
+	title = fso.281.t
+	desc = fso.281.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.281.a
+		set_country_flag = fso_won_sudeten
+	}
+	
+}
+# A Sinister Minister - Stalemate
+country_event = {
+	id = fso.282
+	title = fso.282.t
+	desc = fso.282.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.282.a
+		set_country_flag = fso_sudeten_stalemate
+	}
+	
+}
+# A Sinister Minister - Attacker Won East
+country_event = {
+	id = fso.283
+	title = fso.283.t
+	desc = fso.283.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.283.a
+		set_country_flag = fso_lost_east_sudeten
+	}
+	
+}
+# A Sinister Minister - Defender Won East
+country_event = {
+	id = fso.284
+	title = fso.284.t
+	desc = fso.284.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.284.a
+		set_country_flag = fso_won_east_sudeten
+	}
+	
+}
+# A Sinister Minister - Result
+country_event = {
+	id = fso.285
+	title = fso.285.t
+	desc = {
+		text = fso.285.d1
+		trigger = {
+			AND = {
+				has_country_flag = fso_lost_east_sudeten
+				has_country_flag = fso_lost_sudeten
+			}
+		}
+	}
+	desc = {
+		text = fso.285.d2
+		trigger = {
+			AND = {
+				has_country_flag = fso_won_east_sudeten
+				has_country_flag = fso_won_sudeten
+			}
+		}
+	}
+	desc = {
+		text = fso.285.d3
+		trigger = {
+			AND = {
+				OR = {
+					has_country_flag = fso_won_east_sudeten
+					has_country_flag = fso_sudeten_stalemate
+				}
+				has_country_flag = fso_lost_sudeten
+			}
+		}
+	}
+	desc = {
+		text = fso.285.d4
+		trigger = {
+			AND = {
+				has_country_flag = fso_lost_east_sudeten
+				OR = {
+					has_country_flag = fso_won_sudeten
+					has_country_flag = fso_sudeten_stalemate
+				}
+			}
+		}
+	}
+	desc = {
+		text = fso.285.d5
+		trigger = {
+			has_country_flag = fso_sudeten_stalemate
+		}
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		OR = {
+			AND = {
+				has_country_flag = fso_lost_east_sudeten
+				has_country_flag = fso_lost_sudeten
+			}
+			AND = {
+				has_country_flag = fso_won_east_sudeten
+				has_country_flag = fso_won_sudeten
+			}
+			AND = {
+				OR = {
+					has_country_flag = fso_won_east_sudeten
+					has_country_flag = fso_sudeten_stalemate
+				}
+				has_country_flag = fso_lost_sudeten
+			}
+			AND = {
+				has_country_flag = fso_lost_east_sudeten
+				OR = {
+					has_country_flag = fso_won_sudeten
+					has_country_flag = fso_sudeten_stalemate
+				}
+			}
+			has_country_flag = fso_sudeten_stalemate
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.285.a
+		trigger = {
+			AND = {
+				has_country_flag = fso_lost_east_sudeten
+				has_country_flag = fso_lost_sudeten
+			}
+		}
+		GER = {
+			transfer_state = 69
+			transfer_state = 74
+		}
+	}
+	option = { 
+		name = fso.285.b
+		trigger = {
+			AND = {
+				has_country_flag = fso_won_east_sudeten
+				has_country_flag = fso_won_sudeten
+			}
+		}
+		GER = {
+			add_ideas = disarmed_nation
+			custom_effect_tooltip = fso.285.tt
+			hidden_effect = {
+				start_civil_war = {
+					ideology = communism
+					size = 0.95
+				}
+				random_country = {
+					limit = {
+						AND = {
+							original_tag = GER
+							has_war_with = GER
+						}
+					white_peace = GER
+				}
+				
+			}
+			add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+			add_ideas = FSO_disarmed
+			if = {
+				limit = {
+					69 = { is_claimed_by = GER }
+				}
+				remove_state_claim = 69
+			}
+			if = {
+				limit = {
+					74 = { is_claimed_by = GER }
+				}
+				remove_state_claim = 74
+			}
+			if = {
+				limit = {
+					69 = { is_core_of = GER }
+				}
+				remove_state_core = 69
+			}
+			if = {
+				limit = {
+					74 = { is_core_of = GER }
+				}
+				remove_state_core = 74
+			}
+		}
+	}
+	option = { 
+		name = fso.285.c
+		trigger = {
+			AND = {
+				OR = {
+					has_country_flag = fso_won_east_sudeten
+					has_country_flag = fso_sudeten_stalemate
+				}
+				has_country_flag = fso_lost_sudeten
+			}
+		}
+		69 = {
+			add_manpower = -2405500
+		}
+		GER = {
+			random_owned_state = {
+				limit = {
+					is_core_of = GER
+				}
+				add_manpower = 2405500
+			}
+		}
+	}
+	option = { 
+		name = fso.285.dd
+		trigger = {
+			AND = {
+				has_country_flag = fso_lost_east_sudeten
+				OR = {
+					has_country_flag = fso_won_sudeten
+					has_country_flag = fso_sudeten_stalemate
+				}
+			}
+		}
+		74 = {
+			add_manpower = -697850
+		}
+		GER = {
+			random_owned_state = {
+				limit = {
+					is_core_of = GER
+				}
+				add_manpower = 697850
+			}
+		}
+	}
+	option = { 
+		name = fso.285.e
+		trigger = {
+			has_country_flag = fso_sudeten_stalemate
+		}
+		army_experience = 50
+		GER = {
+			army_experience = 50
+		}
+	}
 }
