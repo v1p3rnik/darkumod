@@ -9020,6 +9020,7 @@ country_event = {
 				num_provinces = 4
 				on_win = fso.283
 				on_lose = fso.284
+				on_cancel = fso.282
 			}
 			
 			defender = {
@@ -9027,6 +9028,7 @@ country_event = {
 				num_provinces = 4
 				on_win = fso.284
 				on_lose = fso.283
+				on_cancel = fso.282
 			}
 		}
 		activate_targeted_decision = { target = GER decision = FSO_border_conflict_time_until_cancelled }
