@@ -8715,7 +8715,7 @@ country_event = {
 	
 	option = { # Favour the winning house
 		name = fso.271.c
-		add_manpower = 5000
+		add_manpower = -5000
 	}
 	
 }
@@ -9345,4 +9345,44 @@ country_event = {
 			army_experience = 50
 		}
 	}
+}
+# Royal Duties - Start
+country_event = {
+	id = fso.286
+	title = fso.286.t
+	desc = fso.286.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_royal_duties }
+		focus_progress = {
+			focus = FSO_royal_duties
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.286.a
+		
+	}
+}
+# Royal Duties - End
+country_event = {
+	id = fso.287
+	title = fso.287.t
+	desc = fso.287.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.287.a
+		unlock_decision_category_tooltip = fso_royal_duties_category
+	}
+	
 }

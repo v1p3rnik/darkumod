@@ -1605,7 +1605,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_three_heads }
 		x = 7
-		y = 12
+		y = 14
 		
 
 		cost = 10
@@ -1632,6 +1632,41 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_sinister_minister_effect
 			hidden_effect = { CZE = { country_event = { id = fso.279 } } }
+		}
+	}
+	# Royal Duties
+	focus = {
+		id = FSO_royal_duties
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_sinister_minister }
+		x = 7
+		y = 16
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_sinister_minister_effect
+			hidden_effect = { CZE = { country_event = { id = fso.287 } } }
 		}
 	}
 	
