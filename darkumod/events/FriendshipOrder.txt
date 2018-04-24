@@ -9246,6 +9246,7 @@ country_event = {
 							original_tag = GER
 							has_war_with = GER
 						}
+					}
 					white_peace = GER
 				}
 				
@@ -9383,6 +9384,242 @@ country_event = {
 	option = { 
 		name = fso.287.a
 		unlock_decision_category_tooltip = fso_royal_duties_category
+	}
+	
+}
+# Royal Duties - Succession Magna Carta
+country_event = {
+	id = fso.288
+	title = fso.288.t
+	desc = fso.288.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Enable Darks retirement
+		name = fso.288.a
+		custom_effect_tooltip = fso.288.tt1
+		set_country_flag = fso_allow_marriages
+		set_country_flag = fso_dark_retirement
+	}
+	
+	option = { # Just marriages
+		name = fso.288.b
+		custom_effect_tooltip = fso.288.tt2
+		set_country_flag = fso_allow_marriages
+	}
+	
+}
+# Royal Duties - Lama's Supporters Demand His Rule
+country_event = {
+	id = fso.289
+	title = fso.289.t
+	desc = fso.289.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		has_completed_focus = FSO_royal_duties
+		has_country_flag = fso_peetry_named_pretender
+	}
+	
+	mean_time_to_happen = {
+		days = 1080
+	}
+	
+	immediate = {
+		clr_country_flag = fso_peetry_named_pretender
+	}
+	
+	option = { # Support Peetry
+		name = fso.289.a
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.5
+		}
+		random_country = {
+			limit = {
+				has_war_with = CZE
+				original_tag = CZE
+				has_civil_war = yes
+			}
+			create_country_leader = {
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = { wae_wa_wee }
+			}
+		}
+	}
+	
+	option = { # Support Lama
+		name = fso.289.b
+		random_list = {
+			80 = {
+				create_country_leader = {
+					name = "Lamatrepide"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+			20 = {
+				start_civil_war = {
+					ideology = neutrality
+					size = 0.3
+				}
+				random_country = {
+					limit = {
+						has_war_with = CZE
+						original_tag = CZE
+						has_civil_war = yes
+					}
+					create_country_leader = {
+						name = "Lamatrepide"
+						desc = "LAMATREPIDE_DESC"
+						picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = { wae_wa_wee }
+					}
+				}
+			}
+		}
+	}
+}
+# Royal Duties - Peetry's Marriage - Replies come in
+country_event = {
+	id = fso.290
+	title = fso.290.t
+	desc = fso.290.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random = { 30 = { set_country_flag = fso_peetry_faux_pas } }
+	}
+	
+	option = { # Spanish Bourbons
+		name = fso.290.a
+		trigger = {
+			has_country_flag = fso_spa_bourbons
+		}
+		clr_country_flag = fso_spa_bourbons
+		SPA = { save_global_event_target_as = fso_marriage_target }
+		custom_effect_tooltip = fso.290.spain
+		country_event = { id = fso.291 days = 7 }
+	}
+	option = { # Windsors
+		name = fso.290.b
+		trigger = {
+			has_country_flag = fso_windsor
+		}
+		clr_country_flag = fso_windsor
+		ENG = { save_global_event_target_as = fso_marriage_target }
+		custom_effect_tooltip = fso.290.britain
+		country_event = { id = fso.291 days = 7 }
+	}
+	option = { # Di Savoia
+		name = fso.290.c
+		trigger = {
+			has_country_flag = fso_di_savoia
+		}
+		clr_country_flag = fso_di_savoia
+		ITA = { save_global_event_target_as = fso_marriage_target }
+		custom_effect_tooltip = fso.290.italy
+		country_event = { id = fso.291 days = 7 }
+	}
+	option = { # Saxe-Coburg-Gotha
+		name = fso.290.dd
+		trigger = {
+			has_country_flag = fso_saxe_coburg_gotha
+		}
+		clr_country_flag = fso_saxe_coburg_gotha
+		BEL = { save_global_event_target_as = fso_marriage_target }
+		custom_effect_tooltip = fso.290.belgium
+		country_event = { id = fso.291 days = 7 }
+	}
+	option = { # Karadzhordzhevic
+		name = fso.290.e
+		trigger = {
+			has_country_flag = fso_karadzhordzhevic
+		}
+		clr_country_flag = fso_karadzhordzhevic
+		YUG = { save_global_event_target_as = fso_marriage_target }
+		custom_effect_tooltip = fso.290.yugoslavia
+		country_event = { id = fso.291 days = 7 }
+	}
+	option = { # Orange
+		name = fso.290.f
+		trigger = {
+			has_country_flag = fso_orange
+		}
+		clr_country_flag = fso_orange
+		HOL = { save_global_event_target_as = fso_marriage_target }
+		custom_effect_tooltip = fso.290.netherlands
+		country_event = { id = fso.291 days = 7 }
+	}
+	
+}
+# Royal Duties - Peetry's Marriage - The Ball at the Palace
+country_event = {
+	id = fso.291
+	title = fso.291.t
+	desc = fso.291.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Peetry did good
+		name = fso.291.a
+		trigger = {
+			NOT = { has_country_flag = fso_peetry_faux_pas }
+		}
+		event_target:fso_marriage_target = { 
+			set_country_flag = fso_peetry_claims
+			add_opinion_modifier = { target = CZE modifier = fso_royal_marriage }
+			CZE = { add_opinion_modifier = { target = PREV modifier = fso_royal_marriage } }
+		}
+	}
+	
+	option = { # Peetry faux pas
+		name = fso.291.b
+		trigger = {
+			has_country_flag = fso_peetry_faux_pas
+		}
+		clr_country_flag = fso_peetry_faux_pas
+		clear_global_event_target = fso_marriage_target
+		country_event = { id = fso.290 days = 7 }
+	}
+	
+}
+# Royal Duties - PU over a country
+country_event = {
+	id = fso.292
+	title = fso.292.t
+	desc = fso.292.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # OK.
+		name = fso.292.a
+		clear_global_event_target = fso_marriage_target
 	}
 	
 }

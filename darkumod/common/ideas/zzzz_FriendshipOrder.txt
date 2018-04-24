@@ -37,6 +37,21 @@ ideas = {
 				training_time_factor = 100
 			}
 		}
+		
+		FSO_symbol_of_friendship = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_victors_of_ww1
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.3
+			}
+		}
 	
 		FSO_royalist = {
 			

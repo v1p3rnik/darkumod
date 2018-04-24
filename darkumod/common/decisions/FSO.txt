@@ -1258,6 +1258,196 @@ fso_noble_houses_category = {
 
 }
 
+fso_royal_duties_category = {
+
+	FSO_secure_line_of_succession = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			NOT = { has_country_flag = fso_succession_set }
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.288 }
+			set_country_flag = fso_succession_set
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_retire_dark = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_dark_retirement
+		}
+		
+		complete_effect = {
+			retire_country_leader = yes
+			
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_Peetry.tga" 
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { doge_pope }
+			}
+			
+			set_country_flag = { flag = fso_recent_abdication days = 540 }
+			
+			hidden_effect = {
+				random = {
+					20 = { set_country_flag = fso_peetry_named_pretender }
+				}
+			}
+			
+			add_ideas = FSO_symbol_of_friendship
+			
+			every_country = {
+				limit = {
+					has_country_flag = fso_peetry_claims
+				}
+				every_country = {
+					limit = {
+						is_puppet_of = PREV
+					}
+					CZE = { puppet = PREV }
+					set_autonomy = { target = THIS autonomy_state = autonomy_colony }
+				}
+				add_ideas = disarmed_nation
+				custom_effect_tooltip = fso.285.tt
+				hidden_effect = {
+					start_civil_war = {
+						ideology = communism
+						size = 0.95
+					}
+					random_country = {
+						limit = {
+							AND = {
+								original_tag = PREV
+								has_war_with = PREV
+							}
+						}
+						white_peace = PREV
+					}
+					add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+				}
+				add_ideas = FSO_disarmed
+				CZE = { puppet = PREV }
+				set_autonomy = { target = THIS autonomy_state = autonomy_fso_personal_union }
+				CZE = { country_event = { id = fso.292 } }
+			}
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_retire_peetry = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_dark_retirement
+			has_country_leader = { ruling_only = yes name = "Peetry" }
+			NOT = { has_country_flag = fso_recent_abdication }
+		}
+		
+		complete_effect = {
+		
+			retire_country_leader = yes
+			
+			create_country_leader = {
+				name = "Lamatrepide"
+				desc = "LAMATREPIDE_DESC"
+				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { wae_wa_wee }
+			}
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_royal_marriage_peetry = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_allow_marriages
+			NOT = { has_country_flag = fso_peetry_marriage }
+		}
+		
+		complete_effect = {
+			
+			set_country_flag = fso_peetry_marriage
+			
+			hidden_effect = {
+				random = { 60 = { set_country_flag = fso_spa_bourbon } }
+				random = { 60 = { set_country_flag = fso_windsor } }
+				random = { 60 = { set_country_flag = fso_di_savoia } }
+				random = { 60 = { set_country_flag = fso_saxe_coburg_gotha } }
+				random = { 60 = { set_country_flag = fso_karadzhordzhevic } }
+				random = { 60 = { set_country_flag = fso_orange } }
+			}
+			
+			country_event = { id = fso.290 days = 14 }
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+
+}
+
 operations = {
 
 	FSO_border_conflict_time_until_cancelled = {

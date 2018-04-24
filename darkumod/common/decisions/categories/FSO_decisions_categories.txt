@@ -55,3 +55,16 @@ fso_noble_houses_category = {
 		has_completed_focus = FSO_three_heads
 	}
 }
+
+fso_royal_duties_category = {
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		is_puppet = no
+		has_completed_focus = FSO_royal_duties
+	}
+
+}

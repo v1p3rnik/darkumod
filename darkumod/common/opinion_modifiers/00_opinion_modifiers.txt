@@ -29,6 +29,10 @@ opinion_modifiers = {
 	fso_opposition = {
 		value = -50
 	}
+	
+	fso_royal_marriage = {
+		value = 25
+	}
 
 	hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
 		value = -100
