@@ -775,7 +775,7 @@ focus_tree = {
 					}
 				}
 				hidden_effect = {
-					209 = {
+					206 = {
 						add_building_construction = {
 							type = bunker
 							level = 1
@@ -1340,6 +1340,9 @@ focus_tree = {
 		}
 
 		available_if_capitulated = no
+		available = {
+			has_war_support > 0.49
+		}
 
 		complete_tooltip = {
 			every_state = {
@@ -1440,6 +1443,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		bypass = {
+			HUN = {
+				OR = {
+					exists = no
+					is_subject = yes			
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
 		
 		completion_reward = {
 			if = {
@@ -1485,6 +1501,19 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
+		}
+		
+		bypass = {
+			ROM = {
+				OR = {
+					exists = no
+					is_subject = yes		
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
 		}
 		
 		completion_reward = {
@@ -1533,6 +1562,19 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
+		}
+		
+		available = {
+			OR = {
+				HUN = {
+					is_in_faction_with = ROOT
+					is_free_or_subject_of_root = yes
+				}
+				ROM = {
+					is_in_faction_with = ROOT
+					is_free_or_subject_of_root = yes
+				}
+			}
 		}
 
 		available_if_capitulated = no
@@ -1615,6 +1657,7 @@ focus_tree = {
 				limit = {
 					HUN = {
 						is_in_faction_with = GER
+						is_free_or_subject_of_root = yes
 					}
 				}
 				random_owned_controlled_state = {
@@ -1654,6 +1697,7 @@ focus_tree = {
 				limit = {
 					ROM = {
 						is_in_faction_with = GER
+						is_free_or_subject_of_root = yes
 					}
 				}
 				random_owned_controlled_state = {
@@ -1693,6 +1737,7 @@ focus_tree = {
 				limit = {
 					HUN = {
 						is_in_faction_with = GER
+						is_free_or_subject_of_root = yes
 					}
 				}
 				HUN = {
@@ -1728,13 +1773,14 @@ focus_tree = {
 						}
 						set_state_flag = GER_integrate_war_economies_2
 					}
-					country_event = { id = wtt_germany.7 days = 1 }
+					
 				}
 			}
 			if = {
 				limit = {
 					ROM = {
 						is_in_faction_with = GER
+						is_free_or_subject_of_root = yes
 					}
 				}
 				ROM = {
@@ -1774,7 +1820,7 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_dlc = "Death or Dishonor" 
 					HUN = {
 						is_in_faction_with = GER
@@ -2139,8 +2185,9 @@ focus_tree = {
 		id = GER_soviet_treaty
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = GER_army_innovation }
-		mutually_exclusive = { focus = GER_anti_soviet_pact }
+		
 		available = {
+			NOT = { has_completed_focus = GER_anti_soviet_pact }
 			OR = {
 				NOT = { has_completed_focus = GER_bulwark_against_bolshevism }
 				NOT = { has_completed_focus = GER_the_great_red_menace }
@@ -2591,6 +2638,7 @@ focus_tree = {
 					NOT = { tag = GER }
 					NOT = { has_war_with = GER }
 					NOT = { is_in_faction_with = SOV }
+					is_subject = no
 					OR = {
 						capital_scope = {
 								is_on_continent = europe
@@ -2816,8 +2864,9 @@ focus_tree = {
 		}
 		cancel = {
 			OR = {
-				is_puppet = yes
+				is_subject = yes
 				has_idea = rhineland_challenge_met
+				has_war_with = AUS
 			}
 		}
 		cancel_if_invalid = no
@@ -2834,13 +2883,24 @@ focus_tree = {
 		}
 
 		bypass = {
-			AUS = {
-				OR = {
-					is_puppet = yes
-					exists = no 
+			OR = {
+				AUS = {
+					OR = {
+						is_subject = yes
+						exists = no 
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = GER }
+						}
 					}
 				}
+				GER = {
+					owns_state = 4
+					owns_state = 152
+					owns_state = 153
+				}
 			}
+		}
 
 		completion_reward = {
 			army_experience = 10
@@ -2977,6 +3037,7 @@ focus_tree = {
 			188 = { add_claim_by = GER }
 			85 = { add_claim_by = GER }
 			86 = { add_claim_by = GER }
+			762 = { add_claim_by = GER }
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
 			if = {
 				limit = {
@@ -3084,7 +3145,9 @@ focus_tree = {
 				}
 				effect_tooltip = {
 					transfer_state = 85
+					add_state_core = 85
 					remove_state_claim = 86
+					remove_state_claim = 762
 				}
 				POL = {
 					country_event = { id = germany.86 }
@@ -4019,12 +4082,14 @@ focus_tree = {
 			has_full_control_of_state = 28
 			OR = {
 				FRA = { has_capitulated = yes }
+				FRA = { is_subject_of = GER }
 				NOT = {
 					any_country = {
 						original_tag = FRA
 						exists = yes
 					}
 				}
+				owns_state = 28
 			}
 			OR = {
 				LUX = { has_capitulated = yes }
@@ -4050,6 +4115,15 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 8
 			add_state_core = 28
+			if = {
+				limit = {
+					NOT = { owns_state = 28 }
+				}
+				transfer_state = 28
+			}
+			28 = { set_state_name = "Elsass-Lothringen" }
+			set_province_name = { id = 9503 name = "Strassburg" }
+			set_province_name = { id = 678 name = "Mulhausen" }
 			FRA = {
 				country_event = { id = wtt_germany.63 }
 			}
@@ -5312,6 +5386,9 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = GER_oppose_hitler_civil_war
+			effect_tooltip = {
+				GER_remove_mefo_bills = yes
+			}
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			add_political_power = 120
@@ -5388,13 +5465,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 9
 		}
 		
 		completion_reward = {
-			add_ideas = GER_rebuild_the_nation
+			add_timed_idea = { idea = GER_rebuild_the_nation days = 365 }
+			add_ideas = GER_national_revitalization
 		}
 	}
 
@@ -5416,33 +5494,33 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_idea = GER_rebuild_the_nation
-						has_idea = GER_rebuild_the_nation3
+						has_idea = GER_national_revitalization
+						has_idea = GER_national_revitalization3
 					}
 				}
 				effect_tooltip = {
 					swap_ideas = {
-						remove_idea = GER_rebuild_the_nation
-						add_idea = GER_rebuild_the_nation2
+						remove_idea = GER_national_revitalization
+						add_idea = GER_national_revitalization2
 					}
 				}
 			}
 			if = {
 				limit = {
-					has_idea = GER_rebuild_the_nation
+					has_idea = GER_national_revitalization
 				}
 				swap_ideas = {
-					remove_idea = GER_rebuild_the_nation
-					add_idea = GER_rebuild_the_nation2
+					remove_idea = GER_national_revitalization
+					add_idea = GER_national_revitalization2
 				}
 			}
 			if = {
 				limit = {
-					has_idea = GER_rebuild_the_nation3
+					has_idea = GER_national_revitalization3
 				}
 				swap_ideas = {
-					remove_idea = GER_rebuild_the_nation3
-					add_idea = GER_rebuild_the_nation4
+					remove_idea = GER_national_revitalization3
+					add_idea = GER_national_revitalization4
 				}
 			}
 		}
@@ -5466,33 +5544,33 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_idea = GER_rebuild_the_nation
-						has_idea = GER_rebuild_the_nation2
+						has_idea = GER_national_revitalization
+						has_idea = GER_national_revitalization2
 					}
 				}
 				effect_tooltip = {
 					swap_ideas = {
-						remove_idea = GER_rebuild_the_nation
-						add_idea = GER_rebuild_the_nation3
+						remove_idea = GER_national_revitalization
+						add_idea = GER_national_revitalization3
 					}
 				}
 			}
 			if = {
 				limit = {
-					has_idea = GER_rebuild_the_nation
+					has_idea = GER_national_revitalization
 				}
 				swap_ideas = {
-					remove_idea = GER_rebuild_the_nation
-					add_idea = GER_rebuild_the_nation3
+					remove_idea = GER_national_revitalization
+					add_idea = GER_national_revitalization3
 				}
 			}
 			if = {
 				limit = {
-					has_idea = GER_rebuild_the_nation2
+					has_idea = GER_national_revitalization2
 				}
 				swap_ideas = {
-					remove_idea = GER_rebuild_the_nation2
-					add_idea = GER_rebuild_the_nation4
+					remove_idea = GER_national_revitalization2
+					add_idea = GER_national_revitalization4
 				}
 			}
 		}
@@ -5845,6 +5923,7 @@ focus_tree = {
 				type = annex_everything
 				target = FRA
 			}
+			add_state_claim = 523
 			add_state_claim = 539
 			add_state_claim = 541
 			add_state_claim = 546
@@ -5852,6 +5931,8 @@ focus_tree = {
 			add_state_claim = 684
 			add_state_claim = 633
 			add_state_claim = 646
+			add_state_claim = 647
+			add_state_claim = 726
 		}
 	}
 
@@ -5861,7 +5942,13 @@ focus_tree = {
 		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony }
 		available = {
 			is_puppet = no
-			has_war_with = FRA
+			OR = {
+				has_war_with = FRA
+				AND = {
+					has_war_with = ENG
+					has_global_flag = flag_franco_british_union
+				}
+			}
 			NOT = { is_in_faction_with = BEL }
 			NOT = { is_in_faction_with = LUX }
 		}
@@ -6321,7 +6408,7 @@ focus_tree = {
 				add_ai_strategy = {
 					type = befriend
 					id = "GER"			
-					value = 400
+					value = 1000
 				}
 				add_ai_strategy = {
 					type = alliance
@@ -6400,12 +6487,14 @@ focus_tree = {
 			has_full_control_of_state = 28
 			OR = {
 				FRA = { has_capitulated = yes }
+				FRA = { is_subject_of = GER }
 				NOT = {
 					any_country = {
 						original_tag = FRA
 						exists = yes
 					}
 				}
+				owns_state = 28
 			}
 		}
 		bypass = {
@@ -6421,9 +6510,16 @@ focus_tree = {
 		
 		completion_reward = {
 			add_state_core = 28
+			if = {
+				limit = {
+					NOT = { owns_state = 28 }
+				}
+				transfer_state = 28
+			}
+			28 = { set_state_name = "Elsass-Lothringen" }
+			set_province_name = { id = 9503 name = "Strassburg" }
+			set_province_name = { id = 678 name = "Mulhausen" }
 			FRA = {
-				remove_state_core = 28
-				add_state_claim = 28
 				country_event = { id = wtt_germany.63 }
 			}
 		}
@@ -6521,6 +6617,19 @@ focus_tree = {
 			NOT = { has_war_with = POL }
 			NOT = { is_in_faction_with = POL }
 		}
+		bypass = {
+			OR = {
+				AND = {
+					POL = { has_war = yes }
+					NOT = { has_war_with = POL }
+				}
+				AND = {
+					POL = { is_subject = yes }
+					NOT = { POL = { is_subject_of = GER } }
+				}
+				POL = { exists = no }
+			}
+		}
 		cancel_if_invalid = yes
 		x = 2
 		y = 2
@@ -6549,14 +6658,38 @@ focus_tree = {
 			OR = {
 				has_guaranteed = EST
 				NOT = { country_exists = EST }
+				AND = {
+					EST = { has_war = yes }
+					NOT = { has_war_with = EST }
+				}
+				AND = {
+					EST = { is_subject = yes }
+					NOT = { EST = { is_subject_of = GER } }
+				}
 			}
 			OR = {
 				has_guaranteed = LAT
 				NOT = { country_exists = LAT }
+				AND = {
+					LAT = { has_war = yes }
+					NOT = { has_war_with = LAT }
+				}
+				AND = {
+					LAT = { is_subject = yes }
+					NOT = { LAT = { is_subject_of = GER } }
+				}
 			}
 			OR = {
 				has_guaranteed = LIT
 				NOT = { country_exists = LIT }
+				AND = {
+					LIT = { has_war = yes }
+					NOT = { has_war_with = LIT }
+				}
+				AND = {
+					LIT = { is_subject = yes }
+					NOT = { LIT = { is_subject_of = GER } }
+				}
 			}
 		}
 		cancel_if_invalid = yes
@@ -6571,7 +6704,19 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { country_exists = EST }
-				EST = { add_ideas = GER_safeguard_the_baltic }
+				EST = {	
+					add_ideas = GER_safeguard_the_baltic
+					add_ai_strategy = {
+						type = befriend
+						id = "GER"			
+						value = 200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "GER"			
+						value = 200
+					}
+				}
 
 				if = { 
 					limit = { NOT = { is_subject_of = ROOT } }
@@ -6580,7 +6725,19 @@ focus_tree = {
 			}
 			if = {
 				limit = { country_exists = LAT }
-				LAT = { add_ideas = GER_safeguard_the_baltic }
+				LAT = {
+					add_ideas = GER_safeguard_the_baltic
+					add_ai_strategy = {
+						type = befriend
+						id = "GER"			
+						value = 200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "GER"			
+						value = 200
+					}
+				}
 
 				if = { 
 					limit = { NOT = { is_subject_of = ROOT } }
@@ -6589,7 +6746,19 @@ focus_tree = {
 			}
 			if = {
 				limit = { country_exists = LIT }
-				LIT = { add_ideas = GER_safeguard_the_baltic }
+				LIT = {
+					add_ideas = GER_safeguard_the_baltic
+					add_ai_strategy = {
+						type = befriend
+						id = "GER"			
+						value = 200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "GER"			
+						value = 200
+					}
+				}
 
 				if = { 
 					limit = { NOT = { is_subject_of = ROOT } }
@@ -6606,6 +6775,19 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			NOT = { has_war_with = FIN }
+		}
+		bypass = {
+			OR = {
+				AND = {
+					FIN = { has_war = yes }
+					NOT = { has_war_with = FIN }
+				}
+				AND = {
+					FIN = { is_subject = yes }
+					NOT = { FIN = { is_subject_of = GER } }
+				}
+				FIN = { exists = no }
+			}
 		}
 		cancel_if_invalid = yes
 		x = 0
@@ -6624,6 +6806,16 @@ focus_tree = {
 			}
 			FIN = {
 				add_ideas = GER_FIN_industrial_support
+				add_ai_strategy = {
+					type = befriend
+					id = "GER"			
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"			
+					value = 200
+				}
 			}
 		}
 	}
@@ -6653,12 +6845,16 @@ focus_tree = {
 					NOT = { tag = GER }
 					NOT = { has_war_with = GER }
 					NOT = { is_in_faction_with = SOV }
+					is_subject = no
 					OR = {
 						capital_scope = {
 								is_on_continent = europe
 						}
-						capital_scope = {
-								is_on_continent = asia
+						AND = {
+							capital_scope = {
+									is_on_continent = asia
+							}
+							is_neighbor_of = SOV
 						}
 						num_of_factories > 30
 					}
@@ -6702,6 +6898,7 @@ focus_tree = {
 			every_other_country = {
 				limit = {
 					has_opinion_modifier = anti_comintern_pact_opinion
+					is_subject = no
 					NOT = { tag = GER }
 					NOT = { has_war_with = GER }
 					NOT = { has_idea = anti_soviet_pact }

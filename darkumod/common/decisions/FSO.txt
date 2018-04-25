@@ -132,7 +132,7 @@ fso_special_projects_category = {
 		}
 		days_remove = 180
 		modifier = {
-			civilian_factory_use = 10
+			civilian_factory_use = 30
 		}
 		remove_effect = {
 			add_ideas = FSO_statue_of_equality_built
@@ -1308,7 +1308,8 @@ fso_royal_duties_category = {
 			set_country_flag = { flag = fso_recent_abdication days = 540 }
 			
 			hidden_effect = {
-				random = {
+				random_list = {
+					80 = { }
 					20 = { set_country_flag = fso_peetry_named_pretender }
 				}
 			}
@@ -1383,19 +1384,56 @@ fso_royal_duties_category = {
 			NOT = { has_country_flag = fso_recent_abdication }
 		}
 		
+		available = {
+			stability > 0.9
+		}
+		
 		complete_effect = {
 		
 			retire_country_leader = yes
 			
-			create_country_leader = {
-				name = "Lamatrepide"
-				desc = "LAMATREPIDE_DESC"
-				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
-				expire = "1965.1.1"
-				ideology = friendshipism
-				traits = { wae_wa_wee }
+			if = {
+				limit = {
+					has_country_flag = fso_lama_bourbon
+				}
+				create_country_leader = {
+					name = "Lamatrepide Bourbon"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
 			}
-			
+			if = {
+				limit = {
+					has_country_flag = fso_lama_bonaparte
+				}
+				create_country_leader = {
+					name = "Lamatrepide Bonaparte"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_country_flag = fso_lama_bourbon }
+						NOT = { has_country_flag = fso_lama_bonaparte }
+					}
+				}
+				create_country_leader = {
+					name = "Lamatrepide"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
 		}
 	
 		cost = 1
@@ -1423,12 +1461,12 @@ fso_royal_duties_category = {
 			set_country_flag = fso_peetry_marriage
 			
 			hidden_effect = {
-				random = { 60 = { set_country_flag = fso_spa_bourbon } }
-				random = { 60 = { set_country_flag = fso_windsor } }
-				random = { 60 = { set_country_flag = fso_di_savoia } }
-				random = { 60 = { set_country_flag = fso_saxe_coburg_gotha } }
-				random = { 60 = { set_country_flag = fso_karadzhordzhevic } }
-				random = { 60 = { set_country_flag = fso_orange } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_spa_bourbon } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_windsor } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_di_savoia } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_saxe_coburg_gotha } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_karadzhordzhevic } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_orange } }
 			}
 			
 			country_event = { id = fso.290 days = 14 }
@@ -1439,6 +1477,110 @@ fso_royal_duties_category = {
 		
 		remove_effect = {
 			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_royal_marriage_lama = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_allow_marriages
+			NOT = { has_country_flag = fso_lama_marriage }
+		}
+		
+		complete_effect = {
+			
+			set_country_flag = fso_lama_marriage
+			
+			country_event = { id = fso.293 days = 14 }
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_institute_friendship_games = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			NOT = { has_country_flag = fso_instituted_friendship_games }
+		}
+		
+		complete_effect = {
+			
+			set_country_flag = fso_instituted_friendship_games
+			
+			country_event = { id = fso.297 }
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hold_games = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_royal_duties
+			has_country_flag = fso_friendship_games_active
+		}
+		
+		available = {
+			
+		}
+	
+		days_remove = 60
+		cost = 0
+		days_mission_timeout = 30
+		
+		modifier = {
+			civilian_factory_use = 10
+			political_power_gain = -0.3
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			all_army_leader = {
+				random_list = {
+					25 = { add_attack = 1 }
+					25 = { add_defense = 1 }
+					25 = { add_planning = 1 }
+					25 = { add_logistics = 1 }
+				}
+			}
+			set_country_flag = { flag = fso_had_friendship_games_recently days = 360 }
+			clr_country_flag = fso_friendship_games_active
+		}
+		
+		timeout_effect = {
+			clr_country_flag = fso_friendship_games_active
+			set_country_flag = { flag = fso_had_friendship_games_recently days = 360 }
 		}
 		
 		ai_will_do = {

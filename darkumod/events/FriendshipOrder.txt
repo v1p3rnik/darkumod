@@ -8614,6 +8614,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = one_year_pulse days = 365 }
+	}
 	
 	option = { 
 		name = fso.269.a
@@ -8660,6 +8661,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = one_year_pulse days = 365 }
+	}
 	
 	option = { # support rivalry
 		name = fso.270.a
@@ -8701,6 +8703,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = one_year_pulse days = 365 }
+	}
 	
 	option = { # Why do we care?
 		name = fso.271.a
@@ -8742,6 +8745,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = two_year_pulse days = 730 }
+	}
 	
 	option = { # Encourage civilian industry
 		name = fso.272.a
@@ -8784,6 +8788,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = two_year_pulse days = 730 }
+	}
 	
 	option = { # Stage recruitment campaign
 		name = fso.273.a
@@ -8826,6 +8831,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = two_year_pulse days = 730 }
+	}
 	
 	option = { # House Spiders
 		name = fso.274.a
@@ -8870,6 +8876,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = half_year_pulse days = 182 }
+	}
 	
 	option = { # Nobody cares
 		name = fso.275.a
@@ -8908,6 +8915,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = half_year_pulse days = 182 }
+	}
 	
 	option = { # Thank them
 		name = fso.276.a
@@ -8941,6 +8949,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = { flag = half_year_pulse days = 182 }
+	}
 	
 	option = { # Accept him and his men
 		name = fso.277.a
@@ -9447,13 +9456,47 @@ country_event = {
 				original_tag = CZE
 				has_civil_war = yes
 			}
-			create_country_leader = {
-				name = "Lamatrepide"
-				desc = "LAMATREPIDE_DESC"
-				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
-				expire = "1965.1.1"
-				ideology = centrism
-				traits = { wae_wa_wee }
+			if = {
+				limit = {
+					has_country_flag = fso_lama_bourbon
+				}
+				create_country_leader = {
+					name = "Lamatrepide Bourbon"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = fso_lama_bonaparte
+				}
+				create_country_leader = {
+					name = "Lamatrepide Bonaparte"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_country_flag = fso_lama_bourbon }
+						NOT = { has_country_flag = fso_lama_bonaparte }
+					}
+				}
+				create_country_leader = {
+					name = "Lamatrepide"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
 			}
 		}
 	}
@@ -9462,13 +9505,47 @@ country_event = {
 		name = fso.289.b
 		random_list = {
 			80 = {
-				create_country_leader = {
-					name = "Lamatrepide"
-					desc = "LAMATREPIDE_DESC"
-					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
-					expire = "1965.1.1"
-					ideology = friendshipism
-					traits = { wae_wa_wee }
+				if = {
+					limit = {
+						has_country_flag = fso_lama_bourbon
+					}
+					create_country_leader = {
+						name = "Lamatrepide Bourbon"
+						desc = "LAMATREPIDE_DESC"
+						picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+						expire = "1965.1.1"
+						ideology = friendshipism
+						traits = { wae_wa_wee }
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = fso_lama_bonaparte
+					}
+					create_country_leader = {
+						name = "Lamatrepide Bonaparte"
+						desc = "LAMATREPIDE_DESC"
+						picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+						expire = "1965.1.1"
+						ideology = friendshipism
+						traits = { wae_wa_wee }
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							NOT = { has_country_flag = fso_lama_bourbon }
+							NOT = { has_country_flag = fso_lama_bonaparte }
+						}
+					}
+					create_country_leader = {
+						name = "Lamatrepide"
+						desc = "LAMATREPIDE_DESC"
+						picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+						expire = "1965.1.1"
+						ideology = friendshipism
+						traits = { wae_wa_wee }
+					}
 				}
 			}
 			20 = {
@@ -9482,13 +9559,47 @@ country_event = {
 						original_tag = CZE
 						has_civil_war = yes
 					}
-					create_country_leader = {
-						name = "Lamatrepide"
-						desc = "LAMATREPIDE_DESC"
-						picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
-						expire = "1965.1.1"
-						ideology = centrism
-						traits = { wae_wa_wee }
+					if = {
+						limit = {
+							has_country_flag = fso_lama_bourbon
+						}
+						create_country_leader = {
+							name = "Lamatrepide Bourbon"
+							desc = "LAMATREPIDE_DESC"
+							picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+							expire = "1965.1.1"
+							ideology = friendshipism
+							traits = { wae_wa_wee }
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = fso_lama_bonaparte
+						}
+						create_country_leader = {
+							name = "Lamatrepide Bonaparte"
+							desc = "LAMATREPIDE_DESC"
+							picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+							expire = "1965.1.1"
+							ideology = friendshipism
+							traits = { wae_wa_wee }
+						}
+					}
+					if = {
+						limit = {
+							AND = {
+								NOT = { has_country_flag = fso_lama_bourbon }
+								NOT = { has_country_flag = fso_lama_bonaparte }
+							}
+						}
+						create_country_leader = {
+							name = "Lamatrepide"
+							desc = "LAMATREPIDE_DESC"
+							picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+							expire = "1965.1.1"
+							ideology = friendshipism
+							traits = { wae_wa_wee }
+						}
 					}
 				}
 			}
@@ -9507,7 +9618,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		random = { 30 = { set_country_flag = fso_peetry_faux_pas } }
+		random_list = { 70 = { } 30 = { set_country_flag = fso_peetry_faux_pas } }
 	}
 	
 	option = { # Spanish Bourbons
@@ -9516,7 +9627,12 @@ country_event = {
 			has_country_flag = fso_spa_bourbons
 		}
 		clr_country_flag = fso_spa_bourbons
-		SPA = { save_global_event_target_as = fso_marriage_target }
+		every_country = {
+			limit = {
+				original_tag = SPR
+			}
+			save_global_event_target_as = fso_marriage_target
+		}
 		custom_effect_tooltip = fso.290.spain
 		country_event = { id = fso.291 days = 7 }
 	}
@@ -9620,6 +9736,164 @@ country_event = {
 	option = { # OK.
 		name = fso.292.a
 		clear_global_event_target = fso_marriage_target
+	}
+	
+}
+# Royal Duties - Lama's Marriage - Start
+country_event = {
+	id = fso.293
+	title = fso.293.t
+	desc = fso.293.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # OK.
+		name = fso.293.a
+		random_list = {
+			30 = { set_country_flag = fso_bourbon }
+			30 = { set_country_flag = fso_bonaparte }
+			40 = { set_country_flag = fso_french_refused }
+		}
+	}
+	
+}
+# Royal Duties - Lama's Marriage - Bourbons
+country_event = {
+	id = fso.293
+	title = fso.293.t
+	desc = fso.293.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_country_flag = fso_bourbon
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = { # Yay!
+		name = fso.293.a
+		FRA = { 
+			set_country_flag = fso_lama_claims
+			add_opinion_modifier = { target = CZE modifier = fso_royal_marriage }
+			CZE = { add_opinion_modifier = { target = PREV modifier = fso_royal_marriage } }
+		}
+	}
+	
+}
+# Royal Duties - Lama's Marriage - Bourbons
+country_event = {
+	id = fso.294
+	title = fso.294.t
+	desc = fso.294.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_country_flag = fso_bourbon
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = { # Yay!
+		name = fso.294.a
+		set_country_flag = fso_lama_bourbon
+		FRA = { 
+			set_country_flag = fso_lama_claims
+			add_opinion_modifier = { target = CZE modifier = fso_royal_marriage }
+			CZE = { add_opinion_modifier = { target = PREV modifier = fso_royal_marriage } }
+		}
+	}
+	
+}
+# Royal Duties - Lama's Marriage - Bonapartes
+country_event = {
+	id = fso.295
+	title = fso.295.t
+	desc = fso.295.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_country_flag = fso_bonaparte
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = { # Yay!
+		name = fso.295.a
+		set_country_flag = fso_lama_bonaparte
+		FRA = { 
+			set_country_flag = fso_lama_claims
+			add_opinion_modifier = { target = CZE modifier = fso_royal_marriage }
+			CZE = { add_opinion_modifier = { target = PREV modifier = fso_royal_marriage } }
+		}
+	}
+	
+}
+# Royal Duties - Lama's Marriage - Nobody
+country_event = {
+	id = fso.296
+	title = fso.296.t
+	desc = fso.296.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_country_flag = fso_french_refused
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = { # Aww
+		name = fso.296.a
+		
+		FRA = {
+			add_opinion_modifier = { target = CZE modifier = fso_opposition }
+			CZE = { add_opinion_modifier = { target = PREV modifier = fso_opposition } }
+		}
+	}
+	
+}
+# Royal Duties - Friendship Games - Initiate
+country_event = {
+	id = fso.297
+	title = fso.297.t
+	desc = fso.297.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		tag = CZE
+		NOT = { has_country_flag = fso_had_friendship_games_recently }
+		NOT = { has_country_flag = fso_friendship_games_active }
+		has_country_flag = fso_instituted_friendship_games
+	}
+	
+	option = { # OK.
+		name = fso.293.a
+		set_country_flag = fso_friendship_games_active
 	}
 	
 }
