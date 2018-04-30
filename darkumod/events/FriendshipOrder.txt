@@ -1654,7 +1654,7 @@ country_event = {
 	id = fso.54
 	title = fso.54.t
 	desc = fso.54.d
-	
+	picture = GFX_fso_rebuild_sad
 	
 	fire_only_once = yes
 	
@@ -1732,7 +1732,7 @@ country_event = {
 	id = fso.56
 	title = fso.56.t
 	desc = fso.56.d
-	
+	picture = GFX_fso_rebuild_happy
 	
 	fire_only_once = yes
 	

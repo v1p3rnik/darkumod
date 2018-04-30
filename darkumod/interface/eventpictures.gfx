@@ -96,6 +96,14 @@ spriteTypes = {
 		name = "GFX_fso_news_democratic_berlin"
 		texturefile = "gfx/event_pictures/fso_news_democratic_berlin.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_rebuild_happy"
+		texturefile = "gfx/event_pictures/fso_rebuild_happy.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_rebuild_sad"
+		texturefile = "gfx/event_pictures/fso_rebuild_sad.tga"
+	}
 	
 	
 	################################################## VANILLA
