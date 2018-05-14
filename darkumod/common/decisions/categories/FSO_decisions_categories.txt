@@ -68,3 +68,16 @@ fso_royal_duties_category = {
 	}
 
 }
+
+fso_supporting_cells_category = {
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		is_puppet = no
+		has_country_flag = fso_helping_cells
+	}
+
+}

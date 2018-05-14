@@ -1592,6 +1592,37 @@ fso_royal_duties_category = {
 
 operations = {
 
+	FSO_friendship_cells_cooldown = {
+
+		icon = generic_independence
+		
+		allowed = { always = no }
+
+		available = {
+			
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		activation = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+		
+		timeout_effect = {
+		
+			clr_global_flag = fso_friendshipism_rising_in_country
+			
+		}
+	}
+
 	FSO_border_conflict_time_until_cancelled = {
 
 		icon = border_war
@@ -1642,4 +1673,348 @@ operations = {
 			
 		}
 	}
+}
+
+fso_supporting_cells_category = {
+
+	FSO_cells_start_war = {
+
+		icon = generic_ignite_civil_war
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+		
+			OR = {
+				
+				has_country_flag = { flag = fso_helped_cells_counter value = 2 }
+				has_country_flag = { flag = fso_helped_cells_counter value = 3 }
+				has_country_flag = { flag = fso_helped_cells_counter value = 4 }
+				has_country_flag = { flag = fso_helped_cells_counter value = 5 }
+				
+			}
+			
+		}
+		
+		days_remove = 30
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+		
+			# varying civil wars here
+			
+			event_target:fso_friendship_cells = {
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 2 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.3
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 3 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.4
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 4 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.5
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 5 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.6
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+			}
+		}
+	}
+	FSO_send_guns = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_guns }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_guns
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
+				
+			}
+			
+		}
+	}
+	FSO_send_volunteers = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_volunteers }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_volunteers
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_manpower = 50000
+				
+			}
+			
+		}
+	}
+	FSO_send_planes = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_planes }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_planes
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_equipment_to_stockpile = { type = fighter_equipment amount = 150 }
+				add_equipment_to_stockpile = { type = CAS_equipment amount = 150 }
+				
+			}
+			
+		}
+	}
+	FSO_send_humanitarian_aid = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_humanitarian_aid }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_humanitarian_aid
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_offsite_building = { type = industrial_complex level = 2 }
+				
+			}
+			
+		}
+	}
+	FSO_send_political_support = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_political_support }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 100
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_political_support
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_political_power = 300
+				
+			}
+			
+		}
+	}
+
 }

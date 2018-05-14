@@ -5704,9 +5704,13 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		save_global_event_target_as = fso_coup_target
+	}
+	
 	option = { # Okay
 		name = fso.152.a
-		save_global_event_target_as = fso_coup_target
+		
 		
 	}
 }
@@ -9896,4 +9900,209 @@ country_event = {
 		set_country_flag = fso_friendship_games_active
 	}
 	
+}
+# Time to be Awesome - Start
+country_event = {
+	id = fso.298
+	title = fso.298.t
+	desc = fso.298.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_time_to_be_awesome }
+		focus_progress = {
+			focus = FSO_time_to_be_awesome
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.298.a
+		
+	}
+}
+# Time to be Awesome - End
+country_event = {
+	id = fso.299
+	title = fso.299.t
+	desc = fso.299.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.299.a
+		custom_effect_tooltip = fso.299.tt
+		set_global_flag = fso_friendshipism_rising
+		set_rule = { can_create_factions = yes }
+		create_faction = friendship_faction
+		hidden_effect = { 
+			random_country = {
+				limit = {
+					NOT = { tag = CZE }
+					NOT = { has_government = friendship }
+				}
+				country_event = { id = fso.300 }
+			}
+		}
+	}
+	
+}
+# Time to be Awesome - Friendshipism Rising
+country_event = {
+	id = fso.300
+	title = fso.300.t
+	desc = fso.300.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = fso_friendshipism_rising
+		NOT = { has_global_flag = fso_friendshipism_rising_in_country }
+		NOT = { has_government = friendship }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = { 
+		name = fso.300.a
+		
+		set_global_flag = fso_friendshipism_rising_in_country
+		
+		save_global_event_target_as = fso_friendship_cells
+		
+		add_popularity = {
+			ideology = friendship
+			popularity = 0.1
+		}
+		
+		CZE = { country_event = { id = fso.301 } }
+		
+	}
+	
+}
+# Time to be Awesome - Friendship Cells In [fso_friendship_cells.GetName] Ask Our Aid!
+country_event = {
+	id = fso.301
+	title = fso.301.t
+	desc = fso.301.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # deny
+		name = fso.301.a
+		
+		activate_mission_tooltip = FSO_friendship_cells_cooldown
+		activate_mission = FSO_friendship_cells_cooldown
+		
+		custom_effect_tooltip = fso.301.tt1
+		
+	}
+	
+	option = { # accept
+		name = fso.301.b
+		
+		custom_effect_tooltip = fso.301.tt2
+		
+		set_country_flag = fso_helping_cells
+		set_country_flag = { flag = fso_helped_cells_counter value = 0 }
+		
+	}
+	
+}
+# Time to be Awesome - Civil War Ends, Friendship Wins
+country_event = {
+	id = fso.302
+	title = fso.302.t
+	desc = fso.302.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = fso_cells_civil_war
+		has_government = friendship
+		has_civil_war = no
+	}
+	
+	option = { 
+		name = fso.302.a
+		CZE = { add_to_faction = PREV }
+		
+		CZE = { country_event = { id = fso.303 }
+		
+		clr_country_flag = fso_cells_civil_war
+		
+	}
+}
+# Time to be Awesome - Civil War Ends, Friendship Lost
+country_event = {
+	id = fso.304
+	title = fso.304.t
+	desc = fso.304.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = fso_cells_civil_war
+		NOT = { has_government = friendship }
+		has_civil_war = no
+	}
+	
+	option = { 
+		name = fso.302.a
+		
+		CZE = { country_event = { id = fso.303 }
+		
+		clr_country_flag = fso_cells_civil_war
+		
+	}
+}
+# Time to be Awesome - Civil War Ends (CZE)
+country_event = {
+	id = fso.303
+	title = fso.303.t
+	desc = fso.303.d
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+		clear_global_event_target = fso_friendship_cells 
+		
+		clr_country_flag = fso_sent_guns
+		clr_country_flag = fso_sent_volunteers
+		clr_country_flag = fso_sent_planes
+		clr_country_flag = fso_sent_humanitarian_aid
+		clr_country_flag = fso_sent_political_support
+		
+		clr_global_flag = fso_friendshipism_rising_in_country
+		
+		clr_country_flag = fso_helping_cells
+		clr_country_flag = fso_helped_cells_counter
+		
+		activate_mission = FSO_friendship_cells_cooldown
+		
+	}
+	
+	option = { 
+		name = fso.303.a
+		
+	}
 }

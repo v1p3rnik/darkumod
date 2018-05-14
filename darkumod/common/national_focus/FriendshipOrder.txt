@@ -1665,8 +1665,43 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_sinister_minister_effect
+			custom_effect_tooltip = FSO_royal_duties_effect
 			hidden_effect = { CZE = { country_event = { id = fso.287 } } }
+		}
+	}
+	# Time to be Awesome
+	focus = {
+		id = FSO_time_to_be_awesome
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_royal_duties }
+		x = 7
+		y = 18
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_time_to_be_awesome_effect
+			hidden_effect = { CZE = { country_event = { id = fso.299 } } }
 		}
 	}
 	
