@@ -4086,7 +4086,7 @@ country_event = {
 	
 	option = { # 
 		name = fso.105.a
-		set_country_flag = statue_of_equality
+		set_country_flag = fso_statue_of_equality
 	}
 }
 
@@ -10105,4 +10105,86 @@ country_event = {
 		name = fso.303.a
 		
 	}
+}
+# Break the Wheel - Start
+country_event = {
+	id = fso.304
+	title = fso.304.t
+	desc = fso.304.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_break_the_wheel }
+		focus_progress = {
+			focus = FSO_break_the_wheel
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.304.a
+		
+	}
+}
+# Break the Wheel - End
+country_event = {
+	id = fso.305
+	title = fso.305.t
+	desc = fso.305.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.305.a
+		custom_effect_tooltip = fso.305.tt
+		set_country_flag = fso_can_disarm_factionals
+	}
+	
+}
+# Dream of Friendship - Start
+country_event = {
+	id = fso.306
+	title = fso.306.t
+	desc = fso.306.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_dream_of_friendship }
+		focus_progress = {
+			focus = FSO_dream_of_friendship
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.306.a
+		
+	}
+}
+# Dream of Friendship - End
+country_event = {
+	id = fso.307
+	title = fso.307.t
+	desc = fso.307.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.307.a
+		custom_effect_tooltip = fso.307.tt
+		set_country_flag = fso_can_build_wonder
+	}
+	
 }

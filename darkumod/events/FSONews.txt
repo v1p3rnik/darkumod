@@ -442,3 +442,30 @@ news_event = {
 		}
 	}
 }
+
+# FSO Completes Victory Wonder
+news_event = {
+	id = fsonews.15
+	title = fsonews.15.t 
+	desc = fsonews.15.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.15.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.15.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
