@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Friendship Order focus tree
 
 focus_tree = {
@@ -1776,4 +1777,1784 @@ focus_tree = {
 	}
 	
 	
+=======
+# Friendship Order focus tree
+
+focus_tree = {
+	id = fso_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = CZE
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 3500 }
+
+#	focus = {
+#		id = FSO_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id =
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	# Order 69
+	focus = {
+		id = FSO_order_69
+		icon = GFX_goal_generic_construction2
+		x = 15
+		y = 0
+		
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_order_69_effect
+			hidden_effect = { CZE = { country_event = { id = fso.6 } } }
+			hidden_effect = { 
+				complete_national_focus = FSO_political_open
+				complete_national_focus = FSO_economic_open
+			}
+		}
+	}
+	
+	# Political Tree Open
+	focus = {
+		id = FSO_political_open
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_order_69 }
+		x = 8
+		y = 1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FSO_political_open_tt
+				has_country_flag = order_69_complete
+			}
+		}
+		
+		bypass = {
+			has_country_flag = order_69_complete
+		}
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	# Economic Tree Open
+	focus = {
+		id = FSO_economic_open
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_order_69 }
+		x = 22
+		y = 1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FSO_political_open_tt
+				has_country_flag = order_69_complete
+			}
+		}
+		
+		bypass = {
+			has_country_flag = order_69_complete
+		}
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	########################### COMMIE TREE #################################
+	# Dark Buddhist question
+	focus = {
+		id = FSO_darku_question
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_political_open }
+		x = 2
+		y = 2
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_darku_question_effect
+			hidden_effect = { CZE = { country_event = { id = fso.27 } } }
+		}
+	}
+	
+	# Delegation to Moscow
+	focus = {
+		id = FSO_delegation_to_moscow
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_darku_question }
+		x = 3
+		y = 3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_delegation_to_moscow_tt
+				has_country_flag = darku_question_solved_gone
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_delegation_to_moscow_effect
+		}
+	}
+	
+	# Autonomous Revolution
+	focus = {
+		id = FSO_autonomous_revolution
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_darku_question }
+		x = 1
+		y = 3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_autonomous_revolution_tt
+				has_country_flag = darku_question_solved_stay
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_autonomous_revolution_effect
+			hidden_effect = { CZE = { country_event = { id = fso.40 } } }
+		}
+	}
+	############################# SUPREME LEADER PATH ####################################
+	# Scientific Greatness
+	focus = {
+		id = FSO_scientific_greatness
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_autonomous_revolution }
+		x = 1
+		y = 4
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_scientific_greatness_effect
+			if = {
+				limit = {
+					has_country_flag = research_speed
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.46 } } }
+			}
+			if = {
+				limit = {
+					has_country_flag = research_slot
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.47 } } }
+			}
+		}
+	}
+	
+	# Anti-Imperialist Propaganda
+	focus = {
+		id = FSO_commie_propaganda
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_scientific_greatness }
+		x = 1
+		y = 6
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_commie_propaganda_effect
+			hidden_effect = { CZE = { country_event = { id = fso.50 } } }
+		}
+	}
+	
+	# Faster, Higher, Stronger
+	focus = {
+		id = FSO_faster_higher_stronger
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_commie_propaganda }
+		x = 1
+		y = 8
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_faster_higher_stronger_effect
+			hidden_effect = { CZE = { country_event = { id = fso.52 } } }
+		}
+	}
+	
+	# Send Friend Requests
+	focus = {
+		id = FSO_friend_requests
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_faster_higher_stronger }
+		x = 1
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_friend_requests_effect
+			hidden_effect = { CZE = { country_event = { id = fso.66 } } }
+		}
+	}
+	
+	# We Got This Together
+	focus = {
+		id = FSO_defend_austria
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_friend_requests }
+		x = -1
+		y = 12
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_defend_austria_tt
+				has_country_flag = protected_austria
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_defend_austria_effect
+			hidden_effect = { CZE = { country_event = { id = fso.68 } } }
+		}
+	}
+	
+	# Choose Your Friends Wisely
+	focus = {
+		id = FSO_appease_germany
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_friend_requests }
+		x = 1
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_appease_germany_tt
+				has_country_flag = neglected_austria
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_appease_germany_effect
+			hidden_effect = { CZE = { country_event = { id = fso.70 } } }
+		}
+	}
+	
+	# Home and Beyond
+	focus = {
+		id = FSO_home_and_beyond
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_defend_austria focus = FSO_appease_germany }
+		x = 1
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			HUN = { exists = no }
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_home_and_beyond_effect
+			hidden_effect = { CZE = { country_event = { id = fso.73 } } }
+		}
+	}
+	
+	# Cutie Crusade
+	focus = {
+		id = FSO_cutie_crusade
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_home_and_beyond }
+		x = 1
+		y = 16
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_cutie_crusade_tt
+				OR = {
+					AND = {
+						HUN = { exists = no }
+						CZE = { owns_state = 43 }
+					}
+					HUN = { is_in_faction_with = CZE }
+				}
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_cutie_crusade_effect
+			hidden_effect = { CZE = { country_event = { id = fso.77 } } }
+			hidden_effect = {
+				set_technology = { tech_engineers = 1 }
+				set_technology = { tech_recon = 1 }
+				set_technology = { tech_maintenance_company = 1 }
+				set_technology = { tech_signal_company = 1 }
+				set_technology = { mechanised_infantry = 1 }
+				set_technology = { basic_heavy_tank = 1 }
+				set_technology = { basic_heavy_art = 1 }
+				division_template = {
+					name = "Cutie Crusaders"
+					priority = 2
+	
+					regiments = {
+						heavy_armor = { x = 0 y = 0 }
+						heavy_armor = { x = 0 y = 1 }
+						heavy_sp_artillery_brigade = { x = 0 y = 2 }
+			
+	    	   		 	heavy_armor = { x = 1 y = 0 }
+						heavy_armor = { x = 1 y = 1 }
+						heavy_sp_artillery_brigade = { x = 1 y = 2 }
+			
+	    	   		 	mechanized = { x = 2 y = 0 }
+						mechanized = { x = 2 y = 1 }
+						mechanized = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						signal_company = { x = 0 y = 3 }
+						maintenance_company = { x = 0 y = 4 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 9 }
+					create_unit = {
+						division = "name = \"Cutie Crusaders\" division_template = \"Cutie Crusaders\" start_experience_factor = 1.0" 
+						owner = CZE
+					}
+				}
+			}
+		}
+	}
+	
+	# Our Legacy
+	focus = {
+		id = FSO_our_legacy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_cutie_crusade }
+		x = 1
+		y = 18
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			OR = {
+				AND = {
+					owns_state = 48
+					owns_state = 46
+					owns_state = 341
+					owns_state = 49
+					owns_state = 454
+					owns_state = 554
+					owns_state = 292
+					owns_state = 291
+				}
+				AND = {
+					owns_state = 16
+					owns_state = 64
+					owns_state = 2
+					owns_state = 126
+				}
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_our_legacy_effect
+			hidden_effect = { CZE = { country_event = { id = fso.79 } } }
+		}
+	}
+	
+	# Dream of Power
+	focus = {
+		id = FSO_dream_of_power
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_our_legacy }
+		x = 1
+		y = 20
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_power_effect
+			hidden_effect = { CZE = { country_event = { id = fso.81 } } }
+		}
+	}
+	################################# ISOLATION PATH ###################################
+	# Cast Alone
+	focus = {
+		id = FSO_rebuilding_alone
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_delegation_to_moscow }
+		x = 3
+		y = 4
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_rebuilding_alone_tt
+				has_country_flag = moscow_declines
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_rebuilding_alone_effect
+			if = {
+				limit = {
+					NOT = { has_country_flag = darku_question_had_war }
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.61 } } }
+				else = {
+					hidden_effect = { CZE = { country_event = { id = fso.54 } } }
+				}
+			}
+		}
+	}
+	# National Defense Act
+	focus = {
+		id = FSO_national_defense
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_rebuilding_alone }
+		x = 3
+		y = 6
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_national_defense_effect
+			hidden_effect = { CZE = { country_event = { id = fso.111 } } }
+		}
+	}
+	# Invisible Enemy
+	focus = {
+		id = FSO_invisible_enemy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_national_defense }
+		x = 3
+		y = 8
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_invisible_enemy_effect
+			hidden_effect = { CZE = { country_event = { id = fso.113 } } }
+		}
+	}
+	# Every Man A Foe
+	focus = {
+		id = FSO_every_man_foe
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_invisible_enemy }
+		x = 3
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_every_man_foe_effect
+			hidden_effect = { CZE = { country_event = { id = fso.115 } } }
+		}
+	}
+	# People's Army of Defense
+	focus = {
+		id = FSO_people_army
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_every_man_foe }
+		x = 3
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_people_army_effect
+			hidden_effect = { CZE = { country_event = { id = fso.117 } } }
+		}
+	}
+	# Self Sufficient Industry
+	focus = {
+		id = FSO_self_sufficient
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_people_army }
+		x = 3
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_self_sufficient_effect
+			hidden_effect = { CZE = { country_event = { id = fso.119 } } }
+		}
+	}
+	# Deep Crust Drills
+	focus = {
+		id = FSO_crust_drills
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_self_sufficient }
+		x = 3
+		y = 16
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_crust_drills_effect
+			hidden_effect = { CZE = { country_event = { id = fso.121 } } }
+		}
+	}
+	# Element of Harmony
+	focus = {
+		id = FSO_element_harmony
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_crust_drills }
+		x = 3
+		y = 18
+		
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_element_harmony_effect
+			hidden_effect = { CZE = { country_event = { id = fso.125 } } }
+		}
+	}
+	# Dream of Unity
+	focus = {
+		id = FSO_dream_of_unity
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_element_harmony }
+		x = 3
+		y = 20
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_unity_effect
+			hidden_effect = { CZE = { country_event = { id = fso.127 } } }
+		}
+	}
+	############################# COMINTERN PATH ###############################
+	# Aid from Soviets
+	focus = {
+		id = FSO_rebuilding_comintern
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_delegation_to_moscow }
+		x = 2
+		y = 5
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_rebuilding_comintern_tt
+				has_country_flag = moscow_agrees
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_rebuilding_comintern_effect
+			if = {
+				limit = {
+					NOT = { has_country_flag = darku_question_had_war }
+				}
+				hidden_effect = { CZE = { country_event = { id = fso.62 } } }
+				else = {
+					hidden_effect = { CZE = { country_event = { id = fso.56 } } }
+				}
+			}
+		}
+	}
+	# Secure Our Future
+	focus = {
+		id = FSO_secure_future
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_rebuilding_comintern }
+		x = 2
+		y = 7
+		
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_secure_future_effect
+			set_country_flag = fso_generallplan_czechia
+			hidden_effect = { country_event = { id = fso.87 } }
+		}
+	}
+	# Great Patavonia Project
+	focus = {
+		id = FSO_roads_project
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_secure_future }
+		x = 2
+		y = 9
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			custom_trigger_tooltip = {
+				tooltip = FSO_roads_project_tt
+				has_country_flag = fso_generallplan_czechia
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_roads_project_effect
+			hidden_effect = { country_event = { id = fso.89 } }
+		}
+	}
+	# Our New Subjects
+	focus = {
+		id = FSO_argentinians_question
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_roads_project }
+		x = 2
+		y = 11
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_argentinians_question_effect
+			hidden_effect = { country_event = { id = fso.91 } }
+		}
+	}
+	# Expand The Frontier
+	focus = {
+		id = FSO_expand_frontier
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_argentinians_question }
+		x = 2
+		y = 13
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_expand_frontier_effect
+			hidden_effect = { country_event = { id = fso.93 } }
+		}
+	}
+	# Para Bellum, Paraguay
+	focus = {
+		id = FSO_para_bellum_paraguay
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_expand_frontier }
+		x = 2
+		y = 15
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_para_bellum_paraguay_effect
+			hidden_effect = { country_event = { id = fso.95 } }
+		}
+	}
+	# Conquer Central Andes
+	focus = {
+		id = FSO_conquer_central_andes
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_para_bellum_paraguay }
+		x = 2
+		y = 17
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_conquer_central_andes_effect
+			hidden_effect = { country_event = { id = fso.97 } }
+		}
+	}
+	# The Red Carnival
+	focus = {
+		id = FSO_red_carnival
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_conquer_central_andes }
+		x = 2
+		y = 19
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_red_carnival_effect
+			hidden_effect = { country_event = { id = fso.99 } }
+		}
+	}
+	# Dream of Revolution
+	focus = {
+		id = FSO_dream_of_revolution
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_red_carnival }
+		x = 2
+		y = 21
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_revolution_effect
+			hidden_effect = { country_event = { id = fso.102 } }
+		}
+	}
+	
+	####################### FRIENDSHIP TREE ####################################
+	# What Matters
+	focus = {
+		id = FSO_what_matters
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_political_open }
+		x = 7
+		y = 2
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = neutrality
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_what_matters_effect
+			hidden_effect = { CZE = { country_event = { id = fso.137 } } }
+		}
+	}
+	# The Grand Adventure
+	focus = {
+		id = FSO_grand_adventure
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_what_matters }
+		x = 7
+		y = 4
+		
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_grand_adventure_effect
+			hidden_effect = { CZE = { country_event = { id = fso.141 } } }
+		}
+	}
+	# Perfect Couple
+	focus = {
+		id = FSO_perfect_couple
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_grand_adventure }
+		x = 7
+		y = 6
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_perfect_couple_effect
+			hidden_effect = { CZE = { country_event = { id = fso.143 } } }
+		}
+	}
+	# Project Destiny
+	focus = {
+		id = FSO_project_destiny
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_perfect_couple }
+		x = 7
+		y = 8
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_project_destiny_effect
+			hidden_effect = { CZE = { country_event = { id = fso.258 } } }
+		}
+	}
+	# Long Distance Relations
+	focus = {
+		id = FSO_long_distance
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_project_destiny }
+		x = 7
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_long_distance_effect
+			hidden_effect = { CZE = { country_event = { id = fso.261 } } }
+		}
+	}
+	# The Three Heads
+	focus = {
+		id = FSO_three_heads
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_long_distance }
+		x = 7
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_three_heads_effect
+			hidden_effect = { CZE = { country_event = { id = fso.263 } } }
+		}
+	}
+	# A Sinister Minister
+	focus = {
+		id = FSO_sinister_minister
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_three_heads }
+		x = 7
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_sinister_minister_effect
+			hidden_effect = { CZE = { country_event = { id = fso.279 } } }
+		}
+	}
+	# Royal Duties
+	focus = {
+		id = FSO_royal_duties
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_sinister_minister }
+		x = 7
+		y = 16
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_royal_duties_effect
+			hidden_effect = { CZE = { country_event = { id = fso.287 } } }
+		}
+	}
+	# Time to be Awesome
+	focus = {
+		id = FSO_time_to_be_awesome
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_royal_duties }
+		x = 7
+		y = 18
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_time_to_be_awesome_effect
+			hidden_effect = { CZE = { country_event = { id = fso.299 } } }
+		}
+	}
+	# Break the Wheel
+	focus = {
+		id = FSO_break_the_wheel
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_time_to_be_awesome }
+		x = 7
+		y = 20
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_break_the_wheel_effect
+			hidden_effect = { CZE = { country_event = { id = fso.305 } } }
+		}
+	}
+	# Dream of Friendship
+	focus = {
+		id = FSO_dream_of_friendship
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_dream_of_friendship }
+		x = 7
+		y = 22
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = friendship
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_friendship_effect
+			hidden_effect = { CZE = { country_event = { id = fso.307 } } }
+		}
+	}
+	
+	
+>>>>>>> cc8c43195c5bdca580d6173c507ac0b533371223
 }

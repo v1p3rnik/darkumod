@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 autonomy_state = {
 	id = autonomy_fso_friend
 	
@@ -44,4 +45,52 @@ autonomy_state = {
 	can_lose_level = {
 		# trigger
 	}
+=======
+autonomy_state = {
+	id = autonomy_fso_friend
+	
+	is_puppet = yes
+	
+	min_freedom_level = 0.0
+	
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+	}
+	
+	modifier = {
+		can_master_build_for_us = 1
+		conscription_factor = -1
+		extra_trade_to_overlord_factor = 1.0
+		overlord_trade_cost_factor = -1
+		cic_to_overlord_factor = 1
+		mic_to_overlord_factor = 1
+		license_subject_master_purchase_cost = -1
+		autonomy_gain_global_factor = -1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = yes
+	}
+
+	allowed = {
+		OVERLORD = { original_tag = CZE }
+	}
+	
+	can_take_level = {
+		# trigger
+	}
+
+	can_lose_level = {
+		# trigger
+	}
+>>>>>>> cc8c43195c5bdca580d6173c507ac0b533371223
 }

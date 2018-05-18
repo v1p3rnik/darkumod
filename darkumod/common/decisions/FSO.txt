@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 form_ussa_category = {
 	
 	form_ussa = {
@@ -2180,4 +2181,2188 @@ fso_supporting_cells_category = {
 		}
 	}
 
+=======
+form_ussa_category = {
+	
+	form_ussa = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+		}
+
+		available = {
+			is_subject = no
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			NOT = { has_global_flag = form_ussa_flag }
+			has_country_flag = fso_potential_ussa
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = CZE_USSA
+			
+			custom_effect_tooltip = form_ussa_cores_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_core_of = CZE }
+					}
+					CZE = { add_state_core = PREV }
+				}
+			}
+			hidden_effect = {
+				news_event = { id = fsonews.10 days = 1 }
+				set_global_flag = form_ussa_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+form_united_union_category = {
+	
+	form_united_union = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CZE
+			}
+		}
+
+		available = {
+			is_subject = no
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			NOT = { has_global_flag = form_united_union_flag }
+			has_country_flag = fso_potential_united_union
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = CZE_SOVIET
+			
+			custom_effect_tooltip = form_united_union_cores_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_core_of = CZE }
+					}
+					CZE = { add_state_core = PREV }
+				}
+			}
+			hidden_effect = {
+				news_event = { id = fsonews.6 days = 1 }
+				set_global_flag = form_united_union_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+fso_special_projects_category = {
+	
+	FSO_statue_of_equality = {
+
+		icon = generic_construction
+
+		available = {
+			controls_state = 500
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			has_government = communism
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			controls_state = 500
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			has_government = communism
+			has_country_flag = fso_statue_of_equality
+			NOT = { has_global_flag = fso_statue_of_equality_built }
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 30
+		}
+		remove_effect = {
+			add_ideas = FSO_statue_of_equality_built
+			set_global_flag = fso_statue_of_equality_built
+			hidden_effect = { news_event = { days = 1 id = fsonews.12 } }
+		}
+		complete_effect = {
+			
+		}
+	}
+	FSO_victory_wonder = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = fso_can_build_wonder
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			has_government = friendship
+			num_subjects > 50
+		}
+
+		cost = 200
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			OR = {
+				original_tag = CZE
+				tag = CZE
+			}
+			has_government = friendship
+			has_country_flag = fso_can_build_wonder
+			NOT = { has_global_flag = fso_victory_wonder_built }
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 999
+		}
+		remove_effect = {
+			set_global_flag = fso_victory_wonder_built
+			every_country = {
+				limit = {
+					NOT = { has_country_flag = fso_disarmed }
+				}
+				add_ideas = disarmed_nation
+				custom_effect_tooltip = fso.285.tt
+				hidden_effect = {
+					start_civil_war = {
+						ideology = communism
+						size = 0.95
+					}
+					random_country = {
+						limit = {
+							AND = {
+								original_tag = PREV
+								has_war_with = PREV
+							}
+						}
+						white_peace = PREV
+					}
+					add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+				}
+				add_ideas = FSO_disarmed
+				set_country_flag = fso_disarmed
+				CZE = { puppet = PREV }
+				set_autonomy = { target = THIS autonomy_state = autonomy_fso_friend }
+			}
+			hidden_effect = { news_event = { days = 1 id = fsonews.15 } }
+		}
+		complete_effect = {
+			
+		}
+	}
+}
+
+fso_war_category = {
+	
+	FSO_glorious_counterattack = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = communism
+			has_country_flag = fso_war_active
+		}
+	
+		modifier = {
+			offence = 0.6
+			defence = -0.6
+		}
+	
+		days_remove = 90
+		cost = 150
+		
+		ai_will_do = {
+		
+		}
+	}
+}
+
+fso_friendship_relationships_category = {
+
+	################## STALIN ##################
+	
+	FSO_stalin_one = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+			NOT = { has_country_flag = fso_stalin_enemy }
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			NOT = { has_country_flag = fso_courting_stalin }
+			NOT = { has_country_flag = fso_stalin_courted }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = fso_courting_stalin
+				value = 0
+			}
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_stalin
+				value = 1
+			}
+			country_event = { id = fso.174 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_two = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+			NOT = { has_country_flag = fso_stalin_enemy }
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = { flag = fso_courting_stalin value = 1 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_stalin
+				value = 1
+			}
+			country_event = { id = fso.179 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_three = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_stalin_enemy }
+			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = { flag = fso_courting_stalin value = 2 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_stalin
+				value = 1
+			}
+			country_event = { id = fso.184 }
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_stalin_enemy }
+			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = { flag = fso_courting_stalin value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			clr_country_flag = fso_courting_stalin
+			set_country_flag = fso_stalin_courted
+			country_event = { id = fso.189 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_stalin_ask_out = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+			NOT = { has_country_flag = fso_stalin_enemy }
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			has_country_flag = fso_stalin_courted
+		}
+		
+		days_remove = 60
+		cost = 10
+		
+		complete_effect = {
+			SOV = { country_event = { id = fso.152 } }
+		}
+		
+		remove_effect = {
+			
+			if = {
+				
+				limit = {
+					CZE = { has_country_flag = { flag = fso_stalin_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
+				}
+				
+				country_event = { id = fso.144 } # Peacefully convert
+				
+				else = { 
+					country_event = { id = fso.145 } # Coup happens, you fail
+				} 
+			}
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	
+	################## HITLER ##################
+	
+	FSO_hitler_one = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hitler_enemy }
+			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = GER }
+			NOT = { has_country_flag = fso_courting_hitler }
+			NOT = { has_country_flag = fso_hitler_courted }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = fso_courting_hitler
+				value = 0
+			}
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hitler
+				value = 1
+			}
+			country_event = { id = fso.154 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hitler_two = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hitler_enemy }
+			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = GER }
+			has_country_flag = { flag = fso_courting_hitler value = 1 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hitler
+				value = 1
+			}
+			country_event = { id = fso.159 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hitler_three = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hitler_enemy }
+			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = GER }
+			has_country_flag = { flag = fso_courting_hitler value = 2 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hitler
+				value = 1
+			}
+			country_event = { id = fso.164 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hitler_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hitler_enemy }
+			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = GER }
+			has_country_flag = { flag = fso_courting_hitler value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			clr_country_flag = fso_courting_hitler
+			set_country_flag = fso_hitler_courted
+			country_event = { id = fso.169 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hitler_ask_out = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hitler_enemy }
+			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = GER }
+			has_country_flag = fso_hitler_courted
+		}
+		
+		days_remove = 60
+		cost = 10
+		
+		complete_effect = {
+			GER = { country_event = { id = fso.152 } }
+		}
+		
+		remove_effect = {
+			
+			if = {
+				
+				limit = {
+					CZE = { has_country_flag = { flag = fso_hitler_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
+				}
+				
+				country_event = { id = fso.144 } # Peacefully convert
+				
+				else = { 
+					country_event = { id = fso.145 } # Coup happens, you fail
+				} 
+			}
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	
+	################## MUSSOLINI ##################
+	
+	FSO_mussolini_one = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_mussolini_enemy }
+			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = ITA }
+			NOT = { has_country_flag = fso_courting_mussolini }
+			NOT = { has_country_flag = fso_mussolini_courted }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = fso_courting_mussolini
+				value = 0
+			}
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_mussolini
+				value = 1
+			}
+			country_event = { id = fso.194 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_mussolini_two = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_mussolini_enemy }
+			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = ITA }
+			has_country_flag = { flag = fso_courting_mussolini value = 1 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_mussolini
+				value = 1
+			}
+			country_event = { id = fso.199 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_mussolini_three = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_mussolini_enemy }
+			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = ITA }
+			has_country_flag = { flag = fso_courting_mussolini value = 2 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_mussolini
+				value = 1
+			}
+			country_event = { id = fso.204 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_mussolini_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_mussolini_enemy }
+			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = ITA }
+			has_country_flag = { flag = fso_courting_mussolini value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			clr_country_flag = fso_courting_mussolini
+			set_country_flag = fso_mussolini_courted
+			country_event = { id = fso.209 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_mussolini_ask_out = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_mussolini_enemy }
+			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = ITA }
+			has_country_flag = fso_mussolini_courted
+		}
+		
+		days_remove = 60
+		cost = 10
+		
+		complete_effect = {
+			ITA = { country_event = { id = fso.152 } }
+		}
+		
+		remove_effect = {
+			
+			if = {
+				
+				limit = {
+					CZE = { has_country_flag = { flag = fso_mussolini_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
+				}
+				
+				country_event = { id = fso.144 } # Peacefully convert
+				
+				else = { 
+					country_event = { id = fso.145 } # Coup happens, you fail
+				} 
+			}
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	
+	################## ROOSEVELT ##################
+	
+	FSO_roosevelt_one = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_roosevelt_enemy }
+			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+			NOT = { has_country_flag = fso_courting_roosevelt }
+			NOT = { has_country_flag = fso_roosevelt_courted }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = fso_courting_roosevelt
+				value = 0
+			}
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_roosevelt
+				value = 1
+			}
+			country_event = { id = fso.214 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_roosevelt_two = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_roosevelt_enemy }
+			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+			has_country_flag = { flag = fso_courting_roosevelt value = 1 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_roosevelt
+				value = 1
+			}
+			country_event = { id = fso.219 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_roosevelt_three = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_roosevelt_enemy }
+			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+			has_country_flag = { flag = fso_courting_roosevelt value = 2 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_roosevelt
+				value = 1
+			}
+			country_event = { id = fso.224 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_roosevelt_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_roosevelt_enemy }
+			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+			has_country_flag = { flag = fso_courting_roosevelt value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			clr_country_flag = fso_courting_roosevelt
+			set_country_flag = fso_roosevelt_courted
+			country_event = { id = fso.229 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_roosevelt_ask_out = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_roosevelt_enemy }
+			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+			has_country_flag = fso_roosevelt_courted
+		}
+		
+		days_remove = 60
+		cost = 10
+		
+		complete_effect = {
+			USA = { country_event = { id = fso.152 } }
+			
+		}
+		
+		remove_effect = {
+			if = {
+				
+				limit = {
+					CZE = { has_country_flag = { flag = fso_roosevelt_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
+				}
+				
+				country_event = { id = fso.144 } # Peacefully convert
+				
+				else = { 
+					country_event = { id = fso.145 } # Coup happens, you fail
+				} 
+			}
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	
+	################## HIROHITO ##################
+	
+	FSO_hirohito_one = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hirohito_enemy }
+			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = JAP }
+			NOT = { has_country_flag = fso_courting_hirohito }
+			NOT = { has_country_flag = fso_hirohito_courted }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = fso_courting_hirohito
+				value = 0
+			}
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hirohito
+				value = 1
+			}
+			country_event = { id = fso.234 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hirohito_two = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hirohito_enemy }
+			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = JAP }
+			has_country_flag = { flag = fso_courting_hirohito value = 1 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hirohito
+				value = 1
+			}
+			country_event = { id = fso.239 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hirohito_three = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hirohito_enemy }
+			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = JAP }
+			has_country_flag = { flag = fso_courting_hirohito value = 2 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			modify_country_flag = {
+				flag = fso_courting_hirohito
+				value = 1
+			}
+			country_event = { id = fso.243 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hirohito_four = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hirohito_enemy }
+			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = JAP }
+			has_country_flag = { flag = fso_courting_hirohito value = 3 }
+		}
+	
+		days_remove = 30
+		cost = 10
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			clr_country_flag = fso_courting_hirohito
+			set_country_flag = fso_hirohito_courted
+			country_event = { id = fso.249 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hirohito_ask_out = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_perfect_couple
+			NOT = { has_country_flag = fso_hirohito_enemy }
+			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+		}
+		
+		available = {
+			NOT = { has_war_with = JAP }
+			has_country_flag = fso_hirohito_courted
+		}
+		
+		days_remove = 60
+		cost = 10
+		
+		complete_effect = {
+			JAP = { country_event = { id = fso.152 } }
+			
+		}
+		
+		remove_effect = {
+			if = {
+				
+				limit = {
+					CZE = { has_country_flag = { flag = fso_hirohito_perfect_friend value = 3 } }
+					NOT = { CZE = { has_country_flag = fso_besties } }
+				}
+				
+				country_event = { id = fso.144 } # Peacefully convert
+				
+				else = { 
+					country_event = { id = fso.145 } # Coup happens, you fail
+				} 
+			}
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+
+}
+fso_noble_houses_category = {
+
+	FSO_filiae_magia_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.264 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_of_spiders_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.265 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_hentai_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.266 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_tameria_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.267 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+	
+	FSO_house_proletariae_actions = {
+	
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.268 }
+			
+		}
+	
+		cost = 1
+		days_remove = 360
+		
+		remove_effect = {
+			custom_effect_tooltip = fso.houses.cooldown
+		}
+		
+		ai_will_do = {
+		
+		}
+	
+	}
+
+}
+
+fso_royal_duties_category = {
+
+	FSO_secure_line_of_succession = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			NOT = { has_country_flag = fso_succession_set }
+		}
+		
+		complete_effect = {
+			country_event = { id = fso.288 }
+			set_country_flag = fso_succession_set
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_retire_dark = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_dark_retirement
+		}
+		
+		complete_effect = {
+			retire_country_leader = yes
+			
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_Peetry.tga" 
+				expire = "1965.1.1"
+				ideology = friendshipism
+				traits = { doge_pope }
+			}
+			
+			set_country_flag = { flag = fso_recent_abdication days = 540 }
+			
+			hidden_effect = {
+				random_list = {
+					80 = { }
+					20 = { set_country_flag = fso_peetry_named_pretender }
+				}
+			}
+			
+			add_ideas = FSO_symbol_of_friendship
+			
+			every_country = {
+				limit = {
+					has_country_flag = fso_peetry_claims
+				}
+				every_country = {
+					limit = {
+						is_puppet_of = PREV
+					}
+					CZE = { puppet = PREV }
+					set_autonomy = { target = THIS autonomy_state = autonomy_colony }
+				}
+				add_ideas = disarmed_nation
+				custom_effect_tooltip = fso.285.tt
+				hidden_effect = {
+					start_civil_war = {
+						ideology = communism
+						size = 0.95
+					}
+					random_country = {
+						limit = {
+							AND = {
+								original_tag = PREV
+								has_war_with = PREV
+							}
+						}
+						white_peace = PREV
+					}
+					add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+				}
+				add_ideas = FSO_disarmed
+				CZE = { puppet = PREV }
+				set_autonomy = { target = THIS autonomy_state = autonomy_fso_personal_union }
+				CZE = { country_event = { id = fso.292 } }
+			}
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_retire_peetry = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_dark_retirement
+			has_country_leader = { ruling_only = yes name = "Peetry" }
+			NOT = { has_country_flag = fso_recent_abdication }
+		}
+		
+		available = {
+			stability > 0.9
+		}
+		
+		complete_effect = {
+		
+			retire_country_leader = yes
+			
+			if = {
+				limit = {
+					has_country_flag = fso_lama_bourbon
+				}
+				create_country_leader = {
+					name = "Lamatrepide Bourbon"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = fso_lama_bonaparte
+				}
+				create_country_leader = {
+					name = "Lamatrepide Bonaparte"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_country_flag = fso_lama_bourbon }
+						NOT = { has_country_flag = fso_lama_bonaparte }
+					}
+				}
+				create_country_leader = {
+					name = "Lamatrepide"
+					desc = "LAMATREPIDE_DESC"
+					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = { wae_wa_wee }
+				}
+			}
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_royal_marriage_peetry = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_allow_marriages
+			NOT = { has_country_flag = fso_peetry_marriage }
+		}
+		
+		complete_effect = {
+			
+			set_country_flag = fso_peetry_marriage
+			
+			hidden_effect = {
+				random_list = { 40 = { } 60 = { set_country_flag = fso_spa_bourbon } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_windsor } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_di_savoia } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_saxe_coburg_gotha } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_karadzhordzhevic } }
+				random_list = { 40 = { } 60 = { set_country_flag = fso_orange } }
+			}
+			
+			country_event = { id = fso.290 days = 14 }
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_royal_marriage_lama = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_allow_marriages
+			NOT = { has_country_flag = fso_lama_marriage }
+		}
+		
+		complete_effect = {
+			
+			set_country_flag = fso_lama_marriage
+			
+			country_event = { id = fso.293 days = 14 }
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_institute_friendship_games = {
+		
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = friendship
+			NOT = { has_country_flag = fso_instituted_friendship_games }
+		}
+		
+		complete_effect = {
+			
+			set_country_flag = fso_instituted_friendship_games
+			
+			country_event = { id = fso.297 }
+			
+		}
+	
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+	FSO_hold_games = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_completed_focus = FSO_royal_duties
+			has_country_flag = fso_friendship_games_active
+		}
+		
+		available = {
+			
+		}
+		
+		activation = {
+			has_country_flag = fso_friendship_games_active
+		}
+	
+		days_remove = 60
+		cost = 0
+		days_mission_timeout = 30
+		
+		modifier = {
+			civilian_factory_use = 10
+			political_power_gain = -0.3
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			all_army_leader = {
+				random_list = {
+					25 = { add_attack = 1 }
+					25 = { add_defense = 1 }
+					25 = { add_planning = 1 }
+					25 = { add_logistics = 1 }
+				}
+			}
+			set_country_flag = { flag = fso_had_friendship_games_recently days = 360 }
+			clr_country_flag = fso_friendship_games_active
+		}
+		
+		timeout_effect = {
+			clr_country_flag = fso_friendship_games_active
+			set_country_flag = { flag = fso_had_friendship_games_recently days = 360 }
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+
+}
+
+operations = {
+
+	FSO_disarm_faction = {
+
+		icon = infiltrate_state
+
+		visible = {
+			has_government = friendship
+			has_country_flag = fso_can_disarm_factionals
+		}
+		
+		available = {
+			any_other_country = {
+				is_in_faction_with = CZE
+				has_government = friendship
+				NOT = { has_country_flag = fso_disarmed }
+			}
+		}
+	
+		days_remove = 30
+		cost = 50
+		
+		modifier = {
+			civilian_factory_use = 15
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = CZE
+					has_government = friendship
+					NOT = { has_country_flag = fso_disarmed }
+				}
+				add_ideas = disarmed_nation
+				custom_effect_tooltip = fso.285.tt
+				hidden_effect = {
+					start_civil_war = {
+						ideology = communism
+						size = 0.95
+					}
+					random_country = {
+						limit = {
+							AND = {
+								original_tag = PREV
+								has_war_with = PREV
+							}
+						}
+						white_peace = PREV
+					}
+					add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
+					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+				}
+				set_country_flag = fso_disarmed
+				add_ideas = FSO_disarmed
+				CZE = { puppet = PREV }
+				set_autonomy = { target = THIS autonomy_state = autonomy_fso_friend }
+			}
+		}
+		
+		timeout_effect = {
+			
+		}
+		
+		ai_will_do = {
+		
+		}
+	}
+
+	FSO_friendship_cells_cooldown = {
+
+		icon = generic_independence
+		
+		allowed = { always = no }
+
+		available = {
+			
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		activation = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+		
+		timeout_effect = {
+		
+			clr_global_flag = fso_friendshipism_rising_in_country
+			
+		}
+	}
+
+	FSO_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			69 = { has_border_war = no }
+			65 = { has_border_war = no }
+			67 = { has_border_war = no }
+			74 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 69
+				state = 65
+				state = 67
+				state = 74
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 69
+				attacker = 65
+			}
+			cancel_border_war = {
+				defender = 74
+				attacker = 67
+			}
+			
+		}
+	}
+}
+
+fso_supporting_cells_category = {
+
+	FSO_cells_start_war = {
+
+		icon = generic_ignite_civil_war
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+		
+			OR = {
+				
+				has_country_flag = { flag = fso_helped_cells_counter value = 2 }
+				has_country_flag = { flag = fso_helped_cells_counter value = 3 }
+				has_country_flag = { flag = fso_helped_cells_counter value = 4 }
+				has_country_flag = { flag = fso_helped_cells_counter value = 5 }
+				
+			}
+			
+		}
+		
+		days_remove = 30
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+		
+			# varying civil wars here
+			
+			event_target:fso_friendship_cells = {
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 2 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.3
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 3 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.4
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 4 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.5
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+				
+				if = { 
+					limit = {
+						CZE = { has_country_flag = { flag = fso_helped_cells_counter value = 5 } }
+					}
+					start_civil_war = {
+						ideology = friendship
+						size = 0.6
+					}
+					set_country_flag = fso_cells_civil_war
+				}
+			}
+		}
+	}
+	FSO_send_guns = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_guns }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_guns
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
+				
+			}
+			
+		}
+	}
+	FSO_send_volunteers = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_volunteers }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_volunteers
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_manpower = 50000
+				
+			}
+			
+		}
+	}
+	FSO_send_planes = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_planes }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_planes
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_equipment_to_stockpile = { type = fighter_equipment amount = 150 }
+				add_equipment_to_stockpile = { type = CAS_equipment amount = 150 }
+				
+			}
+			
+		}
+	}
+	FSO_send_humanitarian_aid = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_humanitarian_aid }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 25
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_humanitarian_aid
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_offsite_building = { type = industrial_complex level = 2 }
+				
+			}
+			
+		}
+	}
+	FSO_send_political_support = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			has_government = friendship
+		
+		}
+
+		available = {
+			
+			has_country_flag = fso_helping_cells
+			NOT = { has_country_flag = fso_sent_political_support }
+			
+		}
+		
+		days_remove = 15
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			
+		}
+		
+		cost = 100
+		
+		timeout_effect = {
+			
+			set_country_flag = fso_sent_political_support
+			
+			modify_country_flag = {
+				flag = fso_helped_cells_counter
+				value = 1
+			}
+			
+			event_target:fso_friendship_cells = {
+				
+				add_popularity = {
+					ideology = friendship
+					popularity = 0.1
+				}
+				
+				add_political_power = 300
+				
+			}
+			
+		}
+	}
+
+>>>>>>> cc8c43195c5bdca580d6173c507ac0b533371223
 }
