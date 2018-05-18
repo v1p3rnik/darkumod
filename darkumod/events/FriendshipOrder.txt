@@ -8162,7 +8162,7 @@ country_event = {
 		add_ideas = FSO_support_anticommunist_dissidents
 	}
 	option = { # openly oppose
-		name = fso.255.d
+		name = fso.255.dd
 		trigger = {
 			has_country_flag = fso_friendship_aggressive
 			has_idea = FSO_royalist_ind_1
@@ -8222,7 +8222,7 @@ country_event = {
 		add_ideas = FSO_harboured_german_exiles
 	}
 	option = { # openly oppose
-		name = fso.256.d
+		name = fso.256.dd
 		trigger = {
 			has_country_flag = fso_friendship_aggressive
 			has_idea = FSO_royalist_col_1
@@ -8285,7 +8285,7 @@ country_event = {
 		}
 	}
 	option = { # openly oppose
-		name = fso.257.d
+		name = fso.257.dd
 		trigger = {
 			has_country_flag = fso_friendship_aggressive
 			
@@ -8801,7 +8801,6 @@ country_event = {
 	
 	option = { # Improve officer skills
 		name = fso.273.b
-		add_offsite_building = { type = arms_factory level = 2 }
 		every_army_leader = {
 			add_skill_level = 1
 		}
@@ -8893,7 +8892,7 @@ country_event = {
 	}
 	
 	option = { # Ban Bickering
-		name = fso.275.b
+		name = fso.275.c
 		add_war_support = -0.02
 	}
 	
@@ -10185,6 +10184,24 @@ country_event = {
 		name = fso.307.a
 		custom_effect_tooltip = fso.307.tt
 		set_country_flag = fso_can_build_wonder
+	}
+	
+}
+# Demand Sudetenland - FSO Friendshipist
+country_event = {
+	id = fso.308
+	title = fso.308.t
+	desc = fso.308.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.308.a
+		custom_effect_tooltip = fso.308.tt
+		
 	}
 	
 }
