@@ -3542,7 +3542,6 @@ focus_tree = {
 						CZE = { is_in_faction_with = GER }
 					}
 					CZE = { controls_state = 69 }
-					NOT = { CZE = { has_government = friendship } }
 				}
 				if = {
 					limit = {
@@ -3561,7 +3560,6 @@ focus_tree = {
 			if = {
 				limit = {
 					has_dlc = "Death or Dishonor"
-					NOT = { CZE = { has_government = friendship } }
 					CZE = { NOT = { is_in_faction_with = GER } } #in case AH is in faction with GER and dragged a subject CZE along.
 					OR = {
 						69 = { is_owned_by = HUN } #AH restored
@@ -3577,7 +3575,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = { CZE = { has_government = friendship } }
+					
 					ENG = { exists = yes }
 					ENG = { is_subject = no }
 					NOT = { has_war_with = ENG }
@@ -3607,7 +3605,6 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = { CZE = { has_government = friendship } }
 					NOT = { CZE = { controls_state = 69 } }
 					NOT = {
 						69 = { is_controlled_by = HUN }
@@ -3631,12 +3628,6 @@ focus_tree = {
 						}
 					}
 				}
-			}
-			if = {
-				limit = {
-					CZE = { has_government = friendship }
-				}
-				CZE = { country_event = { id = fso.308 }
 			}
 		}
 	}

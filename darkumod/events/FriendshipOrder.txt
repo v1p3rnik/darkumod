@@ -4086,7 +4086,7 @@ country_event = {
 	
 	option = { # 
 		name = fso.105.a
-		set_country_flag = fso_statue_of_equality
+		set_country_flag = statue_of_equality
 	}
 }
 
@@ -8162,7 +8162,7 @@ country_event = {
 		add_ideas = FSO_support_anticommunist_dissidents
 	}
 	option = { # openly oppose
-		name = fso.255.dd
+		name = fso.255.d
 		trigger = {
 			has_country_flag = fso_friendship_aggressive
 			has_idea = FSO_royalist_ind_1
@@ -8222,7 +8222,7 @@ country_event = {
 		add_ideas = FSO_harboured_german_exiles
 	}
 	option = { # openly oppose
-		name = fso.256.dd
+		name = fso.256.d
 		trigger = {
 			has_country_flag = fso_friendship_aggressive
 			has_idea = FSO_royalist_col_1
@@ -8285,7 +8285,7 @@ country_event = {
 		}
 	}
 	option = { # openly oppose
-		name = fso.257.dd
+		name = fso.257.d
 		trigger = {
 			has_country_flag = fso_friendship_aggressive
 			
@@ -8801,6 +8801,7 @@ country_event = {
 	
 	option = { # Improve officer skills
 		name = fso.273.b
+		add_offsite_building = { type = arms_factory level = 2 }
 		every_army_leader = {
 			add_skill_level = 1
 		}
@@ -8892,7 +8893,7 @@ country_event = {
 	}
 	
 	option = { # Ban Bickering
-		name = fso.275.c
+		name = fso.275.b
 		add_war_support = -0.02
 	}
 	
@@ -10104,104 +10105,4 @@ country_event = {
 		name = fso.303.a
 		
 	}
-}
-# Break the Wheel - Start
-country_event = {
-	id = fso.304
-	title = fso.304.t
-	desc = fso.304.d
-	
-	
-	fire_only_once = yes
-	
-	trigger = {
-		has_government = friendship
-		NOT = { has_completed_focus = FSO_break_the_wheel }
-		focus_progress = {
-			focus = FSO_break_the_wheel
-			progress > 0.01
-		}
-	}
-	
-	option = { 
-		name = fso.304.a
-		
-	}
-}
-# Break the Wheel - End
-country_event = {
-	id = fso.305
-	title = fso.305.t
-	desc = fso.305.d
-	
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fso.305.a
-		custom_effect_tooltip = fso.305.tt
-		set_country_flag = fso_can_disarm_factionals
-	}
-	
-}
-# Dream of Friendship - Start
-country_event = {
-	id = fso.306
-	title = fso.306.t
-	desc = fso.306.d
-	
-	
-	fire_only_once = yes
-	
-	trigger = {
-		has_government = friendship
-		NOT = { has_completed_focus = FSO_dream_of_friendship }
-		focus_progress = {
-			focus = FSO_dream_of_friendship
-			progress > 0.01
-		}
-	}
-	
-	option = { 
-		name = fso.306.a
-		
-	}
-}
-# Dream of Friendship - End
-country_event = {
-	id = fso.307
-	title = fso.307.t
-	desc = fso.307.d
-	
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fso.307.a
-		custom_effect_tooltip = fso.307.tt
-		set_country_flag = fso_can_build_wonder
-	}
-	
-}
-# Demand Sudetenland - FSO Friendshipist
-country_event = {
-	id = fso.308
-	title = fso.308.t
-	desc = fso.308.d
-	
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fso.308.a
-		custom_effect_tooltip = fso.308.tt
-		
-	}
-	
 }
