@@ -3705,6 +3705,7 @@ focus_tree = {
 						is_puppet_of = PREV
 					}
 				}
+				CZE = { has_government = friendship }
 			}
 		}
 

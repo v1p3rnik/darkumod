@@ -9185,6 +9185,10 @@ country_event = {
 		text = fso.285.d5
 		trigger = {
 			has_country_flag = fso_sudeten_stalemate
+			NOT = {
+				has_country_flag = fso_lost_east_sudeten
+				has_country_flag = fso_lost_sudeten
+			}
 		}
 	}
 	
@@ -9352,6 +9356,10 @@ country_event = {
 		name = fso.285.e
 		trigger = {
 			has_country_flag = fso_sudeten_stalemate
+			NOT = {
+				has_country_flag = fso_lost_east_sudeten
+				has_country_flag = fso_lost_sudeten
+			}
 		}
 		army_experience = 50
 		GER = {
