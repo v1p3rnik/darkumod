@@ -3636,7 +3636,7 @@ focus_tree = {
 				limit = {
 					CZE = { has_government = friendship }
 				}
-				CZE = { country_event = { id = fso.308 }
+				CZE = { country_event = { id = fso.308 } }
 			}
 		}
 	}

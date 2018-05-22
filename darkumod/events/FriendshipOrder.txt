@@ -9773,34 +9773,6 @@ country_event = {
 }
 # Royal Duties - Lama's Marriage - Bourbons
 country_event = {
-	id = fso.293
-	title = fso.293.t
-	desc = fso.293.d
-	
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = CZE
-		has_country_flag = fso_bourbon
-	}
-	
-	mean_time_to_happen = {
-		days = 14
-	}
-	
-	option = { # Yay!
-		name = fso.293.a
-		FRA = { 
-			set_country_flag = fso_lama_claims
-			add_opinion_modifier = { target = CZE modifier = fso_royal_marriage }
-			CZE = { add_opinion_modifier = { target = PREV modifier = fso_royal_marriage } }
-		}
-	}
-	
-}
-# Royal Duties - Lama's Marriage - Bourbons
-country_event = {
 	id = fso.294
 	title = fso.294.t
 	desc = fso.294.d
@@ -10047,7 +10019,7 @@ country_event = {
 		name = fso.302.a
 		CZE = { add_to_faction = PREV }
 		
-		CZE = { country_event = { id = fso.303 }
+		CZE = { country_event = { id = fso.303 } }
 		
 		clr_country_flag = fso_cells_civil_war
 		

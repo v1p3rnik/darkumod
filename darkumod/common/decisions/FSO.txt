@@ -1464,7 +1464,7 @@ fso_royal_duties_category = {
 		}
 		
 		available = {
-			stability > 0.9
+			has_stability > 0.9
 		}
 		
 		complete_effect = {
@@ -1649,7 +1649,7 @@ fso_royal_duties_category = {
 		}
 		
 		remove_effect = {
-			all_army_leader = {
+			every_army_leader = {
 				random_list = {
 					25 = { add_attack = 1 }
 					25 = { add_defense = 1 }
