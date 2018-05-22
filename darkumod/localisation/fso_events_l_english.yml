@@ -493,6 +493,12 @@
  fso.145.t:0 "[fso_coup_target.GetLeader] Befriended!"
  fso.145.d:0 "[fso_coup_target.GetLeader] now considers Dark Buddhist his trusted, close friend, and starts growing support for friendshipism in his country, [fso_coup_target.GetName]. However, it will take some time as his followers are hesitant and not ready for war yet. [fso_coup_target.GetLeader] has assured us of their full support in the war should one start."
  fso.145.a:0 "Friendship Wins!"
+ fso.146.t:0 "Adventures in Germany"
+ fso.146.d:0 "And they say Germans do not party! First destination of our enlightening travels were of course our direct neighbour, the Empire of Germany, or how they like to call it, reich. Early this morning, the emperor and his most trusted friends arrived in Dresden. After a short visit, the still unofficial, sort of hidden delegation sent letters to the government, announcing their intention of visiting Berlin.\nThe Führer accepted our proposal of an official visit, with a possibility of knowledge exchange, with unforeseen eagerness. The asociated officials showed us into the factories of Volkswagen in Berlin, showing us some of their incredible technologies. Soon, all people would ride in cars, they said! We also got to see their ingenious engineers working on all sorts of impressive endeavours, including the military innovations.\nOur emperor was also excited to visit Metzingen in southern Germany, where the Hugo Boss company designed both super fancy coat and uniform for the emperor and all companions alike. Maybe they can provide the hottest uniforms for our homeland security!\nWe also had the honor of attending one of the legendary speeches of the Führer himself, and we made sure to take notes. Not that we share his ideas or goals, but we sure got a lot to learn about passionate speeches, about the whole art of persuading the audience and proper rhetoric."
+ fso.146.a:0 "Machines are the future!"
+ fso.146.b:0 "Aesthetics and fashion!"
+ fso.146.c:0 "Deal with Volkswagen!"
+ fso.146.dd:0 "Art of rhetoric!"
  
  fso.151.t:0 "Planned Purges"
  fso.151.d:0 "In Soviet Union Dark Buddhist was inspired by the purges performed there. Now that he has returned, he wants to make a decision about doing the purges - decide the scale or if the purges are needed at all. Surely, the enemies of friendship must be removed, per say, but is it really aligned with friendshipism?.."

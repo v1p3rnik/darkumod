@@ -170,6 +170,46 @@ ideas = {
 			}
 		}
 		
+		FSO_hugo_boss = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				army_org_Factor = 0.1
+			}
+		}
+		
+		FSO_art_of_rhetoric = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.005
+				army_morale_factor = 0.1
+			}
+		}
+		
 		FSO_spirit_of_friendship = {
 			
 			allowed = {
