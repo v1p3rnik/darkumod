@@ -190,6 +190,64 @@ ideas = {
 			}
 		}
 		
+		FSO_rethink_assembly = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+		
+		FSO_intense_training = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.15
+				conscription = 0.005
+			}
+		}
+		
+		FSO_maginot_plans = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.25
+			}
+		}
+		
 		FSO_art_of_rhetoric = {
 			
 			allowed = {

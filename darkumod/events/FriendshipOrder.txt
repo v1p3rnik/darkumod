@@ -5383,6 +5383,58 @@ country_event = {
 		
 	}
 }
+# Grand Embassy - France
+country_event = {
+	id = fso.309
+	title = fso.309.t
+	desc = fso.309.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = friendship
+		NOT = { has_completed_focus = FSO_grand_adventure }
+		NOT = { has_war_with = GER }
+		focus_progress = {
+			focus = FSO_grand_adventure
+			progress > 0.3
+		}
+	}
+	
+	option = { # training
+		name = fso.309.a
+		trigger = {
+			has_country_flag = fso_friendship_aggressive
+		}
+		add_ideas = FSO_intense_training
+
+	}
+	option = { # fortification
+		name = fso.309.b
+		trigger = {
+			has_country_flag = fso_friendship_passive
+		}
+		add_ideas = FSO_maginot_plans
+
+	}
+	option = { # rethink assembly
+		name = fso.309.c
+		trigger = {
+			has_idea = FSO_royalist_col_1
+		}
+		add_ideas = FSO_rethink_assembly
+		
+	}
+	option = { # tour de france
+		name = fso.309.dd
+		trigger = {
+			has_idea = FSO_royalist_ind_1
+		}
+		set_technology = { bicycle_infantry = 1 }
+		
+	}
+}
 # Grand Embassy - Soviet Union
 country_event = {
 	id = fso.147
@@ -5398,7 +5450,7 @@ country_event = {
 		NOT = { has_war_with = SOV }
 		focus_progress = {
 			focus = FSO_grand_adventure
-			progress > 0.4
+			progress > 0.8
 		}
 	}
 	
@@ -5452,7 +5504,7 @@ country_event = {
 		NOT = { has_war_with = ITA }
 		focus_progress = {
 			focus = FSO_grand_adventure
-			progress > 0.5
+			progress > 0.4
 		}
 	}
 	
@@ -5504,7 +5556,7 @@ country_event = {
 		NOT = { has_war_with = USA }
 		focus_progress = {
 			focus = FSO_grand_adventure
-			progress > 0.6
+			progress > 0.5
 		}
 	}
 	
@@ -5557,7 +5609,7 @@ country_event = {
 		NOT = { has_war_with = JAP }
 		focus_progress = {
 			focus = FSO_grand_adventure
-			progress > 0.8
+			progress > 0.6
 		}
 	}
 	
@@ -10184,3 +10236,4 @@ country_event = {
 	}
 	
 }
+### EVENT 309 IS TAKEN ###
