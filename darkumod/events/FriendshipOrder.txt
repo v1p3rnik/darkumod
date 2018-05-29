@@ -9695,7 +9695,7 @@ country_event = {
 			}
 			save_global_event_target_as = fso_marriage_target
 		}
-		custom_effect_tooltip = fso.290.spain
+		
 		country_event = { id = fso.291 days = 7 }
 	}
 	option = { # Windsors
@@ -9705,7 +9705,7 @@ country_event = {
 		}
 		clr_country_flag = fso_windsor
 		ENG = { save_global_event_target_as = fso_marriage_target }
-		custom_effect_tooltip = fso.290.britain
+		
 		country_event = { id = fso.291 days = 7 }
 	}
 	option = { # Di Savoia
@@ -9715,7 +9715,7 @@ country_event = {
 		}
 		clr_country_flag = fso_di_savoia
 		ITA = { save_global_event_target_as = fso_marriage_target }
-		custom_effect_tooltip = fso.290.italy
+		
 		country_event = { id = fso.291 days = 7 }
 	}
 	option = { # Saxe-Coburg-Gotha
@@ -9725,7 +9725,7 @@ country_event = {
 		}
 		clr_country_flag = fso_saxe_coburg_gotha
 		BEL = { save_global_event_target_as = fso_marriage_target }
-		custom_effect_tooltip = fso.290.belgium
+		
 		country_event = { id = fso.291 days = 7 }
 	}
 	option = { # Karadzhordzhevic
@@ -9735,7 +9735,7 @@ country_event = {
 		}
 		clr_country_flag = fso_karadzhordzhevic
 		YUG = { save_global_event_target_as = fso_marriage_target }
-		custom_effect_tooltip = fso.290.yugoslavia
+		
 		country_event = { id = fso.291 days = 7 }
 	}
 	option = { # Orange
@@ -9745,7 +9745,7 @@ country_event = {
 		}
 		clr_country_flag = fso_orange
 		HOL = { save_global_event_target_as = fso_marriage_target }
-		custom_effect_tooltip = fso.290.netherlands
+		
 		country_event = { id = fso.291 days = 7 }
 	}
 	
