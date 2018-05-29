@@ -104,6 +104,14 @@ spriteTypes = {
 		name = "GFX_fso_rebuild_sad"
 		texturefile = "gfx/event_pictures/fso_rebuild_sad.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_battle_crowds"
+		texturefile = "gfx/event_pictures/fso_battle_crowds.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_civil_war"
+		texturefile = "gfx/event_pictures/fso_civil_war.tga"
+	}
 	
 	
 	################################################## VANILLA
