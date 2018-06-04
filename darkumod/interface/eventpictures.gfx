@@ -105,6 +105,7 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/fso_rebuild_sad.tga"
 	}
 	spriteType = {
+<<<<<<< HEAD
 		name = "GFX_fso_bonaparte_princess"
 		texturefile = "gfx/event_pictures/fso_bonaparte_princess.tga"
 	}
@@ -139,6 +140,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_fso_replies_come_in"
 		texturefile = "gfx/event_pictures/fso_replies_come_in.tga"
+=======
+		name = "GFX_fso_battle_crowds"
+		texturefile = "gfx/event_pictures/fso_battle_crowds.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_civil_war"
+		texturefile = "gfx/event_pictures/fso_civil_war.tga"
+>>>>>>> 1ec054a19f5b40da315b1e25372276bea99171ea
 	}
 	
 	

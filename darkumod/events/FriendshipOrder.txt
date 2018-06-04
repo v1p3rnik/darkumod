@@ -468,7 +468,7 @@ country_event = {
 	id = fso.14
 	title = fso.14.t
 	desc = fso.14.d
-	
+	picture = GFX_fso_battle_crowds
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1120,7 +1120,7 @@ country_event = {
 	id = fso.34
 	title = fso.34.t
 	desc = fso.34.d
-	
+	picture = GFX_fso_civil_war
 	
 	fire_only_once = yes
 	
