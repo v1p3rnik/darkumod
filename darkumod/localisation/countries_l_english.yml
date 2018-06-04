@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  CZE_fascism:0 "Friendship State"
  CZE_fascism_DEF:0 "The Friendship State"
  CZE_democratic:0 "Friendship Republic"
@@ -233,9 +233,9 @@ l_english:
  YUG_democratic_ADJ:0 "Yugoslavian"
  YUG_neutrality_ADJ:0 "Yugoslavian"
  YUG_communism_ADJ:0 "Yugoslavian"
- TAG_friendship:0 "Not Cancerous Yugoslavia"
- TAG_friendship_DEF:0 "The Not Cancerous State Of Yugoslavia"
- TAG_friendship_ADJ:0 "Yugoslavian"
+ YUG_friendship:0 "Not Cancerous Yugoslavia"
+ YUG_friendship_DEF:0 "The Not Cancerous State Of Yugoslavia"
+ YUG_friendship_ADJ:0 "Yugoslavian"
  SWI_fascism:0 "Swiss Imperial Confederation"
  SWI_fascism_DEF:0 "the Swiss Imperial Confederation"
  SWI_democratic:0 "Switzerland"
@@ -326,7 +326,7 @@ l_english:
  DEN_communism_ADJ:0 "Norwegian"
  DEN_friendship:0 "Friendly State Of Denmark"
  DEN_friendship_DEF:0 "The Friendly State Of Denmark"
- NOR_friendship_ADJ:0 "Danish"
+ DEN_friendship_ADJ:0 "Danish"
  BUL_fascism:0 "Legionnaires Bulgaria"
  BUL_fascism_DEF:0 "Legionnaires Bulgaria"
  BUL_democratic:0 "Republic of Bulgaria"
