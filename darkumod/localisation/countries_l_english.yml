@@ -265,7 +265,7 @@ l_english:
  TUR_communism_ADJ:0 "Turkish"
  TUR_friendship:0 "Friendly Republic Of Greater Constantinople"
  TUR_friendship_DEF:0 "The Friendly Republic Of Greater Constantinople"
- TAG_friendship_ADJ:0 "Constantinoplian"
+ TUR_friendship_ADJ:0 "Constantinoplian"
  GRE_fascism:0 "National Union of Greece"
  GRE_fascism_DEF:0 "the National Union of Greece"
  GRE_democratic:0 "Hellenic Republic"
