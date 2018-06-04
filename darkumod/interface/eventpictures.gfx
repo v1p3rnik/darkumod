@@ -104,6 +104,42 @@ spriteTypes = {
 		name = "GFX_fso_rebuild_sad"
 		texturefile = "gfx/event_pictures/fso_rebuild_sad.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_bonaparte_princess"
+		texturefile = "gfx/event_pictures/fso_bonaparte_princess.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_bourbon_princess"
+		texturefile = "gfx/event_pictures/fso_bourbon_princess.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_french_refusal"
+		texturefile = "gfx/event_pictures/fso_french_refusal.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_friendship_games"
+		texturefile = "gfx/event_pictures/fso_friendship_games.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_grand_ball"
+		texturefile = "gfx/event_pictures/fso_grand_ball.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_lama_coup"
+		texturefile = "gfx/event_pictures/fso_lama_coup.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_lama_marriage"
+		texturefile = "gfx/event_pictures/fso_lama_marriage.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_personal_union"
+		texturefile = "gfx/event_pictures/fso_personal_union.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_replies_come_in"
+		texturefile = "gfx/event_pictures/fso_replies_come_in.tga"
+	}
 	
 	
 	################################################## VANILLA

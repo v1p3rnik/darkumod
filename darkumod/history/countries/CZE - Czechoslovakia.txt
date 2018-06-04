@@ -109,6 +109,18 @@ create_navy_leader = {
 	
 }
 
+create_field_marshal = {
+	name = "MrPigster, Budget Boi"
+	picture = "Portrait_FSO_Budget_Boi.tga"
+	traits = { logistics_wizard organisational_leader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 10
+	
+}
+
 create_corps_commander = {
 	name = "Spitty"
 	picture = "Portrait_FSO_Spitty.tga"
@@ -134,8 +146,8 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Steven Universe"
-	picture = "Portrait_FSO_Steven_Universe.tga"
+	name = "Sunset Shimmer Stalin"
+	picture = "Portrait_FSO_Sunset_Shimmer_Stalin.tga"
 	traits = { panzer_leader bearer_of_artillery urban_assault_specialist }
 	skill = 4
 	

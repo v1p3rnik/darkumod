@@ -9488,7 +9488,7 @@ country_event = {
 	id = fso.289
 	title = fso.289.t
 	desc = fso.289.d
-	
+	picture = GFX_fso_lama_coup
 	
 	fire_only_once = yes
 	
@@ -9673,7 +9673,7 @@ country_event = {
 	id = fso.290
 	title = fso.290.t
 	desc = fso.290.d
-	
+	picture = GFX_fso_replies_come_in
 	
 	fire_only_once = yes
 	
@@ -9755,7 +9755,7 @@ country_event = {
 	id = fso.291
 	title = fso.291.t
 	desc = fso.291.d
-	
+	picture = GFX_fso_grand_ball
 	
 	fire_only_once = yes
 	
@@ -9789,7 +9789,7 @@ country_event = {
 	id = fso.292
 	title = fso.292.t
 	desc = fso.292.d
-	
+	picture = GFX_fso_personal_union
 	
 	fire_only_once = yes
 	
@@ -9806,7 +9806,7 @@ country_event = {
 	id = fso.293
 	title = fso.293.t
 	desc = fso.293.d
-	
+	picture = GFX_fso_lama_marriage
 	
 	fire_only_once = yes
 	
@@ -9827,7 +9827,7 @@ country_event = {
 	id = fso.294
 	title = fso.294.t
 	desc = fso.294.d
-	
+	picture = GFX_fso_bourbon_princess
 	
 	fire_only_once = yes
 	
@@ -9856,7 +9856,7 @@ country_event = {
 	id = fso.295
 	title = fso.295.t
 	desc = fso.295.d
-	
+	picture = GFX_fso_bonaparte_princess
 	
 	fire_only_once = yes
 	
@@ -9885,7 +9885,7 @@ country_event = {
 	id = fso.296
 	title = fso.296.t
 	desc = fso.296.d
-	
+	picture = GFX_fso_french_refusal
 	
 	fire_only_once = yes
 	
@@ -9913,7 +9913,7 @@ country_event = {
 	id = fso.297
 	title = fso.297.t
 	desc = fso.297.d
-	
+	picture = GFX_fso_friendship_games
 	
 	fire_only_once = yes
 	
