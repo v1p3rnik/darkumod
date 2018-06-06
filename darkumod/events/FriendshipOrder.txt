@@ -10094,7 +10094,7 @@ country_event = {
 	option = { 
 		name = fso.310.a
 		
-		CZE = { country_event = { id = fso.303 }
+		CZE = { country_event = { id = fso.303 } }
 		
 		clr_country_flag = fso_cells_civil_war
 		
