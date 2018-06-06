@@ -10078,9 +10078,9 @@ country_event = {
 }
 # Time to be Awesome - Civil War Ends, Friendship Lost
 country_event = {
-	id = fso.304
-	title = fso.304.t
-	desc = fso.304.d
+	id = fso.310
+	title = fso.310.t
+	desc = fso.310.d
 	
 	
 	fire_only_once = yes
@@ -10092,7 +10092,7 @@ country_event = {
 	}
 	
 	option = { 
-		name = fso.302.a
+		name = fso.310.a
 		
 		CZE = { country_event = { id = fso.303 }
 		
@@ -10236,4 +10236,4 @@ country_event = {
 	}
 	
 }
-### EVENT 309 IS TAKEN ###
+### EVENT 309, 310 IS TAKEN ###
