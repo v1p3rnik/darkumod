@@ -137,7 +137,7 @@ fso_special_projects_category = {
 		remove_effect = {
 			add_ideas = FSO_statue_of_equality_built
 			set_global_flag = fso_statue_of_equality_built
-			hidden_effect = { news_event = { days = 1 id = fsonews.12 } }
+			hidden_effect = { news_event = { days = 1 id = fsonews.15 } }
 		}
 		complete_effect = {
 			
@@ -177,6 +177,7 @@ fso_special_projects_category = {
 			civilian_factory_use = 999
 		}
 		remove_effect = {
+			set_province_name = { id = 11542 name = "Utopia Praga" }
 			set_global_flag = fso_victory_wonder_built
 			every_country = {
 				limit = {
@@ -1650,12 +1651,10 @@ fso_royal_duties_category = {
 		
 		remove_effect = {
 			every_army_leader = {
-				random_list = {
-					25 = { add_attack = 1 }
-					25 = { add_defense = 1 }
-					25 = { add_planning = 1 }
-					25 = { add_logistics = 1 }
-				}
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1 
+				add_logistics = 1
 			}
 			set_country_flag = { flag = fso_had_friendship_games_recently days = 360 }
 			clr_country_flag = fso_friendship_games_active

@@ -1743,7 +1743,7 @@ focus_tree = {
 	focus = {
 		id = FSO_dream_of_friendship
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FSO_dream_of_friendship }
+		prerequisite = { focus = FSO_break_the_wheel }
 		x = 7
 		y = 22
 		
