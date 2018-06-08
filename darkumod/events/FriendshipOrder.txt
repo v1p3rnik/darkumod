@@ -5751,7 +5751,7 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -5773,7 +5773,7 @@ country_event = {
 	desc = fso.144.d
 	
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -5796,7 +5796,7 @@ country_event = {
 	desc = fso.145.d
 	
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -8364,7 +8364,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
-		name = fso.257.a
+		name = fso.258.a
 		add_stability = 0.1
 	}
 	
@@ -8655,7 +8655,7 @@ country_event = {
 	desc = fso.269.d
 	
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8675,19 +8675,19 @@ country_event = {
 		name = fso.269.a
 		random_list = {
 			25 = {
-				custom_effect_tooltip = fso.268.spiders
+				
 				add_political_power = -40
 			}
 			25 = {
-				custom_effect_tooltip = fso.268.hentai
+				
 				add_manpower = -1000
 			}
 			25 = {
-				custom_effect_tooltip = fso.268.tameria
+				
 				add_command_power = -30
 			}
 			25 = {
-				custom_effect_tooltip = fso.268.proletariae
+				
 				add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
 			}
 		}
@@ -8702,7 +8702,7 @@ country_event = {
 	desc = fso.270.d
 	picture = GFX_fso_interhouse_rivalry
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8744,7 +8744,7 @@ country_event = {
 	desc = fso.271.d
 	picture = GFX_fso_turncoats
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8786,7 +8786,7 @@ country_event = {
 	desc = fso.272.d
 	picture = GFX_fso_house_charter
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8829,7 +8829,7 @@ country_event = {
 	desc = fso.273.d
 	picture = GFX_fso_jousting_tournament
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8871,7 +8871,7 @@ country_event = {
 	desc = fso.274.d
 	picture = GFX_fso_research_opportunity
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8916,7 +8916,7 @@ country_event = {
 	desc = fso.275.d
 	picture = GFX_fso_house_clash
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8955,7 +8955,7 @@ country_event = {
 	desc = fso.276.d
 	picture = GFX_fso_gift_from_nobles
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -8989,7 +8989,7 @@ country_event = {
 	desc = fso.277.d
 	picture = GFX_fso_noble_adoption
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_government = friendship
@@ -9243,6 +9243,10 @@ country_event = {
 		}
 	}
 	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -9300,6 +9304,12 @@ country_event = {
 			}
 		}
 		GER = {
+			every_country = {
+				limit = {
+					has_war_with = GER
+				}
+				white_peace = GER
+			}
 			add_ideas = disarmed_nation
 			custom_effect_tooltip = fso.285.tt
 			hidden_effect = {
@@ -9680,7 +9690,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		random_list = { 70 = { } 30 = { set_country_flag = fso_peetry_faux_pas } }
+		hidden_effect = { random_list = { 70 = { } 30 = { set_country_flag = fso_peetry_faux_pas } } }
 	}
 	
 	option = { # Spanish Bourbons
@@ -9814,10 +9824,12 @@ country_event = {
 	
 	option = { # OK.
 		name = fso.293.a
-		random_list = {
-			30 = { set_country_flag = fso_bourbon }
-			30 = { set_country_flag = fso_bonaparte }
-			40 = { set_country_flag = fso_french_refused }
+		hidden_effect = {
+			random_list = {
+				30 = { set_country_flag = fso_bourbon }
+				30 = { set_country_flag = fso_bonaparte }
+				40 = { set_country_flag = fso_french_refused }
+			}
 		}
 	}
 	
@@ -10033,7 +10045,6 @@ country_event = {
 	option = { # deny
 		name = fso.301.a
 		
-		activate_mission_tooltip = FSO_friendship_cells_cooldown
 		activate_mission = FSO_friendship_cells_cooldown
 		
 		custom_effect_tooltip = fso.301.tt1

@@ -411,6 +411,7 @@ fso_friendship_relationships_category = {
 		available = {
 			NOT = { has_war_with = SOV }
 			has_country_flag = fso_stalin_courted
+			NOT = { has_country_flag = fso_asking_out_someone }
 		}
 		
 		days_remove = 60
@@ -418,6 +419,7 @@ fso_friendship_relationships_category = {
 		
 		complete_effect = {
 			SOV = { country_event = { id = fso.152 } }
+			set_country_flag = fso_asking_out_someone
 		}
 		
 		remove_effect = {
@@ -435,6 +437,8 @@ fso_friendship_relationships_category = {
 					country_event = { id = fso.145 } # Coup happens, you fail
 				} 
 			}
+			
+			clr_country_flag = fso_asking_out_someone
 			
 		}
 		
@@ -601,6 +605,7 @@ fso_friendship_relationships_category = {
 		available = {
 			NOT = { has_war_with = GER }
 			has_country_flag = fso_hitler_courted
+			NOT = { has_country_flag = fso_asking_out_someone }
 		}
 		
 		days_remove = 60
@@ -608,6 +613,7 @@ fso_friendship_relationships_category = {
 		
 		complete_effect = {
 			GER = { country_event = { id = fso.152 } }
+			set_country_flag = fso_asking_out_someone
 		}
 		
 		remove_effect = {
@@ -625,6 +631,8 @@ fso_friendship_relationships_category = {
 					country_event = { id = fso.145 } # Coup happens, you fail
 				} 
 			}
+			
+			clr_country_flag = fso_asking_out_someone
 			
 		}
 		
@@ -791,6 +799,7 @@ fso_friendship_relationships_category = {
 		available = {
 			NOT = { has_war_with = ITA }
 			has_country_flag = fso_mussolini_courted
+			NOT = { has_country_flag = fso_asking_out_someone }
 		}
 		
 		days_remove = 60
@@ -798,6 +807,7 @@ fso_friendship_relationships_category = {
 		
 		complete_effect = {
 			ITA = { country_event = { id = fso.152 } }
+			set_country_flag = fso_asking_out_someone
 		}
 		
 		remove_effect = {
@@ -815,6 +825,8 @@ fso_friendship_relationships_category = {
 					country_event = { id = fso.145 } # Coup happens, you fail
 				} 
 			}
+			
+			clr_country_flag = fso_asking_out_someone
 			
 		}
 		
@@ -981,6 +993,7 @@ fso_friendship_relationships_category = {
 		available = {
 			NOT = { has_war_with = USA }
 			has_country_flag = fso_roosevelt_courted
+			NOT = { has_country_flag = fso_asking_out_someone }
 		}
 		
 		days_remove = 60
@@ -988,10 +1001,11 @@ fso_friendship_relationships_category = {
 		
 		complete_effect = {
 			USA = { country_event = { id = fso.152 } }
-			
+			set_country_flag = fso_asking_out_someone
 		}
 		
 		remove_effect = {
+		
 			if = {
 				
 				limit = {
@@ -1005,6 +1019,8 @@ fso_friendship_relationships_category = {
 					country_event = { id = fso.145 } # Coup happens, you fail
 				} 
 			}
+			
+			clr_country_flag = fso_asking_out_someone
 			
 		}
 		
@@ -1171,6 +1187,7 @@ fso_friendship_relationships_category = {
 		available = {
 			NOT = { has_war_with = JAP }
 			has_country_flag = fso_hirohito_courted
+			NOT = { has_country_flag = fso_asking_out_someone }
 		}
 		
 		days_remove = 60
@@ -1178,10 +1195,11 @@ fso_friendship_relationships_category = {
 		
 		complete_effect = {
 			JAP = { country_event = { id = fso.152 } }
-			
+			set_country_flag = fso_asking_out_someone
 		}
 		
 		remove_effect = {
+		
 			if = {
 				
 				limit = {
@@ -1195,6 +1213,8 @@ fso_friendship_relationships_category = {
 					country_event = { id = fso.145 } # Coup happens, you fail
 				} 
 			}
+			
+			clr_country_flag = fso_asking_out_someone
 			
 		}
 		
@@ -1374,7 +1394,6 @@ fso_royal_duties_category = {
 		}
 		
 		complete_effect = {
-			retire_country_leader = yes
 			
 			create_country_leader = {
 				name = "Peetry"
@@ -1405,14 +1424,13 @@ fso_royal_duties_category = {
 						is_puppet_of = PREV
 					}
 					CZE = { puppet = PREV }
-					set_autonomy = { target = THIS autonomy_state = autonomy_colony }
+					set_autonomy = { target = ROOT autonomy_state = autonomy_colony }
 				}
 				add_ideas = disarmed_nation
-				custom_effect_tooltip = fso.285.tt
 				hidden_effect = {
 					start_civil_war = {
 						ideology = communism
-						size = 0.95
+						size = 0.99
 					}
 					random_country = {
 						limit = {
@@ -1438,7 +1456,7 @@ fso_royal_duties_category = {
 				}
 				add_ideas = FSO_disarmed
 				CZE = { puppet = PREV }
-				set_autonomy = { target = THIS autonomy_state = autonomy_fso_personal_union }
+				set_autonomy = { target = ROOT autonomy_state = autonomy_fso_personal_union }
 				CZE = { country_event = { id = fso.292 } }
 			}
 		}
@@ -1714,7 +1732,7 @@ operations = {
 				hidden_effect = {
 					start_civil_war = {
 						ideology = communism
-						size = 0.95
+						size = 0.99
 					}
 					random_country = {
 						limit = {
