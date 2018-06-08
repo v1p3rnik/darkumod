@@ -177,7 +177,7 @@ fso_special_projects_category = {
 			civilian_factory_use = 999
 		}
 		remove_effect = {
-			set_province_name = { id = 11542 name = "Utopia Praga" }
+			set_province_name = { id = 11542 name = "Utopia Casurgis" }
 			set_global_flag = fso_victory_wonder_built
 			every_country = {
 				limit = {
