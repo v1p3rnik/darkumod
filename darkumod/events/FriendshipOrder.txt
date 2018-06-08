@@ -8700,7 +8700,7 @@ country_event = {
 	id = fso.270
 	title = fso.270.t
 	desc = fso.270.d
-	
+	picture = GFX_fso_interhouse_rivalry
 	
 	fire_only_once = yes
 	
@@ -8742,7 +8742,7 @@ country_event = {
 	id = fso.271
 	title = fso.271.t
 	desc = fso.271.d
-	
+	picture = GFX_fso_turncoats
 	
 	fire_only_once = yes
 	
@@ -8784,7 +8784,7 @@ country_event = {
 	id = fso.272
 	title = fso.272.t
 	desc = fso.272.d
-	
+	picture = GFX_fso_house_charter
 	
 	fire_only_once = yes
 	
@@ -8827,7 +8827,7 @@ country_event = {
 	id = fso.273
 	title = fso.273.t
 	desc = fso.273.d
-	
+	picture = GFX_fso_jousting_tournament
 	
 	fire_only_once = yes
 	
@@ -8869,7 +8869,7 @@ country_event = {
 	id = fso.274
 	title = fso.274.t
 	desc = fso.274.d
-	
+	picture = GFX_fso_research_opportunity
 	
 	fire_only_once = yes
 	
@@ -8914,7 +8914,7 @@ country_event = {
 	id = fso.275
 	title = fso.275.t
 	desc = fso.275.d
-	
+	picture = GFX_fso_house_clash
 	
 	fire_only_once = yes
 	
@@ -8953,7 +8953,7 @@ country_event = {
 	id = fso.276
 	title = fso.276.t
 	desc = fso.276.d
-	
+	picture = GFX_fso_gift_from_nobles
 	
 	fire_only_once = yes
 	
@@ -8987,7 +8987,7 @@ country_event = {
 	id = fso.277
 	title = fso.277.t
 	desc = fso.277.d
-	
+	picture = GFX_fso_noble_adoption
 	
 	fire_only_once = yes
 	
@@ -9027,7 +9027,7 @@ country_event = {
 	id = fso.278
 	title = fso.278.t
 	desc = fso.278.d
-	
+	picture = GFX_fso_trouble_stirs
 	
 	fire_only_once = yes
 	
@@ -9050,7 +9050,7 @@ country_event = {
 	id = fso.279
 	title = fso.279.t
 	desc = fso.279.d
-	
+	picture = GFX_fso_sinister_minister
 	
 	fire_only_once = yes
 	
@@ -9106,7 +9106,7 @@ country_event = {
 	id = fso.280
 	title = fso.280.t
 	desc = fso.280.d
-	
+	picture = GFX_fso_sudetenland_falls
 	
 	fire_only_once = yes
 	
@@ -9123,7 +9123,7 @@ country_event = {
 	id = fso.281
 	title = fso.281.t
 	desc = fso.281.d
-	
+	picture = GFX_fso_sudetenland_holds
 	
 	fire_only_once = yes
 	
@@ -9140,7 +9140,7 @@ country_event = {
 	id = fso.282
 	title = fso.282.t
 	desc = fso.282.d
-	
+	picture = GFX_fso_stalemate
 	
 	fire_only_once = yes
 	
@@ -9157,7 +9157,7 @@ country_event = {
 	id = fso.283
 	title = fso.283.t
 	desc = fso.283.d
-	
+	picture = GFX_fso_east_sudeten_falls
 	
 	fire_only_once = yes
 	
@@ -9174,7 +9174,7 @@ country_event = {
 	id = fso.284
 	title = fso.284.t
 	desc = fso.284.d
-	
+	picture = GFX_fso_east_sudeten_holds
 	
 	fire_only_once = yes
 	

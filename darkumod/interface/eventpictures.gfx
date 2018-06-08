@@ -148,6 +148,66 @@ spriteTypes = {
 		name = "GFX_fso_civil_war"
 		texturefile = "gfx/event_pictures/fso_civil_war.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_gift_from_nobles"
+		texturefile = "gfx/event_pictures/fso_gift_from_nobles.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_charter"
+		texturefile = "gfx/event_pictures/fso_house_charter.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_clash"
+		texturefile = "gfx/event_pictures/fso_house_clash.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_interhouse_rivalry"
+		texturefile = "gfx/event_pictures/fso_interhouse_rivalry.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_jousting_tournament"
+		texturefile = "gfx/event_pictures/fso_jousting_tournament.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_noble_adoption"
+		texturefile = "gfx/event_pictures/fso_noble_adoption.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_research_opportunity"
+		texturefile = "gfx/event_pictures/fso_research_opportunity.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_turncoats"
+		texturefile = "gfx/event_pictures/fso_turncoats.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_east_sudeten_falls"
+		texturefile = "gfx/event_pictures/fso_east_sudeten_falls.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_east_sudeten_holds"
+		texturefile = "gfx/event_pictures/fso_east_sudeten_holds.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_sinister_minister"
+		texturefile = "gfx/event_pictures/fso_sinister_minister.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_stalemate"
+		texturefile = "gfx/event_pictures/fso_stalemate.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_sudetenland_falls"
+		texturefile = "gfx/event_pictures/fso_sudetenland_falls.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_sudetenland_holds"
+		texturefile = "gfx/event_pictures/fso_sudetenland_holds.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_trouble_stirs"
+		texturefile = "gfx/event_pictures/fso_trouble_stirs.tga"
+	}
 	
 	
 	################################################## VANILLA
