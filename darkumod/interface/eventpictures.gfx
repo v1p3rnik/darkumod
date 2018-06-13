@@ -208,6 +208,34 @@ spriteTypes = {
 		name = "GFX_fso_trouble_stirs"
 		texturefile = "gfx/event_pictures/fso_trouble_stirs.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_research_slot"
+		texturefile = "gfx/event_pictures/fso_research_slot.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_filia_magia"
+		texturefile = "gfx/event_pictures/fso_house_filia_magia.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_hentai"
+		texturefile = "gfx/event_pictures/fso_house_hentai.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_spiders"
+		texturefile = "gfx/event_pictures/fso_house_spiders.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_tameria"
+		texturefile = "gfx/event_pictures/fso_house_tameria.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_wax_wane"
+		texturefile = "gfx/event_pictures/fso_wax_wane.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_house_proletariae"
+		texturefile = "gfx/event_pictures/fso_house_proletariae.tga"
+	}
 	
 	
 	################################################## VANILLA

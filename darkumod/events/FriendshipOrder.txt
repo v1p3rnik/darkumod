@@ -1468,7 +1468,7 @@ country_event = {
 		give_guarantee = CZE
 	}
 }
-# Scientific Greatness - End, picked research slot
+# Scientific Greatness - End, picked research speed
 country_event = {
 	id = fso.46
 	title = fso.46.t
@@ -1489,7 +1489,7 @@ country_event = {
 	id = fso.47
 	title = fso.47.t
 	desc = fso.47.d
-	
+	picture = GFX_fso_research_slot
 	
 	fire_only_once = yes
 	
@@ -5223,6 +5223,7 @@ country_event = {
 			ruling_party = friendship
 		}
 		
+		add_ideas = volunteer_only
 		
 		
 	}
@@ -5756,12 +5757,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		save_global_event_target_as = fso_coup_target
+		
 	}
 	
 	option = { # Okay
 		name = fso.152.a
-		
+		save_global_event_target_as = fso_coup_target
 		
 	}
 }
@@ -5922,8 +5923,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = { flag = fso_hitler_disgust value = 2 }
-		set_country_flag = { flag = fso_hitler_perfect_friend value = 0 }
+		
 	}
 	
 	option = { # Perfect Option
@@ -5931,24 +5931,32 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = fso.155 }
 		}
+		set_country_flag = { flag = fso_hitler_disgust value = 2 }
+		set_country_flag = { flag = fso_hitler_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.154.b
 		hidden_effect = {
 			country_event = { id = fso.156 }
 		}
+		set_country_flag = { flag = fso_hitler_disgust value = 2 }
+		set_country_flag = { flag = fso_hitler_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.154.c
 		hidden_effect = {
 			country_event = { id = fso.157 }
 		}
+		set_country_flag = { flag = fso_hitler_disgust value = 2 }
+		set_country_flag = { flag = fso_hitler_perfect_friend value = 0 }
 	}
 	option = { # Disgust
 		name = fso.154.dd
 		hidden_effect = {
 			country_event = { id = fso.158 }
 		}
+		set_country_flag = { flag = fso_hitler_disgust value = 2 }
+		set_country_flag = { flag = fso_hitler_perfect_friend value = 0 }
 	}
 }
 # Perfect Couple - Hitler 1 perfect
@@ -6369,8 +6377,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = { flag = fso_stalin_disgust value = 2 }
-		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
+		
 	}
 	
 	option = { # Perfect Option
@@ -6378,24 +6385,32 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = fso.175 }
 		}
+		set_country_flag = { flag = fso_stalin_disgust value = 2 }
+		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.174.b
 		hidden_effect = {
 			country_event = { id = fso.176 }
 		}
+		set_country_flag = { flag = fso_stalin_disgust value = 2 }
+		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.174.c
 		hidden_effect = {
 			country_event = { id = fso.177 }
 		}
+		set_country_flag = { flag = fso_stalin_disgust value = 2 }
+		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
 	}
 	option = { # Disgust
 		name = fso.174.dd
 		hidden_effect = {
 			country_event = { id = fso.178 }
 		}
+		set_country_flag = { flag = fso_stalin_disgust value = 2 }
+		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
 	}
 }
 # Perfect Couple - Stalin 1 perfect
@@ -6816,8 +6831,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
-		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
+		
 	}
 	
 	option = { # Perfect Option
@@ -6825,24 +6839,32 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = fso.195 }
 		}
+		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
+		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.194.b
 		hidden_effect = {
 			country_event = { id = fso.196 }
 		}
+		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
+		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.194.c
 		hidden_effect = {
 			country_event = { id = fso.197 }
 		}
+		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
+		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
 	}
 	option = { # Disgust
 		name = fso.194.dd
 		hidden_effect = {
 			country_event = { id = fso.198 }
 		}
+		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
+		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
 	}
 }
 # Perfect Couple - Mussolini 1 perfect
@@ -7263,8 +7285,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
-		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
+		
 	}
 	
 	option = { # Perfect Option
@@ -7272,24 +7293,32 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = fso.215 }
 		}
+		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
+		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.214.b
 		hidden_effect = {
 			country_event = { id = fso.216 }
 		}
+		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
+		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.214.c
 		hidden_effect = {
 			country_event = { id = fso.217 }
 		}
+		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
+		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
 	}
 	option = { # Disgust
 		name = fso.214.dd
 		hidden_effect = {
 			country_event = { id = fso.218 }
 		}
+		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
+		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
 	}
 }
 # Perfect Couple - Roosevelt 1 perfect
@@ -7710,8 +7739,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
-		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
+		
 	}
 	
 	option = { # Perfect Option
@@ -7719,24 +7747,32 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = fso.235 }
 		}
+		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
+		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.234.b
 		hidden_effect = {
 			country_event = { id = fso.236 }
 		}
+		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
+		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
 	}
 	option = { # OK
 		name = fso.234.c
 		hidden_effect = {
 			country_event = { id = fso.237 }
 		}
+		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
+		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
 	}
 	option = { # Disgust
 		name = fso.234.dd
 		hidden_effect = {
 			country_event = { id = fso.238 }
 		}
+		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
+		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
 	}
 }
 # Perfect Couple - Hirohito 1 perfect
@@ -8483,7 +8519,7 @@ country_event = {
 	id = fso.264
 	title = fso.264.t
 	desc = fso.264.d
-	
+	picture = GFX_fso_house_filia_magia
 	
 	fire_only_once = yes
 	
@@ -8515,7 +8551,7 @@ country_event = {
 	id = fso.265
 	title = fso.265.t
 	desc = fso.265.d
-	
+	picture = GFX_fso_house_spiders
 	
 	fire_only_once = yes
 	
@@ -8549,7 +8585,7 @@ country_event = {
 	id = fso.266
 	title = fso.266.t
 	desc = fso.266.d
-	
+	picture = GFX_fso_house_hentai
 	
 	fire_only_once = yes
 	
@@ -8582,7 +8618,7 @@ country_event = {
 	id = fso.267
 	title = fso.267.t
 	desc = fso.267.d
-	
+	picture = GFX_fso_house_tameria
 	
 	fire_only_once = yes
 	
@@ -8618,7 +8654,7 @@ country_event = {
 	id = fso.268
 	title = fso.268.t
 	desc = fso.268.d
-	
+	picture = GFX_fso_house_proletariae
 	
 	fire_only_once = yes
 	
@@ -8653,7 +8689,7 @@ country_event = {
 	id = fso.269
 	title = fso.269.t
 	desc = fso.269.d
-	
+	picture = GFX_fso_wax_wane
 	
 	
 	
@@ -8661,6 +8697,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = one_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8668,7 +8705,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = one_year_pulse days = 365 }
+		CZE = {
+			set_country_flag = { flag = one_year_pulse days = 365 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { 
@@ -8708,6 +8748,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = one_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8715,7 +8756,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = one_year_pulse days = 365 }
+		CZE = {
+			set_country_flag = { flag = one_year_pulse days = 365 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # support rivalry
@@ -8750,6 +8794,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = one_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8757,7 +8802,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = one_year_pulse days = 365 }
+		CZE = {
+			set_country_flag = { flag = one_year_pulse days = 365 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # Why do we care?
@@ -8792,6 +8840,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = two_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8799,7 +8848,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = two_year_pulse days = 730 }
+		CZE = {
+			set_country_flag = { flag = two_year_pulse days = 730 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # Encourage civilian industry
@@ -8835,6 +8887,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = two_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8842,7 +8895,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = two_year_pulse days = 730 }
+		CZE = {
+			set_country_flag = { flag = two_year_pulse days = 730 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # Stage recruitment campaign
@@ -8877,6 +8933,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = two_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8884,7 +8941,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = two_year_pulse days = 730 }
+		CZE = {
+			set_country_flag = { flag = two_year_pulse days = 730 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # House Spiders
@@ -8922,6 +8982,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = half_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8929,7 +8990,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = half_year_pulse days = 182 }
+		CZE = {
+			set_country_flag = { flag = half_year_pulse days = 182 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # Nobody cares
@@ -8961,6 +9025,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = half_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8968,7 +9033,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = half_year_pulse days = 182 }
+		CZE = {
+			set_country_flag = { flag = half_year_pulse days = 182 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # Thank them
@@ -8995,6 +9063,7 @@ country_event = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
 		NOT = { has_country_flag = half_year_pulse }
+		NOT = { has_country_flag = pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -9002,7 +9071,10 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = { flag = half_year_pulse days = 182 }
+		CZE = {
+			set_country_flag = { flag = half_year_pulse days = 182 }
+			set_country_flag = { flag = pulse_cooldown days = 30 }
+		}
 	}
 	
 	option = { # Accept him and his men

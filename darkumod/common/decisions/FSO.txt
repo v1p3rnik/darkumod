@@ -1423,8 +1423,11 @@ fso_royal_duties_category = {
 					limit = {
 						is_puppet_of = PREV
 					}
-					CZE = { puppet = PREV }
-					set_autonomy = { target = ROOT autonomy_state = autonomy_colony }
+					CZE = { 
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_colony }
+					}
+					
 				}
 				add_ideas = disarmed_nation
 				hidden_effect = {
@@ -1455,8 +1458,11 @@ fso_royal_duties_category = {
 					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
 				}
 				add_ideas = FSO_disarmed
-				CZE = { puppet = PREV }
-				set_autonomy = { target = ROOT autonomy_state = autonomy_fso_personal_union }
+				CZE = { 
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_fso_personal_union }
+				}
+				
 				CZE = { country_event = { id = fso.292 } }
 			}
 		}
@@ -1655,8 +1661,7 @@ fso_royal_duties_category = {
 		}
 	
 		days_remove = 60
-		cost = 0
-		days_mission_timeout = 30
+		cost = 10
 		
 		modifier = {
 			civilian_factory_use = 10
@@ -1728,7 +1733,7 @@ operations = {
 					NOT = { has_country_flag = fso_disarmed }
 				}
 				add_ideas = disarmed_nation
-				custom_effect_tooltip = fso.285.tt
+				
 				hidden_effect = {
 					start_civil_war = {
 						ideology = communism
@@ -1758,8 +1763,11 @@ operations = {
 				}
 				set_country_flag = fso_disarmed
 				add_ideas = FSO_disarmed
-				CZE = { puppet = PREV }
-				set_autonomy = { target = THIS autonomy_state = autonomy_fso_friend }
+				CZE = { 
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_fso_friend }
+				}
+				
 			}
 		}
 		
