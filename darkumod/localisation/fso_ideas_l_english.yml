@@ -64,6 +64,11 @@
  FSO_hentai_advisors_desc:0 "House Hentai provided advisors for us. For now we will tolerate them for their wisdom."
  FSO_spider_advisor:0 "House of Spiders Advisor"
  FSO_spider_advisor_desc:0 "No doubt seeks personal gains or gains for the House. But useful, for now."
+ FSO_supporting_cells_cooldown:0 "Waiting for a new contact..."
+ FSO_one_year_pulse:0 "Houses Biding Time"
+ FSO_two_year_pulse:0 "Big Event Wrap-up"
+ FSO_half_year_pulse:0 "Minor Event Consequences"
+ FSO_pulse_cooldown:0 "Time Passes..."
  
  FSO_fascist:0 "Nationalist Dreams"
  FSO_communist_base:0 "Communist Dawn"

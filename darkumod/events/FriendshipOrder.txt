@@ -8696,8 +8696,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = one_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_one_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8706,8 +8706,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = one_year_pulse days = 365 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_one_year_pulse days = 365 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -8747,8 +8747,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = one_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_one_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8757,8 +8757,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = one_year_pulse days = 365 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_one_year_pulse days = 365 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -8793,8 +8793,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = one_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_one_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8803,8 +8803,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = one_year_pulse days = 365 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_one_year_pulse days = 365 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -8839,8 +8839,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = two_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_two_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8849,8 +8849,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = two_year_pulse days = 730 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_two_year_pulse days = 730 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -8886,8 +8886,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = two_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_two_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8896,8 +8896,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = two_year_pulse days = 730 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_two_year_pulse days = 730 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -8932,8 +8932,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = two_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_two_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8942,8 +8942,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = two_year_pulse days = 730 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_two_year_pulse days = 730 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -8981,8 +8981,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = half_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_half_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -8991,8 +8991,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = half_year_pulse days = 182 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_half_year_pulse days = 182 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -9024,8 +9024,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = half_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_half_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -9034,8 +9034,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = half_year_pulse days = 182 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_half_year_pulse days = 182 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -9062,8 +9062,8 @@ country_event = {
 	trigger = {
 		has_government = friendship
 		has_completed_focus = FSO_three_heads
-		NOT = { has_country_flag = half_year_pulse }
-		NOT = { has_country_flag = pulse_cooldown }
+		NOT = { has_idea = FSO_half_year_pulse }
+		NOT = { has_idea = FSO_pulse_cooldown }
 	}
 	
 	mean_time_to_happen = {
@@ -9072,8 +9072,8 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			set_country_flag = { flag = half_year_pulse days = 182 }
-			set_country_flag = { flag = pulse_cooldown days = 30 }
+			add_timed_idea = { flag = FSO_half_year_pulse days = 182 }
+			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
 	
@@ -9383,35 +9383,8 @@ country_event = {
 				white_peace = GER
 			}
 			add_ideas = disarmed_nation
-			custom_effect_tooltip = fso.285.tt
-			hidden_effect = {
-				start_civil_war = {
-					ideology = communism
-					size = 0.95
-				}
-				random_country = {
-					limit = {
-						AND = {
-							original_tag = GER
-							has_war_with = GER
-						}
-					}
-					white_peace = GER
-				}
-				
-			}
-			add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+			set_equipment_fraction = 0
+			
 			add_ideas = FSO_disarmed
 			if = {
 				limit = {
@@ -10010,7 +9983,7 @@ country_event = {
 	}
 	
 	option = { # OK.
-		name = fso.293.a
+		name = fso.297.a
 		set_country_flag = fso_friendship_games_active
 	}
 	
@@ -10074,9 +10047,10 @@ country_event = {
 	desc = fso.300.d
 	
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
+		NOT = { CZE = { has_idea = FSO_supporting_cells_cooldown }
 		has_global_flag = fso_friendshipism_rising
 		NOT = { has_global_flag = fso_friendshipism_rising_in_country }
 		NOT = { has_government = friendship }
@@ -10110,14 +10084,14 @@ country_event = {
 	desc = fso.301.d
 	
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
 	option = { # deny
 		name = fso.301.a
 		
-		activate_mission = FSO_friendship_cells_cooldown
+		add_timed_idea = { idea = FSO_supporting_cells_cooldown days = 30 }
 		
 		custom_effect_tooltip = fso.301.tt1
 		
@@ -10141,12 +10115,16 @@ country_event = {
 	desc = fso.302.d
 	
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
-		has_country_flag = fso_cells_civil_war
+		NOT = { is_in_faction_with = CZE }
 		has_government = friendship
 		has_civil_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = { 
@@ -10166,12 +10144,16 @@ country_event = {
 	desc = fso.310.d
 	
 	
-	fire_only_once = yes
+	
 	
 	trigger = {
 		has_country_flag = fso_cells_civil_war
 		NOT = { has_government = friendship }
 		has_civil_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = { 
@@ -10189,9 +10171,9 @@ country_event = {
 	title = fso.303.t
 	desc = fso.303.d
 	
-	hidden = yes
 	
-	fire_only_once = yes
+	
+	
 	
 	is_triggered_only = yes
 	
@@ -10204,19 +10186,20 @@ country_event = {
 		clr_country_flag = fso_sent_planes
 		clr_country_flag = fso_sent_humanitarian_aid
 		clr_country_flag = fso_sent_political_support
+		clr_country_flag = fso_ignited_revolution
 		
 		clr_global_flag = fso_friendshipism_rising_in_country
 		
 		clr_country_flag = fso_helping_cells
 		clr_country_flag = fso_helped_cells_counter
 		
-		activate_mission = FSO_friendship_cells_cooldown
+		custom_effect_tooltip = fso.303.tt
 		
 	}
 	
 	option = { 
 		name = fso.303.a
-		
+		add_timed_idea = { idea = FSO_supporting_cells_cooldown days = 30 }
 	}
 }
 # Break the Wheel - Start
