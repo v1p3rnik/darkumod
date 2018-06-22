@@ -265,6 +265,8 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
 			NOT = { has_country_flag = fso_stalin_enemy }
+			NOT = { has_country_flag = fso_courting_stalin }
+			NOT = { has_country_flag = fso_stalin_courted }
 		}
 		
 		available = {
@@ -306,6 +308,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
 			NOT = { has_country_flag = fso_stalin_enemy }
+			has_country_flag = { flag = fso_courting_stalin value = 1 }
 		}
 		
 		available = {
@@ -343,6 +346,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_stalin_enemy }
 			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+			has_country_flag = { flag = fso_courting_stalin value = 2 }
 		}
 		
 		available = {
@@ -381,6 +385,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_stalin_enemy }
 			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
+			has_country_flag = { flag = fso_courting_stalin value = 3 }
 		}
 		
 		available = {
@@ -416,6 +421,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			SOV = { has_country_leader = { ruling_only = yes name = "Joseph Stalin" } }
 			NOT = { has_country_flag = fso_stalin_enemy }
+			has_country_flag = fso_stalin_courted
 		}
 		
 		available = {
@@ -430,6 +436,7 @@ fso_friendship_relationships_category = {
 		complete_effect = {
 			SOV = { country_event = { id = fso.152 } }
 			set_country_flag = fso_asking_out_someone
+			
 		}
 		
 		remove_effect = {
@@ -470,6 +477,8 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hitler_enemy }
 			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+			NOT = { has_country_flag = fso_courting_hitler }
+			NOT = { has_country_flag = fso_hitler_courted }
 		}
 		
 		available = {
@@ -511,6 +520,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hitler_enemy }
 			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+			has_country_flag = { flag = fso_courting_hitler value = 1 }
 		}
 		
 		available = {
@@ -548,6 +558,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hitler_enemy }
 			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+			has_country_flag = { flag = fso_courting_hitler value = 2 }
 		}
 		
 		available = {
@@ -585,6 +596,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hitler_enemy }
 			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+			has_country_flag = { flag = fso_courting_hitler value = 3 }
 		}
 		
 		available = {
@@ -620,6 +632,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hitler_enemy }
 			GER = { has_country_leader = { ruling_only = yes name = "Adolf Hitler" } }
+			has_country_flag = fso_hitler_courted
 		}
 		
 		available = {
@@ -634,6 +647,7 @@ fso_friendship_relationships_category = {
 		complete_effect = {
 			GER = { country_event = { id = fso.152 } }
 			set_country_flag = fso_asking_out_someone
+			
 		}
 		
 		remove_effect = {
@@ -674,6 +688,8 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_mussolini_enemy }
 			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+			NOT = { has_country_flag = fso_courting_mussolini }
+			NOT = { has_country_flag = fso_mussolini_courted }
 		}
 		
 		available = {
@@ -715,6 +731,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_mussolini_enemy }
 			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+			has_country_flag = { flag = fso_courting_mussolini value = 1 }
 		}
 		
 		available = {
@@ -752,6 +769,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_mussolini_enemy }
 			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+			has_country_flag = { flag = fso_courting_mussolini value = 2 }
 		}
 		
 		available = {
@@ -789,6 +807,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_mussolini_enemy }
 			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+			has_country_flag = { flag = fso_courting_mussolini value = 3 }
 		}
 		
 		available = {
@@ -824,6 +843,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_mussolini_enemy }
 			ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+			has_country_flag = fso_mussolini_courted
 		}
 		
 		available = {
@@ -838,6 +858,7 @@ fso_friendship_relationships_category = {
 		complete_effect = {
 			ITA = { country_event = { id = fso.152 } }
 			set_country_flag = fso_asking_out_someone
+			
 		}
 		
 		remove_effect = {
@@ -878,6 +899,8 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_roosevelt_enemy }
 			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+			NOT = { has_country_flag = fso_courting_roosevelt }
+			NOT = { has_country_flag = fso_roosevelt_courted }
 		}
 		
 		available = {
@@ -919,6 +942,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_roosevelt_enemy }
 			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+			has_country_flag = { flag = fso_courting_roosevelt value = 1 }
 		}
 		
 		available = {
@@ -956,6 +980,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_roosevelt_enemy }
 			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+			has_country_flag = { flag = fso_courting_roosevelt value = 2 }
 		}
 		
 		available = {
@@ -993,6 +1018,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_roosevelt_enemy }
 			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+			has_country_flag = { flag = fso_courting_roosevelt value = 3 }
 		}
 		
 		available = {
@@ -1028,6 +1054,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_roosevelt_enemy }
 			USA = { has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" } }
+			has_country_flag = fso_roosevelt_courted
 		}
 		
 		available = {
@@ -1042,6 +1069,7 @@ fso_friendship_relationships_category = {
 		complete_effect = {
 			USA = { country_event = { id = fso.152 } }
 			set_country_flag = fso_asking_out_someone
+			
 		}
 		
 		remove_effect = {
@@ -1082,6 +1110,8 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hirohito_enemy }
 			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+			NOT = { has_country_flag = fso_courting_hirohito }
+			NOT = { has_country_flag = fso_hirohito_courted }
 		}
 		
 		available = {
@@ -1123,6 +1153,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hirohito_enemy }
 			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+			has_country_flag = { flag = fso_courting_hirohito value = 1 }
 		}
 		
 		available = {
@@ -1160,6 +1191,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hirohito_enemy }
 			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+			has_country_flag = { flag = fso_courting_hirohito value = 2 }
 		}
 		
 		available = {
@@ -1197,6 +1229,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hirohito_enemy }
 			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+			has_country_flag = { flag = fso_courting_hirohito value = 3 }
 		}
 		
 		available = {
@@ -1232,6 +1265,7 @@ fso_friendship_relationships_category = {
 			has_completed_focus = FSO_perfect_couple
 			NOT = { has_country_flag = fso_hirohito_enemy }
 			JAP = { has_country_leader = { ruling_only = yes name = "Hirohito" } }
+			has_country_flag = fso_hirohito_courted
 		}
 		
 		available = {
@@ -1246,6 +1280,7 @@ fso_friendship_relationships_category = {
 		complete_effect = {
 			JAP = { country_event = { id = fso.152 } }
 			set_country_flag = fso_asking_out_someone
+			
 		}
 		
 		remove_effect = {

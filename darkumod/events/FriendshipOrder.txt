@@ -5742,6 +5742,9 @@ country_event = {
 		custom_effect_tooltip = fso.143.tt
 		unlock_decision_category_tooltip = fso_friendship_relationships_category
 		
+		set_rule = { can_create_factions = yes }
+		create_faction = friendship_faction
+		
 	}
 }
 # Perfect Couple - Save Event Target
@@ -5774,7 +5777,7 @@ country_event = {
 	desc = fso.144.d
 	
 	
-	
+	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -5786,7 +5789,93 @@ country_event = {
 				ideology = friendship
 				size = 0.5
 			}
+			retire_country_leader = yes
+			every_country = {
+				limit = {
+					original_tag = SOV
+					has_government = friendship
+				}
+				create_country_leader = {
+					name = "Joseph Stalin"
+					desc = "POLITICS_JOSEPH_STALIN_DESC"
+					picture = "Portrait_Soviet_Joseph_Stalin.dds" ### PLACEHOLDER
+					expire = "1953.3.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = GER
+					has_government = friendship
+				}
+				create_country_leader = {
+					name = "Adolf Hitler"
+					desc = "POLITICS_ADOLF_HITLER_DESC"
+					picture = "Portrait_Germany_Adolf_Hitler.dds" ### PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = friendship
+				}
+				create_country_leader = {
+					name = "Benito Mussolini"
+					desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+					picture = "Portrait_Italy_Benito_Mussolini.dds" ### PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = USA
+					has_government = friendship
+				}
+				create_country_leader = {
+					name = "Franklin Delano Roosevelt"
+					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+					picture = "Portrait_USA_Franklin_Roosevelt.dds" ### PLACEHOLDER
+					expire = "1947.1.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = JAP
+					has_government = friendship
+				}
+				create_country_leader = {
+					name = "Hirohito"
+					desc = "POLITICS_Hirohito_DESC"
+					picture = "Portrait_Japan_Hirohito.dds" ### PLACEHOLDER
+					expire = "1989.1.1"
+					ideology = friendshipism
+					traits = {
+						warrior_code
+						emperor_showa
+						imperial_sanction
+					}
+					id = 700 #Hirohito
+				}
+			}
 		}
+		
+		clear_global_event_target = fso_coup_target
 		
 	}
 }
@@ -5806,8 +5895,93 @@ country_event = {
 		
 		event_target:fso_coup_target = {
 			set_country_flag = fso_darks_friend
+			diplomatic_relation = { country = CZE relation = non_aggression_pact }
+			give_guarantee = CZE
+			CZE = {
+				give_guarantee = PREV
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "CZE"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "CZE"
+				value = 200
+			}
+			if = {
+				limit = { original_tag = SOV }
+				create_country_leader = {
+					name = "Joseph Stalin"
+					desc = "POLITICS_JOSEPH_STALIN_DESC"
+					picture = "Portrait_Soviet_Joseph_Stalin.dds" ### PLACEHOLDER
+					expire = "1953.3.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = GER }
+				create_country_leader = {
+					name = "Adolf Hitler"
+					desc = "POLITICS_ADOLF_HITLER_DESC"
+					picture = "Portrait_Germany_Adolf_Hitler.dds" ### PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = ITA }
+				create_country_leader = {
+					name = "Benito Mussolini"
+					desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+					picture = "Portrait_Italy_Benito_Mussolini.dds" ### PLACEHOLDER
+					expire = "1965.1.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = USA }
+				create_country_leader = {
+					name = "Franklin Delano Roosevelt"
+					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+					picture = "Portrait_USA_Franklin_Roosevelt.dds" ### PLACEHOLDER
+					expire = "1947.1.1"
+					ideology = friendshipism
+					traits = {
+						
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = JAP }
+				create_country_leader = {
+					name = "Hirohito"
+					desc = "POLITICS_Hirohito_DESC"
+					picture = "Portrait_Japan_Hirohito.dds" ### PLACEHOLDER
+					expire = "1989.1.1"
+					ideology = friendshipism
+					traits = {
+						warrior_code
+						emperor_showa
+						imperial_sanction
+					}
+					id = 700 #Hirohito
+				}
+			}
 		}
+		
 		clear_global_event_target = fso_coup_target
+		
 	}
 }
 # Perfect Couple - Courting Target Failure
@@ -6834,23 +7008,23 @@ country_event = {
 		
 	}
 	
-	option = { # Perfect Option
-		name = fso.194.a
-		hidden_effect = {
-			country_event = { id = fso.195 }
-		}
-		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
-		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
-	}
 	option = { # OK
-		name = fso.194.b
+		name = fso.194.a
 		hidden_effect = {
 			country_event = { id = fso.196 }
 		}
 		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
 		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
 	}
-	option = { # OK
+	option = { # Perfect
+		name = fso.194.b
+		hidden_effect = {
+			country_event = { id = fso.195 }
+		}
+		set_country_flag = { flag = fso_mussolini_disgust value = 2 }
+		set_country_flag = { flag = fso_mussolini_perfect_friend value = 0 }
+	}
+	option = { # Disgust
 		name = fso.194.c
 		hidden_effect = {
 			country_event = { id = fso.197 }
@@ -6887,7 +7061,7 @@ country_event = {
 		}
 	}
 }
-# Perfect Couple - Mussolini 1 OK 1
+# Perfect Couple - Mussolini 1 OK
 country_event = {
 	id = fso.196
 	title = fso.196.t
@@ -6904,7 +7078,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Mussolini 1 OK 2
+# Perfect Couple - Mussolini 1 disgust 1
 country_event = {
 	id = fso.197
 	title = fso.197.t
@@ -6917,11 +7091,14 @@ country_event = {
 	
 	option = { 
 		name = fso.197.a
-		custom_effect_tooltip = fso.156.tt
-		
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
 	}
 }
-# Perfect Couple - Mussolini 1 disgust
+# Perfect Couple - Mussolini 1 disgust 2
 country_event = {
 	id = fso.198
 	title = fso.198.t
@@ -7062,10 +7239,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # OK
+	option = { # Perfect
 		name = fso.204.a
 		hidden_effect = {
-			country_event = { id = fso.205 }
+			country_event = { id = fso.208 }
 		}
 	}
 	option = { # Disgust
@@ -7074,16 +7251,16 @@ country_event = {
 			country_event = { id = fso.206 }
 		}
 	}
-	option = { # OK
+	option = { # Disgust
 		name = fso.204.c
 		hidden_effect = {
 			country_event = { id = fso.207 }
 		}
 	}
-	option = { # Perfect
+	option = { # OK
 		name = fso.204.dd
 		hidden_effect = {
-			country_event = { id = fso.208 }
+			country_event = { id = fso.205 }
 		}
 	}
 }
@@ -7124,7 +7301,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Mussolini 3 OK 2
+# Perfect Couple - Mussolini 3 disgust 1
 country_event = {
 	id = fso.207
 	title = fso.207.t
@@ -7137,11 +7314,14 @@ country_event = {
 	
 	option = { 
 		name = fso.207.a
-		custom_effect_tooltip = fso.156.tt
-		
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
 	}
 }
-# Perfect Couple - Mussolini 3 disgust
+# Perfect Couple - Mussolini 3 disgust 2
 country_event = {
 	id = fso.206
 	title = fso.206.t
@@ -7190,7 +7370,7 @@ country_event = {
 			country_event = { id = fso.212 }
 		}
 	}
-	option = { # OK
+	option = { # Disgust
 		name = fso.209.dd
 		hidden_effect = {
 			country_event = { id = fso.213 }
@@ -7234,7 +7414,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Mussolini 4 OK 2
+# Perfect Couple - Mussolini 4 disgust 1
 country_event = {
 	id = fso.213
 	title = fso.213.t
@@ -7247,11 +7427,14 @@ country_event = {
 	
 	option = { 
 		name = fso.213.a
-		custom_effect_tooltip = fso.156.tt
-		
+		custom_effect_tooltip = fso.158.tt
+		modify_country_flag = {
+			flag = fso_mussolini_disgust
+			value = -1
+		}
 	}
 }
-# Perfect Couple - Mussolini 4 disgust
+# Perfect Couple - Mussolini 4 disgust 2
 country_event = {
 	id = fso.212
 	title = fso.212.t
@@ -10026,8 +10209,7 @@ country_event = {
 		name = fso.299.a
 		custom_effect_tooltip = fso.299.tt
 		set_global_flag = fso_friendshipism_rising
-		set_rule = { can_create_factions = yes }
-		create_faction = friendship_faction
+		
 		hidden_effect = { 
 			random_country = {
 				limit = {
