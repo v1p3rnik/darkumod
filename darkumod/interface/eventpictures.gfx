@@ -236,6 +236,14 @@ spriteTypes = {
 		name = "GFX_fso_house_proletariae"
 		texturefile = "gfx/event_pictures/fso_house_proletariae.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_foreign_recognition"
+		texturefile = "gfx/event_pictures/fso_foreign_recognition.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_commie_festival"
+		texturefile = "gfx/event_pictures/fso_commie_festival.tga"
+	}
 	
 	
 	################################################## VANILLA
