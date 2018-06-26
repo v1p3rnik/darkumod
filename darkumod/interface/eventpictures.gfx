@@ -237,8 +237,8 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/fso_house_proletariae.tga"
 	}
 	spriteType = {
-		name = "GFX_fso_foreign_recognition"
-		texturefile = "gfx/event_pictures/fso_foreign_recognition.tga"
+		name = "GFX_fso_crowds_fascist"
+		texturefile = "gfx/event_pictures/fso_crowds_fascist.tga"
 	}
 	spriteType = {
 		name = "GFX_fso_commie_festival"
