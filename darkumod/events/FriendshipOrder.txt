@@ -7925,18 +7925,18 @@ country_event = {
 		
 	}
 	
-	option = { # Perfect Option
+	option = { # bad
 		name = fso.234.a
 		hidden_effect = {
-			country_event = { id = fso.235 }
+			country_event = { id = fso.236 }
 		}
 		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
 		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
 	}
-	option = { # OK
+	option = { # perfect
 		name = fso.234.b
 		hidden_effect = {
-			country_event = { id = fso.236 }
+			country_event = { id = fso.235 }
 		}
 		set_country_flag = { flag = fso_hirohito_disgust value = 2 }
 		set_country_flag = { flag = fso_hirohito_perfect_friend value = 0 }
@@ -7978,7 +7978,7 @@ country_event = {
 		}
 	}
 }
-# Perfect Couple - Hirohito 1 OK 1
+# Perfect Couple - Hirohito 1 bad
 country_event = {
 	id = fso.236
 	title = fso.236.t
@@ -7992,10 +7992,13 @@ country_event = {
 	option = { 
 		name = fso.236.a
 		custom_effect_tooltip = fso.156.tt
-		
+		modify_country_flag = {
+			flag = fso_hirohito_disgust
+			value = -1
+		}
 	}
 }
-# Perfect Couple - Hirohito 1 OK 2
+# Perfect Couple - Hirohito 1 OK
 country_event = {
 	id = fso.237
 	title = fso.237.t
@@ -8012,7 +8015,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Hirohito 1 disgust
+# Perfect Couple - Hirohito 1 bad
 country_event = {
 	id = fso.238
 	title = fso.238.t
@@ -8263,7 +8266,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # OK
+	option = { # bad
 		name = fso.249.a
 		hidden_effect = {
 			country_event = { id = fso.250 }
@@ -8275,7 +8278,7 @@ country_event = {
 			country_event = { id = fso.251 }
 		}
 	}
-	option = { # Disgust
+	option = { # bad
 		name = fso.249.c
 		hidden_effect = {
 			country_event = { id = fso.252 }
@@ -8308,7 +8311,7 @@ country_event = {
 		}
 	}
 }
-# Perfect Couple - Hirohito 4 OK 1
+# Perfect Couple - Hirohito 4 bad
 country_event = {
 	id = fso.250
 	title = fso.250.t
@@ -8322,10 +8325,13 @@ country_event = {
 	option = { 
 		name = fso.250.a
 		custom_effect_tooltip = fso.156.tt
-		
+		modify_country_flag = {
+			flag = fso_hirohito_disgust
+			value = -1
+		}
 	}
 }
-# Perfect Couple - Hirohito 4 OK 2
+# Perfect Couple - Hirohito 4 OK 
 country_event = {
 	id = fso.253
 	title = fso.253.t
@@ -8342,7 +8348,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Hirohito 4 disgust
+# Perfect Couple - Hirohito 4 bad
 country_event = {
 	id = fso.252
 	title = fso.252.t
