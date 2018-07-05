@@ -6554,18 +6554,18 @@ country_event = {
 		
 	}
 	
-	option = { # Perfect Option
+	option = { # bad
 		name = fso.174.a
 		hidden_effect = {
-			country_event = { id = fso.175 }
+			country_event = { id = fso.178 }
 		}
 		set_country_flag = { flag = fso_stalin_disgust value = 2 }
 		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
 	}
-	option = { # OK
+	option = { # perfect
 		name = fso.174.b
 		hidden_effect = {
-			country_event = { id = fso.176 }
+			country_event = { id = fso.175 }
 		}
 		set_country_flag = { flag = fso_stalin_disgust value = 2 }
 		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
@@ -6578,10 +6578,10 @@ country_event = {
 		set_country_flag = { flag = fso_stalin_disgust value = 2 }
 		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
 	}
-	option = { # Disgust
+	option = { # ok
 		name = fso.174.dd
 		hidden_effect = {
-			country_event = { id = fso.178 }
+			country_event = { id = fso.176 }
 		}
 		set_country_flag = { flag = fso_stalin_disgust value = 2 }
 		set_country_flag = { flag = fso_stalin_perfect_friend value = 0 }
@@ -6690,7 +6690,7 @@ country_event = {
 			country_event = { id = fso.182 }
 		}
 	}
-	option = { # OK
+	option = { # bad
 		name = fso.179.dd
 		hidden_effect = {
 			country_event = { id = fso.183 }
@@ -6734,7 +6734,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Stalin 2 OK 2
+# Perfect Couple - Stalin 2 bad
 country_event = {
 	id = fso.183
 	title = fso.183.t
@@ -6748,7 +6748,10 @@ country_event = {
 	option = { 
 		name = fso.183.a
 		custom_effect_tooltip = fso.156.tt
-		
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
 	}
 }
 # Perfect Couple - Stalin 2 disgust
@@ -6782,7 +6785,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # OK
+	option = { # bad
 		name = fso.184.a
 		hidden_effect = {
 			country_event = { id = fso.185 }
@@ -6827,7 +6830,7 @@ country_event = {
 		}
 	}
 }
-# Perfect Couple - Stalin 3 OK 1
+# Perfect Couple - Stalin 3 bad
 country_event = {
 	id = fso.185
 	title = fso.185.t
@@ -6841,7 +6844,10 @@ country_event = {
 	option = { 
 		name = fso.185.a
 		custom_effect_tooltip = fso.156.tt
-		
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
 	}
 }
 # Perfect Couple - Stalin 3 OK 2
@@ -6910,7 +6916,7 @@ country_event = {
 			country_event = { id = fso.192 }
 		}
 	}
-	option = { # OK
+	option = { # bad
 		name = fso.189.dd
 		hidden_effect = {
 			country_event = { id = fso.193 }
@@ -6954,7 +6960,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Stalin 4 OK 2
+# Perfect Couple - Stalin 4 bad
 country_event = {
 	id = fso.193
 	title = fso.193.t
@@ -6968,7 +6974,10 @@ country_event = {
 	option = { 
 		name = fso.193.a
 		custom_effect_tooltip = fso.156.tt
-		
+		modify_country_flag = {
+			flag = fso_stalin_disgust
+			value = -1
+		}
 	}
 }
 # Perfect Couple - Stalin 4 disgust
@@ -7471,34 +7480,34 @@ country_event = {
 		
 	}
 	
-	option = { # Perfect Option
+	option = { # ok
 		name = fso.214.a
-		hidden_effect = {
-			country_event = { id = fso.215 }
-		}
-		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
-		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
-	}
-	option = { # OK
-		name = fso.214.b
 		hidden_effect = {
 			country_event = { id = fso.216 }
 		}
 		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
 		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
 	}
-	option = { # OK
-		name = fso.214.c
+	option = { # bad
+		name = fso.214.b
 		hidden_effect = {
-			country_event = { id = fso.217 }
+			country_event = { id = fso.218 }
 		}
 		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
 		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
 	}
-	option = { # Disgust
+	option = { # ok
+		name = fso.214.c
+		hidden_effect = {
+			country_event = { id = fso.215 }
+		}
+		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
+		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
+	}
+	option = { # perfect
 		name = fso.214.dd
 		hidden_effect = {
-			country_event = { id = fso.218 }
+			country_event = { id = fso.217 }
 		}
 		set_country_flag = { flag = fso_roosevelt_disgust value = 2 }
 		set_country_flag = { flag = fso_roosevelt_perfect_friend value = 0 }
@@ -7705,13 +7714,13 @@ country_event = {
 			country_event = { id = fso.225 }
 		}
 	}
-	option = { # Disgust
+	option = { # bad
 		name = fso.224.b
 		hidden_effect = {
 			country_event = { id = fso.226 }
 		}
 	}
-	option = { # OK
+	option = { # bad
 		name = fso.224.c
 		hidden_effect = {
 			country_event = { id = fso.227 }
@@ -7761,7 +7770,7 @@ country_event = {
 		
 	}
 }
-# Perfect Couple - Roosevelt 3 OK 2
+# Perfect Couple - Roosevelt 3 bad
 country_event = {
 	id = fso.227
 	title = fso.227.t
@@ -7775,10 +7784,13 @@ country_event = {
 	option = { 
 		name = fso.227.a
 		custom_effect_tooltip = fso.156.tt
-		
+		modify_country_flag = {
+			flag = fso_roosevelt_disgust
+			value = -1
+		}
 	}
 }
-# Perfect Couple - Roosevelt 3 disgust
+# Perfect Couple - Roosevelt 3 bad
 country_event = {
 	id = fso.226
 	title = fso.226.t
