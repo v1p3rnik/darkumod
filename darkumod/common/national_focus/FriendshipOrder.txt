@@ -1775,5 +1775,76 @@ focus_tree = {
 		}
 	}
 	
+	################## FASCIST TREE #########################
+	# The Grand Conspiracy
+	focus = {
+		id = FSO_grand_conspiracy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_political_open }
+		x = 10 # next focuses are x9y3 x10y4 x11y3
+		y = 2
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_grand_conspiracy_effect
+			hidden_effect = { CZE = { country_event = { id = fso. } } }
+		}
+	}
+	# Let It Reign
+	focus = {
+		id = FSO_let_it_reign
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_grand_conspiracy }
+		x = 9
+		y = 3
+		
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_let_it_reign_effect
+			hidden_effect = { CZE = { country_event = { id = fso. } } }
+		}
+	}
 	
 }
