@@ -765,7 +765,7 @@ country_event = {
 			picture = "Portrait_FSO_Peetry.tga" 
 			expire = "1965.1.1"
 			ideology = fascism_ideology
-			traits = { }
+			traits = { doge_pope }
 		}
 		hidden_effect = { set_country_flag = darku_crisis_civil_war }
 		add_stability = -0.2
@@ -777,7 +777,7 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga"
 			expire = "1965.1.1"
 			ideology = marxism
 			traits = { trap_master }
@@ -797,7 +797,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = nazism
-				traits = { }
+				traits = { freundschaft_uber_alles }
 			}
 			create_country_leader = {
 				name = "Lamatrepide"
@@ -805,7 +805,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = friendshipism
-				traits = { }
+				traits = { wae_wa_wee }
 			}
 			create_country_leader = {
 				name = "Lamatrepide"
@@ -813,7 +813,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
-				traits = { }
+				traits = { wae_wa_wee }
 			}
 		}
 	}
@@ -851,7 +851,7 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga" 
 			expire = "1965.1.1"
 			ideology = marxism
 			traits = { trap_master }
@@ -872,7 +872,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = nazism
-				traits = { }
+				traits = { freundschaft_uber_alles }
 			}
 			create_country_leader = {
 				name = "Peetry"
@@ -880,7 +880,7 @@ country_event = {
 				picture = "Portrait_FSO_Peetry.tga" 
 				expire = "1965.1.1"
 				ideology = friendshipism
-				traits = { }
+				traits = { doge_pope }
 			}
 			create_country_leader = {
 				name = "Lamatrepide"
@@ -888,7 +888,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
-				traits = { }
+				traits = { wae_wa_wee }
 			}
 		}
 	}
@@ -908,7 +908,7 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga"
 			expire = "1965.1.1"
 			ideology = marxism
 			traits = { trap_master }
@@ -929,7 +929,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = nazism
-				traits = { }
+				traits = { freundschaft_uber_alles }
 			}
 			create_country_leader = {
 				name = "Peetry"
@@ -937,7 +937,7 @@ country_event = {
 				picture = "Portrait_FSO_Peetry.tga" 
 				expire = "1965.1.1"
 				ideology = friendshipism
-				traits = { }
+				traits = { doge_pope }
 			}
 			create_country_leader = {
 				name = "Lamatrepide"
@@ -945,7 +945,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
-				traits = { }
+				traits = { wae_wa_wee }
 			}
 		}
 		set_country_flag = darku_question_solved_gone
@@ -968,7 +968,7 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga"
 			expire = "1965.1.1"
 			ideology = marxism
 			traits = { trap_master }
@@ -989,7 +989,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = nazism
-				traits = { }
+				traits = { freundschaft_uber_alles }
 			}
 			create_country_leader = {
 				name = "Peetry"
@@ -997,7 +997,7 @@ country_event = {
 				picture = "Portrait_FSO_Peetry.tga" 
 				expire = "1965.1.1"
 				ideology = friendshipism
-				traits = { }
+				traits = { doge_pope }
 			}
 			create_country_leader = {
 				name = "Lamatrepide"
@@ -1005,7 +1005,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
-				traits = { }
+				traits = { wae_wa_wee }
 			}
 		}
 		set_country_flag = darku_question_solved_gone
@@ -1073,7 +1073,7 @@ country_event = {
 		create_country_leader = {
 			name = "Ladifour"
 			desc = "LADIFOUR_DESC"
-			picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+			picture = "Portrait_FSO_LadiFour.tga"
 			expire = "1965.1.1"
 			ideology = marxism
 			traits = { trap_master }
@@ -1094,7 +1094,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = nazism
-				traits = { }
+				traits = { freundschaft_uber_alles }
 			}
 			create_country_leader = {
 				name = "Peetry"
@@ -1102,7 +1102,7 @@ country_event = {
 				picture = "Portrait_FSO_Peetry.tga" 
 				expire = "1965.1.1"
 				ideology = friendshipism
-				traits = { }
+				traits = { doge_pope }
 			}
 			create_country_leader = {
 				name = "Lamatrepide"
@@ -1110,7 +1110,7 @@ country_event = {
 				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = centrism
-				traits = { }
+				traits = { wae_wa_wee }
 			}
 		}
 	}
@@ -4230,7 +4230,7 @@ country_event = {
 			create_country_leader = {
 				name = "Ladifour"
 				desc = "LADIFOUR_DESC"
-				picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+				picture = "Portrait_FSO_LadiFour.tga"
 				expire = "1965.1.1"
 				ideology = marxism
 				traits = { trap_master }
@@ -4271,7 +4271,7 @@ country_event = {
 			create_country_leader = {
 				name = "Ladifour"
 				desc = "LADIFOUR_DESC"
-				picture = "Portrait_FSO_LadiFour.tga" # PLACEHOLDER
+				picture = "Portrait_FSO_LadiFour.tga"
 				expire = "1965.1.1"
 				ideology = marxism
 				traits = { trap_master }
@@ -10503,3 +10503,562 @@ country_event = {
 	
 }
 ### EVENT 309, 310 IS TAKEN ###
+# Grand Conspiracy - The Senate Fire
+country_event = {
+	id = fso.311
+	title = fso.311.t
+	desc = fso.311.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_grand_conspiracy }
+		focus_progress = {
+			focus = FSO_grand_conspiracy
+			progress > 0.15
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			var = fsomoderate
+			value = 1
+		}
+		set_variable = {
+			var = fsodarker
+			value = 1
+		}
+		set_variable = {
+			var = fsodarkest
+			value = 1
+		}
+		set_variable = {
+			var = fsodemo
+			value = 1
+		}
+		set_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	
+	option = { 
+		name = fso.311.a
+		custom_effect_tooltip = fso.moderatelean
+		add_to_variable = {
+			var = fsomoderate
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.311.b
+		custom_effect_tooltip = fso.darkerlean
+		add_to_variable = {
+			var = fsodarker
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.311.c
+		custom_effect_tooltip = fso.demolean
+		add_to_variable = {
+			var = fsodemo
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.311.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.311.e
+		custom_effect_tooltip = fso.darkestlean
+		add_to_variable = {
+			var = fsodarkest
+			value = 1
+		}
+	}
+}
+# Grand Conspiracy - Fascist Public Speech
+country_event = {
+	id = fso.312
+	title = fso.312.t
+	desc = fso.312.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_grand_conspiracy }
+		focus_progress = {
+			focus = FSO_grand_conspiracy
+			progress > 0.3
+		}
+	}
+	
+	option = { 
+		name = fso.312.a
+		custom_effect_tooltip = fso.moderatelean
+		add_to_variable = {
+			var = fsomoderate
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.312.b
+		custom_effect_tooltip = fso.darkerlean
+		add_to_variable = {
+			var = fsodarker
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.312.c
+		custom_effect_tooltip = fso.demolean
+		add_to_variable = {
+			var = fsodemo
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.312.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.312.e
+		custom_effect_tooltip = fso.darkestlean
+		add_to_variable = {
+			var = fsodarkest
+			value = 1
+		}
+	}
+}
+# Grand Conspiracy - Assault Divisions Form
+country_event = {
+	id = fso.313
+	title = fso.313.t
+	desc = fso.313.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_grand_conspiracy }
+		focus_progress = {
+			focus = FSO_grand_conspiracy
+			progress > 0.45
+		}
+	}
+	
+	option = { 
+		name = fso.313.a
+		custom_effect_tooltip = fso.moderatelean
+		add_to_variable = {
+			var = fsomoderate
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.313.b
+		custom_effect_tooltip = fso.darkerlean
+		add_to_variable = {
+			var = fsodarker
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.313.c
+		custom_effect_tooltip = fso.demolean
+		add_to_variable = {
+			var = fsodemo
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.313.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.313.e
+		custom_effect_tooltip = fso.darkestlean
+		add_to_variable = {
+			var = fsodarkest
+			value = 1
+		}
+	}
+}
+# Grand Conspiracy - PLACEHOLDER
+country_event = {
+	id = fso.314
+	title = fso.314.t
+	desc = fso.314.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_grand_conspiracy }
+		focus_progress = {
+			focus = FSO_grand_conspiracy
+			progress > 0.6
+		}
+	}
+	
+	option = { 
+		name = fso.314.a
+		custom_effect_tooltip = fso.moderatelean
+		add_to_variable = {
+			var = fsomoderate
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.314.b
+		custom_effect_tooltip = fso.darkerlean
+		add_to_variable = {
+			var = fsodarker
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.314.c
+		custom_effect_tooltip = fso.demolean
+		add_to_variable = {
+			var = fsodemo
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.314.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.314.e
+		custom_effect_tooltip = fso.darkestlean
+		add_to_variable = {
+			var = fsodarkest
+			value = 1
+		}
+	}
+}
+# Grand Conspiracy - Trial of Communists
+country_event = {
+	id = fso.315
+	title = fso.315.t
+	desc = fso.315.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_grand_conspiracy }
+		focus_progress = {
+			focus = FSO_grand_conspiracy
+			progress > 0.75
+		}
+	}
+	
+	option = { 
+		name = fso.315.a
+		custom_effect_tooltip = fso.moderatelean
+		add_to_variable = {
+			var = fsomoderate
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.315.b
+		custom_effect_tooltip = fso.darkerlean
+		add_to_variable = {
+			var = fsodarker
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.315.c
+		custom_effect_tooltip = fso.demolean
+		add_to_variable = {
+			var = fsodemo
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.315.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.315.e
+		custom_effect_tooltip = fso.darkestlean
+		add_to_variable = {
+			var = fsodarkest
+			value = 1
+		}
+	}
+}
+# Grand Conspiracy - PG Investigation Yields Results
+country_event = {
+	id = fso.316
+	title = fso.316.t
+	desc = fso.316.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_grand_conspiracy }
+		focus_progress = {
+			focus = FSO_grand_conspiracy
+			progress > 0.9
+		}
+	}
+	
+	option = { 
+		name = fso.316.a
+		custom_effect_tooltip = fso.moderatelean
+		add_to_variable = {
+			var = fsomoderate
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.316.b
+		custom_effect_tooltip = fso.darkerlean
+		add_to_variable = {
+			var = fsodarker
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.316.c
+		custom_effect_tooltip = fso.demolean
+		add_to_variable = {
+			var = fsodemo
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.316.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
+	option = { 
+		name = fso.316.e
+		custom_effect_tooltip = fso.darkestlean
+		add_to_variable = {
+			var = fsodarkest
+			value = 1
+		}
+	}
+}
+# Grand Conspiracy - Path Locked In
+country_event = {
+	id = fso.317
+	title = fso.317.t
+	desc = {
+		text = fso.317.d1
+		trigger = {
+			AND = {
+				check_variable = { fsomoderate > fsodarker }
+				check_variable = { fsomoderate > fsodarkest }
+				check_variable = { fsomoderate > fsodemo }
+				check_variable = { fsomoderate > fsofriendship }
+			}
+		}
+	}
+	desc = {
+		text = fso.317.d2
+		trigger = {
+			AND = {
+				check_variable = { fsodarker > fsomoderate }
+				check_variable = { fsodarker > fsodarkest }
+				check_variable = { fsodarker > fsodemo }
+				check_variable = { fsodarker > fsofriendship }
+			}
+		}
+	}
+	desc = {
+		text = fso.317.d3
+		trigger = {
+			AND = {
+				check_variable = { fsodarkest > fsodarker }
+				check_variable = { fsodarkest > fsomoderate }
+				check_variable = { fsodarkest > fsodemo }
+				check_variable = { fsodarkest > fsofriendship }
+			}
+		}
+	}
+	desc = {
+		text = fso.317.d4
+		trigger = {
+			AND = {
+				check_variable = { fsodemo > fsodarker }
+				check_variable = { fsodemo > fsodarkest }
+				check_variable = { fsodemo > fsomoderate }
+				check_variable = { fsodemo > fsofriendship }
+			}
+		}
+	}
+	desc = {
+		text = fso.317.d5
+		trigger = {
+			AND = {
+				check_variable = { fsofriendship > fsodarker }
+				check_variable = { fsofriendship > fsodarkest }
+				check_variable = { fsofriendship > fsodemo }
+				check_variable = { fsofriendship > fsomoderate }
+			}
+		}
+	}
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # MODERATE PATH
+		name = fso.317.a
+		trigger = {
+			AND = {
+				check_variable = { fsomoderate > fsodarker }
+				check_variable = { fsomoderate > fsodarkest }
+				check_variable = { fsomoderate > fsodemo }
+				check_variable = { fsomoderate > fsofriendship }
+			}
+		}
+		add_stability = 0.1
+		set_country_flag = fso_moderate_nazi
+		create_country_leader = { # PLACEHOLDER
+			name = "Arische Ehefrau"
+			desc = "POLITICS_DARK_BUDDHIST_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
+				freundschaft_uber_alles
+			}
+		}
+	}
+	option = { # DARKER PATH
+		name = fso.317.b
+		trigger = {
+			AND = {
+				check_variable = { fsodarker > fsomoderate }
+				check_variable = { fsodarker > fsodarkest }
+				check_variable = { fsodarker > fsodemo }
+				check_variable = { fsodarker > fsofriendship }
+			}
+		}
+		add_war_support = 0.1
+		set_country_flag = fso_darker
+		set_cosmetic_tag = CZE_DARKER
+		create_country_leader = {
+			name = "Darker Buddhist"
+			desc = "POLITICS_DARK_BUDDHIST_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds"
+			expire = "1965.1.1"
+			ideology = freundschaftism
+			traits = {
+				dark_buddhist_darker
+			}
+		}
+	}
+	option = { # PLS NO
+		name = fso.317.c
+		trigger = {
+			AND = {
+				check_variable = { fsodarkest > fsodarker }
+				check_variable = { fsodarkest > fsomoderate }
+				check_variable = { fsodarkest > fsodemo }
+				check_variable = { fsodarkest > fsofriendship }
+			}
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 1
+		}
+		set_country_flag = fso_darkest
+		set_cosmetic_tag = CZE_DARKEST
+		set_party_name = { ideology = fascism long_name = CZE_darkest_fascist_long name = CZE_darkest_fascist }
+		create_country_leader = {
+			name = "Darkest Buddhist"
+			desc = "POLITICS_DARK_BUDDHIST_DESC"
+			picture = "Portrait_FSO_DarkBuddhist.dds"
+			expire = "1965.1.1"
+			ideology = freundschaftism
+			traits = {
+				dark_buddhist_darkest
+			}
+		}
+	}
+	option = { # DEMO
+		name = fso.317.d
+		trigger = {
+			AND = {
+				check_variable = { fsodemo > fsodarker }
+				check_variable = { fsodemo > fsodarkest }
+				check_variable = { fsodemo > fsomoderate }
+				check_variable = { fsodemo > fsofriendship }
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		add_ideas = FSO_democratic
+		remove_ideas = FSO_fascist
+	}
+	option = { # FRIENDSHIP
+		name = fso.317.e
+		trigger = {
+			AND = {
+				check_variable = { fsofriendship > fsodarker }
+				check_variable = { fsofriendship > fsodarkest }
+				check_variable = { fsofriendship > fsodemo }
+				check_variable = { fsofriendship > fsomoderate }
+			}
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		add_ideas = FSO_royalist
+		remove_ideas = FSO_fascist
+	}
+	
+}

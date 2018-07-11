@@ -1785,7 +1785,7 @@ focus_tree = {
 		y = 2
 		
 
-		cost = 20
+		cost = 30
 
 		ai_will_do = {
 			factor = 1
@@ -1808,7 +1808,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FSO_grand_conspiracy_effect
-			hidden_effect = { CZE = { country_event = { id = fso. } } }
+			hidden_effect = { CZE = { country_event = { id = fso.317 } } }
 		}
 	}
 	# Let It Reign
@@ -1820,7 +1820,7 @@ focus_tree = {
 		y = 3
 		
 
-		cost = 20
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
