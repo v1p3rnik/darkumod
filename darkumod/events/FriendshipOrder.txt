@@ -10703,7 +10703,7 @@ country_event = {
 		}
 	}
 }
-# Grand Conspiracy - PLACEHOLDER
+# Grand Conspiracy - Battle of Wenceslas Square
 country_event = {
 	id = fso.314
 	title = fso.314.t
@@ -10956,6 +10956,7 @@ country_event = {
 			}
 		}
 		add_stability = 0.1
+		add_ideas = FSO_warrior_emperor
 		set_country_flag = fso_moderate_nazi
 		create_country_leader = { # PLACEHOLDER
 			name = "Arische Ehefrau"
@@ -10982,7 +10983,7 @@ country_event = {
 		set_country_flag = fso_darker
 		set_cosmetic_tag = CZE_DARKER
 		create_country_leader = {
-			name = "Darker Buddhist"
+			name = "Voice of Friendship"
 			desc = "POLITICS_DARK_BUDDHIST_DESC"
 			picture = "Portrait_FSO_DarkBuddhist.dds"
 			expire = "1965.1.1"
@@ -11061,4 +11062,352 @@ country_event = {
 		remove_ideas = FSO_fascist
 	}
 	
+}
+# Make It Reign - Start
+country_event = {
+	id = fso.318
+	title = fso.318.t
+	desc = fso.318.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_make_it_reign }
+		focus_progress = {
+			focus = FSO_make_it_reign
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.318.a
+		
+	}
+}
+# Make It Reign - End
+country_event = {
+	id = fso.319
+	title = fso.319.t
+	desc = fso.319.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.319.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.3
+		}
+		add_stability = 0.2
+		hidden_effect = {
+			news_event = { id = fsonews.16 }
+		}
+	}
+	
+}
+# Kindness - Start
+country_event = {
+	id = fso.320
+	title = fso.320.t
+	desc = fso.320.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_kindness }
+		focus_progress = {
+			focus = FSO_helping_hand
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.320.a
+		
+	}
+}
+# Kindness - End
+country_event = {
+	id = fso.321
+	title = fso.321.t
+	desc = fso.321.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.321.a
+		custom_effect_tooltip = fso.321.tt
+		set_country_flag = fso_hitler_secret_article
+		hidden_effect = {
+			AUS = {
+				country_event = germany.28
+			}
+		}
+	}
+	
+}
+# Kindness - Obligations Call To Arms
+country_event = {
+	id = fso.322
+	title = fso.322.t
+	desc = fso.322.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.322.a
+		custom_effect_tooltip = fso.322.tt
+		declare_war_on = {
+			target = AUS
+			type = annex_everything
+		}
+	}
+	option = { 
+		name = fso.322.b
+		custom_effect_tooltip = fso.323.tt
+		clr_country_flag = fso_hitler_secret_article
+		GER = {
+			create_wargoal = {
+				type = annex_everything
+				target = CZE
+			}
+			if = { limit = { is_in_faction_with = CZE }
+				remove_from_faction = CZE
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = "CZE"			
+				value = 400
+			}
+		}
+	}
+	
+}
+# Kindness - Forfeit Agreements if FSO took Austrian land
+country_event = {
+	id = fso.323
+	title = fso.323.t
+	desc = fso.323.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		has_country_flag = fso_hitler_secret_article
+		OR = {
+			owns_state = 4
+			owns_state = 152
+			owns_state = 153
+			AUS = { is_subject_of = CZE }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.323.a
+		custom_effect_tooltip = fso.323.tt
+		clr_country_flag = fso_hitler_secret_article
+		GER = {
+			create_wargoal = {
+				type = take_state
+				target = CZE
+				generator = { 4 152 153 }
+			}
+			if = { limit = { is_in_faction_with = CZE }
+				remove_from_faction = CZE
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = "CZE"			
+				value = 400
+			}
+		}
+	}
+}
+# Axis Girls - Start
+country_event = {
+	id = fso.324
+	title = fso.324.t
+	desc = fso.324.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_axis_girls }
+		focus_progress = {
+			focus = FSO_axis_girls
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.324.a
+		
+	}
+}
+# Axis Girls - End
+country_event = {
+	id = fso.325
+	title = fso.325.t
+	desc = fso.325.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.325.a
+		swap_ideas = { remove_idea = FSO_fascist add_idea = FSO_axis_girls_idea }
+	}
+	
+}
+# Loyalty - Start
+country_event = {
+	id = fso.326
+	title = fso.326.t
+	desc = fso.326.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_loyalty }
+		focus_progress = {
+			focus = FSO_loyalty
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.326.a
+		
+	}
+	option = { 
+		name = fso.326.b
+		random_list = {
+			80 = { 
+				custom_effect_tooltip = fso.326.tt
+				hidden_effect = {
+					GER = {
+						set_country_flag = fso_mussolini_gae
+						if = { limit = { is_in_faction_with = ITA }
+							remove_from_faction = ITA
+						}
+						add_ai_strategy = {
+							type = antagonize
+							id = "ITA"			
+							value = 400
+						}
+					}
+				}
+			}
+			20 = { }
+		}
+	}
+}
+# Loyalty - End
+country_event = {
+	id = fso.327
+	title = fso.327.t
+	desc = fso.327.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.327.a
+		custom_effect_tooltip = fso.327.tt
+		GER = {
+			add_to_faction = CZE
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+		}
+		add_to_war = {
+			targeted_alliance = GER
+			enemy = POL
+		}
+	}
+	
+}
+# Loyalty - Forfeit Agreements if FSO took Polish land
+country_event = {
+	id = fso.328
+	title = fso.328.t
+	desc = fso.328.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		has_country_flag = fso_hitler_secret_article
+		OR = {
+			owns_state = 10
+			owns_state = 85
+			owns_state = 86
+			owns_state = 87
+			owns_state = 88
+			owns_state = 89
+			owns_state = 90
+			owns_state = 91
+			owns_state = 92
+			owns_state = 93
+			owns_state = 94
+			owns_state = 95
+			owns_state = 96
+			owns_state = 97
+			owns_state = 98
+			POL = { is_subject_of = CZE }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.328.a
+		custom_effect_tooltip = fso.323.tt
+		clr_country_flag = fso_hitler_secret_article
+		GER = {
+			create_wargoal = {
+				type = take_state
+				target = CZE
+				generator = { 10 85 86 87 88 89 90 91 92 93 94 95 96 97 98 }
+			}
+			if = { limit = { is_in_faction_with = CZE }
+				remove_from_faction = CZE
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = "CZE"			
+				value = 400
+			}
+		}
+	}
 }

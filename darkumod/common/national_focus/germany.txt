@@ -3492,6 +3492,7 @@ focus_tree = {
 			}
 			hidden_trigger = {
 				NOT = { has_opinion_modifier = fso_germany_appeased }
+				NOT = { CZE = { has_country_flag = fso_hitler_secret_article } }
 			}
 		}
 		bypass = {
@@ -3831,7 +3832,10 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = GER_second_vienna_award }
 		available = {
-			NOT = { has_war_with = ITA }
+			NOT = { 
+				has_war_with = ITA
+				has_country_flag = fso_mussolini_gae
+			}
 		}
 
 		bypass = {
@@ -3840,6 +3844,7 @@ focus_tree = {
 				is_in_faction_with = ITA
 				has_war_with = ITA
 				NOT = { country_exists = ITA }
+				has_country_flag = fso_mussolini_gae
 			}
 		}
 

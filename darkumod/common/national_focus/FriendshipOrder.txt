@@ -1811,9 +1811,9 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.317 } } }
 		}
 	}
-	# Let It Reign
+	# Make It Reign
 	focus = {
-		id = FSO_let_it_reign
+		id = FSO_make_it_reign
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_grand_conspiracy }
 		x = 9
@@ -1842,8 +1842,113 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_let_it_reign_effect
-			hidden_effect = { CZE = { country_event = { id = fso. } } }
+			custom_effect_tooltip = FSO_make_it_reign_effect
+			hidden_effect = { CZE = { country_event = { id = fso.319 } } }
+		}
+	}
+	# Axis Girls
+	focus = {
+		id = FSO_axis_girls
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_grand_conspiracy }
+		x = 9
+		y = 5
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_axis_girls_effect
+			hidden_effect = { CZE = { country_event = { id = fso.325 } } }
+		}
+	}
+	# Kindness
+	focus = {
+		id = FSO_kindness
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_axis_girls }
+		x = 9
+		y = 7
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_kindness_effect
+			hidden_effect = { CZE = { country_event = { id = fso.321 } } }
+		}
+	}
+	# Loyalty
+	focus = {
+		id = FSO_loyalty
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_kindness }
+		x = 9
+		y = 9
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_loyalty_effect
+			hidden_effect = { CZE = { country_event = { id = fso.327 } } }
 		}
 	}
 	

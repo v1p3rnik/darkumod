@@ -71,6 +71,11 @@
  FSO_pulse_cooldown:0 "Time Passes..."
  
  FSO_fascist:0 "Nationalist Dreams"
+ FSO_fascist_desc:0 "The people are engulfed in the fires of nationalism, the veterans and patricians keeping an iron grip on the levers of our nation."
+ FSO_axis_girls_idea:0 "Axis Girls"
+ FSO_axis_girls_idea_desc:0 "This new band of patriotic girls has conquered hearts and minds of thousands of people already, and they are becoming an excellent tool of diplomacy!"
+ FSO_warrior_emperor:0 "Emperor Dark Buddhist"
+ FSO_warrior_emperor_desc:0 "Removed from power, Emperor Dark silently approves everything the Fascist party does."
  FSO_communist_base:0 "Communist Dawn"
  FSO_communist_base_desc:0 "The communist ideas are spreading gradually across the country. Further events are going to shape this worldview and our community."
  FSO_democratic:0 "Republican Ideal"

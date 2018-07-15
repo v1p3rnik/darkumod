@@ -373,6 +373,24 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
+			### FSO Joins Germany as per pact
+			if = {
+				limit = {
+					AND = {
+						FROM = {
+							tag = AUS
+						}
+						ROOT = {
+							tag = GER
+						}
+						CZE = {
+							has_country_flag = fso_hitler_secret_article
+						}
+					}
+				}
+				CZE = { country_event = { id = fso.322 }
+			}
+					
 			if = {
 				limit = {
 					FROM = {

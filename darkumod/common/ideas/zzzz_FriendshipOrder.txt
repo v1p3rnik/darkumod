@@ -1208,6 +1208,44 @@ ideas = {
 				political_power_gain = 0.1
 			}
 		}
+		FSO_axis_girls_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.2
+				trade_opinion_factor = 0.5
+				army_morale_factor = 0.1
+			}
+		}
+		FSO_warrior_emperor = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
 		
 		FSO_wondercolts = {
 		
