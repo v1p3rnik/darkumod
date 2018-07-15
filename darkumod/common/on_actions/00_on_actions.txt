@@ -388,7 +388,7 @@ on_actions = {
 						}
 					}
 				}
-				CZE = { country_event = { id = fso.322 }
+				CZE = { country_event = { id = fso.322 } }
 			}
 					
 			if = {

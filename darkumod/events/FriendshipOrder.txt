@@ -8907,7 +8907,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_one_year_pulse days = 365 }
+			add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -8958,7 +8958,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_one_year_pulse days = 365 }
+			add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9004,7 +9004,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_one_year_pulse days = 365 }
+			add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9050,7 +9050,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_two_year_pulse days = 730 }
+			add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9097,7 +9097,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_two_year_pulse days = 730 }
+			add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9143,7 +9143,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_two_year_pulse days = 730 }
+			add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9192,7 +9192,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_half_year_pulse days = 182 }
+			add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9235,7 +9235,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_half_year_pulse days = 182 }
+			add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -9273,7 +9273,7 @@ country_event = {
 	
 	immediate = {
 		CZE = {
-			add_timed_idea = { flag = FSO_half_year_pulse days = 182 }
+			add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
 			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
 		}
 	}
@@ -10250,7 +10250,7 @@ country_event = {
 	
 	
 	trigger = {
-		NOT = { CZE = { has_idea = FSO_supporting_cells_cooldown }
+		NOT = { CZE = { has_idea = FSO_supporting_cells_cooldown } }
 		has_global_flag = fso_friendshipism_rising
 		NOT = { has_global_flag = fso_friendshipism_rising_in_country }
 		NOT = { has_government = friendship }
