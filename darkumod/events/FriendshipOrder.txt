@@ -11411,3 +11411,268 @@ country_event = {
 		}
 	}
 }
+# Generosity - Start
+country_event = {
+	id = fso.329
+	title = fso.329.t
+	desc = fso.329.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_generosity }
+		focus_progress = {
+			focus = FSO_generosity
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.329.a
+		10 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 10 }
+			}
+		}
+		85 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 85 }
+			}
+		}
+		86 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 86 }
+			}
+		}
+		87 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 87 }
+			}
+		}
+		88 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 88 }
+			}
+		}
+		89 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 89 }
+			}
+		}
+		90 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 90 }
+			}
+		}
+		91 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 91 }
+			}
+		}
+		92 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 92 }
+			}
+		}
+		93 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 93 }
+			}
+		}
+		94 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 94 }
+			}
+		}
+		95 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 95 }
+			}
+		}
+		96 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 96 }
+			}
+		}
+		97 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 97 }
+			}
+		}
+		98 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 98 }
+			}
+		}
+		4 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 4 }
+			}
+		}
+		152 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 152 }
+			}
+		}
+		153 = {
+			if = {
+				limit = {
+					is_claimed_by = CZE
+				}
+				CZE = { remove_state_claim = 153 }
+			}
+		}
+		
+	}
+}
+# Generosity - End
+country_event = {
+	id = fso.330
+	title = fso.330.t
+	desc = fso.330.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.330.a
+		custom_effect_tooltip = fso.330.tt
+		add_offsite_building = { type = arms_factory level = 4 }
+		add_offsite_building = { type = industrial_complex level = 8 }
+		GER = { set_technology = { schutzengrabenvernichtungsautomobile_tech = 1 } }
+		set_technology = { schutzengrabenvernichtungsautomobile_tech = 1 }
+		
+		division_template = {
+			name = "Schutzengrabenvernichtungsautomobile-Division"
+			priority = 2
+	
+			regiments = {
+				medium_armor = { x = 0 y = 0 }
+				medium_armor = { x = 0 y = 1 }
+				medium_armor = { x = 0 y = 2 }
+			
+	    	   	medium_armor = { x = 1 y = 0 }
+				medium_armor = { x = 1 y = 1 }
+				medium_armor = { x = 1 y = 2 }
+				
+				motorized = { x = 2 y = 0 }
+				motorized = { x = 2 y = 1 }
+				motorized = { x = 2 y = 2 }
+				motorized = { x = 2 y = 3 }
+
+			
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				signal_company = { x = 0 y = 2 }
+				maintenance_company = { x = 0 y = 3 }
+			}
+		}
+		
+		add_equipment_to_stockpile = { type = schutzengrabenvernichtungsautomobile_0 amount = 1 }
+	}
+	
+}
+# Operation Thinkable - Start
+country_event = {
+	id = fso.331
+	title = fso.331.t
+	desc = fso.331.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_operation_thinkable }
+		focus_progress = {
+			focus = FSO_operation_thinkable
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.331.a
+		GER = { # Get Guderian
+			every_army_leader = {
+				limit = {
+					has_id = 6
+				}
+				set_nationality = CZE
+			}
+		}
+	}
+}
+# Operation Thinkable - End
+country_event = {
+	id = fso.332
+	title = fso.332.t
+	desc = fso.332.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.332.a
+		create_wargoal = { type = annex_everything target = HUN }
+	}
+	
+}

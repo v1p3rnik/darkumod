@@ -1394,7 +1394,7 @@ focus_tree = {
 		id = FSO_what_matters
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_political_open }
-		x = 7
+		x = 6
 		y = 2
 		
 
@@ -1429,7 +1429,7 @@ focus_tree = {
 		id = FSO_grand_adventure
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_what_matters }
-		x = 7
+		x = 6
 		y = 4
 		
 
@@ -1464,7 +1464,7 @@ focus_tree = {
 		id = FSO_perfect_couple
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_grand_adventure }
-		x = 7
+		x = 6
 		y = 6
 		
 
@@ -1499,7 +1499,7 @@ focus_tree = {
 		id = FSO_project_destiny
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_perfect_couple }
-		x = 7
+		x = 6
 		y = 8
 		
 
@@ -1534,7 +1534,7 @@ focus_tree = {
 		id = FSO_long_distance
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_project_destiny }
-		x = 7
+		x = 6
 		y = 10
 		
 
@@ -1569,7 +1569,7 @@ focus_tree = {
 		id = FSO_three_heads
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_long_distance }
-		x = 7
+		x = 6
 		y = 12
 		
 
@@ -1604,7 +1604,7 @@ focus_tree = {
 		id = FSO_sinister_minister
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_three_heads }
-		x = 7
+		x = 6
 		y = 14
 		
 
@@ -1639,7 +1639,7 @@ focus_tree = {
 		id = FSO_royal_duties
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_sinister_minister }
-		x = 7
+		x = 6
 		y = 16
 		
 
@@ -1674,7 +1674,7 @@ focus_tree = {
 		id = FSO_time_to_be_awesome
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_royal_duties }
-		x = 7
+		x = 6
 		y = 18
 		
 
@@ -1709,7 +1709,7 @@ focus_tree = {
 		id = FSO_break_the_wheel
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_time_to_be_awesome }
-		x = 7
+		x = 6
 		y = 20
 		
 
@@ -1744,7 +1744,7 @@ focus_tree = {
 		id = FSO_dream_of_friendship
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_break_the_wheel }
-		x = 7
+		x = 6
 		y = 22
 		
 
@@ -1949,6 +1949,76 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_loyalty_effect
 			hidden_effect = { CZE = { country_event = { id = fso.327 } } }
+		}
+	}
+	# Generosity
+	focus = {
+		id = FSO_generosity
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_loyalty }
+		x = 9
+		y = 11
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_generosity_effect
+			hidden_effect = { CZE = { country_event = { id = fso.330 } } }
+		}
+	}
+	# Operation Thinkable
+	focus = {
+		id = FSO_operation_thinkable
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_generosity }
+		x = 8
+		y = 12
+		
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_operation_thinkable_effect
+			hidden_effect = { CZE = { country_event = { id = fso.332 } } }
 		}
 	}
 	
