@@ -11676,3 +11676,68 @@ country_event = {
 	}
 	
 }
+# Honesty - Start
+country_event = {
+	id = fso.333
+	title = fso.333.t
+	desc = fso.333.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_honesty }
+		focus_progress = {
+			focus = FSO_honesty
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.333.a
+		
+	}
+}
+# Honesty - End
+country_event = {
+	id = fso.334
+	title = fso.334.t
+	desc = fso.334.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.334.a
+		set_global_flag = fso_honesty_tours
+	}
+	
+}
+# Honesty - Trigger Sleeping Cells
+country_event = {
+	id = fso.335
+	title = fso.335.t
+	desc = fso.335.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		has_global_flag = fso_honesty_tours
+		has_war_with = ENG
+		has_completed_focus = FSO_honesty
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.335.a
+		
+	}
+}
