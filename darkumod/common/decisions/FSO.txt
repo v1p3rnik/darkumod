@@ -1211,7 +1211,7 @@ fso_friendship_relationships_category = {
 				flag = fso_courting_hirohito
 				value = 1
 			}
-			country_event = { id = fso.243 }
+			country_event = { id = fso.244 }
 		}
 		
 		ai_will_do = {
@@ -1517,33 +1517,8 @@ fso_royal_duties_category = {
 					
 				}
 				add_ideas = disarmed_nation
-				hidden_effect = {
-					start_civil_war = {
-						ideology = communism
-						size = 0.99
-					}
-					random_country = {
-						limit = {
-							AND = {
-								original_tag = PREV
-								has_war_with = PREV
-							}
-						}
-						white_peace = PREV
-					}
-					add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
-				}
+				set_equipment_fraction = 0
+			
 				add_ideas = FSO_disarmed
 				CZE = { 
 					puppet = PREV

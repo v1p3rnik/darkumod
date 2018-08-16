@@ -8906,9 +8906,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -8957,9 +8959,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9003,9 +9007,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_one_year_pulse days = 365 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9049,9 +9055,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9096,9 +9104,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9142,9 +9152,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_two_year_pulse days = 730 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9191,9 +9203,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9234,9 +9248,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9272,9 +9288,11 @@ country_event = {
 	}
 	
 	immediate = {
-		CZE = {
-			add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
-			add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+		hidden_effect = {
+			CZE = {
+				add_timed_idea = { idea = FSO_half_year_pulse days = 182 }
+				add_timed_idea = { idea = FSO_pulse_cooldown days = 30 }
+			}
 		}
 	}
 	
@@ -9336,9 +9354,7 @@ country_event = {
 			attacker = {
 				state = 65
 				num_provinces = 4
-				on_win = fso.280
-				on_lose = fso.281
-				on_cancel = fso.282
+				
 			}
 			
 			defender = {
@@ -9354,9 +9370,7 @@ country_event = {
 			attacker = {
 				state = 67
 				num_provinces = 4
-				on_win = fso.283
-				on_lose = fso.284
-				on_cancel = fso.282
+				
 			}
 			
 			defender = {
@@ -9381,7 +9395,7 @@ country_event = {
 	desc = fso.280.d
 	picture = GFX_fso_sudetenland_falls
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -9398,7 +9412,7 @@ country_event = {
 	desc = fso.281.d
 	picture = GFX_fso_sudetenland_holds
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -9415,7 +9429,7 @@ country_event = {
 	desc = fso.282.d
 	picture = GFX_fso_stalemate
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -9432,7 +9446,7 @@ country_event = {
 	desc = fso.283.d
 	picture = GFX_fso_east_sudeten_falls
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -9449,7 +9463,7 @@ country_event = {
 	desc = fso.284.d
 	picture = GFX_fso_east_sudeten_holds
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -9931,7 +9945,7 @@ country_event = {
 	desc = fso.290.d
 	picture = GFX_fso_replies_come_in
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -10013,7 +10027,7 @@ country_event = {
 	desc = fso.291.d
 	picture = GFX_fso_grand_ball
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -10047,7 +10061,7 @@ country_event = {
 	desc = fso.292.d
 	picture = GFX_fso_personal_union
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -10319,6 +10333,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { is_in_faction_with = CZE }
+		NOT = { tag = CZE }
 		has_government = friendship
 		has_civil_war = no
 	}

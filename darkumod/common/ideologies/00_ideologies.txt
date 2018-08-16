@@ -191,8 +191,8 @@ ideologies = {
 		}
 		
 		modifiers = {
-			generate_wargoal_tension = 1.01
-			join_faction_tension = 1.01
+			generate_wargoal_tension = 2
+			join_faction_tension = 2
 			lend_lease_tension = 0
 			send_volunteers_tension = 0.1
 			guarantee_tension = 0.4
