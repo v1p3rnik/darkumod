@@ -1811,6 +1811,7 @@ operations = {
 			every_country = {
 				limit = {
 					is_in_faction_with = CZE
+					NOT = { tag = CZE }
 					has_government = friendship
 					NOT = { has_country_flag = fso_disarmed }
 				}
