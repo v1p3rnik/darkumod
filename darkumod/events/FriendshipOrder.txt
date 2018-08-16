@@ -10333,7 +10333,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { is_in_faction_with = CZE }
-		has_country_flag = fso_cells_civil_war
+		NOT = { tag = CZE }
 		has_government = friendship
 		has_civil_war = no
 	}
