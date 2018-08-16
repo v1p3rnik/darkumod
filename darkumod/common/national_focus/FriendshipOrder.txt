@@ -1616,10 +1616,21 @@ focus_tree = {
 
 		available = {
 			has_government = friendship
+			GER = { 
+				AND = {
+					has_civil_war = no
+					has_government = fascism
+				}
+			}
 		}
 		
 		bypass = {
-			
+			GER = { 
+				AND = {
+					has_civil_war = no
+					NOT = { has_government = fascism }
+				}
+			}
 		}
 		
 		cancel_if_invalid = yes
