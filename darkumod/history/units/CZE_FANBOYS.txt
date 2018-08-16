@@ -1,0 +1,108 @@
+﻿division_template = {
+	name = "Axis Girls Fanboys"
+	priority = 1
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		
+	    infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+
+	}
+	
+}
+
+units = {
+
+	# Dover
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3501  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3501  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3501  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3501  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	# Liverpool
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 6384  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 6384  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 6384  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 6384  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	# Bristol
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3369  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3369  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3369  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Axis Girls Fanboys"
+		location = 3369  
+		division_template = "Axis Girls Fanboys"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+}

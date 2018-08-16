@@ -7,6 +7,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/friendship_group.tga"
 	}
 	
+	spriteType = {
+		name = "GFX_autonomy_fso_personal_union_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_fso_personal_union_icon.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_fso_friend_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_fso_friend_icon.tga"
+	}
+	
 	#Autonomy Stuff
 
 	spriteType = {

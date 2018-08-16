@@ -1478,6 +1478,8 @@ fso_royal_duties_category = {
 			has_country_flag = fso_dark_retirement
 		}
 		
+		fire_only_once = yes
+		
 		complete_effect = {
 			
 			create_country_leader = {
@@ -1573,6 +1575,8 @@ fso_royal_duties_category = {
 			NOT = { has_country_flag = fso_recent_abdication }
 		}
 		
+		fire_only_once = yes
+		
 		available = {
 			has_stability > 0.9
 		}
@@ -1588,7 +1592,7 @@ fso_royal_duties_category = {
 				create_country_leader = {
 					name = "Lamatrepide Bourbon"
 					desc = "LAMATREPIDE_DESC"
-					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					picture = "Portrait_FSO_Lamatrepide.tga"
 					expire = "1965.1.1"
 					ideology = friendshipism
 					traits = { wae_wa_wee }
@@ -1601,7 +1605,7 @@ fso_royal_duties_category = {
 				create_country_leader = {
 					name = "Lamatrepide Bonaparte"
 					desc = "LAMATREPIDE_DESC"
-					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					picture = "Portrait_FSO_Lamatrepide.tga"
 					expire = "1965.1.1"
 					ideology = friendshipism
 					traits = { wae_wa_wee }
@@ -1617,7 +1621,7 @@ fso_royal_duties_category = {
 				create_country_leader = {
 					name = "Lamatrepide"
 					desc = "LAMATREPIDE_DESC"
-					picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+					picture = "Portrait_FSO_Lamatrepide.tga"
 					expire = "1965.1.1"
 					ideology = friendshipism
 					traits = { wae_wa_wee }
