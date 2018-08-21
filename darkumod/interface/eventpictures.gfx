@@ -244,6 +244,14 @@ spriteTypes = {
 		name = "GFX_fso_commie_festival"
 		texturefile = "gfx/event_pictures/fso_commie_festival.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_news_axisgirls_danzig"
+		texturefile = "gfx/event_pictures/fso_news_axisgirls_danzig.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_news_axisgirls_hamburg"
+		texturefile = "gfx/event_pictures/fso_news_axisgirls_hamburg.tga"
+	}
 	
 	
 	################################################## VANILLA

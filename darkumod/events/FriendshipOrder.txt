@@ -11276,7 +11276,9 @@ country_event = {
 	
 	option = { 
 		name = fso.324.a
-		
+		hidden_effect = {
+			news_event = { days = 7 id = fsonews.17 }
+		}
 	}
 }
 # Axis Girls - End
@@ -11293,6 +11295,9 @@ country_event = {
 	option = { 
 		name = fso.325.a
 		swap_ideas = { remove_idea = FSO_fascist add_idea = FSO_axis_girls_idea }
+		hidden_effect = {
+			news_event = { days = 7 id = fsonews.18 }
+		}
 	}
 	
 }
@@ -11365,6 +11370,9 @@ country_event = {
 		add_to_war = {
 			targeted_alliance = GER
 			enemy = POL
+		}
+		hidden_effect = {
+			news_event = { days = 7 id = fsonews.19 }
 		}
 	}
 	
@@ -11446,6 +11454,9 @@ country_event = {
 	
 	option = { 
 		name = fso.329.a
+		hidden_effect = {
+			news_event = { days = 7 id = fsonews.20 }
+		}
 		10 = {
 			if = {
 				limit = {

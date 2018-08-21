@@ -496,3 +496,111 @@ news_event = {
 		}
 	}
 }
+
+# Axis Girls Tour Hamburg
+news_event = {
+	id = fsonews.17
+	title = fsonews.17.t 
+	desc = fsonews.17.d 
+	picture = GFX_fso_news_axisgirls_hamburg
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.17.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.17.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# Axis Girls Tour Danzig
+news_event = {
+	id = fsonews.18
+	title = fsonews.18.t 
+	desc = fsonews.18.d 
+	picture = GFX_fso_news_axisgirls_danzig
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.18.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.18.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# Axis Girls Tour Uppsala
+news_event = {
+	id = fsonews.19
+	title = fsonews.19.t 
+	desc = fsonews.19.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.19.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.19.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
+
+# Axis Girls Tour Helsinki
+news_event = {
+	id = fsonews.20
+	title = fsonews.20.t 
+	desc = fsonews.20.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.20.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.20.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}
