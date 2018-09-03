@@ -11768,3 +11768,140 @@ country_event = {
 		custom_effect_tooltip = fso.335.tt
 	}
 }
+# Laughter - Start
+country_event = {
+	id = fso.336
+	title = fso.336.t
+	desc = fso.336.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_laughter }
+		focus_progress = {
+			focus = FSO_laughter
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.336.a
+		
+	}
+}
+# Laughter - End
+country_event = {
+	id = fso.337
+	title = fso.337.t
+	desc = fso.337.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.337.a
+		hidden_effect = {
+			news_event = { days = 1 id = fsonews.21 }
+		}
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
+		if = { # if Finland does not exist release it and give troops
+			limit = {
+				NOT = { country_exists = FIN }
+			}
+			SOV = {
+				release = FIN
+			}
+			FIN = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+				hidden_effect = { load_oob = FSO_ANGRY_FANBOYS }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 30000
+					producer = GER
+				}
+			}
+			GER = {
+				add_to_faction = FIN
+			}
+			add_to_war = {
+				targeted_alliance = FIN
+				enemy = SOV
+			}
+		}
+		if = { # if Finland is a Soviet Puppet civil war it and we help
+			limit = {
+				AND = {
+					country_exists = FIN
+					FIN = {
+						is_puppet_of = SOV
+					}
+				}
+			}
+			FIN = {
+				start_civil_war = {
+					ruling_party = communism
+					ideology = fascism
+					size = 0.8
+				}
+				hidden_effect = { load_oob = FSO_ANGRY_FANBOYS }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 30000
+					producer = GER
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = FIN
+					has_civil_war = yes
+					has_government = fascism
+				}
+				GER = { add_to_faction = PREV }
+			}
+			add_to_war = {
+				targeted_alliance = FIN
+				enemy = SOV
+			}
+		}
+		if = { # if Finland is free and exists declares war on Soviets and calls us in
+			limit = {
+				AND = {
+					country_exists = FIN
+					FIN = {
+						is_puppet = no
+					}
+				}
+			}
+			FIN = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+				hidden_effect = { load_oob = FSO_ANGRY_FANBOYS }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 30000
+					producer = GER
+				}
+			}
+			GER = {
+				add_to_faction = FIN
+			}
+			add_to_war = {
+				targeted_alliance = FIN
+				enemy = SOV
+			}
+		}
+	}
+	
+}

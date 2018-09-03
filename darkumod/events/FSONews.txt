@@ -604,3 +604,30 @@ news_event = {
 		}
 	}
 }
+
+# Axis Girls Tour de France
+news_event = {
+	id = fsonews.21
+	title = fsonews.21.t 
+	desc = fsonews.21.d 
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fsonews.21.a 
+		trigger = {
+			NOT = {
+				tag = CZE
+			}
+		}
+	}
+	option = {
+		name = fsonews.21.b 
+		trigger = {
+			tag = CZE
+		}
+	}
+}

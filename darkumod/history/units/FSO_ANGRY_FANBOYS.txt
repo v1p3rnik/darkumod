@@ -1,0 +1,193 @@
+﻿division_template = {
+	name = "Drunk Sniper Fanboys"
+	priority = 1
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		
+	    infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+	}
+	
+}
+
+units = {
+
+	# Helsinki
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Drunk Sniper Fanboys"
+		location = 11105 
+		division_template = "Drunk Sniper Fanboys"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+}
