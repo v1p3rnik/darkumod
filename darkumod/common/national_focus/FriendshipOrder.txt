@@ -2102,5 +2102,40 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.337 } } }
 		}
 	}
+	# Magic
+	focus = {
+		id = FSO_magic
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_laughter }
+		x = 9
+		y = 17
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_magic_effect
+			hidden_effect = { CZE = { country_event = { id = fso.339 } } }
+		}
+	}
 	
 }

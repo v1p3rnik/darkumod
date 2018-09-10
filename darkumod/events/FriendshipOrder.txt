@@ -11905,3 +11905,403 @@ country_event = {
 	}
 	
 }
+# Honesty - Start
+country_event = {
+	id = fso.338
+	title = fso.338.t
+	desc = fso.338.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_magic }
+		focus_progress = {
+			focus = FSO_magic
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.338.a
+		
+	}
+}
+# Honesty - End - First Axis Conference in Berlin
+country_event = {
+	id = fso.339
+	title = fso.339.t
+	desc = fso.339.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.339.a 
+		set_country_flag = fso_held_first_axis_conference
+		
+		# We claim Ukraine, Hungary, Yugo, Romania, Bulgaria
+		add_state_claim = 105
+		add_state_claim = 106
+		add_state_claim = 107
+		add_state_claim = 108
+		add_state_claim = 109
+		add_state_claim = 45
+		add_state_claim = 102
+		add_state_claim = 103
+		add_state_claim = 104
+		add_state_claim = 46
+		add_state_claim = 76
+		add_state_claim = 77
+		add_state_claim = 78
+		add_state_claim = 79
+		add_state_claim = 80
+		add_state_claim = 81
+		add_state_claim = 82
+		add_state_claim = 83
+		add_state_claim = 84
+		add_state_claim = 43
+		add_state_claim = 154
+		add_state_claim = 155
+		add_state_claim = 48
+		add_state_claim = 211
+		add_state_claim = 212
+		add_state_claim = 199
+		add_state_claim = 201
+		add_state_claim = 202
+		add_state_claim = 193
+		add_state_claim = 225
+		add_state_claim = 221
+		add_state_claim = 228
+		add_state_claim = 227
+		add_state_claim = 200
+		add_state_claim = 196
+		add_state_claim = 137
+		add_state_claim = 197
+		add_state_claim = 192
+		add_state_claim = 198
+		add_state_claim = 196
+		add_state_claim = 259
+		add_state_claim = 226
+		add_state_claim = 89
+		add_state_claim = 91
+		add_state_claim = 93
+		GER = { # Germany claims Britain, France, Poland, Belarus
+			add_state_claim = 6
+			add_state_claim = 34
+			add_state_claim = 295
+			add_state_claim = 538
+			add_state_claim = 718
+			add_state_claim = 14
+			add_state_claim = 15
+			add_state_claim = 16
+			add_state_claim = 17
+			add_state_claim = 18
+			add_state_claim = 19
+			add_state_claim = 20
+			add_state_claim = 21
+			add_state_claim = 22
+			add_state_claim = 23
+			add_state_claim = 24
+			add_state_claim = 25
+			add_state_claim = 26
+			add_state_claim = 27
+			add_state_claim = 28
+			add_state_claim = 29
+			add_state_claim = 30
+			add_state_claim = 31
+			add_state_claim = 32
+			add_state_claim = 33
+			add_state_claim = 735
+			add_state_claim = 7
+			add_state_claim = 35
+			add_state_claim = 36
+			add_state_claim = 309
+			add_state_claim = 695
+			add_state_claim = 119
+			add_state_claim = 120
+			add_state_claim = 121
+			add_state_claim = 122
+			add_state_claim = 123
+			add_state_claim = 125
+			add_state_claim = 126
+			add_state_claim = 127
+			add_state_claim = 128
+			add_state_claim = 129
+			add_state_claim = 130
+			add_state_claim = 131
+			add_state_claim = 132
+			add_state_claim = 133
+			add_state_claim = 136
+			add_state_claim = 270
+			add_state_claim = 281
+			add_state_claim = 299
+			add_state_claim = 308
+			add_state_claim = 311
+			add_state_claim = 326
+			add_state_claim = 331
+			add_state_claim = 332
+			add_state_claim = 338
+			add_state_claim = 442
+			add_state_claim = 636
+			add_state_claim = 639
+			add_state_claim = 643
+			add_state_claim = 687
+			add_state_claim = 689
+			add_state_claim = 690
+			add_state_claim = 691
+			add_state_claim = 692
+			add_state_claim = 693
+			add_state_claim = 696
+			add_state_claim = 709
+			add_state_claim = 711
+			add_state_claim = 712
+			add_state_claim = 720
+			add_state_claim = 725
+			add_state_claim = 733
+			add_state_claim = 241
+			add_state_claim = 194
+			add_state_claim = 207
+			add_state_claim = 204
+			add_state_claim = 206
+		}
+		every_country = { # Finland claims Baltic states, Kola, Karelia, Novgorod
+			limit = {
+				AND = {
+					original_tag = FIN
+					is_in_faction_with = GER
+				}
+			}				
+			add_state_claim = 213
+			add_state_claim = 215
+			add_state_claim = 216
+			add_state_claim = 195
+			add_state_claim = 208
+			add_state_claim = 264
+			add_state_claim = 247
+			add_state_claim = 244
+			add_state_claim = 246
+			add_state_claim = 210
+			add_state_claim = 263
+			add_state_claim = 209
+			add_state_claim = 191
+			add_state_claim = 13
+			add_state_claim = 12
+			add_state_claim = 190
+			add_state_claim = 189
+			add_state_claim = 11
+		}
+		if = {
+			limit = {
+				ITA = {
+					is_in_faction_with = GER
+				}
+			}
+			ITA = { # If Italy in Axis, it gets Spain, Greece, Albania, African colonies, Corsice, Malta, Gibraltar, Cyprus
+				add_state_claim = 41
+				add_state_claim = 165
+				add_state_claim = 166
+				add_state_claim = 167
+				add_state_claim = 168
+				add_state_claim = 169
+				add_state_claim = 170
+				add_state_claim = 171
+				add_state_claim = 172
+				add_state_claim = 173
+				add_state_claim = 174
+				add_state_claim = 175
+				add_state_claim = 176
+				add_state_claim = 177
+				add_state_claim = 178
+				add_state_claim = 290
+				add_state_claim = 297
+				add_state_claim = 699
+				add_state_claim = 47
+				add_state_claim = 182
+				add_state_claim = 184
+				add_state_claim = 185
+				add_state_claim = 186
+				add_state_claim = 187
+				add_state_claim = 731
+				add_state_claim = 44
+				add_state_claim = 1 # British and French stuff
+				add_state_claim = 116
+				add_state_claim = 118
+				add_state_claim = 183
+				add_state_claim = 269
+				add_state_claim = 274
+				add_state_claim = 446
+				add_state_claim = 447
+				add_state_claim = 452
+				add_state_claim = 453
+				add_state_claim = 454
+				add_state_claim = 455
+				add_state_claim = 456
+				add_state_claim = 457
+				add_state_claim = 542
+				add_state_claim = 545
+				add_state_claim = 546
+				add_state_claim = 547
+				add_state_claim = 548
+				add_state_claim = 549
+				add_state_claim = 551
+				add_state_claim = 552
+				add_state_claim = 558
+				add_state_claim = 656
+				add_state_claim = 658
+				add_state_claim = 659
+				add_state_claim = 700
+				add_state_claim = 701
+				add_state_claim = 703
+				add_state_claim = 704
+				add_state_claim = 707
+			}
+		}
+		else = { # If Italy is not in Axis, Germany claims British and French stuff instead
+			GER = {
+				add_state_claim = 1 # British and French stuff
+				add_state_claim = 116
+				add_state_claim = 118
+				add_state_claim = 183
+				add_state_claim = 269
+				add_state_claim = 274
+				add_state_claim = 446
+				add_state_claim = 447
+				add_state_claim = 452
+				add_state_claim = 453
+				add_state_claim = 454
+				add_state_claim = 455
+				add_state_claim = 456
+				add_state_claim = 457
+				add_state_claim = 542
+				add_state_claim = 545
+				add_state_claim = 546
+				add_state_claim = 547
+				add_state_claim = 548
+				add_state_claim = 549
+				add_state_claim = 551
+				add_state_claim = 552
+				add_state_claim = 558
+				add_state_claim = 656
+				add_state_claim = 658
+				add_state_claim = 659
+				add_state_claim = 700
+				add_state_claim = 701
+				add_state_claim = 703
+				add_state_claim = 704
+				add_state_claim = 707
+			}
+		}
+	}
+	
+}
+# Magic - Second Axis Conference in Berlin
+country_event = {
+	id = fso.340
+	title = fso.340.t
+	desc = fso.340.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.340.a
+		CZE = {
+			every_state = {
+				limit = {
+					is_claimed_by = CZE
+					NOT = { is_owned_and_controlled_by = CZE }
+				}
+				CZE = {
+					transfer_state = PREV
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_claimed_by = CZE
+					NOT = { is_core_of = CZE }
+				}
+				add_core_of = CZE
+				remove_claim_by = CZE
+			}
+		}
+		GER = {
+			every_state = {
+				limit = {
+					is_claimed_by = GER
+					NOT = { is_owned_and_controlled_by = GER }
+				}
+				GER = {
+					transfer_state = PREV
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_claimed_by = GER
+					NOT = { is_core_of = GER }
+				}
+				add_core_of = GER
+				remove_claim_by = GER
+			}
+		}
+		any_country = {
+			limit = {
+				original_tag = FIN
+				is_in_faction_with = GER
+				is_puppet = no
+				has_government = fascism
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = PREV
+					NOT = { is_owned_and_controlled_by = PREV }
+				}
+				PREV = {
+					transfer_state = PREV
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_claimed_by = PREV
+					NOT = { is_core_of = PREV }
+				}
+				add_core_of = PREV
+				remove_claim_by = PREV
+			}
+		}
+		if = {
+			limit = {
+				ITA = {
+					is_in_faction_with = GER
+					is_puppet = no
+					has_government = fascism
+				}
+			}
+			ITA = {
+				every_state = {
+					limit = {
+						is_claimed_by = ITA
+						NOT = { is_owned_and_controlled_by = ITA }
+					}
+					ITA = {
+						transfer_state = PREV
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_claimed_by = ITA
+						NOT = { is_core_of = ITA }
+					}
+					add_core_of = ITA
+					remove_claim_by = ITA
+				}
+			}
+		}
+	}
+	
+}
