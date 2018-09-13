@@ -1841,7 +1841,10 @@ focus_tree = {
 			has_government = fascism
 			custom_trigger_tooltip = {
 				tooltip = FSO_make_it_reign_tt
-				has_country_flag = fso_moderate_nazi
+				OR = {
+					has_country_flag = fso_moderate_nazi
+					has_country_flag = fso_darker
+				}
 			}
 		}
 		
@@ -1878,6 +1881,10 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = FSO_axis_girls_tt
+				has_country_flag = fso_moderate_nazi
+			}
 		}
 		
 		bypass = {
