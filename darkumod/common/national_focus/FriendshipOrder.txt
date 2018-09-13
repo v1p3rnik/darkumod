@@ -1430,7 +1430,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_what_matters }
 		x = 6
-		y = 4
+		y = 3
 		
 
 		cost = 30
@@ -1465,7 +1465,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_grand_adventure }
 		x = 6
-		y = 6
+		y = 5
 		
 
 		cost = 10
@@ -1500,7 +1500,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_perfect_couple }
 		x = 6
-		y = 8
+		y = 7
 		
 
 		cost = 10
@@ -1535,7 +1535,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_project_destiny }
 		x = 6
-		y = 10
+		y = 9
 		
 
 		cost = 10
@@ -1570,7 +1570,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_long_distance }
 		x = 6
-		y = 12
+		y = 11
 		
 
 		cost = 10
@@ -1605,7 +1605,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_three_heads }
 		x = 6
-		y = 14
+		y = 13
 		
 
 		cost = 10
@@ -1651,7 +1651,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_sinister_minister }
 		x = 6
-		y = 16
+		y = 15
 		
 
 		cost = 10
@@ -1686,7 +1686,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_royal_duties }
 		x = 6
-		y = 18
+		y = 17
 		
 
 		cost = 10
@@ -1721,7 +1721,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_time_to_be_awesome }
 		x = 6
-		y = 20
+		y = 19
 		
 
 		cost = 10
@@ -1756,7 +1756,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_break_the_wheel }
 		x = 6
-		y = 22
+		y = 21
 		
 
 		cost = 20
@@ -1792,7 +1792,7 @@ focus_tree = {
 		id = FSO_grand_conspiracy
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_political_open }
-		x = 10 # next focuses are x9y3 x10y4 x11y3
+		x = 10 # next focuses are x9y3 x11y3
 		y = 2
 		
 
@@ -1827,7 +1827,7 @@ focus_tree = {
 		id = FSO_make_it_reign
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_grand_conspiracy }
-		x = 9
+		x = 9 # branching into x9y4 and x10y5
 		y = 3
 		
 
@@ -1867,7 +1867,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_make_it_reign }
 		x = 9
-		y = 5
+		y = 4
 		
 
 		cost = 10
@@ -1902,7 +1902,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_axis_girls }
 		x = 9
-		y = 7
+		y = 6
 		
 
 		cost = 10
@@ -1937,7 +1937,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_kindness }
 		x = 9
-		y = 9
+		y = 8
 		
 
 		cost = 10
@@ -1972,7 +1972,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_loyalty }
 		x = 9
-		y = 11
+		y = 10
 		
 
 		cost = 10
@@ -2007,7 +2007,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_generosity }
 		x = 8
-		y = 12
+		y = 11
 		
 
 		cost = 5
@@ -2042,7 +2042,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_generosity }
 		x = 9
-		y = 13
+		y = 12
 		
 
 		cost = 10
@@ -2077,7 +2077,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_honesty }
 		x = 9
-		y = 15
+		y = 14
 		
 
 		cost = 10
@@ -2112,7 +2112,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_laughter }
 		x = 9
-		y = 17
+		y = 16
 		
 
 		cost = 10
