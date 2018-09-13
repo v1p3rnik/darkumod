@@ -11766,6 +11766,7 @@ country_event = {
 		name = fso.335.a
 		hidden_effect = { load_oob = CZE_FANBOYS }
 		custom_effect_tooltip = fso.335.tt
+		add_equipment_to_stockpile = { type = convoy_1 amount = 500 producer = GER }
 	}
 }
 # Laughter - Start
@@ -11819,6 +11820,9 @@ country_event = {
 				release = FIN
 			}
 			FIN = {
+				set_politics = {
+					ruling_party = fascism
+				}
 				declare_war_on = {
 					target = SOV
 					type = annex_everything
@@ -11851,13 +11855,20 @@ country_event = {
 				start_civil_war = {
 					ruling_party = communism
 					ideology = fascism
-					size = 0.8
+					size = 0.9
 				}
-				hidden_effect = { load_oob = FSO_ANGRY_FANBOYS }
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 30000
-					producer = GER
+				every_country = {
+					limit = {
+						original_tag = FIN
+						has_government = fascism
+						has_civil_war = yes
+					}
+					hidden_effect = { load_oob = FSO_ANGRY_FANBOYS }
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 30000
+						producer = GER
+					}
 				}
 			}
 			every_country = {
@@ -11883,6 +11894,9 @@ country_event = {
 				}
 			}
 			FIN = {
+				set_politics = {
+					ruling_party = fascism
+				}
 				declare_war_on = {
 					target = SOV
 					type = annex_everything
@@ -11905,7 +11919,7 @@ country_event = {
 	}
 	
 }
-# Honesty - Start
+# Magic - Start
 country_event = {
 	id = fso.338
 	title = fso.338.t
@@ -11928,7 +11942,7 @@ country_event = {
 		
 	}
 }
-# Honesty - End - First Axis Conference in Berlin
+# Magic - End - First Axis Conference in Berlin
 country_event = {
 	id = fso.339
 	title = fso.339.t

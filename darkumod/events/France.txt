@@ -363,10 +363,16 @@ country_event = {
 	option = { # Agree
 		name = france.14.a
 		ai_chance = {
-			factor = 50
+			factor = 0
 		}
 		trigger = {
 			has_government = fascism
+			NOT = {
+				CZE = {
+					has_government = fascism
+					is_in_faction_with = GER
+				}
+			}
 		}
 		#Set same cosmetic tag they would get on capitulation
 		FRA = {
@@ -654,10 +660,16 @@ country_event = {
 	option = { # Agree - Neutrality
 		name = france.14.c
 		ai_chance = {
-			factor = 50
+			factor = 0
 		}
 		trigger = {
 			has_government = neutrality
+			NOT = {
+				CZE = {
+					has_government = fascism
+					is_in_faction_with = GER
+				}
+			}
 		}
 		#Set same cosmetic tag they would get on capitulation
 		FRA = {
@@ -962,11 +974,7 @@ country_event = {
 	option = { # Conquer everything!
 		name = france.14.b
 		ai_chance = { 
-			factor = 50 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			factor = 100 
 		}
 		FRA = {
 			country_event = { hours = 6 id = france.15 }

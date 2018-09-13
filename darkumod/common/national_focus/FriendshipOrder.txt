@@ -1839,6 +1839,10 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = FSO_make_it_reign_tt
+				has_country_flag = fso_moderate_nazi
+			}
 		}
 		
 		bypass = {
@@ -1861,7 +1865,7 @@ focus_tree = {
 	focus = {
 		id = FSO_axis_girls
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FSO_grand_conspiracy }
+		prerequisite = { focus = FSO_make_it_reign }
 		x = 9
 		y = 5
 		
