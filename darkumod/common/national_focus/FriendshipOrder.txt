@@ -2148,5 +2148,75 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.339 } } }
 		}
 	}
+	# Siren's Song
+	focus = {
+		id = FSO_sirens_song
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_magic }
+		x = 9
+		y = 18
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_sirens_song_effect
+			hidden_effect = { CZE = { country_event = { id = fso.342 } } }
+		}
+	}
+	# Dream of Change
+	focus = {
+		id = FSO_dream_of_change
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_sirens_song }
+		x = 9
+		y = 20
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_change_effect
+			hidden_effect = { CZE = { country_event = { id = fso.344 } } }
+		}
+	}
 	
 }

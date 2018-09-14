@@ -53,7 +53,7 @@ equipments = {
 	schutzengrabenvernichtungsautomobile_0 = {
 		year = 1936
 	
-		archetype = medium_tank_equipment
+		archetype = schutzengrabenvernichtungsautomobile
 		priority = 100
 		visual_level = 2
 		is_convertable = yes

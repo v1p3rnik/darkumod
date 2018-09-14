@@ -10,6 +10,7 @@
  form_united_union_cores_tt:0 "Will gain cores on owned provinces."
  fso_special_projects_category:0 "Special Projects"
  fso_war_category:0 "War Measures"
+ fso_sirens_song_category:0 "Axis Girls Tours"
  FSO_statue_of_equality:0 "Build the Statue of Equality"
  FSO_statue_of_equality_desc:0 "Demolish the statue of Christ the Redemptor in Rio and build the Statue of Equality to rival the american Statue of Liberty!"
  FSO_glorious_counterattack:0 "Glorious Counterattack"
@@ -72,3 +73,5 @@
  FSO_send_humanitarian_aid:0 "Send Humanitarian Aid"
  FSO_send_political_support:0 "Support them internationally"
  FSO_hold_second_axis_conference:0 "Hold the Second Axis Conference"
+ FSO_weaponized_music:0 "Weaponized Music"
+ FSO_weaponized_music_desc:0 "This allows us to use the vast potential of our Axis Girls to bolster morale of our troops, at least temporarily. Unfortunately, it seems like it will be harder and harder to keep this war going if we are not fast enough... The cost of this decision is doubled after every use."
