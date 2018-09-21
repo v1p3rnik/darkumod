@@ -1864,6 +1864,7 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.319 } } }
 		}
 	}
+	##################### AXIS GIRLS PATH ###########################
 	# Axis Girls
 	focus = {
 		id = FSO_axis_girls
@@ -2216,6 +2217,82 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_dream_of_change_effect
 			hidden_effect = { CZE = { country_event = { id = fso.344 } } }
+		}
+	}
+	####################### DARKER BUDDHIST PATH ############################
+	# Alternative For Bohemia
+	focus = {
+		id = FSO_alternative_for_bohemia
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_make_it_reign }
+		x = 10
+		y = 5
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = FSO_alternative_for_bohemia_tt
+				has_country_flag = fso_darker
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_alternative_for_bohemia_effect
+			hidden_effect = { CZE = { country_event = { id = fso.347 } } }
+		}
+	}
+	# Freundschaft ist Magie
+	focus = {
+		id = FSO_freundschaft_ist_magie
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_alternative_for_bohemia }
+		x = 10
+		y = 7
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_freundschaft_ist_magie_effect
+			hidden_effect = { CZE = { country_event = { id = fso.349 } } }
 		}
 	}
 	

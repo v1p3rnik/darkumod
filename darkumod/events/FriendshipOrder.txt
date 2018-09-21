@@ -5795,6 +5795,9 @@ country_event = {
 					original_tag = SOV
 					has_government = friendship
 				}
+				CZE = {
+					add_to_faction = PREV
+				}
 				create_country_leader = {
 					name = "Joseph Stalin"
 					desc = "POLITICS_JOSEPH_STALIN_DESC"
@@ -5810,6 +5813,9 @@ country_event = {
 				limit = {
 					original_tag = GER
 					has_government = friendship
+				}
+				CZE = {
+					add_to_faction = PREV
 				}
 				create_country_leader = {
 					name = "Adolf Hitler"
@@ -5827,6 +5833,9 @@ country_event = {
 					original_tag = ITA
 					has_government = friendship
 				}
+				CZE = {
+					add_to_faction = PREV
+				}
 				create_country_leader = {
 					name = "Benito Mussolini"
 					desc = "POLITICS_BENITO_MUSSOLINI_DESC"
@@ -5843,6 +5852,9 @@ country_event = {
 					original_tag = USA
 					has_government = friendship
 				}
+				CZE = {
+					add_to_faction = PREV
+				}
 				create_country_leader = {
 					name = "Franklin Delano Roosevelt"
 					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -5858,6 +5870,9 @@ country_event = {
 				limit = {
 					original_tag = JAP
 					has_government = friendship
+				}
+				CZE = {
+					add_to_faction = PREV
 				}
 				create_country_leader = {
 					name = "Hirohito"
@@ -12473,10 +12488,124 @@ country_event = {
 	fire_only_once = yes
 	
 	option = { 
-		name = fso.344.a
+		name = fso.345.a
 		
-		custom_effect_tooltip = fso.344.tt
+		custom_effect_tooltip = fso.345.tt
 		swap_ideas = { remove_idea = FSO_dream_of_change_idea	add_idea = FSO_dream_of_change_fulfilled }
+	}
+	
+}
+# Alternative for Bohemia - Start
+country_event = {
+	id = fso.346
+	title = fso.346.t
+	desc = fso.346.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_alternative_for_bohemia }
+		focus_progress = {
+			focus = FSO_alternative_for_bohemia
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.346.a
+		
+	}
+}
+# Alternative for Bohemia - End
+country_event = {
+	id = fso.347
+	title = fso.347.t
+	desc = fso.347.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.347.a
+		
+		set_rule = { can_create_factions = yes }
+		create_faction = darker_faction
+		add_to_faction = HUN
+		add_to_faction = SLO
+		HUN = {
+			transfer_state = 664
+			transfer_state = 73
+			add_state_core = 664
+			add_state_core = 73
+		}
+		SLO = {
+			transfer_state = 70
+			transfer_state = 71
+			add_state_core = 70
+			add_state_core = 71
+			hidden_effect = { load_oob = SLO_1939 }
+			add_manpower = 9876
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+	}
+	
+}
+# Freundschaft ist Magie - Start
+country_event = {
+	id = fso.348
+	title = fso.348.t
+	desc = fso.348.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_freundschaft_ist_magie }
+		focus_progress = {
+			focus = FSO_freundschaft_ist_magie
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.348.a
+		
+	}
+}
+# Freundschaft ist Magie - End
+country_event = {
+	id = fso.349
+	title = fso.349.t
+	desc = fso.349.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.349.a
+		
+		9 = {
+			add_building_construction = { type = infrastructure level = 3 instant_build = yes }
+			add_extra_state_shared_building_slots = 11
+			add_building_construction = { type = industrial_complex level = 8 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
+		}
+		
+		POL = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+		}
 	}
 	
 }
