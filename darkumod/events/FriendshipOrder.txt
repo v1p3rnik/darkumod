@@ -12609,3 +12609,74 @@ country_event = {
 	}
 	
 }
+# Fall Schwarz - Start
+country_event = {
+	id = fso.350
+	title = fso.350.t
+	desc = fso.350.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_fall_schwarz }
+		focus_progress = {
+			focus = FSO_fall_schwarz
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.350.a
+		
+	}
+}
+# Fall Schwarz - End
+country_event = {
+	id = fso.351
+	title = fso.351.t
+	desc = fso.351.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.351.a
+		
+		POL = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			if = {
+				limit = {
+					POL = { NOT = { has_government = fascism } }
+				}
+				
+				start_civil_war = {
+					ideology = fascism
+					size = 0.7
+				}
+				every_country = {
+					limit = {
+						original_tag = POL
+						has_government = fascism
+						has_civil_war = yes
+					}
+					CZE = {
+						add_to_faction = PREV
+					}
+				}
+			}
+			else = {
+				CZE = {
+					add_to_faction = POL
+				}
+			}
+		}
+	}
+	
+}
