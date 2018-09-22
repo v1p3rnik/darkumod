@@ -6,6 +6,14 @@ spriteTypes = {
 	name = "GFX_fso_order_69"
 	texturefile = "gfx/interface/goals/focus_fso_order_69.tga"			
 	}
+	SpriteType = {
+	name = "GFX_fso_political_tree"
+	texturefile = "gfx/interface/goals/focus_fso_political_tree.tga"			
+	}
+	SpriteType = {
+	name = "GFX_fso_economic_military"
+	texturefile = "gfx/interface/goals/focus_fso_economy_military.tga"			
+	}
 	
 
 

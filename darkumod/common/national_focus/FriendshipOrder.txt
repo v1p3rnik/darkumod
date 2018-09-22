@@ -91,7 +91,7 @@ focus_tree = {
 	# Political Tree Open
 	focus = {
 		id = FSO_political_open
-		icon = GFX_goal_generic_construction2
+		icon = GFX_fso_political_tree
 		prerequisite = { focus = FSO_order_69 }
 		x = 8
 		y = 1
@@ -125,7 +125,7 @@ focus_tree = {
 	# Economic Tree Open
 	focus = {
 		id = FSO_economic_open
-		icon = GFX_goal_generic_construction2
+		icon = GFX_fso_economic_military
 		prerequisite = { focus = FSO_order_69 }
 		x = 22
 		y = 1
@@ -2329,6 +2329,42 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_fall_schwarz_effect
 			hidden_effect = { CZE = { country_event = { id = fso.351 } } }
+		}
+	}
+	# Visegrad Conference
+	focus = {
+		id = FSO_visegrad_conference
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_fall_schwarz }
+		x = 10
+		y = 9
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_visegrad_conference_effect
+			hidden_effect = { CZE = { country_event = { id = fso.353 } } }
 		}
 	}
 	

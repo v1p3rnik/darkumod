@@ -12680,3 +12680,124 @@ country_event = {
 	}
 	
 }
+# Visegrad Conference - Start
+country_event = {
+	id = fso.352
+	title = fso.352.t
+	desc = fso.352.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_visegrad_conference }
+		focus_progress = {
+			focus = FSO_visegrad_conference
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.352.a
+		
+	}
+}
+# Visegrad Conference - End
+country_event = {
+	id = fso.353
+	title = fso.353.t
+	desc = fso.353.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.353.a
+		
+		set_country_flag = fso_better_axis_integrated_military
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CZE
+					tag = CZE
+				}
+				has_government = fascism
+			}
+			add_ideas = FSO_darker_integrated_military_command
+		}
+		CZE = {
+			add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+			set_country_flag = fso_darker_former_presidency
+		}
+	}
+	
+}
+# Visegrad Conference - New President
+country_event = {
+	id = fso.354
+	title = fso.354.t
+	desc = fso.354.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CZE
+		has_completed_focus = FSO_visegrad_conference
+		NOT = {
+			any_country = {
+				has_idea = FSO_darker_rotating_presidency
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.354.a
+		if = {
+			limit = {
+				CZE = { has_country_flag = fso_darker_former_presidency }
+			}
+			CZE = { clr_country_flag = fso_darker_former_presidency }
+			SLO = {
+				set_country_flag = fso_darker_former_presidency
+				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+			}
+		}
+		else_if = {
+			limit = {
+				SLO = { has_country_flag = fso_darker_former_presidency }
+			}
+			SLO = { clr_country_flag = fso_darker_former_presidency }
+			POL = {
+				set_country_flag = fso_darker_former_presidency
+				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+			}
+		}
+		else_if = {
+			limit = {
+				POL = { has_country_flag = fso_darker_former_presidency }
+			}
+			POL = { clr_country_flag = fso_darker_former_presidency }
+			HUN = {
+				set_country_flag = fso_darker_former_presidency
+				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+			}
+		}
+		else_if = {
+			limit = {
+				HUN = { has_country_flag = fso_darker_former_presidency }
+			}
+			HUN = { clr_country_flag = fso_darker_former_presidency }
+			CZE = {
+				set_country_flag = fso_darker_former_presidency
+				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+			}
+		}
+	}
+}
