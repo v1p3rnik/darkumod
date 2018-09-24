@@ -252,6 +252,42 @@ spriteTypes = {
 		name = "GFX_fso_news_axisgirls_hamburg"
 		texturefile = "gfx/event_pictures/fso_news_axisgirls_hamburg.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_demo_wins"
+		texturefile = "gfx/event_pictures/fso_demo_wins.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_foreign_recognition"
+		texturefile = "gfx/event_pictures/fso_foreign_recognition.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_peetry_investigation"
+		texturefile = "gfx/event_pictures/fso_peetry_investigation.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_communist_victory"
+		texturefile = "gfx/event_pictures/fso_communist_victory.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_festival_fascist"
+		texturefile = "gfx/event_pictures/fso_festival_fascist.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_festival_demo"
+		texturefile = "gfx/event_pictures/fso_festival_demo.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_festival_unaligned"
+		texturefile = "gfx/event_pictures/fso_festival_unaligned.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_recognition_communist"
+		texturefile = "gfx/event_pictures/fso_recognition_communist.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_friendship_code"
+		texturefile = "gfx/event_pictures/fso_friendship_code.tga"
+	}
 	
 	
 	################################################## VANILLA

@@ -154,7 +154,7 @@ country_event = {
 	id = fso.4
 	title = fso.4.t
 	desc = fso.4.d
-	
+	picture = GFX_fso_foreign_recognition
 
 	fire_only_once = yes
 	
@@ -214,7 +214,7 @@ country_event = {
 	id = fso.5
 	title = fso.5.t
 	desc = fso.5.d
-	
+	picture = GFX_fso_peetry_investigation
 
 	fire_only_once = yes
 	
@@ -289,7 +289,7 @@ country_event = {
 	id = fso.7
 	title = fso.7.t
 	desc = fso.7.d
-	
+	picture = GFX_fso_communist_victory
 	
 	fire_only_once = yes
 	
@@ -380,6 +380,7 @@ country_event = {
 	id = fso.10
 	title = fso.10.t
 	desc = fso.10.d
+	picture = GFX_fso_demo_wins
 	
 	
 	fire_only_once = yes
@@ -505,7 +506,7 @@ country_event = {
 	id = fso.16
 	title = fso.16.t
 	desc = fso.16.d
-	
+	picture = GFX_fso_festival_fascist
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -523,7 +524,7 @@ country_event = {
 	id = fso.17
 	title = fso.17.t
 	desc = fso.17.d
-	
+	picture = GFX_fso_festival_demo
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -541,7 +542,7 @@ country_event = {
 	id = fso.18
 	title = fso.18.t
 	desc = fso.18.d
-	
+	picture = GFX_fso_festival_unaligned
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -559,7 +560,7 @@ country_event = {
 	id = fso.19
 	title = fso.19.t
 	desc = fso.19.d
-	
+	picture = GFX_fso_recognition_communist
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -4160,7 +4161,7 @@ country_event = {
 		create_country_leader = {
 			name = "The Church Committee"
 			desc = "HOLY_REVOLUTION_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_Church_Committee.tga"
 			expire = "1965.1.1"
 			ideology = revolution_r
 			traits = { }
@@ -4252,7 +4253,7 @@ country_event = {
 			create_country_leader = {
 				name = "The Church Committee"
 				desc = "HOLY_REVOLUTION_DESC"
-				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				picture = "Portrait_FSO_Church_Committee.tga"
 				expire = "1965.1.1"
 				ideology = revolution_r
 				traits = { }
@@ -4293,7 +4294,7 @@ country_event = {
 			create_country_leader = {
 				name = "The Church Committee"
 				desc = "HOLY_REVOLUTION_DESC"
-				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				picture = "Portrait_FSO_Church_Committee.tga"
 				expire = "1965.1.1"
 				ideology = revolution_r
 				traits = { }
@@ -4385,7 +4386,7 @@ country_event = {
 	id = fso.113
 	title = fso.113.t
 	desc = fso.113.d
-	
+	picture = GFX_fso_friendship_code
 	
 	fire_only_once = yes
 	
