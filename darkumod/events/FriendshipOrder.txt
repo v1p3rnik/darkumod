@@ -12802,3 +12802,60 @@ country_event = {
 		}
 	}
 }
+# Together to the Stars - Start
+country_event = {
+	id = fso.355
+	title = fso.355.t
+	desc = fso.355.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_together_stars }
+		focus_progress = {
+			focus = FSO_together_stars
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.355.a
+		
+	}
+}
+# Together to the Stars - End
+country_event = {
+	id = fso.356
+	title = fso.356.t
+	desc = fso.356.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.356.a
+		CZE = {
+			add_research_slot = 1
+			add_to_tech_sharing_group = fso_visegrad_research
+		}
+		POL = {
+			add_research_slot = 1
+			add_to_tech_sharing_group = fso_visegrad_research
+		}
+		SLO = {
+			add_research_slot = 1
+			add_to_tech_sharing_group = fso_visegrad_research
+		}
+		HUN = {
+			add_research_slot = 1
+			add_to_tech_sharing_group = fso_visegrad_research
+		}
+		
+		
+	}
+	
+}

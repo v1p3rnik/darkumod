@@ -2367,5 +2367,41 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.353 } } }
 		}
 	}
+	# Together to the Stars
+	focus = {
+		id = FSO_together_stars
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_visegrad_conference }
+		x = 10
+		y = 9
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_together_stars_effect
+			hidden_effect = { CZE = { country_event = { id = fso.356 } } }
+		}
+	}
 	
 }
