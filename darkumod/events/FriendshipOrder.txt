@@ -12542,6 +12542,19 @@ country_event = {
 			transfer_state = 73
 			add_state_core = 664
 			add_state_core = 73
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "CZE"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "CZE"
+				value = 200
+			}
 		}
 		SLO = {
 			transfer_state = 70
@@ -12552,6 +12565,16 @@ country_event = {
 			add_manpower = 9876
 			set_politics = {
 				ruling_party = fascism
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "CZE"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "CZE"
+				value = 200
 			}
 		}
 	}
@@ -12670,6 +12693,16 @@ country_event = {
 					CZE = {
 						add_to_faction = PREV
 					}
+					add_ai_strategy = {
+						type = alliance
+						id = "CZE"
+						value = 200
+					}
+					add_ai_strategy = {
+						type = befriend
+						id = "CZE"
+						value = 200
+					}
 				}
 			}
 			else = {
@@ -12732,6 +12765,139 @@ country_event = {
 		CZE = {
 			add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
 			set_country_flag = fso_darker_former_presidency
+		}
+		69 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		9 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		74 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		72 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		####
+		70 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		155 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		664 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		762 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		87 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		86 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
+		}
+		85 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					level < 4
+				}
+			}
 		}
 	}
 	
@@ -12855,6 +13021,328 @@ country_event = {
 			add_to_tech_sharing_group = fso_visegrad_research
 		}
 		
+		
+	}
+	
+}
+# Neu-Magyarország - Start
+country_event = {
+	id = fso.357
+	title = fso.357.t
+	desc = fso.357.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_neu_magyarorszag }
+		focus_progress = {
+			focus = FSO_neu_magyarorszag
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.357.a
+		
+	}
+}
+# Neu-Magyarország - End
+country_event = {
+	id = fso.358
+	title = fso.358.t
+	desc = fso.358.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.358.a
+		
+		HUN = {
+			add_state_claim = 76
+			add_state_claim = 84
+			add_state_claim = 83
+			add_state_claim = 82
+			add_state_claim = 45
+			add_state_claim = 109
+			add_state_claim = 103
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+				generator = { 109 45 103 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				generator = { 76 84 83 82 }
+			}
+			ROM = {
+				create_faction = fso_balkan_bulwark
+				add_to_faction = YUG
+				## add_to_faction = BUL
+				## add_to_faction = TUR
+				## add_to_faction = GRE
+			}
+		}
+		
+	}
+	
+}
+# Visegrad Group - Declared on by Germany
+country_event = {
+	id = fso.359
+	title = fso.359.t
+	desc = fso.359.d
+	
+	
+	trigger = {
+		tag = CZE
+		has_defensive_war_with = GER
+		has_completed_focus = FSO_alternative_for_bohemia
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.359.a
+		set_country_flag = fso_better_axis_defending_against_germany
+		every_country = {
+			limit = {
+				is_in_faction_with = CZE
+			}
+			add_to_war = {
+				targeted_alliance = CZE
+				enemy = GER
+			}
+		}
+		
+	}
+	
+}
+# Visegrad Group - Peace
+country_event = {
+	id = fso.360
+	title = fso.360.t
+	desc = fso.360.d
+	
+	
+	trigger = {
+		tag = CZE
+		country_exists = CZE
+		has_war = no
+		has_country_flag = fso_better_axis_defending_against_germany
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.360.a
+		
+		every_country = {
+			limit = {
+				original_tag = POL
+				is_in_faction_with = CZE
+				has_government = fascism
+			}
+			transfer_state = 63
+			transfer_state = 68
+			transfer_state = 66
+			transfer_state = 67
+			transfer_state = 5
+			## add_state_claim
+		}
+		
+		CZE = {
+			transfer_state = 54
+			transfer_state = 50
+			transfer_state = 52
+			transfer_state = 53
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 4
+		}
+		
+		custom_effect_tooltip = fso.360.tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = ignore
+					id = "GRE"
+					value = 300
+				}
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = ignore
+					id = "YUG"
+					value = 300
+				}
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = ignore
+					id = "BUL"
+					value = 300
+				}
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = ignore
+					id = "TUR"
+					value = 300
+				}
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = ignore
+					id = "ROM"
+					value = 300
+				}
+			}
+		}
+		
+	}
+	
+}
+# Neu-Magyarország - Peace
+country_event = {
+	id = fso.361
+	title = fso.361.t
+	desc = fso.361.d
+	
+	
+	trigger = {
+		tag = CZE
+		country_exists = CZE
+		has_war = no
+		HUN = { has_war = no }
+		has_country_flag = fso_better_axis_war_balkans
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.361.a
+		
+		### Hungary becomes big boy Hungary
+		HUN = {
+			every_state = {
+				limit = {
+					is_claimed_by = HUN
+					NOT = { is_owned_and_controlled_by = HUN }
+				}
+				HUN = {
+					transfer_state = PREV
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_claimed_by = HUN
+						is_core_of = HUN
+					}
+				}
+				add_core_of = HUN
+				remove_claim_by = HUN
+				remove_core_of = YUG
+				remove_core_of = ROM
+			}
+			every_state = {
+				limit = {
+					is_core_of = YUG
+					NOT = { is_owned_and_controlled_by = YUG }
+				}
+				YUG = {
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ROM
+					NOT = { is_owned_and_controlled_by = ROM }
+				}
+				ROM = {
+					transfer_state = PREV
+				}
+			}
+			puppet = ROM
+			puppet = YUG
+			set_cosmetic_tag = HUN_KINGDOM_OF_HUNGARY
+		}
+		YUG = {
+			set_cosmetic_tag = YUG_GREATER_SERBIA
+		}
+		ROM = {
+			set_cosmetic_tag = ROM_GRAND_DUCHY
+		}
+		
+		4 = { ### Slovenia to owner of Wien
+			owner = {
+				transfer_state = 102
+			}
+		}
+		2 = { ### Istria to owner of Rome
+			owner = {
+				transfer_state = 736
+			}
+		}
+		
+	}
+	
+}
+# Neu-Magyarország - FSO Informed about war
+country_event = {
+	id = fso.362
+	title = fso.362.t
+	desc = fso.362.d
+	
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	option = { 
+		name = fso.362.a
+		declare_war_on = YUG
+		declare_war_on = ROM
 		
 	}
 	

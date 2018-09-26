@@ -2337,7 +2337,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_fall_schwarz }
 		x = 10
-		y = 9
+		y = 11
 		
 
 		cost = 10
@@ -2373,7 +2373,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_visegrad_conference }
 		x = 10
-		y = 9
+		y = 13
 		
 
 		cost = 10
@@ -2401,6 +2401,42 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_together_stars_effect
 			hidden_effect = { CZE = { country_event = { id = fso.356 } } }
+		}
+	}
+	# Neu-Magyarország
+	focus = {
+		id = FSO_neu_magyarorszag
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_together_stars }
+		x = 10
+		y = 15
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			NOT = { has_war = yes }
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_neu_magyarorszag_effect
+			hidden_effect = { CZE = { country_event = { id = fso.358 } } }
 		}
 	}
 	

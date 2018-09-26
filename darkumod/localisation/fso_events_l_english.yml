@@ -1205,7 +1205,7 @@
  fso.317.e:0 "Down with fake ideologies! Long Live the Emperor!"
  fso.318.t:0 "Stability And Safety"
  fso.318.d:0 "Greetings, glorious leader! Now that our party has secured full power, we must make a significant effort to diminish the influence of other parties as much as possible, and improve our stability."
- fso.318.a:0 "Heil Arische!"
+ fso.318.a:0 "Heil Freundschaft!"
  fso.319.t:0 "Make It Reign"
  fso.319.d:0 "Our regime is secure. People believe fully in our guidance, and are willing to sacrifice anything for the State. It seems as our internal politics are the focus of interest internationally, however... Adolf Hitler has taken great interest in our nation now, but the Allies denounced us officially, removing any obligations they previously made."
  fso.319.a:0 "Good riddance!"
@@ -1287,3 +1287,6 @@
  fso.345.d:0 "We have burned our enemies cities to the ground, and Axis stands victorious over the rubble. Luckily, we have each other - friends and brothers in arms, who we fought alongside with. With the power of Sirens at our disposal, and our bonds stronger than ever, we have made our dream... a Reality.\n\nYou win! Congratulations!"
  fso.345.a:0 "And Forever More!"
  fso.345.tt:0 "You win! Yay!\n"
+ 
+ #### OTHER COUNTRIES ####
+ germany.46.c:0 "Visegrad Group pressures Allies to support us anyway!"

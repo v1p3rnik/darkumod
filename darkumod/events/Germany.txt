@@ -1055,10 +1055,7 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = { CZE = { is_in_faction = no } }
-			add_to_faction = CZE
-		}
+		give_guarantee = CZE
 		CZE = {
 			add_ai_strategy = {
 				type = alliance
@@ -1260,7 +1257,7 @@ country_event = {
 				NOT = { is_in_faction_with = CZE }
 				CZE = { 
 					is_faction_leader = yes 
-					has_completed_focus = CZE_an_entente_of_our_own
+					
 				}
 			}
 			CZE = { add_to_faction = FRA }
@@ -1546,6 +1543,21 @@ country_event = {
 					type = take_state_focus
 					target = CZE
 					generator = { 69 74 }
+				}
+			}
+		}
+	}
+	option = { # If in Better Axis, combine pressure of V4 to make Allies pressure Germany
+		name = germany.46.c
+		FRA = { give_guarantee = CZE }
+		ENG = { give_guarantee = CZE }
+		GER = {
+			country_event = germany.47
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+					generator = { 69 }
 				}
 			}
 		}

@@ -373,6 +373,27 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
+			### Better Axis War in Balkans
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							tag = YUG
+							tag = ROM
+						}
+					}
+					ROOT = {
+						tag = HUN
+					}
+					CZE = {
+						has_completed_focus = FSO_neu_magyarorszag
+					}
+				}
+				CZE = { 
+					set_country_flag = fso_better_axis_war_balkans
+					country_event = { id = fso.362 }
+				}
+			}
 			### FSO Joins Germany as per pact
 			if = {
 				limit = {
