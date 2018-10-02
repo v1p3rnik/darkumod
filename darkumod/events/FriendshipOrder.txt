@@ -596,7 +596,7 @@ country_event = {
 	id = fso.21
 	title = fso.21.t
 	desc = fso.21.d
-	
+	picture = GFX_fso_foreign_recognition_democratic
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -650,7 +650,7 @@ country_event = {
 	id = fso.24
 	title = fso.24.t
 	desc = fso.24.d
-	
+	picture = GFX_fso_investigation_fascist
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1029,7 +1029,7 @@ country_event = {
 		create_country_leader = {
 			name = "Supreme Leader Dark Buddhist"
 			desc = "DARK_COMMIE_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+			picture = "Portrait_FSO_Supreme_Leader_Dark.tga" 
 			expire = "1965.1.1"
 			ideology = cutie_marxism
 			traits = { 
@@ -13343,6 +13343,206 @@ country_event = {
 		name = fso.362.a
 		declare_war_on = YUG
 		declare_war_on = ROM
+		
+	}
+	
+}
+# Legacy of Das Romische Reich - Start
+country_event = {
+	id = fso.363
+	title = fso.363.t
+	desc = fso.363.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_legacy_romische_reich }
+		focus_progress = {
+			focus = FSO_legacy_romische_reich
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.363.a
+		
+	}
+}
+# Legacy of Das Romische Reich - End
+country_event = {
+	id = fso.364
+	title = fso.364.t
+	desc = fso.364.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.364.a
+		
+		random_list = {
+			30 = { # Greece says yes to our offer
+				custom_effect_tooltip = fso.364.tt
+				GRE = {
+					set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.3
+					}
+					set_party_name = { ideology = fascism long_name = "Order of the Purple Phoenix" name = "Purple Phoenix" }
+					CZE = {
+						add_to_faction = PREV
+					}
+					add_state_claim = 164
+					add_state_claim = 342
+					add_state_claim = 106
+					add_state_claim = 211
+					add_state_claim = 347
+					add_state_claim = 48
+					add_state_claim = 339
+					add_state_claim = 212
+					add_state_claim = 341
+					add_state_claim = 340
+					create_wargoal = {
+						type = take_state_focus
+						target = TUR
+						generator = { 341 }
+					}
+				}
+				TUR = {
+					create_faction = fso_balkan_bulwark
+					add_to_faction = BUL
+				}
+			}
+			70 = { # Greece says no to our offer 
+				GRE = {
+					create_faction = fso_balkan_bulwark
+					add_to_faction = BUL
+					add_to_faction = TUR
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = TUR
+					generator = { 341 }
+				}
+			}
+		}
+	}
+	
+}
+# Legacy of Das Romische Reich - FSO Informed about war
+country_event = {
+	id = fso.365
+	title = fso.365.t
+	desc = fso.365.d
+	
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	option = { 
+		name = fso.365.a
+		declare_war_on = TUR
+		
+	}
+	
+}
+# Neu-Magyarország - Peace
+country_event = {
+	id = fso.366
+	title = fso.366.t
+	desc = fso.366.d
+	
+	
+	trigger = {
+		tag = CZE
+		country_exists = CZE
+		has_war = no
+		GRE = { has_war = no }
+		has_country_flag = fso_restoring_byzantium
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.366.a
+		
+		GRE = { # Roma Invicta
+			every_state = {
+				limit = {
+					is_core_of = GRE
+					NOT = { is_owned_and_controlled_by = GRE }
+				}
+				GRE = {
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = GRE
+					NOT = { is_owned_and_controlled_by = GRE }
+				}
+				GRE = {
+					transfer_state = PREV
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_claimed_by = GRE
+						is_core_of = GRE
+					}
+				}
+				add_core_of = GRE
+				remove_claim_by = GRE
+			}
+			annex_country = { target = YUG transfer_troops = yes }
+			transfer_state = 81
+			transfer_state = 46
+			transfer_state = 77
+			hidden_effect = {
+				if = {
+					GRE = {
+						limit = {
+							NOT = { has_government = fascism }
+						}
+						set_politics = {
+							ruling_party = fascism
+						}
+						add_popularity = {
+							ideology = fascism
+							popularity = 0.3
+						}
+						set_party_name = { ideology = fascism long_name = "Order of the Purple Phoenix" name = "Purple Phoenix" }
+					}
+				}
+			}
+			add_opinion_modifier = { target = ITA modifier = fso_purple_phoenix } # Fake Rome 
+			ITA = { add_opinion_modifier = { target = ITA modifier = fso_purple_phoenix } } # Fake Rome
+			every_state = {
+				limit = {
+					is_core_of = TUR
+					NOT = { is_owned_and_controlled_by = GRE }
+				}
+				GRE = {
+					transfer_state = PREV
+				}
+			}
+			set_cosmetic_tag = GRE_PURPLE_PHOENIX
+			ROM = { set_cosmetic_tag = ROM_MOLDAVIA }
+		}
 		
 	}
 	

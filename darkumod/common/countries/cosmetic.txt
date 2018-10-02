@@ -23,6 +23,21 @@ CZE_EUROPE = {
 	color_ui = { 0 12 153 }
 }
 
+GRE_PURPLE_PHOENIX = {
+	color = rgb { 112 41 99 }
+	color_ui = { 142 71 129 }
+}
+
+ROM_MOLDAVIA = {
+	color = rgb { 223 244 66 }
+	color_ui = { 253 255 96 }
+}
+
+HUN_KINGDOM_OF_HUNGARY = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

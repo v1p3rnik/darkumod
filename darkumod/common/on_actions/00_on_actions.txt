@@ -394,6 +394,23 @@ on_actions = {
 					country_event = { id = fso.362 }
 				}
 			}
+			if = {
+				limit = {
+					FROM = {
+						tag = TUR
+					}
+					ROOT = {
+						tag = GRE
+					}
+					CZE = {
+						has_completed_focus = FSO_legacy_romische_reich
+					}
+				}
+				CZE = { 
+					set_country_flag = fso_restoring_byzantium
+					country_event = { id = fso.365 }
+				}
+			}
 			### FSO Joins Germany as per pact
 			if = {
 				limit = {

@@ -159,7 +159,7 @@ focus_tree = {
 	# Dark Buddhist question
 	focus = {
 		id = FSO_darku_question
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_fso_question_of_monarchy
 		prerequisite = { focus = FSO_political_open }
 		x = 2
 		y = 2
@@ -2437,6 +2437,42 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_neu_magyarorszag_effect
 			hidden_effect = { CZE = { country_event = { id = fso.358 } } }
+		}
+	}
+	# Legacy of Das Römische Reich
+	focus = {
+		id = FSO_legacy_romische_reich
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_neu_magyarorszag }
+		x = 10
+		y = 15
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			NOT = { has_war = yes }
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_legacy_romische_reich_effect
+			hidden_effect = { CZE = { country_event = { id = fso.364 } } }
 		}
 	}
 	

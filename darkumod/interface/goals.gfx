@@ -14,6 +14,10 @@ spriteTypes = {
 	name = "GFX_fso_economic_military"
 	texturefile = "gfx/interface/goals/focus_fso_economy_military.tga"			
 	}
+	SpriteType = {
+	name = "GFX_focus_fso_question_of_monarchy"
+	texturefile = "gfx/interface/goals/focus_fso_question_of_monarchy.tga"			
+	}
 	
 
 
