@@ -13540,6 +13540,10 @@ country_event = {
 					transfer_state = PREV
 				}
 			}
+			set_province_name = { id = 9833 name = "Kōnstantinoúpolis" }
+			341 = {
+				set_state_name = "Thracia"
+			}
 			set_cosmetic_tag = GRE_PURPLE_PHOENIX
 			ROM = { set_cosmetic_tag = ROM_MOLDAVIA }
 		}
