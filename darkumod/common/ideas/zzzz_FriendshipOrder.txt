@@ -1397,4 +1397,647 @@ ideas = {
 			}
 		}
 	}
+	
+	political_advisor = {
+
+		FSO_frontier = {
+
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		FSO_momiji = {
+
+			picture = generic_army_europe_2
+				
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		FSO_peetry = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { financial_expert }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		FSO_wanuke = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { democratic_reformer }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		FSO_dobyvatel = {
+
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { communist_revolutionary }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		FSO_isak = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { fascist_demagogue }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		FSO_lamatrepide = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { friendship_expert }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+
+	# MILITARY
+	army_chief = {
+	
+
+		FSO_drax = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+
+			
+			traits = { army_chief_offensive_3 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+
+		FSO_spacefox = {
+			
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+
+			
+			traits = { army_chief_defensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		
+		FSO_ladifour = {
+			
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+
+			
+			traits = { army_chief_morale_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		
+		FSO_spitty = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+
+			
+			traits = { air_chief_safety_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FSO_zimmerson = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { air_chief_ground_support_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	navy_chief = {
+		
+		
+		FSO_hibiki = {
+			
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FSO_sam = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			traits = { navy_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	high_command = {
+	
+		FSO_nico = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = CZE
+			}
+						
+			traits = { army_infantry_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		FSO_aroze = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = CZE
+			}
+						
+			traits = { army_armored_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		FSO_warlord = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = CZE
+			}
+						
+			traits = { army_artillery_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FSO_emeru = {
+						
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = CZE
+			}
+						
+			traits = { army_logistics_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+	
+		FSO_aroze_2 = {			
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.10
+			}
+			
+			traits = { blitzkrieg_theorist }
+		}
+		
+		FSO_dobyvatel_2 = {			
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		FSO_frontier_2 = {			
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				rocketry = 0.05
+				nuclear = 0.05
+			}
+			
+			traits = { nuclear_scientist rocket_scientist }
+		}
+		
+		FSO_spitty_2 = {
+		
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		FSO_hibiki_2 = {
+		
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+	}
+
+	
+	# TECHNOLOGY
+	tank_manufacturer = { 
+
+		designer = yes
+
+		CZE_ckd = {
+			
+			picture = generic_tank_manufacturer_1
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			equipment_bonus = {
+				# made light/medium tanks panzerkampfwagen 38
+			}
+		}
+
+		CZE_tatra = {
+			
+			picture = generic_tank_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			equipment_bonus = {
+			}
+		}
+
+		CZE_skoda_armor = {
+			
+			picture = generic_tank_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			equipment_bonus = {
+			}
+		}
+	}
+
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		CZE_skoda_shipyards = {
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+		}
+	}
+
+	aircraft_manufacturer = { 
+		
+		designer = yes
+
+		CZE_ckd_praga = {
+			
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			# fighter aircraft B-534, versitile and high performing in manuverability and speed
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CZE_avia = {
+			
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			# fighter aircraft B-534, versitile and high performing in manuverability and speed
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		CZE_aero = {
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		CZE_letov = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# produced almost 300 junker 290 heavy hombers during ww2, as well as own fighters prior to the war
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		CZE_zbrojovka_brno = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CZE_skoda_artillery = {
+			
+			picture = generic_artillery_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			equipment_bonus = {
+
+			}
+		}
+		
+		CZE_praga = {
+			
+			picture = generic_motorized_equipment_manufacturer_2
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		
+		CZE_elektra = {
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CZE_skoda_works_2 = {
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				
+			}
+			
+			traits = { industrial_concern }
+		}	
+	}
 }

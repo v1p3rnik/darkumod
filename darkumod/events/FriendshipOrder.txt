@@ -578,7 +578,7 @@ country_event = {
 	id = fso.20
 	title = fso.20.t
 	desc = fso.20.d
-	
+	picture = GFX_fso_foreign_recognition_fascist
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -668,7 +668,7 @@ country_event = {
 	id = fso.25
 	title = fso.25.t
 	desc = fso.25.d
-	
+	picture = GFX_fso_investigation_democratic
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -11013,6 +11013,7 @@ country_event = {
 		add_war_support = 0.1
 		set_country_flag = fso_darker
 		set_cosmetic_tag = CZE_DARKER
+		set_party_name = { ideology = fascism long_name = CZE_darker_fascist_long name = CZE_darker_fascist }
 		create_country_leader = {
 			name = "Voice of Friendship"
 			desc = "POLITICS_DARK_BUDDHIST_DESC"
@@ -13341,8 +13342,8 @@ country_event = {
 	
 	option = { 
 		name = fso.362.a
-		declare_war_on = YUG
-		declare_war_on = ROM
+		declare_war_on = { target = YUG type = annex_everything }
+		declare_war_on = { target = ROM type = annex_everything }
 		
 	}
 	
@@ -13409,6 +13410,7 @@ country_event = {
 					add_state_claim = 212
 					add_state_claim = 341
 					add_state_claim = 340
+					add_state_claim = 44
 					create_wargoal = {
 						type = take_state_focus
 						target = TUR
@@ -13450,7 +13452,7 @@ country_event = {
 	
 	option = { 
 		name = fso.365.a
-		declare_war_on = TUR
+		declare_war_on = { target = TUR type = annex_everything }
 		
 	}
 	
@@ -13480,6 +13482,17 @@ country_event = {
 		name = fso.366.a
 		
 		GRE = { # Roma Invicta
+			add_state_claim = 164
+			add_state_claim = 342
+			add_state_claim = 106
+			add_state_claim = 211
+			add_state_claim = 347
+			add_state_claim = 48
+			add_state_claim = 339
+			add_state_claim = 212
+			add_state_claim = 341
+			add_state_claim = 340
+			add_state_claim = 44
 			every_state = {
 				limit = {
 					is_core_of = GRE
@@ -13514,19 +13527,17 @@ country_event = {
 			transfer_state = 77
 			hidden_effect = {
 				if = {
-					GRE = {
-						limit = {
-							NOT = { has_government = fascism }
-						}
-						set_politics = {
-							ruling_party = fascism
-						}
-						add_popularity = {
-							ideology = fascism
-							popularity = 0.3
-						}
-						set_party_name = { ideology = fascism long_name = "Order of the Purple Phoenix" name = "Purple Phoenix" }
+					limit = {
+						NOT = { has_government = fascism }
 					}
+					set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.3
+					}
+					set_party_name = { ideology = fascism long_name = "Order of the Purple Phoenix" name = "Purple Phoenix" }
 				}
 			}
 			add_opinion_modifier = { target = ITA modifier = fso_purple_phoenix } # Fake Rome 
@@ -13541,11 +13552,121 @@ country_event = {
 				}
 			}
 			set_province_name = { id = 9833 name = "Kōnstantinoúpolis" }
+			set_capital = 341
 			341 = {
 				set_state_name = "Thracia"
 			}
 			set_cosmetic_tag = GRE_PURPLE_PHOENIX
 			ROM = { set_cosmetic_tag = ROM_MOLDAVIA }
+		}
+		
+		add_to_faction = GRE
+		
+	}
+	
+}
+# Red Alert - Start
+country_event = {
+	id = fso.367
+	title = fso.367.t
+	desc = fso.367.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_red_alert }
+		focus_progress = {
+			focus = FSO_red_alert
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.367.a
+		
+	}
+}
+# Red Alert - End
+country_event = {
+	id = fso.368
+	title = fso.368.t
+	desc = fso.368.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.368.a
+		
+		POL = {
+			annex_country = { target = LIT transfer_troops = yes }
+			set_cosmetic_tag = PLC_UNIFIED
+			# Lithuania
+			custom_effect_tooltip = form_country_lithuania_coring_states_tt
+			hidden_effect = {
+				11 = { add_core_of = PREV }
+				189 = { add_core_of = PREV }
+				188 = { add_core_of = PREV }
+			}
+			# Poland
+			custom_effect_tooltip = form_country_poland_coring_states_tt
+			hidden_effect = {
+				85 = { add_core_of = PREV }
+				86 = { add_core_of = PREV }
+				87 = { add_core_of = PREV }
+				88 = { add_core_of = PREV }
+				90 = { add_core_of = PREV }
+				98 = { add_core_of = PREV }
+				10 = { add_core_of = PREV }
+				97 = { add_core_of = PREV }
+				92 = { add_core_of = PREV }
+				91 = { add_core_of = PREV }
+				89 = { add_core_of = PREV }
+				93 = { add_core_of = PREV }
+				94 = { add_core_of = PREV }
+				95 = { add_core_of = PREV }
+				96 = { add_core_of = PREV }
+			}
+			190 = { add_core_of = PREV }
+			12 = { add_core_of = PREV }
+			5 = { add_core_of = PREV }
+			207 = { add_core_of = PREV }
+			242 = { add_core_of = PREV }
+			206 = { add_core_of = PREV }
+			241 = { add_core_of = PREV }
+			243 = { add_core_of = PREV }
+			204 = { add_core_of = PREV }
+			194 = { add_core_of = PREV }
+			201 = { add_core_of = PREV }
+			199 = { add_core_of = PREV }
+			198 = { add_core_of = PREV }
+			202 = { add_core_of = PREV }
+			203 = { add_core_of = PREV }
+			193 = { add_core_of = PREV }
+			259 = { add_core_of = PREV }
+
+
+			hidden_effect = {
+				news_event = { id = wtt_news.57 hours = 6 }
+				set_global_flag = form_commonwealth_flag
+			}
+			
+			GRE = {
+				add_state_claim = 137
+				add_state_claim = 230
+				add_state_claim = 231
+				add_state_claim = 229
+			}
+			
+			SOV = {
+				annex_country = { target = EST transfer_troops = no }
+				annex_country = { target = LAT transfer_troops = no }
+				declare_war_on = { target = POL type = annex_everything }
+			}
 		}
 		
 	}

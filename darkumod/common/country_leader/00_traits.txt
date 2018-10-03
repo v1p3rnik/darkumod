@@ -31,6 +31,17 @@ leader_traits = {
 		}
 	}
 	
+	friendship_expert = {
+		random = no
+		# Boosts Friendshipism
+		sprite = 13
+		friendship_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
 	dark_buddhist_commie = {
 		random = no
 		production_speed_buildings_factor = 0.15

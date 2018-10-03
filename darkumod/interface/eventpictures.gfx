@@ -296,6 +296,14 @@ spriteTypes = {
 		name = "GFX_fso_foreign_recognition_democratic"
 		texturefile = "gfx/event_pictures/fso_foreign_recognition_democratic.tga"
 	}
+	spriteType = {
+		name = "GFX_fso_foreign_recognition_fascist"
+		texturefile = "gfx/event_pictures/fso_foreign_recognition_fascist.tga"
+	}
+	spriteType = {
+		name = "GFX_fso_investigation_democratic"
+		texturefile = "gfx/event_pictures/fso_investigation_democratic.tga"
+	}
 	
 	
 	################################################## VANILLA
