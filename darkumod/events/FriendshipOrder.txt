@@ -13504,6 +13504,8 @@ country_event = {
 			}
 			every_state = {
 				limit = {
+					NOT = { id = 44 }
+					NOT = { id = 164 }
 					is_claimed_by = GRE
 					NOT = { is_owned_and_controlled_by = GRE }
 				}
