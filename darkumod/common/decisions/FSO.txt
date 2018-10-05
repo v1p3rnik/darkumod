@@ -1831,6 +1831,141 @@ fso_royal_duties_category = {
 
 operations = {
 
+	FSO_send_byz_pp = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			tag = CZE
+			GRE = {
+				OR = {
+					has_idea = FSO_byzantium_bad_stuff_1
+					has_idea = FSO_byzantium_bad_stuff_2
+					has_idea = FSO_byzantium_bad_stuff_3
+					has_idea = FSO_byzantium_bad_stuff_4
+				}
+			}
+		
+		}
+
+		available = {
+			
+			has_political_power > 500
+			
+		}
+		
+		days_remove = 14
+		
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+			country_event = { id = fso.371 }
+			
+		}
+		
+		cost = 500
+		
+		remove_effect = {
+			
+			
+			
+		}
+	}
+	
+	FSO_send_byz_ic = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			tag = CZE
+			GRE = {
+				OR = {
+					has_idea = FSO_byzantium_bad_stuff_1
+					has_idea = FSO_byzantium_bad_stuff_2
+					has_idea = FSO_byzantium_bad_stuff_3
+					has_idea = FSO_byzantium_bad_stuff_4
+				}
+			}
+		
+		}
+
+		available = {
+			
+			
+			
+		}
+		
+		days_remove = 28
+		
+		modifier = {
+			civilian_factory_use = 45
+		}
+
+		complete_effect = {
+			
+			
+			
+		}
+		
+		cost = 1
+		
+		remove_effect = {
+			
+			country_event = { id = fso.372 }
+			
+		}
+	}
+	
+	FSO_send_byz_more_ic = {
+
+		icon = infiltrate_state
+		
+		visible = {
+		
+			tag = CZE
+			GRE = {
+				OR = {
+					has_idea = FSO_byzantium_bad_stuff_1
+					has_idea = FSO_byzantium_bad_stuff_2
+					has_idea = FSO_byzantium_bad_stuff_3
+					has_idea = FSO_byzantium_bad_stuff_4
+				}
+			}
+		
+		}
+
+		available = {
+			
+			
+			
+		}
+		
+		days_remove = 14
+		
+		modifier = {
+			civilian_factory_use = 90
+		}
+
+		complete_effect = {
+			
+			
+			
+		}
+		
+		cost = 1
+		
+		remove_effect = {
+			
+			country_event = { id = fso.372 }
+			
+		}
+	}
+
 	FSO_disarm_faction = {
 
 		icon = infiltrate_state

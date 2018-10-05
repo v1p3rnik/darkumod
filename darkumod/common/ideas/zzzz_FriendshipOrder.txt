@@ -1396,6 +1396,144 @@ ideas = {
 				encryption_factor = 0.2
 			}
 		}
+		
+		FSO_byzantium_bad_stuff_1 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -80
+				stability_factor = -0.8
+				war_support_factor = -0.8
+				offence = -0.8
+				defence = 0.8
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
+				consumer_goods_factor = 0.8
+				research_time_factor = 0.8
+				political_power_factor = -0.8
+				training_time_factor = 0.8
+				conscription_factor = -0.8
+			}
+		}
+		FSO_byzantium_bad_stuff_2 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -60
+				stability_factor = -0.6
+				war_support_factor = -0.6
+				offence = -0.6
+				defence = 0.6
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				consumer_goods_factor = 0.6
+				research_time_factor = 0.6
+				political_power_factor = -0.6
+				training_time_factor = 0.6
+				conscription_factor = -0.6
+			}
+		}
+		FSO_byzantium_bad_stuff_3 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -40
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				offence = -0.4
+				defence = 0.4
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				consumer_goods_factor = 0.4
+				research_time_factor = 0.4
+				political_power_factor = -0.4
+				training_time_factor = 0.4
+				conscription_factor = -0.4
+			}
+		}
+		FSO_byzantium_bad_stuff_4 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -20
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				offence = -0.2
+				defence = 0.2
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.2
+				research_time_factor = 0.2
+				political_power_factor = -0.2
+				training_time_factor = 0.2
+				conscription_factor = -0.2
+			}
+		}
+		FSO_byzantium_bad_reforged = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 20
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				conscription_factor = 0.2
+			}
+		}
 	}
 	
 	political_advisor = {
@@ -1437,7 +1575,7 @@ ideas = {
 			}
 		}
 
-		FSO_wanuke = {
+		FSO_appo = {
 
 			picture = generic_political_advisor_europe_1
 			

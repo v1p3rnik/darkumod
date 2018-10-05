@@ -785,9 +785,9 @@ country_event = {
 		}
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga"
+				name = "SpaceFox"
+				desc = "SPACEFOX_DESC"
+				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -837,7 +837,7 @@ country_event = {
 			create_country_leader = {
 				name = "Darkest Buddhist"
 				desc = "DARKEST_DESC"
-				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				picture = "Portrait_FSO_Emperor_Dark.tga"
 				expire = "1965.1.1"
 				ideology = freundschaftism
 				traits = { dark_buddhist_darkest }
@@ -860,9 +860,9 @@ country_event = {
 		add_stability = -0.4
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga"
+				name = "SpaceFox"
+				desc = "SPACEFOX_DESC"
+				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -917,9 +917,9 @@ country_event = {
 		add_stability = 0.10
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga"
+				name = "SpaceFox"
+				desc = "SPACEFOX_DESC"
+				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -977,9 +977,9 @@ country_event = {
 		add_stability = 0.10
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga"
+				name = "SpaceFox"
+				desc = "SPACEFOX_DESC"
+				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -1059,7 +1059,7 @@ country_event = {
 			create_country_leader = {
 				name = "Darkest Buddhist"
 				desc = "DARKEST_DESC"
-				picture = "Portrait_FSO_DarkBuddhist.dds" # PLACEHOLDER
+				picture = "Portrait_FSO_Emperor_Dark.tga"
 				expire = "1965.1.1"
 				ideology = freundschaftism
 				traits = { dark_buddhist_darkest }
@@ -1082,9 +1082,9 @@ country_event = {
 		add_stability = -0.2
 		hidden_effect = {
 			create_country_leader = {
-				name = "Polekov"
-				desc = "POLEKOV_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga"
+				name = "SpaceFox"
+				desc = "SPACEFOX_DESC"
+				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -10991,7 +10991,7 @@ country_event = {
 		set_country_flag = fso_moderate_nazi
 		create_country_leader = { # PLACEHOLDER
 			name = "Arische Ehefrau"
-			desc = "POLITICS_DARK_BUDDHIST_DESC"
+			desc = "ARISCHE_DESC"
 			picture = "Portrait_FSO_Arische_Ehefrau.tga"
 			expire = "1965.1.1"
 			ideology = nazism
@@ -11016,7 +11016,7 @@ country_event = {
 		set_party_name = { ideology = fascism long_name = CZE_darker_fascist_long name = CZE_darker_fascist }
 		create_country_leader = {
 			name = "Voice of Friendship"
-			desc = "POLITICS_DARK_BUDDHIST_DESC"
+			desc = "DARKER_DESC"
 			picture = "Portrait_FSO_DarkBuddhist.dds"
 			expire = "1965.1.1"
 			ideology = freundschaftism
@@ -11044,7 +11044,7 @@ country_event = {
 		set_party_name = { ideology = fascism long_name = CZE_darkest_fascist_long name = CZE_darkest_fascist }
 		create_country_leader = {
 			name = "Darkest Buddhist"
-			desc = "POLITICS_DARK_BUDDHIST_DESC"
+			desc = "DARKEST_DESC"
 			picture = "Portrait_FSO_DarkBuddhist.dds"
 			expire = "1965.1.1"
 			ideology = freundschaftism
@@ -12563,6 +12563,15 @@ country_event = {
 			add_state_core = 70
 			add_state_core = 71
 			hidden_effect = { load_oob = SLO_1939 }
+			create_country_leader = {
+				name = "Peetry"
+				desc = "PEETRY_DESC"
+				picture = "Portrait_FSO_Peetry.tga" 
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = { doge_pope }
+			}
+			set_cosmetic_tag = SLO_PEETRY
 			add_manpower = 9876
 			set_politics = {
 				ruling_party = fascism
@@ -13411,6 +13420,7 @@ country_event = {
 					add_state_claim = 341
 					add_state_claim = 340
 					add_state_claim = 44
+					add_state_claim = 183
 					create_wargoal = {
 						type = take_state_focus
 						target = TUR
@@ -13493,6 +13503,7 @@ country_event = {
 			add_state_claim = 341
 			add_state_claim = 340
 			add_state_claim = 44
+			add_state_claim = 183
 			every_state = {
 				limit = {
 					is_core_of = GRE
@@ -13504,8 +13515,9 @@ country_event = {
 			}
 			every_state = {
 				limit = {
-					NOT = { id = 44 }
-					NOT = { id = 164 }
+					NOT = { state = 44 }
+					NOT = { state = 164 }
+					NOT = { state = 183 }
 					is_claimed_by = GRE
 					NOT = { is_owned_and_controlled_by = GRE }
 				}
@@ -13560,10 +13572,12 @@ country_event = {
 			}
 			set_cosmetic_tag = GRE_PURPLE_PHOENIX
 			ROM = { set_cosmetic_tag = ROM_MOLDAVIA }
+			add_ideas = FSO_byzantium_bad_stuff_1
+			set_variable = { var = fso_byz_recovering value = 0 }
 		}
-		
+		hidden_effect = { add_equipment_to_stockpile = { type = convoy_1 amount = 200 } }
 		add_to_faction = GRE
-		
+		country_event = { id = fso.370 }
 	}
 	
 }
@@ -13673,4 +13687,212 @@ country_event = {
 		
 	}
 	
+}
+# Byzantine - Divisions cause unrest reduction
+country_event = {
+	id = fso.369
+	title = fso.369.t
+	desc = fso.369.d
+	
+	
+	trigger = {
+		tag = CZE
+		GRE = {
+			OR = {
+				has_idea = FSO_byzantium_bad_stuff_1
+				has_idea = FSO_byzantium_bad_stuff_2
+				has_idea = FSO_byzantium_bad_stuff_3
+				has_idea = FSO_byzantium_bad_stuff_4
+			}
+			every_owned_state = {
+				divisions_in_state = {
+					size > 1
+					state = 49
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = { 
+		name = fso.369.a
+		add_to_variable = {
+			var = fso_byz_recovering
+			value = 1
+		}
+	}
+}
+# Byzantine - inform player
+country_event = {
+	id = fso.370
+	title = fso.370.t
+	desc = fso.370.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.370.a
+		
+		custom_effect_tooltip = fso.370.tt
+		
+	}
+	
+}
+# Byzantine - bankrolled PP
+country_event = {
+	id = fso.371
+	title = fso.371.t
+	desc = fso.371.d
+	
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.371.a
+		
+		add_to_variable = {
+			var = fso_byz_recovering
+			value = 1
+		}
+		
+	}
+	
+}
+# Byzantine - bankrolled IC
+country_event = {
+	id = fso.372
+	title = fso.372.t
+	desc = fso.372.d
+	
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.372.a
+		
+		add_to_variable = {
+			var = fso_byz_recovering
+			value = 1
+		}
+		
+	}
+	
+}
+# Byzantine - Situation improves 1
+country_event = {
+	id = fso.373
+	title = fso.373.t
+	desc = fso.373.d
+	
+	
+	trigger = {
+		check_variable = {
+			var = fso_byz_recovering
+			value = 3
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.373.a
+		GRE = {
+			swap_ideas = {
+				remove_idea = FSO_byzantium_bad_stuff_1
+				add_idea = FSO_byzantium_bad_stuff_2
+			}
+		}
+	}
+}
+# Byzantine - Situation improves 2
+country_event = {
+	id = fso.374
+	title = fso.374.t
+	desc = fso.374.d
+	
+	
+	trigger = {
+		check_variable = {
+			var = fso_byz_recovering
+			value = 6
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.374.a
+		GRE = {
+			swap_ideas = {
+				remove_idea = FSO_byzantium_bad_stuff_2
+				add_idea = FSO_byzantium_bad_stuff_3
+			}
+		}
+	}
+}
+# Byzantine - Situation improves 3
+country_event = {
+	id = fso.375
+	title = fso.375.t
+	desc = fso.375.d
+	
+	
+	trigger = {
+		check_variable = {
+			var = fso_byz_recovering
+			value = 9
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.375.a
+		GRE = {
+			swap_ideas = {
+				remove_idea = FSO_byzantium_bad_stuff_3
+				add_idea = FSO_byzantium_bad_stuff_4
+			}
+		}
+	}
+}
+# Byzantine - Situation improves 4
+country_event = {
+	id = fso.376
+	title = fso.376.t
+	desc = fso.376.d
+	
+	
+	trigger = {
+		check_variable = {
+			var = fso_byz_recovering
+			value = 12
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = fso.375.a
+		GRE = {
+			swap_ideas = {
+				remove_idea = FSO_byzantium_bad_stuff_4
+				add_idea = FSO_byzantium_reforged
+			}
+		}
+	}
 }
