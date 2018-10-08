@@ -1540,7 +1540,7 @@ ideas = {
 
 		FSO_frontier = {
 
-			picture = generic_political_advisor_europe_1
+			picture = frontier
 
 			allowed = {
 				original_tag = CZE
@@ -1551,7 +1551,7 @@ ideas = {
 
 		FSO_momiji = {
 
-			picture = generic_army_europe_2
+			picture = momiji
 				
 			allowed = {
 				original_tag = CZE
@@ -1562,7 +1562,7 @@ ideas = {
 
 		FSO_peetry = {
 
-			picture = generic_political_advisor_europe_3
+			picture = peetry
 			
 			allowed = {
 				original_tag = CZE
@@ -1607,7 +1607,7 @@ ideas = {
 
 		FSO_isak = {
 
-			picture = generic_political_advisor_europe_3
+			picture = isak
 			
 			allowed = {
 				original_tag = CZE
@@ -1758,7 +1758,7 @@ ideas = {
 				original_tag = CZE
 			}
 			
-			traits = { navy_chief_reform_3 }
+			traits = { navy_chief_naval_aviation_3 }
 			
 			ai_will_do = {
 				factor = 1
@@ -1858,7 +1858,9 @@ ideas = {
 			traits = { military_theorist }
 		}
 		
-		FSO_frontier_2 = {			
+		FSO_frontier_2 = {	
+
+			picture = frontier
 
 			allowed = {
 				original_tag = CZE

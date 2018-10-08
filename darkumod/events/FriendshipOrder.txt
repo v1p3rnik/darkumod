@@ -13704,13 +13704,12 @@ country_event = {
 				has_idea = FSO_byzantium_bad_stuff_3
 				has_idea = FSO_byzantium_bad_stuff_4
 			}
-			every_owned_state = {
-				divisions_in_state = {
-					size > 1
-					state = 49
-				}
+			divisions_in_state = {
+				size > 1
+				state = every_owned_state
 			}
 		}
+		
 	}
 	
 	mean_time_to_happen = {
@@ -13891,7 +13890,7 @@ country_event = {
 		GRE = {
 			swap_ideas = {
 				remove_idea = FSO_byzantium_bad_stuff_4
-				add_idea = FSO_byzantium_reforged
+				add_idea = FSO_byzantium_bad_reforged
 			}
 		}
 	}
