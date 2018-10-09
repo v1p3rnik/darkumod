@@ -1549,6 +1549,12 @@ country_event = {
 	}
 	option = { # If in Better Axis, combine pressure of V4 to make Allies pressure Germany
 		name = germany.46.c
+		trigger = {
+			CZE = {
+				has_government = fascism
+				has_completed_focus = FSO_alternative_for_bohemia
+			}
+		}
 		FRA = { give_guarantee = CZE }
 		ENG = { give_guarantee = CZE }
 		GER = {
