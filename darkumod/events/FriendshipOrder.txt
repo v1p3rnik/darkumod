@@ -11017,7 +11017,7 @@ country_event = {
 		create_country_leader = {
 			name = "Voice of Friendship"
 			desc = "DARKER_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds"
+			picture = "Portrait_FSO_Darker.tga"
 			expire = "1965.1.1"
 			ideology = freundschaftism
 			traits = {
@@ -11045,7 +11045,7 @@ country_event = {
 		create_country_leader = {
 			name = "Darkest Buddhist"
 			desc = "DARKEST_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds"
+			picture = "Portrait_FSO_Darkest.tga"
 			expire = "1965.1.1"
 			ideology = freundschaftism
 			traits = {
@@ -13893,5 +13893,113 @@ country_event = {
 				add_idea = FSO_byzantium_bad_reforged
 			}
 		}
+	}
+}
+# Dream of Glory - Start
+country_event = {
+	id = fso.377
+	title = fso.377.t
+	desc = fso.377.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_dream_of_glory }
+		focus_progress = {
+			focus = FSO_dream_of_glory
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.377.a
+		
+	}
+}
+# Dream of Glory - End
+country_event = {
+	id = fso.378
+	title = fso.378.t
+	desc = fso.378.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.378.a
+		
+		add_state_core = 53
+		add_state_core = 153
+		add_state_core = 152
+		add_state_core = 4
+		add_state_core = 54
+		add_state_core = 50
+		add_state_core = 52
+		
+		if = {
+			limit = { 102 = { is_owned_by = ROOT } }
+			add_state_core = 102
+		}
+		
+		every_country = {
+			limit = {
+				is_faction_leader = yes
+				NOT = { tag = CZE }
+			}
+			CZE = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+		
+		custom_effect_tooltip = fso.378.tt
+		
+	}
+	
+}
+# Dream of Glory - Victory
+country_event = {
+	id = fso.379
+	title = fso.379.t
+	desc = fso.379.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		has_completed_focus = FSO_dream_of_glory
+		NOT = {
+			any_country = {
+				is_faction_leader = yes
+				exists = yes
+				NOT = { tag = CZE }
+			}
+		}
+	}
+	
+	option = { 
+		name = fso.379.a
+		
+		every_country = {
+			limit = {
+				NOT = { is_in_faction_with = CZE }
+			}
+			CZE = { add_to_faction = PREV }
+		}
+		every_country = {
+			limit = {
+				NOT = { has_government = fascism }
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.6
+			}
+		}
+		
 	}
 }
