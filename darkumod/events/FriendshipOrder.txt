@@ -10599,14 +10599,14 @@ country_event = {
 			value = 1
 		}
 	}
-	option = { 
-		name = fso.311.dd
-		custom_effect_tooltip = fso.friendshiplean
-		add_to_variable = {
-			var = fsofriendship
-			value = 1
-		}
-	}
+	#option = { 
+	#	name = fso.311.dd
+	#	custom_effect_tooltip = fso.friendshiplean
+	#	add_to_variable = {
+	#		var = fsofriendship
+	#		value = 1
+	#	}
+	#}
 	option = { 
 		name = fso.311.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10658,14 +10658,14 @@ country_event = {
 			value = 1
 		}
 	}
-	option = { 
-		name = fso.312.dd
-		custom_effect_tooltip = fso.friendshiplean
-		add_to_variable = {
-			var = fsofriendship
-			value = 1
-		}
-	}
+	#option = { 
+	#	name = fso.312.dd
+	#	custom_effect_tooltip = fso.friendshiplean
+	#	add_to_variable = {
+	#		var = fsofriendship
+	#		value = 1
+	#	}
+	#}
 	option = { 
 		name = fso.312.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10717,14 +10717,14 @@ country_event = {
 			value = 1
 		}
 	}
-	option = { 
-		name = fso.313.dd
-		custom_effect_tooltip = fso.friendshiplean
-		add_to_variable = {
-			var = fsofriendship
-			value = 1
-		}
-	}
+	#option = { 
+	#	name = fso.313.dd
+	#	custom_effect_tooltip = fso.friendshiplean
+	#	add_to_variable = {
+	#		var = fsofriendship
+	#		value = 1
+	#	}
+	#}
 	option = { 
 		name = fso.313.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10776,14 +10776,14 @@ country_event = {
 			value = 1
 		}
 	}
-	option = { 
-		name = fso.314.dd
-		custom_effect_tooltip = fso.friendshiplean
-		add_to_variable = {
-			var = fsofriendship
-			value = 1
-		}
-	}
+	#option = { 
+	#	name = fso.314.dd
+	#	custom_effect_tooltip = fso.friendshiplean
+	#	add_to_variable = {
+	#		var = fsofriendship
+	#		value = 1
+	#	}
+	#}
 	option = { 
 		name = fso.314.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10835,14 +10835,14 @@ country_event = {
 			value = 1
 		}
 	}
-	option = { 
-		name = fso.315.dd
-		custom_effect_tooltip = fso.friendshiplean
-		add_to_variable = {
-			var = fsofriendship
-			value = 1
-		}
-	}
+	#option = { 
+	#	name = fso.315.dd
+	#	custom_effect_tooltip = fso.friendshiplean
+	#	add_to_variable = {
+	#		var = fsofriendship
+	#		value = 1
+	#	}
+	#}
 	option = { 
 		name = fso.315.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10894,14 +10894,14 @@ country_event = {
 			value = 1
 		}
 	}
-	option = { 
-		name = fso.316.dd
-		custom_effect_tooltip = fso.friendshiplean
-		add_to_variable = {
-			var = fsofriendship
-			value = 1
-		}
-	}
+	#option = { 
+	#	name = fso.316.dd
+	#	custom_effect_tooltip = fso.friendshiplean
+	#	add_to_variable = {
+	#		var = fsofriendship
+	#		value = 1
+	#	}
+	#}
 	option = { 
 		name = fso.316.e
 		custom_effect_tooltip = fso.darkestlean
