@@ -10599,14 +10599,14 @@ country_event = {
 			value = 1
 		}
 	}
-	#option = { 
-	#	name = fso.311.dd
-	#	custom_effect_tooltip = fso.friendshiplean
-	#	add_to_variable = {
-	#		var = fsofriendship
-	#		value = 1
-	#	}
-	#}
+	option = { 
+		name = fso.311.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
 	option = { 
 		name = fso.311.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10658,14 +10658,14 @@ country_event = {
 			value = 1
 		}
 	}
-	#option = { 
-	#	name = fso.312.dd
-	#	custom_effect_tooltip = fso.friendshiplean
-	#	add_to_variable = {
-	#		var = fsofriendship
-	#		value = 1
-	#	}
-	#}
+	option = { 
+		name = fso.312.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
 	option = { 
 		name = fso.312.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10717,14 +10717,14 @@ country_event = {
 			value = 1
 		}
 	}
-	#option = { 
-	#	name = fso.313.dd
-	#	custom_effect_tooltip = fso.friendshiplean
-	#	add_to_variable = {
-	#		var = fsofriendship
-	#		value = 1
-	#	}
-	#}
+	option = { 
+		name = fso.313.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
 	option = { 
 		name = fso.313.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10776,14 +10776,14 @@ country_event = {
 			value = 1
 		}
 	}
-	#option = { 
-	#	name = fso.314.dd
-	#	custom_effect_tooltip = fso.friendshiplean
-	#	add_to_variable = {
-	#		var = fsofriendship
-	#		value = 1
-	#	}
-	#}
+	option = { 
+		name = fso.314.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
 	option = { 
 		name = fso.314.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10835,14 +10835,14 @@ country_event = {
 			value = 1
 		}
 	}
-	#option = { 
-	#	name = fso.315.dd
-	#	custom_effect_tooltip = fso.friendshiplean
-	#	add_to_variable = {
-	#		var = fsofriendship
-	#		value = 1
-	#	}
-	#}
+	option = { 
+		name = fso.315.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
 	option = { 
 		name = fso.315.e
 		custom_effect_tooltip = fso.darkestlean
@@ -10894,14 +10894,14 @@ country_event = {
 			value = 1
 		}
 	}
-	#option = { 
-	#	name = fso.316.dd
-	#	custom_effect_tooltip = fso.friendshiplean
-	#	add_to_variable = {
-	#		var = fsofriendship
-	#		value = 1
-	#	}
-	#}
+	option = { 
+		name = fso.316.dd
+		custom_effect_tooltip = fso.friendshiplean
+		add_to_variable = {
+			var = fsofriendship
+			value = 1
+		}
+	}
 	option = { 
 		name = fso.316.e
 		custom_effect_tooltip = fso.darkestlean
@@ -13147,7 +13147,8 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
-		has_war = no
+		NOT = { has_war_with = GER }
+		GER = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_better_axis_defending_against_germany
 	}
 	
@@ -13257,8 +13258,8 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
-		has_war = no
-		HUN = { has_war = no }
+		NOT = { has_war_with = YUG }
+		YUG = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_better_axis_war_balkans
 	}
 	
@@ -13477,8 +13478,8 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
-		has_war = no
-		GRE = { has_war = no }
+		NOT = { has_war_with = TUR }
+		TUR = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_restoring_byzantium
 	}
 	
@@ -13618,7 +13619,11 @@ country_event = {
 	option = { 
 		name = fso.368.a
 		
-		POL = {
+		random_country = {
+			limit = {
+				original_tag = POL
+				has_government = fascism
+			}
 			annex_country = { target = LIT transfer_troops = yes }
 			set_cosmetic_tag = PLC_UNIFIED
 			# Lithuania
@@ -13789,6 +13794,7 @@ country_event = {
 	title = fso.373.t
 	desc = fso.373.d
 	
+	fire_only_once = yes
 	
 	trigger = {
 		check_variable = {
@@ -13818,6 +13824,8 @@ country_event = {
 	desc = fso.374.d
 	
 	
+	fire_only_once = yes
+	
 	trigger = {
 		check_variable = {
 			var = fso_byz_recovering
@@ -13846,6 +13854,8 @@ country_event = {
 	desc = fso.375.d
 	
 	
+	fire_only_once = yes
+	
 	trigger = {
 		check_variable = {
 			var = fso_byz_recovering
@@ -13873,6 +13883,8 @@ country_event = {
 	title = fso.376.t
 	desc = fso.376.d
 	
+	
+	fire_only_once = yes
 	
 	trigger = {
 		check_variable = {
@@ -13999,6 +14011,29 @@ country_event = {
 				ideology = fascism
 				popularity = 0.6
 			}
+		}
+		
+	}
+}
+# Controlling Friendshipism - Service Event
+country_event = {
+	id = fso.380
+	title = fso.380.t
+	desc = fso.380.d
+	
+	
+	trigger = {
+		NOT = { tag = CZE }
+		friendship > 0.01
+		NOT = { CZE = { has_completed_focus = FSO_what_matters } }
+	}
+	
+	option = { 
+		name = fso.380.a
+		
+		add_popularity = {
+			ideology = friendship
+			popularity = -1
 		}
 		
 	}
