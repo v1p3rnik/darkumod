@@ -2547,5 +2547,48 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.378 } } }
 		}
 	}
+	################## DARKEST PATH #############################
+	# Trust No One
+	focus = {
+		id = FSO_make_it_reign
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_grand_conspiracy }
+		x = 11 
+		y = 3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = FSO_make_it_reign_tt
+				OR = {
+					has_country_flag = fso_moderate_nazi
+					has_country_flag = fso_darker
+				}
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_make_it_reign_effect
+			hidden_effect = { CZE = { country_event = { id = fso.319 } } }
+		}
+	}
 	
 }
