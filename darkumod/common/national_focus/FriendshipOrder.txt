@@ -2550,7 +2550,7 @@ focus_tree = {
 	################## DARKEST PATH #############################
 	# Trust No One
 	focus = {
-		id = FSO_make_it_reign
+		id = FSO_trust_no_one
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_grand_conspiracy }
 		x = 11 
@@ -2566,11 +2566,8 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			custom_trigger_tooltip = {
-				tooltip = FSO_make_it_reign_tt
-				OR = {
-					has_country_flag = fso_moderate_nazi
-					has_country_flag = fso_darker
-				}
+				tooltip = FSO_trust_no_one_tt
+				has_country_flag = fso_darkest
 			}
 		}
 		
@@ -2586,8 +2583,44 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FSO_make_it_reign_effect
-			hidden_effect = { CZE = { country_event = { id = fso.319 } } }
+			custom_effect_tooltip = FSO_trust_no_one_effect
+			hidden_effect = { CZE = { country_event = { id = fso.382 } } }
+		}
+	}
+	# Rise of Darkstapo
+	focus = {
+		id = FSO_rise_of_darkstapo
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_trust_no_one }
+		x = 11 
+		y = 5
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_rise_of_darkstapo_effect
+			hidden_effect = { CZE = { country_event = { id = fso.384 } } }
 		}
 	}
 	

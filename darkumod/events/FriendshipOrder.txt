@@ -14038,3 +14038,89 @@ country_event = {
 		
 	}
 }
+# Trust No One - Start
+country_event = {
+	id = fso.381
+	title = fso.381.t
+	desc = fso.381.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_trust_no_one }
+		focus_progress = {
+			focus = FSO_trust_no_one
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.381.a
+		
+	}
+}
+# Trust No One - End
+country_event = {
+	id = fso.382
+	title = fso.382.t
+	desc = fso.382.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.382.a
+		
+		add_ideas = FSO_dark_secluded_vs_everyone_1
+		add_ideas = FSO_spies_network_1
+		
+	}
+	
+}
+# Rise of Darkstapo - Start
+country_event = {
+	id = fso.383
+	title = fso.383.t
+	desc = fso.383.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_rise_of_darkstapo }
+		focus_progress = {
+			focus = FSO_rise_of_darkstapo
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.383.a
+		
+	}
+}
+# Rise of Darkstapo - End
+country_event = {
+	id = fso.384
+	title = fso.384.t
+	desc = fso.384.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.384.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_1 add_idea = FSO_dark_secluded_vs_everyone_2 }
+		swap_ideas = { remove_idea = FSO_spies_network_1 add_idea = FSO_spies_network_2 }
+		
+	}
+	
+}
