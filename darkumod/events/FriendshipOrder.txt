@@ -13468,7 +13468,7 @@ country_event = {
 	}
 	
 }
-# Neu-Magyarország - Peace
+# Legacy of das Romische Reich - Peace
 country_event = {
 	id = fso.366
 	title = fso.366.t
@@ -13797,6 +13797,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 3
@@ -13827,6 +13828,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 6
@@ -13857,6 +13859,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 9
@@ -13887,6 +13890,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 12
@@ -14027,6 +14031,8 @@ country_event = {
 		friendship > 0.01
 		NOT = { CZE = { has_completed_focus = FSO_what_matters } }
 	}
+	
+	hidden = yes
 	
 	option = { 
 		name = fso.380.a
