@@ -2420,7 +2420,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			NOT = { has_war = yes }
+			
 		}
 		
 		bypass = {
@@ -2445,7 +2445,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_neu_magyarorszag }
 		x = 10
-		y = 15
+		y = 17
 		
 
 		cost = 10
@@ -2456,7 +2456,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			NOT = { has_war = yes }
+			
 		}
 		
 		bypass = {
@@ -2481,7 +2481,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_legacy_romische_reich }
 		x = 10
-		y = 15
+		y = 19
 		
 
 		cost = 10
@@ -2492,7 +2492,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			NOT = { has_war = yes }
+			
 		}
 		
 		bypass = {
@@ -2509,6 +2509,226 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_red_alert_effect
 			hidden_effect = { CZE = { country_event = { id = fso.368 } } }
+		}
+	}
+	# Dream of Glory
+	focus = {
+		id = FSO_dream_of_glory
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_red_alert }
+		x = 10
+		y = 21
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_of_glory_effect
+			hidden_effect = { CZE = { country_event = { id = fso.378 } } }
+		}
+	}
+	################## DARKEST PATH #############################
+	# Trust No One
+	focus = {
+		id = FSO_trust_no_one
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_grand_conspiracy }
+		x = 11 
+		y = 3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = FSO_trust_no_one_tt
+				has_country_flag = fso_darkest
+			}
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_trust_no_one_effect
+			hidden_effect = { CZE = { country_event = { id = fso.382 } } }
+		}
+	}
+	# Rise of Darkstapo
+	focus = {
+		id = FSO_rise_of_darkstapo
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_trust_no_one }
+		x = 11 
+		y = 5
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_rise_of_darkstapo_effect
+			hidden_effect = { CZE = { country_event = { id = fso.384 } } }
+		}
+	}
+	# The Wonderbunker
+	focus = {
+		id = FSO_wonderbunker
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_rise_of_darkstapo }
+		x = 11 
+		y = 7
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_wonderbunker_effect
+			hidden_effect = { CZE = { country_event = { id = fso.386 } } }
+		}
+	}
+	# Caesar Consultum Ultimum
+	focus = {
+		id = FSO_caesar_consultum_ultimum
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_wonderbunker }
+		x = 11 
+		y = 9
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_caesar_consultum_ultimum_effect
+			hidden_effect = { CZE = { country_event = { id = fso.388 } } }
+		}
+	}
+	# Dictator Tenebris
+	focus = {
+		id = FSO_dictator_tenebris
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_caesar_consultum_ultimum }
+		x = 11 
+		y = 11
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dictator_tenebris_effect
+			hidden_effect = { CZE = { country_event = { id = fso.390 } } }
 		}
 	}
 	

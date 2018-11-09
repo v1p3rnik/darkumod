@@ -17,7 +17,63 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_isak"
 		texturefile = "gfx/interface/ideas/FSO_idea_isak.tga"
-	}	
+	}
+	spriteType = {
+		name = "GFX_idea_appo"
+		texturefile = "gfx/interface/ideas/FSO_idea_appo.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_arische"
+		texturefile = "gfx/interface/ideas/FSO_idea_arische.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_doby"
+		texturefile = "gfx/interface/ideas/FSO_idea_doby.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_drax"
+		texturefile = "gfx/interface/ideas/FSO_idea_drax.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_emeru"
+		texturefile = "gfx/interface/ideas/FSO_idea_emeru.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_hibiki"
+		texturefile = "gfx/interface/ideas/FSO_idea_hibiki.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ladi"
+		texturefile = "gfx/interface/ideas/FSO_idea_ladi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_lama"
+		texturefile = "gfx/interface/ideas/FSO_idea_lama.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_nico"
+		texturefile = "gfx/interface/ideas/FSO_idea_nico.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_sam"
+		texturefile = "gfx/interface/ideas/FSO_idea_sam.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_spacefox"
+		texturefile = "gfx/interface/ideas/FSO_idea_spacefox.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_spitty"
+		texturefile = "gfx/interface/ideas/FSO_idea_spitty.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_warlord"
+		texturefile = "gfx/interface/ideas/FSO_idea_warlord.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_zimmerson"
+		texturefile = "gfx/interface/ideas/FSO_idea_zimmerson.tga"
+	}
 	
 	
 	##### VANILLA

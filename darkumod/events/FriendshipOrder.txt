@@ -11017,7 +11017,7 @@ country_event = {
 		create_country_leader = {
 			name = "Voice of Friendship"
 			desc = "DARKER_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds"
+			picture = "Portrait_FSO_Darker.tga"
 			expire = "1965.1.1"
 			ideology = freundschaftism
 			traits = {
@@ -11045,7 +11045,7 @@ country_event = {
 		create_country_leader = {
 			name = "Darkest Buddhist"
 			desc = "DARKEST_DESC"
-			picture = "Portrait_FSO_DarkBuddhist.dds"
+			picture = "Portrait_FSO_Darkest.tga"
 			expire = "1965.1.1"
 			ideology = freundschaftism
 			traits = {
@@ -13147,7 +13147,8 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
-		has_war = no
+		NOT = { has_war_with = GER }
+		GER = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_better_axis_defending_against_germany
 	}
 	
@@ -13257,8 +13258,8 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
-		has_war = no
-		HUN = { has_war = no }
+		NOT = { has_war_with = YUG }
+		YUG = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_better_axis_war_balkans
 	}
 	
@@ -13467,7 +13468,7 @@ country_event = {
 	}
 	
 }
-# Neu-Magyarország - Peace
+# Legacy of das Romische Reich - Peace
 country_event = {
 	id = fso.366
 	title = fso.366.t
@@ -13477,8 +13478,8 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
-		has_war = no
-		GRE = { has_war = no }
+		NOT = { has_war_with = TUR }
+		TUR = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_restoring_byzantium
 	}
 	
@@ -13793,8 +13794,10 @@ country_event = {
 	title = fso.373.t
 	desc = fso.373.d
 	
+	fire_only_once = yes
 	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 3
@@ -13822,7 +13825,10 @@ country_event = {
 	desc = fso.374.d
 	
 	
+	fire_only_once = yes
+	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 6
@@ -13850,7 +13856,10 @@ country_event = {
 	desc = fso.375.d
 	
 	
+	fire_only_once = yes
+	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 9
@@ -13878,7 +13887,10 @@ country_event = {
 	desc = fso.376.d
 	
 	
+	fire_only_once = yes
+	
 	trigger = {
+		tag = CZE
 		check_variable = {
 			var = fso_byz_recovering
 			value = 12
@@ -13898,4 +13910,365 @@ country_event = {
 			}
 		}
 	}
+}
+# Dream of Glory - Start
+country_event = {
+	id = fso.377
+	title = fso.377.t
+	desc = fso.377.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_dream_of_glory }
+		focus_progress = {
+			focus = FSO_dream_of_glory
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.377.a
+		
+	}
+}
+# Dream of Glory - End
+country_event = {
+	id = fso.378
+	title = fso.378.t
+	desc = fso.378.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.378.a
+		
+		add_state_core = 53
+		add_state_core = 153
+		add_state_core = 152
+		add_state_core = 4
+		add_state_core = 54
+		add_state_core = 50
+		add_state_core = 52
+		
+		if = {
+			limit = { 102 = { is_owned_by = ROOT } }
+			add_state_core = 102
+		}
+		
+		every_country = {
+			limit = {
+				is_faction_leader = yes
+				NOT = { tag = CZE }
+			}
+			CZE = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+		
+		custom_effect_tooltip = fso.378.tt
+		
+	}
+	
+}
+# Dream of Glory - Victory
+country_event = {
+	id = fso.379
+	title = fso.379.t
+	desc = fso.379.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		has_completed_focus = FSO_dream_of_glory
+		NOT = {
+			any_country = {
+				is_faction_leader = yes
+				exists = yes
+				NOT = { tag = CZE }
+			}
+		}
+	}
+	
+	option = { 
+		name = fso.379.a
+		
+		every_country = {
+			limit = {
+				NOT = { is_in_faction_with = CZE }
+			}
+			CZE = { add_to_faction = PREV }
+		}
+		every_country = {
+			limit = {
+				NOT = { has_government = fascism }
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.6
+			}
+		}
+		
+	}
+}
+# Controlling Friendshipism - Service Event
+country_event = {
+	id = fso.380
+	title = fso.380.t
+	desc = fso.380.d
+	
+	
+	trigger = {
+		NOT = { tag = CZE }
+		friendship > 0.01
+		NOT = { CZE = { has_completed_focus = FSO_what_matters } }
+	}
+	
+	hidden = yes
+	
+	option = { 
+		name = fso.380.a
+		
+		add_popularity = {
+			ideology = friendship
+			popularity = -1
+		}
+		
+	}
+}
+# Trust No One - Start
+country_event = {
+	id = fso.381
+	title = fso.381.t
+	desc = fso.381.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_trust_no_one }
+		focus_progress = {
+			focus = FSO_trust_no_one
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.381.a
+		
+	}
+}
+# Trust No One - End
+country_event = {
+	id = fso.382
+	title = fso.382.t
+	desc = fso.382.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.382.a
+		
+		add_ideas = FSO_dark_secluded_vs_everyone_1
+		add_ideas = FSO_spies_network_1
+		
+	}
+	
+}
+# Rise of Darkstapo - Start
+country_event = {
+	id = fso.383
+	title = fso.383.t
+	desc = fso.383.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_rise_of_darkstapo }
+		focus_progress = {
+			focus = FSO_rise_of_darkstapo
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.383.a
+		
+	}
+}
+# Rise of Darkstapo - End
+country_event = {
+	id = fso.384
+	title = fso.384.t
+	desc = fso.384.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.384.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_1 add_idea = FSO_dark_secluded_vs_everyone_2 }
+		swap_ideas = { remove_idea = FSO_spies_network_1 add_idea = FSO_spies_network_2 }
+		
+	}
+	
+}
+# The Wonderbunker - Start
+country_event = {
+	id = fso.385
+	title = fso.385.t
+	desc = fso.385.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_wonderbunker }
+		focus_progress = {
+			focus = FSO_wonderbunker
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.385.a
+		
+	}
+}
+# Wonderbunker - End
+country_event = {
+	id = fso.386
+	title = fso.386.t
+	desc = fso.386.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.386.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_2 add_idea = FSO_dark_secluded_vs_everyone_3 }
+		swap_ideas = { remove_idea = FSO_spies_network_2 add_idea = FSO_spies_network_3 }
+		
+		9 = {
+			add_building_construction = {
+				type = bunker
+				level = 10
+				instant_build = yes
+				province = 12364 # Prague
+			}
+		}
+		
+	}
+	
+}
+# Caesar Consultum Ultimum - Start
+country_event = {
+	id = fso.387
+	title = fso.387.t
+	desc = fso.387.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_caesar_consultum_ultimum }
+		focus_progress = {
+			focus = FSO_caesar_consultum_ultimum
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.387.a
+		
+	}
+}
+# Caesar Consultum Ultimum - End
+country_event = {
+	id = fso.388
+	title = fso.388.t
+	desc = fso.388.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.388.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_3 add_idea = FSO_dark_secluded_vs_everyone_4 }
+		swap_ideas = { remove_idea = FSO_spies_network_3 add_idea = FSO_spies_network_4 }
+		
+		add_ideas = FSO_assuming_direct_command
+		
+	}
+	
+}
+# Dictator Tenebris - Start
+country_event = {
+	id = fso.389
+	title = fso.389.t
+	desc = fso.389.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_dictator_tenebris }
+		focus_progress = {
+			focus = FSO_dictator_tenebris
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.389.a
+		
+	}
+}
+# Dictator Tenebris - End
+country_event = {
+	id = fso.390
+	title = fso.390.t
+	desc = fso.390.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.390.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_4 add_idea = FSO_dark_secluded_vs_everyone_5 }
+		swap_ideas = { remove_idea = FSO_spies_network_4 add_idea = FSO_spies_network_5 }
+		
+		
+		
+	}
+	
 }
