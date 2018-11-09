@@ -13618,7 +13618,11 @@ country_event = {
 	option = { 
 		name = fso.368.a
 		
-		POL = {
+		random_country = {
+			limit = {
+				original_tag = POL
+				has_government = fascism
+			}
 			annex_country = { target = LIT transfer_troops = yes }
 			set_cosmetic_tag = PLC_UNIFIED
 			# Lithuania
