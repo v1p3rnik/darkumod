@@ -14272,3 +14272,201 @@ country_event = {
 	}
 	
 }
+# Chaos Aeternam - Start
+country_event = {
+	id = fso.391
+	title = fso.391.t
+	desc = fso.391.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_chaos_aeternam }
+		focus_progress = {
+			focus = FSO_chaos_aeternam
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.391.a
+		
+	}
+}
+# Chaos Aeternam - End
+country_event = {
+	id = fso.392
+	title = fso.392.t
+	desc = fso.392.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.392.a
+		
+		if = {
+			limit = {
+				FRA = { is_in_faction_with = ENG }
+			}
+			ENG = { remove_from_faction = FRA }
+		}
+		if = {
+			limit = {
+				ITA = { is_in_faction_with = GER }
+			}
+			GER = { remove_from_faction = ITA }
+		}
+		ENG = {
+			declare_war_on = { target = FRA type = annex_everything }
+			declare_war_on = { target = GER type = annex_everything }
+			declare_war_on = { target = ITA type = annex_everything }
+			declare_war_on = { target = POL type = annex_everything }
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+		FRA = {
+			declare_war_on = { target = ENG type = annex_everything }
+			declare_war_on = { target = GER type = annex_everything }
+			declare_war_on = { target = ITA type = annex_everything }
+			declare_war_on = { target = POL type = annex_everything }
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+		GER = {
+			declare_war_on = { target = FRA type = annex_everything }
+			declare_war_on = { target = ENG type = annex_everything }
+			declare_war_on = { target = ITA type = annex_everything }
+			declare_war_on = { target = POL type = annex_everything }
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+		ITA = {
+			declare_war_on = { target = FRA type = annex_everything }
+			declare_war_on = { target = GER type = annex_everything }
+			declare_war_on = { target = ENG type = annex_everything }
+			declare_war_on = { target = POL type = annex_everything }
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+		POL = {
+			declare_war_on = { target = FRA type = annex_everything }
+			declare_war_on = { target = GER type = annex_everything }
+			declare_war_on = { target = ITA type = annex_everything }
+			declare_war_on = { target = ENG type = annex_everything }
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+		SOV = {
+			declare_war_on = { target = FRA type = annex_everything }
+			declare_war_on = { target = GER type = annex_everything }
+			declare_war_on = { target = ITA type = annex_everything }
+			declare_war_on = { target = POL type = annex_everything }
+			declare_war_on = { target = ENG type = annex_everything }
+		}
+		random_country = {
+			limit = {
+				original_tag = SPR
+				has_civil_war = no
+			}
+			GER = { remove_from_faction = PREV }
+			SOV = { remove_from_faction = PREV }
+			declare_war_on = { target = FRA type = annex_everything }
+			declare_war_on = { target = GER type = annex_everything }
+			declare_war_on = { target = ITA type = annex_everything }
+			declare_war_on = { target = POL type = annex_everything }
+			declare_war_on = { target = SOV type = annex_everything }
+			declare_war_on = { target = ENG type = annex_everything }
+		}
+	}
+	
+}
+# The First Order - Start
+country_event = {
+	id = fso.393
+	title = fso.393.t
+	desc = fso.393.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_dictator_tenebris }
+		focus_progress = {
+			focus = FSO_dictator_tenebris
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.393.a
+		
+	}
+}
+# The First Order - End
+country_event = {
+	id = fso.394
+	title = fso.394.t
+	desc = fso.394.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.394.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_5 add_idea = FSO_dark_secluded_vs_everyone_6 }
+		
+		custom_effect_tooltip = fso.394.tt
+		division_template = {
+			name = "The First Order"
+			priority = 2
+	
+			regiments = {
+			
+				first_order = { x = 0 y = 0 }
+				first_order = { x = 0 y = 1 }
+				first_order = { x = 0 y = 2 }
+				first_order = { x = 0 y = 3 }
+				first_order = { x = 0 y = 4 }
+			
+	    	   	first_order = { x = 1 y = 0 }
+				first_order = { x = 1 y = 1 }
+				first_order = { x = 1 y = 2 }
+				first_order = { x = 1 y = 3 }
+				first_order = { x = 1 y = 4 }
+				
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				signal_company = { x = 0 y = 2 }
+				maintenance_company = { x = 0 y = 3 }
+			}
+		}
+		set_division_template_lock = {
+			division_template = "The First Order"
+			is_locked = yes
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 9 }
+			create_unit = {
+				division = "name = \"The First Order\" division_template = \"The First Order\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"The First Order\" division_template = \"The First Order\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+			create_unit = {
+				division = "name = \"The First Order\" division_template = \"The First Order\" start_experience_factor = 1.0" 
+				owner = CZE
+			}
+		}
+		
+	}
+	
+}

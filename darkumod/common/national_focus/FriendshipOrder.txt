@@ -2731,5 +2731,41 @@ focus_tree = {
 			hidden_effect = { CZE = { country_event = { id = fso.390 } } }
 		}
 	}
+	# Chaos Aeternam
+	focus = {
+		id = FSO_chaos_aeternam
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_dictator_tenebris }
+		x = 11 
+		y = 13
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_chaos_aeternam_effect
+			hidden_effect = { CZE = { country_event = { id = fso.392 } } }
+		}
+	}
 	
 }
