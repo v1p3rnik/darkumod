@@ -1,0 +1,162 @@
+﻿capital = 73
+
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		gwtank = 1
+		basic_light_tank = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		interwar_antiair = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		motorised_infantry = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+
+set_research_slots = 3
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		neutrality = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 100
+		}
+		
+		communism = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = fascism
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Isak Stierngranat"
+	desc = "POLITICS_ISAK_STIERNGRANAT_DESC"
+	picture = "Portrait_FSO_Isak.tga"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Isak Stierngranat"
+	desc = "POLITICS_ISAK_STIERNGRANAT_DESC"
+	picture = "Portrait_FSO_Isak.tga"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Isak Stierngranat"
+	desc = "POLITICS_ISAK_STIERNGRANAT_DESC"
+	picture = "Portrait_FSO_Isak.tga"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Isak Stierngranat"
+	desc = "POLITICS_ISAK_STIERNGRANAT_DESC"
+	picture = "Portrait_FSO_Isak.tga"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Isak Stierngranat"
+	desc = "POLITICS_ISAK_STIERNGRANAT_DESC"
+	picture = "Portrait_FSO_Isak.tga"
+	expire = "1965.1.1"
+	ideology = friendshipism
+	traits = {
+		
+	}
+}
+
+create_field_marshal = {
+	name = "Isak Stierngranat"
+	picture = "Portrait_FSO_Isak.tga"
+	traits = { trait_reckless winter_specialist trait_mountaineer }
+	skill = 4
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Iván Hindy"
+	gfx = GFX_Portrait_hungary_ivan_hindy
+	traits = {  trickster }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Ivvi"
+	picture = "Portrait_FSO_Ivvi.tga"
+	traits = { commando panzer_leader fortress_buster harsh_leader }
+	skill = 4
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 2
+}

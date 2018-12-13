@@ -114,6 +114,7 @@ create_field_marshal = {
 	picture = "Portrait_FSO_Budget_Boi.tga"
 	traits = { logistics_wizard organisational_leader }
 	skill = 3
+	id = 101
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 3
@@ -126,7 +127,7 @@ create_corps_commander = {
 	picture = "Portrait_FSO_Spitty.tga"
 	traits = { trait_reckless armor_officer brilliant_strategist media_personality }
 	skill = 4
-	
+	id = 102
 	attack_skill = 5
 	defense_skill = 3
 	planning_skill = 3
@@ -138,7 +139,7 @@ create_corps_commander = {
 	picture = "Portrait_FSO_Isak.tga"
 	traits = { trait_reckless winter_specialist trait_mountaineer }
 	skill = 4
-	
+	id = 103
 	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 2
@@ -150,7 +151,7 @@ create_corps_commander = {
 	picture = "Portrait_FSO_Sunset_Shimmer_Stalin.tga"
 	traits = { panzer_leader bearer_of_artillery urban_assault_specialist }
 	skill = 4
-	
+	id = 104
 	attack_skill = 4
 	defense_skill = 4
 	planning_skill = 3
@@ -162,7 +163,7 @@ create_corps_commander = {
 	picture = "Portrait_FSO_Zimmerson.tga"
 	traits = { panzer_leader brilliant_strategist trait_engineer ranger }
 	skill = 4
-	
+	id = 105
 	attack_skill = 4
 	defense_skill = 2
 	planning_skill = 4
@@ -174,7 +175,7 @@ create_corps_commander = {
 	picture = "Portrait_FSO_Ivvi.tga"
 	traits = { commando panzer_leader fortress_buster harsh_leader }
 	skill = 4
-	
+	id = 106
 	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 4
@@ -186,7 +187,7 @@ create_corps_commander = {
 	picture = "Portrait_FSO_DobyvatelCZ.tga"
 	traits = { commando naval_invader bearer_of_artillery }
 	skill = 4
-	
+	id = 107
 	attack_skill = 2
 	defense_skill = 4
 	planning_skill = 4

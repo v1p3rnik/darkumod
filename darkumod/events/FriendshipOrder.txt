@@ -787,7 +787,7 @@ country_event = {
 			create_country_leader = {
 				name = "SpaceFox"
 				desc = "SPACEFOX_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
+				picture = "Portrait_FSO_SpaceFox.tga"
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -862,7 +862,7 @@ country_event = {
 			create_country_leader = {
 				name = "SpaceFox"
 				desc = "SPACEFOX_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
+				picture = "Portrait_FSO_SpaceFox.tga"
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -919,7 +919,7 @@ country_event = {
 			create_country_leader = {
 				name = "SpaceFox"
 				desc = "SPACEFOX_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
+				picture = "Portrait_FSO_SpaceFox.tga"
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -979,7 +979,7 @@ country_event = {
 			create_country_leader = {
 				name = "SpaceFox"
 				desc = "SPACEFOX_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
+				picture = "Portrait_FSO_SpaceFox.tga"
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -1084,7 +1084,7 @@ country_event = {
 			create_country_leader = {
 				name = "SpaceFox"
 				desc = "SPACEFOX_DESC"
-				picture = "Portrait_FSO_President_Polekov.tga" ### PLACEHOLDER
+				picture = "Portrait_FSO_SpaceFox.tga"
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = { }
@@ -14395,9 +14395,9 @@ country_event = {
 	
 	trigger = {
 		has_government = fascism
-		NOT = { has_completed_focus = FSO_dictator_tenebris }
+		NOT = { has_completed_focus = FSO_first_order }
 		focus_progress = {
-			focus = FSO_dictator_tenebris
+			focus = FSO_first_order
 			progress > 0.01
 		}
 	}
@@ -14420,8 +14420,6 @@ country_event = {
 	
 	option = { 
 		name = fso.394.a
-		
-		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_5 add_idea = FSO_dark_secluded_vs_everyone_6 }
 		
 		custom_effect_tooltip = fso.394.tt
 		division_template = {
@@ -14468,6 +14466,223 @@ country_event = {
 			create_unit = {
 				division = "name = \"The First Order\" division_template = \"The First Order\" start_experience_factor = 1.0" 
 				owner = CZE
+			}
+		}
+		
+	}
+	
+}
+# Loyal Industries - Start
+country_event = {
+	id = fso.395
+	title = fso.395.t
+	desc = fso.395.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_loyal_industries }
+		focus_progress = {
+			focus = FSO_loyal_industries
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.395.a
+		
+	}
+}
+# Loyal Industries - End
+country_event = {
+	id = fso.396
+	title = fso.396.t
+	desc = fso.396.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.396.a
+		
+		swap_ideas = { remove_idea = FSO_dark_secluded_vs_everyone_5 add_idea = FSO_dark_secluded_vs_everyone_6 }
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
+			
+		9 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}		
+		}
+	}
+	
+}
+# The Darkest Hour - Start
+country_event = {
+	id = fso.397
+	title = fso.397.t
+	desc = fso.397.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_loyal_industries }
+		focus_progress = {
+			focus = FSO_loyal_industries
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.397.a
+		
+	}
+}
+# The Darkest Hour - End
+country_event = {
+	id = fso.398
+	title = fso.398.t
+	desc = fso.398.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.398.a
+		
+		remove_ideas = FSO_dark_secluded_vs_everyone_6
+		
+		create_field_marshal = {
+			name = "Peetry"
+			picture = "Portrait_FSO_Peetry.tga"
+			traits = { brilliant_strategist media_personality old_guard }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 1
+			
+		}
+		
+		start_civil_war = {
+			ideology = communism
+			size = 1.0
+		}
+		every_country = {
+			limit = {
+				original_tag = CZE
+				has_civil_war = yes
+			}
+			CZE = { annex_country = { target = PREV transfer_troops = no } }
+		}
+		
+		load_oob = "FSO_CIVIL_WAR_DARKEST"
+		every_owned_state = {
+			add_core_of = FCO
+			add_core_of = SNT
+			add_core_of = HFF
+		}
+		
+		remove_unit_leader = 101
+		remove_unit_leader = 102
+		remove_unit_leader = 103
+		remove_unit_leader = 104
+		remove_unit_leader = 105
+		remove_unit_leader = 106
+		remove_unit_leader = 107
+		
+		SNT = {
+			transfer_state = 71
+			transfer_state = 70
+			every_owned_state = {
+				add_core_of = SNT
+				add_core_of = FCO
+				add_core_of = HFF
+			}
+			load_oob = "FSO_CIVIL_WAR_SNT"
+			add_political_power = 100
+			add_manpower = 20000
+			declare_war_on = {
+				target = CZE
+				type = civil_war
+			}
+			declare_war_on = {
+				target = FCM
+				type = civil_war
+			}
+			declare_war_on = {
+				target = HFF
+				type = civil_war
+			}
+		}
+		FCO = {
+			transfer_state = 72
+			transfer_state = 74
+			transfer_state = 75
+			every_owned_state = {
+				add_core_of = FCO
+				add_core_of = SNT
+				add_core_of = HFF
+			}
+			load_oob = "FSO_CIVIL_WAR_FCO"
+			add_political_power = 100
+			add_manpower = 20000
+			declare_war_on = {
+				target = CZE
+				type = civil_war
+			}
+			declare_war_on = {
+				target = HFF
+				type = civil_war
+			}
+		}
+		HFF = {
+			transfer_state = 73
+			transfer_state = 664
+			
+			every_owned_state = {
+				add_core_of = HFF
+				add_core_of = FCO
+				add_core_of = SNT
+			}
+			load_oob = "FSO_CIVIL_WAR_HFF"
+			add_political_power = -100
+			add_manpower = 20000
+			declare_war_on = {
+				target = CZE
+				type = civil_war
+			}
+			HUN = { 
+				add_to_war = {
+					targeted_alliance = HFF
+					enemy = CZE
+				}
+				add_to_war = {
+					targeted_alliance = HFF
+					enemy = FCO
+				}
+				add_to_war = {
+					targeted_alliance = HFF
+					enemy = SNT
+				}
+				puppet = HFF 
+			}
+			set_politics = {
+				ruling_party = fascism
 			}
 		}
 		

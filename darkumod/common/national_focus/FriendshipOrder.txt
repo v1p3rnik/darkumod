@@ -2593,7 +2593,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_trust_no_one }
 		x = 11 
-		y = 5
+		y = 4
 		
 
 		cost = 10
@@ -2629,7 +2629,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_rise_of_darkstapo }
 		x = 11 
-		y = 7
+		y = 6
 		
 
 		cost = 10
@@ -2665,7 +2665,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_wonderbunker }
 		x = 11 
-		y = 9
+		y = 8
 		
 
 		cost = 10
@@ -2701,7 +2701,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_caesar_consultum_ultimum }
 		x = 11 
-		y = 11
+		y = 10
 		
 
 		cost = 10
@@ -2737,7 +2737,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FSO_dictator_tenebris }
 		x = 11 
-		y = 13
+		y = 12
 		
 
 		cost = 10
@@ -2765,6 +2765,114 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_chaos_aeternam_effect
 			hidden_effect = { CZE = { country_event = { id = fso.392 } } }
+		}
+	}
+	# Loyal Industries
+	focus = {
+		id = FSO_loyal_industries
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_chaos_aeternam }
+		x = 11 
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_loyal_industries_effect
+			hidden_effect = { CZE = { country_event = { id = fso.396 } } }
+		}
+	}
+	# The Darkest Hour
+	focus = {
+		id = FSO_darkest_hour
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_loyal_industries }
+		x = 11 
+		y = 16
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_darkest_hour_effect
+			hidden_effect = { CZE = { country_event = { id = fso.398 } } }
+		}
+	}
+	# The First Order
+	focus = {
+		id = FSO_first_order
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_dictator_tenebris }
+		x = 11 
+		y = 18
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_first_order_effect
+			hidden_effect = { CZE = { country_event = { id = fso.394 } } }
 		}
 	}
 	
