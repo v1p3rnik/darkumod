@@ -1,0 +1,98 @@
+﻿division_template = {
+	name = "Equites"				# Cavalry Brigade -- precursor to Fast Divisions. Fast Divisions add 2nd regiment of 2x L tank, 2x mot 
+	division_names_group = FSO_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # includes 1x AC comp, 1x L tank comp
+	}
+}
+division_template = {
+	name = "Legio"					# Infantry Division
+	division_names_group = FSO_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+
+	## Legions
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11691
+		division_template = "Legio"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11536
+		division_template = "Legio"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 6573
+		division_template = "Legio"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	
+	## Equites
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11691
+		division_template = "Equites"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6573
+		division_template = "Equites"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CZE"
+		}
+		requested_factories = 2
+		efficiency = 100
+	}
+}

@@ -12915,11 +12915,57 @@ country_event = {
 # Visegrad Conference - New President
 country_event = {
 	id = fso.354
-	title = fso.354.t
-	desc = fso.354.d
+	title = {
+		text = fso.354.t1
+		trigger = {
+			CZE = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	title = {
+		text = fso.354.t2
+		trigger = {
+			SLO = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	title = {
+		text = fso.354.t3
+		trigger = {
+			HUN = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	title = {
+		text = fso.354.t4
+		trigger = {
+			POL = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	desc = {
+		text = fso.354.d1
+		trigger = {
+			CZE = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	desc = {
+		text = fso.354.d1
+		trigger = {
+			SLO = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	desc = {
+		text = fso.354.d1
+		trigger = {
+			HUN = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
+	desc = {
+		text = fso.354.d1
+		trigger = {
+			POL = { has_country_flag = fso_darker_former_presidency }
+		}
+	}
 	
 	
-	fire_only_once = yes
+
 	
 	trigger = {
 		tag = CZE
@@ -12936,47 +12982,49 @@ country_event = {
 	
 	option = { 
 		name = fso.354.a
-		if = {
-			limit = {
-				CZE = { has_country_flag = fso_darker_former_presidency }
-			}
-			CZE = { clr_country_flag = fso_darker_former_presidency }
-			SLO = {
-				set_country_flag = fso_darker_former_presidency
-				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
-			}
+		trigger = {
+			CZE = { has_country_flag = fso_darker_former_presidency }
 		}
-		else_if = {
-			limit = {
-				SLO = { has_country_flag = fso_darker_former_presidency }
-			}
-			SLO = { clr_country_flag = fso_darker_former_presidency }
-			POL = {
-				set_country_flag = fso_darker_former_presidency
-				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
-			}
-		}
-		else_if = {
-			limit = {
-				POL = { has_country_flag = fso_darker_former_presidency }
-			}
-			POL = { clr_country_flag = fso_darker_former_presidency }
-			HUN = {
-				set_country_flag = fso_darker_former_presidency
-				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
-			}
-		}
-		else_if = {
-			limit = {
-				HUN = { has_country_flag = fso_darker_former_presidency }
-			}
-			HUN = { clr_country_flag = fso_darker_former_presidency }
-			CZE = {
-				set_country_flag = fso_darker_former_presidency
-				add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
-			}
+		CZE = { clr_country_flag = fso_darker_former_presidency }
+		SLO = {
+			set_country_flag = fso_darker_former_presidency
+			add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
 		}
 	}
+	option = { 
+		name = fso.354.b
+		trigger = {
+			SLO = { has_country_flag = fso_darker_former_presidency }
+		}
+		SLO = { clr_country_flag = fso_darker_former_presidency }
+		HUN = {
+			set_country_flag = fso_darker_former_presidency
+			add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+		}
+	}
+	option = { 
+		name = fso.354.c
+		trigger = {
+			HUN = { has_country_flag = fso_darker_former_presidency }
+		}
+		HUN = { clr_country_flag = fso_darker_former_presidency }
+		POL = {
+			set_country_flag = fso_darker_former_presidency
+			add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+		}
+	}
+	option = { 
+		name = fso.354.d
+		trigger = {
+			POL = { has_country_flag = fso_darker_former_presidency }
+		}
+		POL = { clr_country_flag = fso_darker_former_presidency }
+		CZE = {
+			set_country_flag = fso_darker_former_presidency
+			add_timed_idea = { idea = FSO_darker_rotating_presidency days = 365 }
+		}
+	}
+
 }
 # Together to the Stars - Start
 country_event = {
@@ -13137,6 +13185,44 @@ country_event = {
 	}
 	
 }
+# Visegrad Group - Surrendered the Sudetenland
+country_event = {
+	id = fso.399
+	title = fso.399.t
+	desc = fso.399.d
+	
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	option = { 
+		name = fso.399.a
+		
+		
+	}
+	
+}
+# Visegrad Group - Declared on by Germany but with Allies
+country_event = {
+	id = fso.400
+	title = fso.400.t
+	desc = fso.400.d
+	
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	option = { 
+		name = fso.400.a
+		
+		
+	}
+	
+}
 # Visegrad Group - Peace
 country_event = {
 	id = fso.360
@@ -13147,6 +13233,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
+		CZE = { is_puppet = no }
 		NOT = { has_war_with = GER }
 		GER = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_better_axis_defending_against_germany
@@ -13183,6 +13270,19 @@ country_event = {
 			transfer_state = 153
 			transfer_state = 152
 			transfer_state = 4
+		}
+		
+		GER = { 
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.6
+			}
+		}
+		ENG = {
+			add_to_faction = GER
 		}
 		
 		custom_effect_tooltip = fso.360.tt
@@ -13258,6 +13358,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		country_exists = CZE
+		CZE = { is_puppet = no }
 		NOT = { has_war_with = YUG }
 		YUG = { NOT = { has_war_with = CZE } }
 		has_country_flag = fso_better_axis_war_balkans
@@ -14566,17 +14667,13 @@ country_event = {
 		
 		remove_ideas = FSO_dark_secluded_vs_everyone_6
 		
-		create_field_marshal = {
-			name = "Peetry"
-			picture = "Portrait_FSO_Peetry.tga"
-			traits = { brilliant_strategist media_personality old_guard }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 5
-			logistics_skill = 1
-			
-		}
+		remove_unit_leader = 101
+		remove_unit_leader = 102
+		remove_unit_leader = 103
+		remove_unit_leader = 104
+		remove_unit_leader = 105
+		remove_unit_leader = 106
+		remove_unit_leader = 107
 		
 		start_civil_war = {
 			ideology = communism
@@ -14597,15 +14694,28 @@ country_event = {
 			add_core_of = HFF
 		}
 		
-		remove_unit_leader = 101
-		remove_unit_leader = 102
-		remove_unit_leader = 103
-		remove_unit_leader = 104
-		remove_unit_leader = 105
-		remove_unit_leader = 106
-		remove_unit_leader = 107
+		create_field_marshal = {
+			name = "Peetry"
+			picture = "Portrait_FSO_Peetry.tga"
+			traits = { brilliant_strategist media_personality old_guard }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 1
+			
+		}
+		
+		add_manpower = 50000
+		add_political_power = 50
+		
+		
 		
 		SNT = {
+			hidden_effect = {
+				add_offsite_building { type = arms_factory level = 4 }
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = CZE }
+			}
 			transfer_state = 71
 			transfer_state = 70
 			every_owned_state = {
@@ -14615,13 +14725,13 @@ country_event = {
 			}
 			load_oob = "FSO_CIVIL_WAR_SNT"
 			add_political_power = 100
-			add_manpower = 20000
+			add_manpower = 50000
 			declare_war_on = {
 				target = CZE
 				type = civil_war
 			}
 			declare_war_on = {
-				target = FCM
+				target = FCO
 				type = civil_war
 			}
 			declare_war_on = {
@@ -14630,6 +14740,10 @@ country_event = {
 			}
 		}
 		FCO = {
+			hidden_effect = {
+				add_offsite_building { type = arms_factory level = 6 }
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 500 producer = CZE }
+			}
 			transfer_state = 72
 			transfer_state = 74
 			transfer_state = 75
@@ -14639,8 +14753,7 @@ country_event = {
 				add_core_of = HFF
 			}
 			load_oob = "FSO_CIVIL_WAR_FCO"
-			add_political_power = 100
-			add_manpower = 20000
+			add_manpower = 100000
 			declare_war_on = {
 				target = CZE
 				type = civil_war
@@ -14651,6 +14764,10 @@ country_event = {
 			}
 		}
 		HFF = {
+			hidden_effect = {
+				add_offsite_building { type = arms_factory level = 2 }
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = CZE }
+			}
 			transfer_state = 73
 			transfer_state = 664
 			

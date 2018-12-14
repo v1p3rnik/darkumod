@@ -1459,14 +1459,14 @@ country_event = {
 # Czechoslovakia (Abandoned)
 country_event = {
 	id = germany.46
-	title = germany.46.t
-	desc = germany.46.d
+	title = germany.46.t1
+	desc = germany.46.d1
 	picture = GFX_report_event_czech_soldiers_01
 	
 	is_triggered_only = yes
 	
 	option = { # Surrender the Sudetenland
-		name = germany.46.a
+		name = germany.46.a1
 		ai_chance = {
 			factor = 90
 			modifier = { # Decrease chance CZE resists if AUS isn't taken first
@@ -1508,10 +1508,11 @@ country_event = {
 				factor = 2.0
 			}
 		}
+		country_event = fso.399
 		GER = { country_event = germany.50 }
 	}
 	option = { # Refuse anyway
-		name = germany.46.b
+		name = germany.46.b1
 		ai_chance = { 
 			factor = 10 
 			modifier = {
@@ -1557,6 +1558,7 @@ country_event = {
 		}
 		FRA = { give_guarantee = CZE }
 		ENG = { give_guarantee = CZE }
+		country_event = fso.400
 		GER = {
 			country_event = germany.47
 			effect_tooltip = {

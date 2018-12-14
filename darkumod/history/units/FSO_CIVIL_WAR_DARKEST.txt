@@ -1,0 +1,76 @@
+﻿units = {
+
+	# Border positions with FCO
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11556
+		division_template = "Legio"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 445
+		division_template = "Legio"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 583
+		division_template = "Legio"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11525
+		division_template = "Legio"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	
+	# Prague
+	division = { 
+		name = "Legio Mons Frontur"
+		location = 11542
+		division_template = "Legio Mons"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = { 
+		name = "Legio Mons Hibur"
+		location = 11542
+		division_template = "Legio Mons"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+}
+air_wings = {
+	
+	9 = { 
+		fighter_equipment_0 = {		
+			owner = "CZE" 
+			amount = 50
+		}
+		CAS_equipment_1 =  {		
+			owner = "CZE" 
+			amount = 20
+		}
+	}
+}

@@ -10,6 +10,7 @@ spriteTypes = {
 	##################################
 	
 	spriteType = { name = "GFX_unit_praetorian_guard_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_infantry_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_first_order_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_infantry_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_praetorian_paratroopers_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_paratroop_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_sirens_song_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_infantry_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_schutzengrabenvernichtungsautomobile_unit_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_medium_tank_icon.dds" noOfFrames = 2 }
@@ -66,6 +67,7 @@ spriteTypes = {
 	####################################################
 	
 	spriteType = { name = "GFX_unit_praetorian_guard_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_infantry_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_first_order_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_infantry_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_praetorian_paratroopers_icon_medium_white"						textureFile = "gfx/interface/counters/divisions_small/onmap_unit_paratroop_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_sirens_song_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_infantry_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_schutzengrabenvernichtungsautomobile_unit_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_medium_tank_icon.dds" noOfFrames = 2}
