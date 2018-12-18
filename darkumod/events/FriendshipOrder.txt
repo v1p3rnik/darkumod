@@ -14639,9 +14639,9 @@ country_event = {
 	
 	trigger = {
 		has_government = fascism
-		NOT = { has_completed_focus = FSO_loyal_industries }
+		NOT = { has_completed_focus = FSO_darkest_hour }
 		focus_progress = {
-			focus = FSO_loyal_industries
+			focus = FSO_darkest_hour
 			progress > 0.01
 		}
 	}
@@ -14687,6 +14687,10 @@ country_event = {
 			CZE = { annex_country = { target = PREV transfer_troops = no } }
 		}
 		
+		add_ideas = {
+			FSO_darkest_hour_civil_war
+		}
+		
 		load_oob = "FSO_CIVIL_WAR_DARKEST"
 		every_owned_state = {
 			add_core_of = FCO
@@ -14695,19 +14699,43 @@ country_event = {
 		}
 		
 		create_field_marshal = {
+			name = "Darkest Buddhist"
+			picture = "Portrait_FSO_Darkest.tga"
+			traits = { harsh_leader thorough_planner media_personality politically_connected }
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 5
+			
+		}
+		create_corps_commander = {
 			name = "Peetry"
 			picture = "Portrait_FSO_Peetry.tga"
 			traits = { brilliant_strategist media_personality old_guard }
 			skill = 4
+			
 			attack_skill = 3
 			defense_skill = 3
 			planning_skill = 5
 			logistics_skill = 1
 			
 		}
+		create_corps_commander = {
+			name = "Arische Ehefrau"
+			picture = "Portrait_FSO_Arische_Ehefrau.tga"
+			traits = { trait_reckless armor_officer brilliant_strategist old_guard }
+			skill = 4
+			
+			attack_skill = 7
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
 		
 		add_manpower = 50000
-		add_political_power = 50
+		add_political_power = 100
 		
 		
 		
@@ -14802,6 +14830,87 @@ country_event = {
 				ruling_party = fascism
 			}
 		}
+		
+	}
+	
+}
+## EVENTS 399 400 EARLIER
+# The Darkest Hour - Over
+country_event = {
+	id = fso.401
+	title = fso.401.t
+	desc = fso.401.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		CZE = {
+			has_idea = FSO_darkest_hour_civil_war
+		}
+		NOT = {
+			country_exists = FCO
+			country_exists = SNT
+			country_exists = HFF
+		}
+	}
+	
+	option = { 
+		name = fso.401.a
+		every_state = {
+			remove_core_of = HFF
+			remove_core_of = FCO
+			remove_core_of = SNT
+		}
+		every_state = {
+			limit = {
+				is_owned_by = CZE
+				NOT = { is_core_of = CZE }
+			}
+			add_core_of = CZE
+		}
+		remove_ideas = FSO_darkest_hour_civil_war
+		swap_ideas = { remove_idea = FSO_no_more_dreams add_idea = FSO_new_world_order }
+	}
+}
+# A Dream Shattered - Start
+country_event = {
+	id = fso.402
+	title = fso.402.t
+	desc = fso.402.d
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = fascism
+		NOT = { has_completed_focus = FSO_dream_shattered }
+		focus_progress = {
+			focus = FSO_dream_shattered
+			progress > 0.01
+		}
+	}
+	
+	option = { 
+		name = fso.402.a
+		
+	}
+}
+# A Dream Shattered - End
+country_event = {
+	id = fso.403
+	title = fso.403.t
+	desc = fso.403.d
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fso.403.a
+		custom_effect_tooltip = fso.403.tt
+		add_ideas = FSO_no_more_dreams
 		
 	}
 	

@@ -167,3 +167,7 @@ create_corps_commander = {
 	planning_skill = 4
 	logistics_skill = 3
 }
+
+add_ideas = {
+	FSO_darkest_hour_civil_war
+}

@@ -1375,12 +1375,12 @@ ideas = {
 				
 				stability_factor = -0.05
 				
-				#industrial_capacity_factory = -0.05
-				#industrial_capacity_dockyard = -0.05
-				#consumer_goods_factor = 0.05
-				#research_time_factor = 0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
+				research_time_factor = 0.05
 				political_power_factor = -0.2
-				
+				training_time_factor = 0.2
 				political_advisor_cost_factor = 0.25
 				trade_laws_cost_factor = 0.25
 				mobilization_laws_cost_factor = 0.25
@@ -1390,6 +1390,193 @@ ideas = {
 				army_chief_cost_factor = 0.25
 				navy_chief_cost_factor = 0.25
 				military_leader_cost_factor = 0.25
+				offence = -0.2
+				defence = -0.2
+			}
+		}
+		FSO_dark_secluded_vs_everyone_2 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = -0.1
+				
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.1
+				research_time_factor = 0.1
+				political_power_factor = -0.4
+				training_time_factor = 0.4
+				political_advisor_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				high_command_cost_factor = 0.5
+				air_chief_cost_factor = 0.5
+				army_chief_cost_factor = 0.5
+				navy_chief_cost_factor = 0.5
+				military_leader_cost_factor = 0.5
+				offence = -0.4
+				defence = -0.4
+			}
+		}
+		FSO_dark_secluded_vs_everyone_3 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = -0.15
+				
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				consumer_goods_factor = 0.15
+				research_time_factor = 0.15
+				political_power_factor = -0.5
+				training_time_factor = 0.5
+				political_advisor_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				high_command_cost_factor = 0.5
+				air_chief_cost_factor = 0.5
+				army_chief_cost_factor = 0.5
+				navy_chief_cost_factor = 0.5
+				military_leader_cost_factor = 0.5
+				offence = -0.5
+				defence = -0.5
+			}
+		}
+		FSO_dark_secluded_vs_everyone_4 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = -0.2
+				
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				consumer_goods_factor = 0.2
+				research_time_factor = 0.2
+				political_power_factor = -0.6
+				training_time_factor = 0.6
+				political_advisor_cost_factor = 0.75
+				trade_laws_cost_factor = 0.75
+				mobilization_laws_cost_factor = 0.75
+				economy_cost_factor = 0.75
+				high_command_cost_factor = 0.75
+				air_chief_cost_factor = 0.75
+				army_chief_cost_factor = 0.75
+				navy_chief_cost_factor = 0.75
+				military_leader_cost_factor = 0.75
+				offence = -0.6
+				defence = -0.6
+			}
+		}
+		FSO_dark_secluded_vs_everyone_5 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = -0.25
+				
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				consumer_goods_factor = 0.25
+				research_time_factor = 0.25
+				political_power_factor = -0.8
+				training_time_factor = 0.8
+				political_advisor_cost_factor = 0.75
+				trade_laws_cost_factor = 0.75
+				mobilization_laws_cost_factor = 0.75
+				economy_cost_factor = 0.75
+				high_command_cost_factor = 0.75
+				air_chief_cost_factor = 0.75
+				army_chief_cost_factor = 0.75
+				navy_chief_cost_factor = 0.75
+				military_leader_cost_factor = 0.75
+				offence = -0.8
+				defence = -0.8
+			}
+		}
+		FSO_dark_secluded_vs_everyone_6 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = -0.3
+				
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				consumer_goods_factor = 0.3
+				research_time_factor = 0.3
+				political_power_factor = -1
+				training_time_factor = 1
+				political_advisor_cost_factor = 1
+				trade_laws_cost_factor = 1
+				mobilization_laws_cost_factor = 1
+				economy_cost_factor = 1
+				high_command_cost_factor = 1
+				air_chief_cost_factor = 1
+				army_chief_cost_factor = 1
+				navy_chief_cost_factor = 1
+				military_leader_cost_factor = 1
+				offence = -1
+				defence = -1
 			}
 		}
 		FSO_spies_network_1 = {
@@ -1414,6 +1601,208 @@ ideas = {
 				special_forces_cap = 0.02
 				war_support_factor = 0.05
 				enemy_partisan_effect = -0.05
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+		}
+		FSO_spies_network_2 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+				political_power_gain = 0.2
+				trade_opinion_factor = -0.25
+				special_forces_cap = 0.04
+				war_support_factor = 0.1
+				enemy_partisan_effect = -0.1
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+		}
+		FSO_spies_network_3 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption_factor = 0.15
+				decryption_factor = 0.15
+				political_power_gain = 0.3
+				trade_opinion_factor = -0.5
+				special_forces_cap = 0.06
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.15
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+			}
+		}
+		FSO_spies_network_4 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption_factor = 0.2
+				decryption_factor = 0.2
+				political_power_gain = 0.4
+				trade_opinion_factor = -0.5
+				special_forces_cap = 0.08
+				war_support_factor = 0.2
+				enemy_partisan_effect = -0.2
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+			}
+		}
+		FSO_spies_network_5 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption_factor = 0.25
+				decryption_factor = 0.25
+				political_power_gain = 0.5
+				trade_opinion_factor = -0.75
+				special_forces_cap = 0.1
+				war_support_factor = 0.25
+				enemy_partisan_effect = -0.3
+				special_forces_attack_factor = 0.3
+				special_forces_defence_factor = 0.3
+			}
+		}
+		FSO_assuming_direct_command = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				military_leader_cost_factor = 5
+				special_forces_cap = 0.05
+				war_support_factor = 0.3
+			}
+		}
+		FSO_darkest_hour_civil_war = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = office_of_strategic_services
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 0.8
+				consumer_goods_factor = -1
+			}
+		}
+		FSO_no_more_dreams = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				offence = 0.1
+				defence = 0.1
+				research_time_factor = -0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		FSO_new_world_order = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				justify_war_goal_time = -1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				consumer_goods_factor = -0.05
+				research_time_factor = -0.05
+				political_power_factor = 0.2
+				training_time_factor = -0.2
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+				military_leader_cost_factor = -0.25
+				offence = 0.2
+				defence = 0.2
 			}
 		}
 		

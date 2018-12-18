@@ -2843,7 +2843,7 @@ focus_tree = {
 	focus = {
 		id = FSO_first_order
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FSO_dictator_tenebris }
+		prerequisite = { focus = FSO_darkest_hour }
 		x = 11 
 		y = 18
 		
@@ -2873,6 +2873,42 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FSO_first_order_effect
 			hidden_effect = { CZE = { country_event = { id = fso.394 } } }
+		}
+	}
+	# A Dream Shattered
+	focus = {
+		id = FSO_dream_shattered
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_first_order }
+		x = 11 
+		y = 20
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FSO_dream_shattered_effect
+			hidden_effect = { CZE = { country_event = { id = fso.403 } } }
 		}
 	}
 	
