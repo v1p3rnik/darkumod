@@ -37,6 +37,7 @@ ideas = {
 				
 			}
 		}
+		
 		FSO_one_year_pulse = {
 			
 			allowed = {
@@ -1845,6 +1846,26 @@ ideas = {
 			}
 		}
 		
+		FSO_gulag_is_magic = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				conscription_factor = -0.2
+			}
+		}
+		
 		FSO_byzantium_bad_stuff_1 = {
 		
 			allowed = {
@@ -2034,6 +2055,8 @@ ideas = {
 			
 			available = {
 				has_government = democratic
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 			traits = { democratic_reformer }
@@ -2054,6 +2077,8 @@ ideas = {
 			
 			available = {
 				has_government = communism
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
 			}
 			
 			traits = { communist_revolutionary }
@@ -2074,6 +2099,8 @@ ideas = {
 			
 			available = {
 				has_government = fascism
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_fascist }
 			}
 			
 			traits = { fascist_demagogue }
@@ -2114,6 +2141,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				
 			}
 			
 
@@ -2131,6 +2159,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 
@@ -2149,6 +2179,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
 			}
 			
 
@@ -2170,6 +2202,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 
@@ -2187,6 +2221,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 			traits = { air_chief_ground_support_2 }
@@ -2207,6 +2243,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 
@@ -2224,6 +2262,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
+				
 			}
 			
 			traits = { navy_chief_naval_aviation_2 }
@@ -2321,6 +2360,8 @@ ideas = {
 
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
 			}
 			
 			research_bonus = {
@@ -2352,6 +2393,8 @@ ideas = {
 		
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 			research_bonus = {
@@ -2367,6 +2410,8 @@ ideas = {
 		
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_darkest_civil_war }
+				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
 			}
 			
 			research_bonus = {
