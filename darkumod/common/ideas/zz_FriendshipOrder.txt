@@ -283,6 +283,48 @@ ideas = {
 			}
 		}
 		
+		FSO_friendly_bankers = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+			}
+		}
+		FSO_prepared_for_anything = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = friendship
+			}
+			
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				no_supply_grace = 336
+			}
+		}
+		
 		FSO_intense_training = {
 			
 			allowed = {
