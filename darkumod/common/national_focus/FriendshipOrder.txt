@@ -159,7 +159,7 @@ focus_tree = {
 	# Dark Buddhist question
 	focus = {
 		id = FSO_darku_question
-		icon = GFX_focus_fso_question_of_monarchy
+		icon = GFX_goal_tfv_sever_ties_with_uk
 		prerequisite = { focus = FSO_political_open }
 		x = 2
 		y = 2
@@ -195,7 +195,7 @@ focus_tree = {
 	# Delegation to Moscow
 	focus = {
 		id = FSO_delegation_to_moscow
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = FSO_darku_question }
 		x = 3
 		y = 3
@@ -234,7 +234,7 @@ focus_tree = {
 	# Autonomous Revolution
 	focus = {
 		id = FSO_autonomous_revolution
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_tfv_burn_the_royal_portraits
 		prerequisite = { focus = FSO_darku_question }
 		x = 1
 		y = 3
@@ -274,7 +274,7 @@ focus_tree = {
 	# Scientific Greatness
 	focus = {
 		id = FSO_scientific_greatness
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_socialist_science
 		prerequisite = { focus = FSO_autonomous_revolution }
 		x = 1
 		y = 4
@@ -321,7 +321,7 @@ focus_tree = {
 	# Anti-Imperialist Propaganda
 	focus = {
 		id = FSO_commie_propaganda
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_strike_at_democracy3
 		prerequisite = { focus = FSO_scientific_greatness }
 		x = 1
 		y = 6
@@ -357,7 +357,7 @@ focus_tree = {
 	# Faster, Higher, Stronger
 	focus = {
 		id = FSO_faster_higher_stronger
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_air_defense
 		prerequisite = { focus = FSO_commie_propaganda }
 		x = 1
 		y = 8
@@ -393,7 +393,7 @@ focus_tree = {
 	# Send Friend Requests
 	focus = {
 		id = FSO_friend_requests
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = FSO_faster_higher_stronger }
 		x = 1
 		y = 10
@@ -429,7 +429,7 @@ focus_tree = {
 	# We Got This Together
 	focus = {
 		id = FSO_defend_austria
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_anschluss
 		prerequisite = { focus = FSO_friend_requests }
 		x = -1
 		y = 12
@@ -469,7 +469,7 @@ focus_tree = {
 	# Choose Your Friends Wisely
 	focus = {
 		id = FSO_appease_germany
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = FSO_friend_requests }
 		x = 1
 		y = 12
@@ -509,7 +509,7 @@ focus_tree = {
 	# Home and Beyond
 	focus = {
 		id = FSO_home_and_beyond
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_hun_assassinate_horthy
 		prerequisite = { focus = FSO_defend_austria focus = FSO_appease_germany }
 		x = 1
 		y = 14
@@ -545,7 +545,7 @@ focus_tree = {
 	# Cutie Crusade
 	focus = {
 		id = FSO_cutie_crusade
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = FSO_home_and_beyond }
 		x = 1
 		y = 16
@@ -633,7 +633,7 @@ focus_tree = {
 	# Our Legacy
 	focus = {
 		id = FSO_our_legacy
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = FSO_cutie_crusade }
 		x = 1
 		y = 18
@@ -687,7 +687,7 @@ focus_tree = {
 	# Dream of Power
 	focus = {
 		id = FSO_dream_of_power
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_ger_great_red_menace
 		prerequisite = { focus = FSO_our_legacy }
 		x = 1
 		y = 20
@@ -723,7 +723,7 @@ focus_tree = {
 	# Cast Alone
 	focus = {
 		id = FSO_rebuilding_alone
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_CZE_german_puppet
 		prerequisite = { focus = FSO_delegation_to_moscow }
 		x = 3
 		y = 4
@@ -770,7 +770,7 @@ focus_tree = {
 	# National Defense Act
 	focus = {
 		id = FSO_national_defense
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_YUG_pan_slavic_congress
 		prerequisite = { focus = FSO_rebuilding_alone }
 		x = 3
 		y = 6
@@ -806,7 +806,7 @@ focus_tree = {
 	# Invisible Enemy
 	focus = {
 		id = FSO_invisible_enemy
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_cryptologic_bomb
 		prerequisite = { focus = FSO_national_defense }
 		x = 3
 		y = 8
@@ -842,7 +842,7 @@ focus_tree = {
 	# Every Man A Foe
 	focus = {
 		id = FSO_every_man_foe
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_radar
 		prerequisite = { focus = FSO_invisible_enemy }
 		x = 3
 		y = 10
@@ -878,7 +878,7 @@ focus_tree = {
 	# People's Army of Defense
 	focus = {
 		id = FSO_people_army
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = FSO_every_man_foe }
 		x = 3
 		y = 12
@@ -914,7 +914,7 @@ focus_tree = {
 	# Self Sufficient Industry
 	focus = {
 		id = FSO_self_sufficient
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = FSO_people_army }
 		x = 3
 		y = 14
@@ -950,7 +950,7 @@ focus_tree = {
 	# Deep Crust Drills
 	focus = {
 		id = FSO_crust_drills
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_tungsten
 		prerequisite = { focus = FSO_self_sufficient }
 		x = 3
 		y = 16
@@ -986,7 +986,7 @@ focus_tree = {
 	# Element of Harmony
 	focus = {
 		id = FSO_element_harmony
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = FSO_crust_drills }
 		x = 3
 		y = 18
@@ -1022,7 +1022,7 @@ focus_tree = {
 	# Dream of Unity
 	focus = {
 		id = FSO_dream_of_unity
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = FSO_element_harmony }
 		x = 3
 		y = 20
@@ -1059,7 +1059,7 @@ focus_tree = {
 	# Aid from Soviets
 	focus = {
 		id = FSO_rebuilding_comintern
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_concessions
 		prerequisite = { focus = FSO_delegation_to_moscow }
 		x = 2
 		y = 5
@@ -1106,7 +1106,7 @@ focus_tree = {
 	# Secure Our Future
 	focus = {
 		id = FSO_secure_future
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = FSO_rebuilding_comintern }
 		x = 2
 		y = 7
@@ -1142,7 +1142,7 @@ focus_tree = {
 	# Great Patavonia Project
 	focus = {
 		id = FSO_roads_project
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = FSO_secure_future }
 		x = 2
 		y = 9
@@ -1180,7 +1180,7 @@ focus_tree = {
 	# Our New Subjects
 	focus = {
 		id = FSO_argentinians_question
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = FSO_roads_project }
 		x = 2
 		y = 11
@@ -1215,7 +1215,7 @@ focus_tree = {
 	# Expand The Frontier
 	focus = {
 		id = FSO_expand_frontier
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = FSO_argentinians_question }
 		x = 2
 		y = 13
@@ -1250,7 +1250,7 @@ focus_tree = {
 	# Para Bellum, Paraguay
 	focus = {
 		id = FSO_para_bellum_paraguay
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = FSO_expand_frontier }
 		x = 2
 		y = 15
@@ -1285,7 +1285,7 @@ focus_tree = {
 	# Conquer Central Andes
 	focus = {
 		id = FSO_conquer_central_andes
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = FSO_para_bellum_paraguay }
 		x = 2
 		y = 17
@@ -1320,7 +1320,7 @@ focus_tree = {
 	# The Red Carnival
 	focus = {
 		id = FSO_red_carnival
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_smiling_buddha
 		prerequisite = { focus = FSO_conquer_central_andes }
 		x = 2
 		y = 19
@@ -1355,7 +1355,7 @@ focus_tree = {
 	# Dream of Revolution
 	focus = {
 		id = FSO_dream_of_revolution
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_RAJ_seek_help_from_soviet
 		prerequisite = { focus = FSO_red_carnival }
 		x = 2
 		y = 21
@@ -1392,7 +1392,7 @@ focus_tree = {
 	# What Matters
 	focus = {
 		id = FSO_what_matters
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_jap_spiritual_mobilization
 		prerequisite = { focus = FSO_political_open }
 		x = 6
 		y = 2
@@ -1427,7 +1427,7 @@ focus_tree = {
 	# The Grand Adventure
 	focus = {
 		id = FSO_grand_adventure
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = FSO_what_matters }
 		x = 6
 		y = 3
@@ -1462,7 +1462,7 @@ focus_tree = {
 	# Perfect Couple
 	focus = {
 		id = FSO_perfect_couple
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_rom_parties_end
 		prerequisite = { focus = FSO_grand_adventure }
 		x = 6
 		y = 5
@@ -1497,7 +1497,7 @@ focus_tree = {
 	# Project Destiny
 	focus = {
 		id = FSO_project_destiny
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = FSO_perfect_couple }
 		x = 6
 		y = 7
@@ -1532,7 +1532,7 @@ focus_tree = {
 	# Long Distance Relations
 	focus = {
 		id = FSO_long_distance
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = FSO_project_destiny }
 		x = 6
 		y = 9
@@ -1567,7 +1567,7 @@ focus_tree = {
 	# The Three Heads
 	focus = {
 		id = FSO_three_heads
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_molotov_ribbentrop_pact
 		prerequisite = { focus = FSO_long_distance }
 		x = 6
 		y = 11
@@ -1602,7 +1602,7 @@ focus_tree = {
 	# A Sinister Minister
 	focus = {
 		id = FSO_sinister_minister
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = FSO_three_heads }
 		x = 6
 		y = 13
@@ -1648,7 +1648,7 @@ focus_tree = {
 	# Royal Duties
 	focus = {
 		id = FSO_royal_duties
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = { focus = FSO_sinister_minister }
 		x = 6
 		y = 15
@@ -1683,7 +1683,7 @@ focus_tree = {
 	# Time to be Awesome
 	focus = {
 		id = FSO_time_to_be_awesome
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = FSO_royal_duties }
 		x = 6
 		y = 17
@@ -1718,7 +1718,7 @@ focus_tree = {
 	# Break the Wheel
 	focus = {
 		id = FSO_break_the_wheel
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		prerequisite = { focus = FSO_time_to_be_awesome }
 		x = 6
 		y = 19
@@ -1753,7 +1753,7 @@ focus_tree = {
 	# Dream of Friendship
 	focus = {
 		id = FSO_dream_of_friendship
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = FSO_break_the_wheel }
 		x = 6
 		y = 21
@@ -1790,7 +1790,7 @@ focus_tree = {
 	# The Grand Conspiracy
 	focus = {
 		id = FSO_grand_conspiracy
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = FSO_political_open }
 		x = 10 # next focuses are x9y3 x11y3
 		y = 2
@@ -1825,7 +1825,7 @@ focus_tree = {
 	# Make It Reign
 	focus = {
 		id = FSO_make_it_reign
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = FSO_grand_conspiracy }
 		x = 9 # branching into x9y4 and x10y5
 		y = 3
@@ -1868,7 +1868,7 @@ focus_tree = {
 	# Axis Girls
 	focus = {
 		id = FSO_axis_girls
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = FSO_make_it_reign }
 		x = 9
 		y = 4
@@ -1907,7 +1907,7 @@ focus_tree = {
 	# Kindness
 	focus = {
 		id = FSO_kindness
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_anschluss
 		prerequisite = { focus = FSO_axis_girls }
 		x = 9
 		y = 6
@@ -1942,7 +1942,7 @@ focus_tree = {
 	# Loyalty
 	focus = {
 		id = FSO_loyalty
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = FSO_kindness }
 		x = 9
 		y = 8
@@ -1977,7 +1977,7 @@ focus_tree = {
 	# Generosity
 	focus = {
 		id = FSO_generosity
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = FSO_loyalty }
 		x = 9
 		y = 10
@@ -2012,7 +2012,7 @@ focus_tree = {
 	# Operation Thinkable
 	focus = {
 		id = FSO_operation_thinkable
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = FSO_generosity }
 		x = 8
 		y = 11
@@ -2047,7 +2047,7 @@ focus_tree = {
 	# Honesty
 	focus = {
 		id = FSO_honesty
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
 		prerequisite = { focus = FSO_generosity }
 		x = 9
 		y = 12
@@ -2082,7 +2082,7 @@ focus_tree = {
 	# Laughter
 	focus = {
 		id = FSO_laughter
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_jap_strike_south
 		prerequisite = { focus = FSO_honesty }
 		x = 9
 		y = 14
@@ -2117,7 +2117,7 @@ focus_tree = {
 	# Magic
 	focus = {
 		id = FSO_magic
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = FSO_laughter }
 		x = 9
 		y = 16
@@ -2152,7 +2152,7 @@ focus_tree = {
 	# Siren's Song
 	focus = {
 		id = FSO_sirens_song
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = FSO_magic }
 		x = 9
 		y = 18
@@ -2187,7 +2187,7 @@ focus_tree = {
 	# Dream of Change
 	focus = {
 		id = FSO_dream_of_change
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_support_fascism
 		prerequisite = { focus = FSO_sirens_song }
 		x = 9
 		y = 20
@@ -2223,7 +2223,7 @@ focus_tree = {
 	# Alternative For Bohemia
 	focus = {
 		id = FSO_alternative_for_bohemia
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = FSO_make_it_reign }
 		x = 10
 		y = 5
@@ -2262,7 +2262,7 @@ focus_tree = {
 	# Freundschaft ist Magie
 	focus = {
 		id = FSO_freundschaft_ist_magie
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = FSO_alternative_for_bohemia }
 		x = 10
 		y = 7
@@ -2298,7 +2298,7 @@ focus_tree = {
 	# Fall Schwarz
 	focus = {
 		id = FSO_fall_schwarz
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_polish_deal
 		prerequisite = { focus = FSO_freundschaft_ist_magie }
 		x = 10
 		y = 9
@@ -2334,7 +2334,7 @@ focus_tree = {
 	# Visegrad Conference
 	focus = {
 		id = FSO_visegrad_conference
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = FSO_fall_schwarz }
 		x = 10
 		y = 11
@@ -2370,7 +2370,7 @@ focus_tree = {
 	# Together to the Stars
 	focus = {
 		id = FSO_together_stars
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = FSO_visegrad_conference }
 		x = 10
 		y = 13
@@ -2406,7 +2406,7 @@ focus_tree = {
 	# Neu-Magyarország
 	focus = {
 		id = FSO_neu_magyarorszag
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		prerequisite = { focus = FSO_together_stars }
 		x = 10
 		y = 15
@@ -2442,7 +2442,7 @@ focus_tree = {
 	# Legacy of Das Römische Reich
 	focus = {
 		id = FSO_legacy_romische_reich
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_tfv_can_compromise_with_quebec
 		prerequisite = { focus = FSO_neu_magyarorszag }
 		x = 10
 		y = 17
@@ -2478,7 +2478,7 @@ focus_tree = {
 	# Red Alert
 	focus = {
 		id = FSO_red_alert
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = { focus = FSO_legacy_romische_reich }
 		x = 10
 		y = 19
@@ -2514,7 +2514,7 @@ focus_tree = {
 	# Dream of Glory
 	focus = {
 		id = FSO_dream_of_glory
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = FSO_red_alert }
 		x = 10
 		y = 21
@@ -2551,7 +2551,7 @@ focus_tree = {
 	# Trust No One
 	focus = {
 		id = FSO_trust_no_one
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = FSO_grand_conspiracy }
 		x = 11 
 		y = 3
@@ -2590,7 +2590,7 @@ focus_tree = {
 	# Rise of Darkstapo
 	focus = {
 		id = FSO_rise_of_darkstapo
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = FSO_trust_no_one }
 		x = 11 
 		y = 4
@@ -2626,7 +2626,7 @@ focus_tree = {
 	# The Wonderbunker
 	focus = {
 		id = FSO_wonderbunker
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_ger_bulwark_against_bolshevism
 		prerequisite = { focus = FSO_rise_of_darkstapo }
 		x = 11 
 		y = 6
@@ -2662,7 +2662,7 @@ focus_tree = {
 	# Caesar Consultum Ultimum
 	focus = {
 		id = FSO_caesar_consultum_ultimum
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = FSO_wonderbunker }
 		x = 11 
 		y = 8
@@ -2698,7 +2698,7 @@ focus_tree = {
 	# Dictator Tenebris
 	focus = {
 		id = FSO_dictator_tenebris
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = FSO_caesar_consultum_ultimum }
 		x = 11 
 		y = 10
@@ -2734,7 +2734,7 @@ focus_tree = {
 	# Chaos Aeternam
 	focus = {
 		id = FSO_chaos_aeternam
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		prerequisite = { focus = FSO_dictator_tenebris }
 		x = 11 
 		y = 12
@@ -2770,7 +2770,7 @@ focus_tree = {
 	# Loyal Industries
 	focus = {
 		id = FSO_loyal_industries
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = FSO_chaos_aeternam }
 		x = 11 
 		y = 14
@@ -2806,7 +2806,7 @@ focus_tree = {
 	# The Darkest Hour
 	focus = {
 		id = FSO_darkest_hour
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = FSO_loyal_industries }
 		x = 11 
 		y = 16
@@ -2842,7 +2842,7 @@ focus_tree = {
 	# The First Order
 	focus = {
 		id = FSO_first_order
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = FSO_darkest_hour }
 		x = 11 
 		y = 18
@@ -2878,7 +2878,7 @@ focus_tree = {
 	# A Dream Shattered
 	focus = {
 		id = FSO_dream_shattered
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		prerequisite = { focus = FSO_first_order }
 		x = 11 
 		y = 20
@@ -2953,7 +2953,7 @@ focus_tree = {
 	# Transformation Act
 	focus = {
 		id = FSO_transformation_act
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_production
 		prerequisite = { focus = FSO_economic_open }
 		x = 17
 		y = 2
@@ -3028,7 +3028,7 @@ focus_tree = {
 	# Jobs For Everyone
 	focus = {
 		id = FSO_jobs_for_everyone
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_production2
 		prerequisite = { focus = FSO_transformation_act }
 		x = 17
 		y = 4
@@ -3193,7 +3193,7 @@ focus_tree = {
 	# Faith In Communes
 	focus = {
 		id = FSO_faith_in_communes
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = FSO_jobs_for_everyone }
 		x = 17
 		y = 6
@@ -3273,7 +3273,7 @@ focus_tree = {
 	# Form Militias
 	focus = {
 		id = FSO_form_militias
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = FSO_encourage_mining }
 		x = 17
 		y = 10
@@ -3309,7 +3309,7 @@ focus_tree = {
 	# Doby Doby Shotgun Club
 	focus = {
 		id = FSO_doby_doby_shotgun_club
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = FSO_form_militias }
 		x = 17
 		y = 12
@@ -3345,7 +3345,7 @@ focus_tree = {
 	# Gulag Is Magic
 	focus = {
 		id = FSO_gulag_magic
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_construction
 		prerequisite = { focus = FSO_doby_doby_shotgun_club }
 		x = 17
 		y = 14
@@ -3377,7 +3377,7 @@ focus_tree = {
 	# Peetry's Wisdom Broadcasts
 	focus = {
 		id = FSO_peetrys_wisdom_broadcasts
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = FSO_economic_open }
 		x = 21
 		y = 2
@@ -3408,7 +3408,7 @@ focus_tree = {
 	# Reduce Work Hours
 	focus = {
 		id = FSO_reduce_work_hours
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = FSO_peetrys_wisdom_broadcasts }
 		x = 21
 		y = 4
@@ -3484,7 +3484,7 @@ focus_tree = {
 	# Friendly Banking
 	focus = {
 		id = FSO_friendly_banking
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_focus_generic_industry_1
 		prerequisite = { focus = FSO_reduce_work_hours }
 		x = 21
 		y = 6
@@ -3521,7 +3521,7 @@ focus_tree = {
 	# Transparent Forum
 	focus = {
 		id = FSO_transparent_forum
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = FSO_friendly_banking }
 		x = 21
 		y = 8
@@ -3557,7 +3557,7 @@ focus_tree = {
 	# Support Our Volunteers
 	focus = {
 		id = FSO_volunteers_support
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = FSO_transparent_forum }
 		x = 21
 		y = 10
@@ -3628,7 +3628,7 @@ focus_tree = {
 	# Budget Field Marshal
 	focus = {
 		id = FSO_budget_boi
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = FSO_volunteers_support }
 		x = 21
 		y = 12
@@ -3670,7 +3670,7 @@ focus_tree = {
 	# Prepared For Worst
 	focus = {
 		id = FSO_prepared_for_worst
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_home_defense
 		prerequisite = { focus = FSO_budget_boi }
 		x = 21
 		y = 14
@@ -3705,6 +3705,336 @@ focus_tree = {
 				type = dockyard
 				level = 6
 			}
+		}
+	}
+	## FASCIST ECO
+	# Nationalise Key Industries
+	focus = {
+		id = FSO_nationalise_key_industries
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = FSO_economic_open }
+		x = 25
+		y = 2
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			set_technology = {
+				concentrated_industry = 1
+				concentrated_industry2 = 1
+			}
+			swap_ideas = { remove_idea = FSO_wondercolts add_idea = FSO_nationalised_industry }
+		}
+	}
+	# Freundschaftsläger
+	focus = {
+		id = FSO_freundschaftslager
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = FSO_nationalise_key_industries }
+		x = 25
+		y = 4
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_stability = 0.2
+		}
+	}
+	# One Purpose
+	focus = {
+		id = FSO_one_purpose
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = FSO_freundschaftslager }
+		x = 25
+		y = 6
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	# Enemies at the Gates
+	focus = {
+		id = FSO_enemies_at_the_gates
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = FSO_one_purpose }
+		x = 25
+		y = 8
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = FSO_enemy_at_the_gates
+		}
+	}
+	# Unleash the Magic
+	focus = {
+		id = FSO_unleash_the_magic
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = FSO_enemies_at_the_gates }
+		x = 25
+		y = 10
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 1
+				bonus = 0.5
+				uses = 2
+				category = nuclear
+			}
+			add_offsite_building = {
+				type = nuclear_reactor
+				level = 1
+			}
+		}
+	}
+	# Containment Zone: Safe
+	focus = {
+		id = FSO_containment_safe
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = FSO_unleash_the_magic }
+		x = 25
+		y = 12
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			modify_building_resources = {
+				building = infrastructure
+				resource = steel
+				amount = 1
+			}
+			modify_building_resources = {
+				building = infrastructure
+				resource = aluminium
+				amount = 1
+			}
+		}
+		
+	}
+	# Containment Zone: Keter
+	focus = {
+		id = FSO_containment_keter
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = FSO_containment_safe }
+		x = 25
+		y = 14
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = FSO_containment_keter_tt
+				check_variable = { num_owned_controlled_states > num_core_states }
+			}
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = CZE }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+	## DEMOCRATIC ECO 
+	# Democratic Placeholder Eco
+	focus = {
+		id = FSO_demo_placeholder_eco
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FSO_economic_open }
+		x = 29
+		y = 2
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = democratic
+			always = no
+		}
+		
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			
 		}
 	}
 }

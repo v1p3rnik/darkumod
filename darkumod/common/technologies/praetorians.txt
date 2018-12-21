@@ -17,4 +17,5 @@ technologies = {
 			praetorian_equipment_0
 		}
 	}
+	
 }
