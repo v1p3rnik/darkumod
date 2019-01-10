@@ -13855,6 +13855,12 @@ country_event = {
 		days = 30
 	}
 	
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = { idea = FSO_byz_troops_cooldown days = 28 }
+		}
+	}
+	
 	option = { 
 		name = fso.369.a
 		add_to_variable = {

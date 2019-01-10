@@ -38,6 +38,21 @@ ideas = {
 			}
 		}
 		
+		FSO_byz_troops_cooldown = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_victors_of_ww1
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
 		FSO_one_year_pulse = {
 			
 			allowed = {
