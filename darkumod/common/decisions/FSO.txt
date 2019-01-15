@@ -1896,7 +1896,7 @@ operations = {
 
 		available = {
 			
-			
+			num_of_civilian_factories > 45
 			
 		}
 		
@@ -1941,7 +1941,7 @@ operations = {
 
 		available = {
 			
-			
+			num_of_civilian_factories > 90
 			
 		}
 		

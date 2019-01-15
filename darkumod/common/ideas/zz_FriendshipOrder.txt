@@ -2110,6 +2110,7 @@ ideas = {
 
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_captain_killed }
 			}
 			
 			traits = { silent_workhorse }
@@ -2474,6 +2475,7 @@ ideas = {
 
 			allowed = {
 				original_tag = CZE
+				NOT = { has_country_flag = fso_captain_killed }
 			}
 			
 			research_bonus = {
