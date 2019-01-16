@@ -18,6 +18,10 @@ opinion_modifiers = {
 		value = -100
 	}
 	
+	fso_harbouring_trotsky = {
+		value = -100
+	}
+	
 	fso_germany_appeased = {
 		value = 50
 	}

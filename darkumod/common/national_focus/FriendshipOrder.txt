@@ -591,6 +591,7 @@ focus_tree = {
 				set_technology = { tech_maintenance_company = 1 }
 				set_technology = { tech_signal_company = 1 }
 				set_technology = { mechanised_infantry = 1 }
+				set_technology = { motorised_infantry = 1 }
 				set_technology = { basic_heavy_tank = 1 }
 				set_technology = { basic_heavy_art = 1 }
 				division_template = {
