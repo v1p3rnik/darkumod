@@ -331,18 +331,22 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			set_country_flag = {
-				flag = fso_courting_stalin
-				value = 0
+			hidden_effect = {
+				set_country_flag = {
+					flag = fso_courting_stalin
+					value = 0
+				}
 			}
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_stalin
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_stalin
+					value = 1
+				}
+				country_event = { id = fso.174 }
 			}
-			country_event = { id = fso.174 }
 		}
 		
 		ai_will_do = {
@@ -376,11 +380,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_stalin
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_stalin
+					value = 1
+				}
+				country_event = { id = fso.179 }
 			}
-			country_event = { id = fso.179 }
 		}
 		
 		ai_will_do = {
@@ -414,12 +420,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_stalin
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_stalin
+					value = 1
+				}
+				country_event = { id = fso.184 }
 			}
-			country_event = { id = fso.184 }
-			
 		}
 		
 		ai_will_do = {
@@ -453,9 +460,11 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			clr_country_flag = fso_courting_stalin
-			set_country_flag = fso_stalin_courted
-			country_event = { id = fso.189 }
+			hidden_effect = {
+				clr_country_flag = fso_courting_stalin
+				set_country_flag = fso_stalin_courted
+				country_event = { id = fso.189 }
+			}
 		}
 		
 		ai_will_do = {
@@ -486,28 +495,30 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			SOV = { country_event = { id = fso.152 } }
-			set_country_flag = fso_asking_out_someone
-			
+			hidden_effect = {
+				SOV = { country_event = { id = fso.152 } }
+				set_country_flag = fso_asking_out_someone
+			}
 		}
 		
 		remove_effect = {
-			
-			if = {
-				
-				limit = {
-					CZE = { has_country_flag = { flag = fso_stalin_perfect_friend value = 4 } }
-					NOT = { CZE = { has_country_flag = fso_besties } }
+			hidden_effect = {
+				if = {
+					
+					limit = {
+						CZE = { has_country_flag = { flag = fso_stalin_perfect_friend value = 4 } }
+						NOT = { CZE = { has_country_flag = fso_besties } }
+					}
+					
+					country_event = { id = fso.144 } # Peacefully convert
+					
+					else = { 
+						country_event = { id = fso.145 } # Coup happens, you fail
+					} 
 				}
 				
-				country_event = { id = fso.144 } # Peacefully convert
-				
-				else = { 
-					country_event = { id = fso.145 } # Coup happens, you fail
-				} 
+				clr_country_flag = fso_asking_out_someone
 			}
-			
-			clr_country_flag = fso_asking_out_someone
 			
 		}
 		
@@ -543,18 +554,22 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			set_country_flag = {
-				flag = fso_courting_hitler
-				value = 0
+			hidden_effect = {
+				set_country_flag = {
+					flag = fso_courting_hitler
+					value = 0
+				}
 			}
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_hitler
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_hitler
+					value = 1
+				}
+				country_event = { id = fso.154 }
 			}
-			country_event = { id = fso.154 }
 		}
 		
 		ai_will_do = {
@@ -588,11 +603,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_hitler
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_hitler
+					value = 1
+				}
+				country_event = { id = fso.159 }
 			}
-			country_event = { id = fso.159 }
 		}
 		
 		ai_will_do = {
@@ -626,11 +643,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_hitler
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_hitler
+					value = 1
+				}
+				country_event = { id = fso.164 }
 			}
-			country_event = { id = fso.164 }
 		}
 		
 		ai_will_do = {
@@ -664,9 +683,11 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			clr_country_flag = fso_courting_hitler
-			set_country_flag = fso_hitler_courted
-			country_event = { id = fso.169 }
+			hidden_effect = {
+				clr_country_flag = fso_courting_hitler
+				set_country_flag = fso_hitler_courted
+				country_event = { id = fso.169 }
+			}
 		}
 		
 		ai_will_do = {
@@ -697,29 +718,31 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			GER = { country_event = { id = fso.152 } }
-			set_country_flag = fso_asking_out_someone
+			hidden_effect = {
+				GER = { country_event = { id = fso.152 } }
+				set_country_flag = fso_asking_out_someone
+			}
 			
 		}
 		
 		remove_effect = {
-			
-			if = {
-				
-				limit = {
-					CZE = { has_country_flag = { flag = fso_hitler_perfect_friend value = 4 } }
-					NOT = { CZE = { has_country_flag = fso_besties } }
+			hidden_effect = {
+				if = {
+					
+					limit = {
+						CZE = { has_country_flag = { flag = fso_hitler_perfect_friend value = 4 } }
+						NOT = { CZE = { has_country_flag = fso_besties } }
+					}
+					
+					country_event = { id = fso.144 } # Peacefully convert
+					
+					else = { 
+						country_event = { id = fso.145 } # Coup happens, you fail
+					} 
 				}
 				
-				country_event = { id = fso.144 } # Peacefully convert
-				
-				else = { 
-					country_event = { id = fso.145 } # Coup happens, you fail
-				} 
+				clr_country_flag = fso_asking_out_someone
 			}
-			
-			clr_country_flag = fso_asking_out_someone
-			
 		}
 		
 		ai_will_do = {
@@ -754,18 +777,22 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			set_country_flag = {
-				flag = fso_courting_mussolini
-				value = 0
+			hidden_effect = {
+				set_country_flag = {
+					flag = fso_courting_mussolini
+					value = 0
+				}
 			}
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_mussolini
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_mussolini
+					value = 1
+				}
+				country_event = { id = fso.194 }
 			}
-			country_event = { id = fso.194 }
 		}
 		
 		ai_will_do = {
@@ -799,11 +826,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_mussolini
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_mussolini
+					value = 1
+				}
+				country_event = { id = fso.199 }
 			}
-			country_event = { id = fso.199 }
 		}
 		
 		ai_will_do = {
@@ -837,11 +866,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_mussolini
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_mussolini
+					value = 1
+				}
+				country_event = { id = fso.204 }
 			}
-			country_event = { id = fso.204 }
 		}
 		
 		ai_will_do = {
@@ -875,9 +906,11 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			clr_country_flag = fso_courting_mussolini
-			set_country_flag = fso_mussolini_courted
-			country_event = { id = fso.209 }
+			hidden_effect = {
+				clr_country_flag = fso_courting_mussolini
+				set_country_flag = fso_mussolini_courted
+				country_event = { id = fso.209 }
+			}
 		}
 		
 		ai_will_do = {
@@ -908,29 +941,31 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			ITA = { country_event = { id = fso.152 } }
-			set_country_flag = fso_asking_out_someone
+			hidden_effect = {
+				ITA = { country_event = { id = fso.152 } }
+				set_country_flag = fso_asking_out_someone
+			}
 			
 		}
 		
 		remove_effect = {
-			
-			if = {
-				
-				limit = {
-					CZE = { has_country_flag = { flag = fso_mussolini_perfect_friend value = 4 } }
-					NOT = { CZE = { has_country_flag = fso_besties } }
+			hidden_effect = {
+				if = {
+					
+					limit = {
+						CZE = { has_country_flag = { flag = fso_mussolini_perfect_friend value = 4 } }
+						NOT = { CZE = { has_country_flag = fso_besties } }
+					}
+					
+					country_event = { id = fso.144 } # Peacefully convert
+					
+					else = { 
+						country_event = { id = fso.145 } # Coup happens, you fail
+					} 
 				}
 				
-				country_event = { id = fso.144 } # Peacefully convert
-				
-				else = { 
-					country_event = { id = fso.145 } # Coup happens, you fail
-				} 
+				clr_country_flag = fso_asking_out_someone
 			}
-			
-			clr_country_flag = fso_asking_out_someone
-			
 		}
 		
 		ai_will_do = {
@@ -965,18 +1000,22 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			set_country_flag = {
-				flag = fso_courting_roosevelt
-				value = 0
+			hidden_effect = {
+				set_country_flag = {
+					flag = fso_courting_roosevelt
+					value = 0
+				}
 			}
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_roosevelt
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_roosevelt
+					value = 1
+				}
+				country_event = { id = fso.214 }
 			}
-			country_event = { id = fso.214 }
 		}
 		
 		ai_will_do = {
@@ -1010,11 +1049,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_roosevelt
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_roosevelt
+					value = 1
+				}
+				country_event = { id = fso.219 }
 			}
-			country_event = { id = fso.219 }
 		}
 		
 		ai_will_do = {
@@ -1048,11 +1089,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_roosevelt
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_roosevelt
+					value = 1
+				}
+				country_event = { id = fso.224 }
 			}
-			country_event = { id = fso.224 }
 		}
 		
 		ai_will_do = {
@@ -1086,9 +1129,11 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			clr_country_flag = fso_courting_roosevelt
-			set_country_flag = fso_roosevelt_courted
-			country_event = { id = fso.229 }
+			hidden_effect = {
+				clr_country_flag = fso_courting_roosevelt
+				set_country_flag = fso_roosevelt_courted
+				country_event = { id = fso.229 }
+			}
 		}
 		
 		ai_will_do = {
@@ -1119,29 +1164,31 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			USA = { country_event = { id = fso.152 } }
-			set_country_flag = fso_asking_out_someone
+			hidden_effect = {
+				USA = { country_event = { id = fso.152 } }
+				set_country_flag = fso_asking_out_someone
+			}
 			
 		}
 		
 		remove_effect = {
-		
-			if = {
-				
-				limit = {
-					CZE = { has_country_flag = { flag = fso_roosevelt_perfect_friend value = 4 } }
-					NOT = { CZE = { has_country_flag = fso_besties } }
+			hidden_effect = {
+				if = {
+					
+					limit = {
+						CZE = { has_country_flag = { flag = fso_roosevelt_perfect_friend value = 4 } }
+						NOT = { CZE = { has_country_flag = fso_besties } }
+					}
+					
+					country_event = { id = fso.144 } # Peacefully convert
+					
+					else = { 
+						country_event = { id = fso.145 } # Coup happens, you fail
+					} 
 				}
 				
-				country_event = { id = fso.144 } # Peacefully convert
-				
-				else = { 
-					country_event = { id = fso.145 } # Coup happens, you fail
-				} 
+				clr_country_flag = fso_asking_out_someone
 			}
-			
-			clr_country_flag = fso_asking_out_someone
-			
 		}
 		
 		ai_will_do = {
@@ -1176,18 +1223,22 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			set_country_flag = {
-				flag = fso_courting_hirohito
-				value = 0
+			hidden_effect = {
+				set_country_flag = {
+					flag = fso_courting_hirohito
+					value = 0
+				}
 			}
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_hirohito
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_hirohito
+					value = 1
+				}
+				country_event = { id = fso.234 }
 			}
-			country_event = { id = fso.234 }
 		}
 		
 		ai_will_do = {
@@ -1221,11 +1272,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_hirohito
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_hirohito
+					value = 1
+				}
+				country_event = { id = fso.239 }
 			}
-			country_event = { id = fso.239 }
 		}
 		
 		ai_will_do = {
@@ -1259,11 +1312,13 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			modify_country_flag = {
-				flag = fso_courting_hirohito
-				value = 1
+			hidden_effect = {
+				modify_country_flag = {
+					flag = fso_courting_hirohito
+					value = 1
+				}
+				country_event = { id = fso.244 }
 			}
-			country_event = { id = fso.244 }
 		}
 		
 		ai_will_do = {
@@ -1297,9 +1352,11 @@ fso_friendship_relationships_category = {
 		}
 		
 		remove_effect = {
-			clr_country_flag = fso_courting_hirohito
-			set_country_flag = fso_hirohito_courted
-			country_event = { id = fso.249 }
+			hidden_effect = {
+				clr_country_flag = fso_courting_hirohito
+				set_country_flag = fso_hirohito_courted
+				country_event = { id = fso.249 }
+			}
 		}
 		
 		ai_will_do = {
@@ -1330,29 +1387,31 @@ fso_friendship_relationships_category = {
 		cost = 10
 		
 		complete_effect = {
-			JAP = { country_event = { id = fso.152 } }
-			set_country_flag = fso_asking_out_someone
+			hidden_effect = {
+				JAP = { country_event = { id = fso.152 } }
+				set_country_flag = fso_asking_out_someone
+			}
 			
 		}
 		
 		remove_effect = {
-		
-			if = {
-				
-				limit = {
-					CZE = { has_country_flag = { flag = fso_hirohito_perfect_friend value = 4 } }
-					NOT = { CZE = { has_country_flag = fso_besties } }
+			hidden_effect = {
+				if = {
+					
+					limit = {
+						CZE = { has_country_flag = { flag = fso_hirohito_perfect_friend value = 4 } }
+						NOT = { CZE = { has_country_flag = fso_besties } }
+					}
+					
+					country_event = { id = fso.144 } # Peacefully convert
+					
+					else = { 
+						country_event = { id = fso.145 } # Coup happens, you fail
+					} 
 				}
 				
-				country_event = { id = fso.144 } # Peacefully convert
-				
-				else = { 
-					country_event = { id = fso.145 } # Coup happens, you fail
-				} 
+				clr_country_flag = fso_asking_out_someone
 			}
-			
-			clr_country_flag = fso_asking_out_someone
-			
 		}
 		
 		ai_will_do = {
