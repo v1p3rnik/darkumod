@@ -2424,10 +2424,40 @@ soundeffect = {
 ############### FSO SOUND EFFECTS ##############
 soundeffect =
 {
-	name = "breaking_upon_wheel_male_01"
+	name = "smolmurder"
 	volume = 0.55
 	sounds = {
-		sound = "breaking_upon_wheel_male_01"
+		sound = "smolmurder"
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect =
+{
+	name = "mediummurder"
+	volume = 0.55
+	sounds = {
+		sound = "mediummurder"
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect =
+{
+	name = "bigmurder"
+	volume = 0.55
+	sounds = {
+		sound = "bigmurder"
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect =
+{
+	name = "sickgenocide"
+	volume = 0.55
+	sounds = {
+		sound = "sickgenocide"
 	}
 	max_audible = 1
 	max_audible_behaviour = fail

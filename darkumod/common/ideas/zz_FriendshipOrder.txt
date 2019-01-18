@@ -8,9 +8,7 @@ ideas = {
 				always = no
 			}
 			
-			allowed_civil_war = {
-				NOT = { has_government = communism }
-			}
+			
 			
 			picture = generic_victors_of_ww1
 			
@@ -2110,7 +2108,13 @@ ideas = {
 
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_captain_killed }
+				
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_captain_killed_tt
+					NOT = { has_country_flag = fso_captain_killed }
+				}
 			}
 			
 			traits = { silent_workhorse }
@@ -2153,8 +2157,14 @@ ideas = {
 			
 			available = {
 				has_government = democratic
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 			traits = { democratic_reformer }
@@ -2175,8 +2185,14 @@ ideas = {
 			
 			available = {
 				has_government = communism
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_communism_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
+				}
 			}
 			
 			traits = { communist_revolutionary }
@@ -2197,8 +2213,14 @@ ideas = {
 			
 			available = {
 				has_government = fascism
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_fascist }
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_fascist_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_fascist }
+				}
 			}
 			
 			traits = { fascist_demagogue }
@@ -2257,8 +2279,17 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 
@@ -2277,10 +2308,18 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
+				
 			}
-			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
+			}
 
 			
 			traits = { army_chief_morale_2 }
@@ -2300,8 +2339,17 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 
@@ -2319,8 +2367,16 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 			traits = { air_chief_ground_support_2 }
@@ -2341,8 +2397,16 @@ ideas = {
 			
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 
@@ -2458,8 +2522,16 @@ ideas = {
 
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_communism }
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 			research_bonus = {
@@ -2475,7 +2547,12 @@ ideas = {
 
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_captain_killed }
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_captain_killed_tt
+					NOT = { has_country_flag = fso_captain_killed }
+				}
 			}
 			
 			research_bonus = {
@@ -2492,8 +2569,16 @@ ideas = {
 		
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 			research_bonus = {
@@ -2509,8 +2594,16 @@ ideas = {
 		
 			allowed = {
 				original_tag = CZE
-				NOT = { has_country_flag = fso_darkest_civil_war }
-				NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = fso_darkest_civil_war_tt
+					NOT = { has_country_flag = fso_darkest_civil_war }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fso_traitors_executed_darkest_senate_tt
+					NOT = { has_country_flag = fso_traitors_executed_darkest_senate }
+				}
 			}
 			
 			research_bonus = {

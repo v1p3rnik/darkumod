@@ -173,8 +173,13 @@
  FSO_new_world_order_desc:0 "Our empire is built not with iron and gunpowder, but with subterfuge, espionage and covert ops. It is time to turn our unified state outwards, with every single citizen a cog in the machine, a puppet controlled directly from the Palace. Hail Dark Buddhist, and may His shadow cover the world!"
  
  ### ADVISORS ###
+ fso_captain_killed_tt:0 "Captain is not killed."
+ fso_darkest_civil_war_tt:0 "Not a part of a secession."
+ fso_traitors_executed_darkest_senate_tt:0 "Has not been executed or purged."
+ fso_traitors_executed_darkest_communism_tt:0 "Has not been executed or purged."
+ fso_traitors_executed_darkest_fascist_tt:0 "Has not been executed or purged."
  friendship_expert:0 "Friendship Connoisseur"
- FSO_frontier:0 "Fr0nt1er"
+ FSO_frontier:0 "Fr0nt1er, Captain of Praetorians"
  FSO_frontier_desc:0 "A silent and often distant politician, this one is praised by some and hated by others. However, what can truly be said is that he is efficient - and sometimes that is all that matters."
  FSO_peetry:0 "Peetry"
  FSO_peetry_desc:0 "Emperor's brother, he has gotten his post not by nepotism, as some claim, but with his wisdom and clever way with words. What's funny about this politician is that he actually hates politics."
@@ -212,7 +217,7 @@
  FSO_emeru_desc:0 "Known by many names, the only constant one being David, he is an excellent, if a bit dreamy, commander. His men like his thoughtful approach, and he is a rather skillful strategist."
  FSO_aroze_2:0 "Arische Ehefrau"
  FSO_aroze_2_desc:0 "As a theorist, Arische mostly promotes strategy of fast, efficient, mobile army."
- FSO_frontier_2:0 "Fr0nt1er"
+ FSO_frontier_2:0 "Fr0nt1er, Captain of Praetorians"
  FSO_frontier_2_desc:0 "Did you know Frontier studied to be a nuclear engineer? Not many did."
  FSO_dobyvatel_2:0 "DobyvatelCZ"
  FSO_dobyvatel_2_desc:0 "Doby likes to come up with new strategies and very often holds wargames among the officer corps."

@@ -120,6 +120,8 @@
  SPECIAL_UNIT_CANNOT_BE_DISBANDED:0 "§RUnits cannot be disbanded§!"
  CONFIRMUNASSIGNUNIT:0 "Unassign unit"
  CONFIRMUNASSIGNUNITS:0 "Unassign units"
+ CONFIRMASSIGNUNITS:0 "Reassign Units"
+ CONFIRMASSIGNUNITSDESC:0 "After the unit assignment $TO_REMOVE|R$ will be §Rdisbanded§!.\n\nAre you sure you want to §YREASSIGN§! all units to $ARMY|H$?"
  CAN_NOT_UNASSIGN_BORDER_WAR:0 "§RCannot unassign units from the Border War!§!"
  OPERATION_SELECT:0 "§GClick to select§!"
  OPERATION_DESELECT:0 "§GClick to deselect§!"

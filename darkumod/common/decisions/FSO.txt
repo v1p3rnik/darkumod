@@ -231,43 +231,24 @@ fso_special_projects_category = {
 				set_state_name = "Utopia Casurgis"
 			}
 			set_global_flag = fso_victory_wonder_built
-			every_country = {
+			every_other_country = {
 				limit = {
 					NOT = { has_country_flag = fso_disarmed }
+					
 				}
 				add_ideas = disarmed_nation
-				custom_effect_tooltip = fso.285.tt
-				hidden_effect = {
-					start_civil_war = {
-						ideology = communism
-						size = 0.95
-					}
-					random_country = {
-						limit = {
-							AND = {
-								original_tag = PREV
-								has_war_with = PREV
-							}
-						}
-						white_peace = PREV
-					}
-					add_equipment_to_stockpile = { type = fighter_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = cv_fighter_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = CAS_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = cv_CAS_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = nav_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = cv_nav_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = jet_fighter_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = strat_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = jet_strat_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = tac_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = jet_tac_bomber_equipment amount = -2500 }
-					add_equipment_to_stockpile = { type = heavy_fighter_equipment amount = -2500 }
+				set_equipment_fraction = 0
+				set_rule = {
+					can_not_declare_war = yes
+					can_be_called_to_war = no
 				}
-				add_ideas = FSO_disarmed
+				load_focus_tree = generic_focus
 				set_country_flag = fso_disarmed
-				CZE = { puppet = PREV }
-				set_autonomy = { target = THIS autonomy_state = autonomy_fso_friend }
+				add_ideas = FSO_disarmed
+				CZE = { 
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_fso_friend }
+				}
 			}
 			hidden_effect = { news_event = { days = 1 id = fsonews.15 } }
 		}
@@ -1629,8 +1610,14 @@ fso_royal_duties_category = {
 				}
 				add_ideas = disarmed_nation
 				set_equipment_fraction = 0
-			
+				set_rule = {
+					can_not_declare_war = yes
+					
+				}
+				load_focus_tree = generic_focus
+				set_country_flag = fso_disarmed
 				add_ideas = FSO_disarmed
+				
 				CZE = { 
 					puppet = PREV
 					set_autonomy = { target = PREV autonomy_state = autonomy_fso_personal_union }
@@ -2063,7 +2050,11 @@ operations = {
 				}
 				add_ideas = disarmed_nation
 				set_equipment_fraction = 0
-				
+				set_rule = {
+					can_not_declare_war = yes
+					can_be_called_to_war = no
+				}
+				load_focus_tree = generic_focus
 				set_country_flag = fso_disarmed
 				add_ideas = FSO_disarmed
 				CZE = { 
@@ -2221,7 +2212,46 @@ operations = {
 		}
 	}
 }
+fso_start_coup_category = {
 
+	FSO_friendshipism_rising = {
+		
+		icon = generic_ignite_civil_war
+		
+		visible = {
+			has_government = friendship
+		}
+		
+		available = {
+		
+			NOT = { has_idea = FSO_supporting_cells_cooldown }
+			NOT = { has_country_flag = fso_helping_cells }
+			
+		}
+		
+		days_remove = 14 # COOLDOWN TO PREVENT MULTIPLE USES
+		
+		complete_effect = {
+			custom_effect_tooltip = fso_start_coup_tt
+			hidden_effect = { 
+				random_country = {
+					limit = {
+						NOT = { tag = CZE }
+						NOT = { has_government = friendship }
+					}
+					country_event = { id = fso.300 }
+				}
+			}
+		}
+		
+		cost = 1
+		
+		remove_effect = {
+			
+		}
+		
+	}
+}
 fso_supporting_cells_category = {
 
 	FSO_cells_start_war = {
@@ -2244,6 +2274,7 @@ fso_supporting_cells_category = {
 				has_country_flag = { flag = fso_helped_cells_counter value = 5 }
 				
 			}
+			NOT = { event_target:fso_friendship_cells = { has_country_flag = fso_ignited_revolution } }
 			
 		}
 		
@@ -2323,7 +2354,7 @@ fso_supporting_cells_category = {
 			
 			has_country_flag = fso_helping_cells
 			NOT = { has_country_flag = fso_sent_guns }
-			
+			NOT = { event_target:fso_friendship_cells = { has_country_flag = fso_ignited_revolution } }
 		}
 		
 		days_remove = 15
@@ -2376,7 +2407,7 @@ fso_supporting_cells_category = {
 			
 			has_country_flag = fso_helping_cells
 			NOT = { has_country_flag = fso_sent_volunteers }
-			
+			NOT = { event_target:fso_friendship_cells = { has_country_flag = fso_ignited_revolution } }
 		}
 		
 		days_remove = 15
@@ -2429,7 +2460,7 @@ fso_supporting_cells_category = {
 			
 			has_country_flag = fso_helping_cells
 			NOT = { has_country_flag = fso_sent_planes }
-			
+			NOT = { event_target:fso_friendship_cells = { has_country_flag = fso_ignited_revolution } }
 		}
 		
 		days_remove = 15
@@ -2483,7 +2514,7 @@ fso_supporting_cells_category = {
 			
 			has_country_flag = fso_helping_cells
 			NOT = { has_country_flag = fso_sent_humanitarian_aid }
-			
+			NOT = { event_target:fso_friendship_cells = { has_country_flag = fso_ignited_revolution } }
 		}
 		
 		days_remove = 15
@@ -2536,7 +2567,7 @@ fso_supporting_cells_category = {
 			
 			has_country_flag = fso_helping_cells
 			NOT = { has_country_flag = fso_sent_political_support }
-			
+			NOT = { event_target:fso_friendship_cells = { has_country_flag = fso_ignited_revolution } }
 		}
 		
 		days_remove = 15

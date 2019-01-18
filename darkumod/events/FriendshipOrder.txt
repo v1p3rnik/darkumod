@@ -1211,17 +1211,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		has_civil_war = no
-		has_government = communism
-		has_completed_focus = FSO_darku_question
-		has_country_flag = darku_crisis_active
-		has_country_flag = darku_crisis_civil_war
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = fso.35.a
@@ -3635,7 +3625,7 @@ country_event = {
 			add_manpower = -1400000
 			add_manpower = -1400000
 		}
-		hidden_effect = { sound_effect = breaking_upon_wheel_male_01 }
+		hidden_effect = { sound_effect = sickgenocide }
 		add_ideas = FSO_purged_argentinians
 		hidden_effect = { ARG = { add_opinion_modifier = { target = CZE modifier = embargo } } }
 		ARG = { add_opinion_modifier = { target = CZE modifier = fso_purged_argentinians } }
@@ -3926,15 +3916,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		has_government = communism
-		tag = CZE
-		has_completed_focus = FSO_red_carnival
-		any_country = {
-			original_tag = BRA
-			has_civil_war = no
-		}
-	}
+	is_triggered_only = yes
 	
 	option = { # Okay
 		name = fso.100.a
@@ -5737,6 +5719,7 @@ country_event = {
 	
 	option = { # purge everyone except for puritan friendshipists
 		name = fso.151.a
+		hidden_effect = { sound_effect = bigmurder }
 		clr_country_flag = fso_planning_purge
 		add_ideas = FSO_maximum_purge
 		add_popularity = {
@@ -5764,6 +5747,7 @@ country_event = {
 	}
 	option = { # purge only the most notorious opposition
 		name = fso.151.b
+		hidden_effect = { sound_effect = mediummurder }
 		clr_country_flag = fso_planning_purge
 		add_ideas = FSO_moderate_purge
 		add_popularity = {
@@ -9700,7 +9684,11 @@ country_event = {
 			}
 			add_ideas = disarmed_nation
 			set_equipment_fraction = 0
-			
+			set_rule = {
+					can_not_declare_war = yes
+					can_be_called_to_war = no
+				}
+				load_focus_tree = generic_focus
 			add_ideas = FSO_disarmed
 			if = {
 				limit = {
@@ -10364,12 +10352,7 @@ country_event = {
 	
 	
 	
-	trigger = {
-		NOT = { CZE = { has_idea = FSO_supporting_cells_cooldown } }
-		has_global_flag = fso_friendshipism_rising
-		NOT = { has_global_flag = fso_friendshipism_rising_in_country }
-		NOT = { has_government = friendship }
-	}
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
 		days = 30
@@ -10406,7 +10389,7 @@ country_event = {
 	option = { # deny
 		name = fso.301.a
 		
-		add_timed_idea = { idea = FSO_supporting_cells_cooldown days = 30 }
+		CZE = { country_event = { id = fso.303 } }
 		
 		custom_effect_tooltip = fso.301.tt1
 		
@@ -10432,16 +10415,9 @@ country_event = {
 	
 	
 	
-	trigger = {
-		NOT = { is_in_faction_with = CZE }
-		NOT = { tag = CZE }
-		has_government = friendship
-		has_civil_war = no
-	}
+	is_triggered_only = yes
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	
 	
 	option = { 
 		name = fso.302.a
@@ -10462,15 +10438,9 @@ country_event = {
 	
 	
 	
-	trigger = {
-		has_country_flag = fso_cells_civil_war
-		NOT = { has_government = friendship }
-		has_civil_war = no
-	}
+	is_triggered_only = yes
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	
 	
 	option = { 
 		name = fso.310.a
@@ -10478,6 +10448,7 @@ country_event = {
 		CZE = { country_event = { id = fso.303 } }
 		
 		clr_country_flag = fso_cells_civil_war
+		clr_country_flag = fso_ignited_revolution
 		
 	}
 }
@@ -10509,13 +10480,15 @@ country_event = {
 		clr_country_flag = fso_helping_cells
 		clr_country_flag = fso_helped_cells_counter
 		
+		add_timed_idea = { idea = FSO_supporting_cells_cooldown days = 30 }
+		
 		custom_effect_tooltip = fso.303.tt
 		
 	}
 	
 	option = { 
 		name = fso.303.a
-		add_timed_idea = { idea = FSO_supporting_cells_cooldown days = 30 }
+		
 	}
 }
 # Break the Wheel - Start
@@ -11760,6 +11733,7 @@ country_event = {
 		add_offsite_building = { type = industrial_complex level = 8 }
 		GER = { set_technology = { schutzengrabenvernichtungsautomobile_tech = 1 } }
 		set_technology = { schutzengrabenvernichtungsautomobile_tech = 1 }
+		set_technology = { motorised_infantry = 1 }
 		create_field_marshal = {
 			name = "Arische Ehefrau"
 			picture = "Portrait_FSO_Arische_Ehefrau.tga"
@@ -13412,6 +13386,15 @@ country_event = {
 			transfer_state = 153
 			transfer_state = 152
 			transfer_state = 4
+		}
+		
+		if = {
+			limit = {
+				102 = {
+					is_owned_by = GER
+				}
+			}
+			CZE = { transfer_state = 102 }
 		}
 		
 		GER = { 
@@ -15186,6 +15169,7 @@ country_event = {
 	}
 	option = { # execute the fascist traitors only
 		name = fso.405.b
+		hidden_effect = { sound_effect = smolmurder }
 		custom_effect_tooltip = fso.405.tt2
 		clr_country_flag = fso_darkest_civil_war
 		set_country_flag = fso_traitors_executed_darkest_fascist
@@ -15245,6 +15229,7 @@ country_event = {
 	}
 	option = { # execute the fascist and communist traitors only
 		name = fso.405.c
+		hidden_effect = { sound_effect = mediummurder }
 		custom_effect_tooltip = fso.405.tt3
 		clr_country_flag = fso_darkest_civil_war
 		set_country_flag = fso_traitors_executed_darkest_fascist
@@ -15283,6 +15268,7 @@ country_event = {
 	}
 	option = { # kill all
 		name = fso.405.dd
+		hidden_effect = { sound_effect = bigmurder }
 		custom_effect_tooltip = fso.405.tt4
 		clr_country_flag = fso_darkest_civil_war
 		set_country_flag = fso_traitors_executed_darkest_fascist

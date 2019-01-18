@@ -93,3 +93,16 @@ fso_supporting_cells_category = {
 	}
 
 }
+
+fso_start_coup_category = {
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		is_puppet = no
+		has_global_flag = fso_friendshipism_rising
+	}
+	
+}

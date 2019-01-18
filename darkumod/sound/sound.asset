@@ -2666,8 +2666,23 @@ sound =
 ############ FSO SOUNDS ###########
 sound =
 {
-	name = "breaking_upon_wheel_male_01"
-	file = "fsosounds/breaking_upon_wheel_male_01.wav"
+	name = "smolmurder"
+	file = "fsosounds/smolmurder.wav"
+}
+sound =
+{
+	name = "mediummurder"
+	file = "fsosounds/mediummurder.wav"
+}
+sound =
+{
+	name = "bigmurder"
+	file = "fsosounds/bigmurder.wav"
+}
+sound =
+{
+	name = "sickgenocide"
+	file = "fsosounds/sickgenocide.wav"
 }
 sound =
 {

@@ -816,7 +816,48 @@ on_actions = {
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
 	on_civil_war_end = {
 		effect = {
-
+			# Friendship civil war
+			if = {
+				limit = {
+					ROOT = {
+						has_government = friendship
+					}
+				}
+				country_event = fso.302
+			}
+			if = {
+				limit = {
+					ROOT = {
+						has_country_flag = fso_ignited_revolution
+					}
+				}
+				country_event = fso.310
+			}
+			# Darku Question Civil War
+			if = {
+				limit = {
+					ROOT = {
+						has_government = communism
+						has_completed_focus = FSO_darku_question
+						has_country_flag = darku_crisis_active
+						has_country_flag = darku_crisis_civil_war
+					}
+				}
+				country_event = fso.35
+			}
+			# Brazil Civil War
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = BRA
+						has_government = communism
+					}
+					CZE = {
+						has_completed_focus = FSO_red_carnival
+					}
+				}
+				CZE = { country_event = fso.100 }
+			}
 			#End of SCW
 			if = {
 				limit = {
