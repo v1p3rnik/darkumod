@@ -3889,6 +3889,7 @@ country_event = {
 					limit = {
 						original_tag = BRA
 						has_civil_war = yes
+						has_government = communism
 					}
 					SOV = { add_to_faction = PREV }
 				}
@@ -3995,7 +3996,10 @@ country_event = {
 		
 		every_country = {
 			limit = {
-				capital_scope = { is_on_continent = south_america }
+				OR = {
+					capital_scope = { is_on_continent = south_america }
+					tag = GUA
+				}
 				NOT = { is_in_faction_with = CZE }
 				NOT = { tag = CZE }
 				NOT = {
@@ -4044,14 +4048,16 @@ country_event = {
 	trigger = {
 		has_completed_focus = FSO_dream_of_revolution
 		has_government = communism
-		NOT = { 
-			any_other_country = {
-				AND = {
-					capital_scope = { is_on_continent = south_america }
-					NOT = { is_in_faction_with = CZE }
-					NOT = { is_puppet_of = CZE }
-				}	
-			}
+		every_state = {
+			AND = {
+				capital_scope = { is_on_continent = south_america }
+				OR = {
+					is_controlled_by = CZE
+					is_owned_and_controlled_by = CZE
+				}
+				#NOT = { is_in_faction_with = CZE }
+				#NOT = { is_puppet_of = CZE }
+			}	
 		}
 	}
 	
@@ -4171,17 +4177,21 @@ country_event = {
 	option = { # Accept
 		name = fso.106.a
 		add_ideas = FSO_church_of_revolution_accepted
-		random_list = {
-			90 = { }
-			10 = { set_country_flag = fso_church_of_revolution_coup }
+		hidden_effect = {
+			random_list = {
+				90 = { }
+				10 = { set_country_flag = fso_church_of_revolution_coup }
+			}
 		}
 	}
 	option = { # Decline
 		name = fso.106.b
 		add_ideas = FSO_church_of_revolution_shunned
-		random_list = {
-			70 = { set_country_flag = fso_church_of_revolution_oppressed }
-			30 = { set_country_flag = fso_church_of_revolution_rebellious }
+		hidden_effect = {
+			random_list = {
+				70 = { set_country_flag = fso_church_of_revolution_oppressed }
+				30 = { set_country_flag = fso_church_of_revolution_rebellious }
+			}
 		}
 	}
 }
