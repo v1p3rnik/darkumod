@@ -3221,9 +3221,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				dispersed_industry = 1
-				dispersed_industry2 = 1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -3739,9 +3765,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				concentrated_industry = 1
-				concentrated_industry2 = 1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
 			}
 			swap_ideas = { remove_idea = FSO_wondercolts add_idea = FSO_nationalised_industry }
 		}

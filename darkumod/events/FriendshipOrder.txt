@@ -3294,7 +3294,10 @@ country_event = {
 			any_country = {
 				is_in_faction = yes
 				has_war_with = CZE
-				capital_scope = { is_on_continent = europe }
+				OR = {
+					tag = SOV
+					capital_scope = { is_on_continent = europe }
+				}
 				NOT = { has_capitulated = yes }
 				exists = yes
 			}
@@ -4048,16 +4051,18 @@ country_event = {
 	trigger = {
 		has_completed_focus = FSO_dream_of_revolution
 		has_government = communism
-		every_state = {
-			AND = {
-				capital_scope = { is_on_continent = south_america }
-				OR = {
-					is_controlled_by = CZE
-					is_owned_and_controlled_by = CZE
+		NOT = {
+			any_state = {
+				is_on_continent = south_america
+				NOT = {
+					OR = {
+						is_controlled_by = CZE
+						is_owned_and_controlled_by = CZE
+					}
 				}
 				#NOT = { is_in_faction_with = CZE }
 				#NOT = { is_puppet_of = CZE }
-			}	
+			}
 		}
 	}
 	
@@ -9698,7 +9703,7 @@ country_event = {
 					can_not_declare_war = yes
 					can_be_called_to_war = no
 				}
-				load_focus_tree = generic_focus
+			load_focus_tree = generic_focus
 			add_ideas = FSO_disarmed
 			if = {
 				limit = {
