@@ -1267,14 +1267,14 @@ country_event = {
 			factor = 80
 		}
 		name = fso.37.a
-		CZE = { set_country_flag = moscow_agrees }
+		CZE = { set_country_flag = fso_moscow_agrees }
 	}
 	option = { # decline
 		ai_chance = {
 			factor = 20
 		}
 		name = fso.37.b
-		CZE = { set_country_flag = moscow_declines }
+		CZE = { set_country_flag = fso_moscow_declines }
 	}
 }
 # Delegation to Moscow - Moscow Accepted
@@ -1289,7 +1289,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		has_completed_focus = FSO_delegation_to_moscow
-		has_country_flag = moscow_agrees
+		has_country_flag = fso_moscow_agrees
 	}
 	
 	mean_time_to_happen = {
@@ -1328,7 +1328,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		has_completed_focus = FSO_delegation_to_moscow
-		has_country_flag = moscow_declines
+		has_country_flag = fso_moscow_declines
 	}
 	
 	mean_time_to_happen = {
@@ -1372,7 +1372,7 @@ country_event = {
 			NOT = { has_global_flag = trotsky_dead }
 		}
 		name = fso.40.b 
-		hidden_effect = { set_country_flag = searching_for_trotsky }
+		hidden_effect = { set_country_flag = fso_searching_for_trotsky }
 	}
 }
 # Autonomous Revolution - Soviet Path
@@ -1393,27 +1393,27 @@ country_event = {
 		ai_chance = {
 			factor = 80
 			modifier = {
-				has_country_flag = stalin_angry
+				has_country_flag = fso_stalin_angry
 				factor = 0.1
 			}
 			modifier = {
-				has_country_flag = stalin_not_bad
+				has_country_flag = fso_stalin_not_bad
 				factor = 1.1
 			}
 			modifier = {
-				has_country_flag = stalin_happy
+				has_country_flag = fso_stalin_happy
 				factor = 1.5
 			}
 		}
 		name = fso.41.a
-		CZE = { set_country_flag = moscow_agrees }
+		CZE = { set_country_flag = fso_moscow_agrees }
 	}
 	option = { # decline
 		ai_chance = {
 			factor = 20
 		}
 		name = fso.41.b
-		CZE = { set_country_flag = moscow_declines }
+		CZE = { set_country_flag = fso_moscow_declines }
 	}
 }
 # Autonomous Revolution - Moscow Accepted
@@ -1428,7 +1428,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		has_completed_focus = FSO_autonomous_revolution
-		has_country_flag = moscow_agrees
+		has_country_flag = fso_moscow_agrees
 	}
 	
 	mean_time_to_happen = {
@@ -1456,7 +1456,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		has_completed_focus = FSO_autonomous_revolution
-		has_country_flag = moscow_declines
+		has_country_flag = fso_moscow_declines
 	}
 	
 	mean_time_to_happen = {
@@ -1481,7 +1481,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		has_completed_focus = FSO_autonomous_revolution
-		has_country_flag = searching_for_trotsky
+		has_country_flag = fso_searching_for_trotsky
 	}
 	
 	mean_time_to_happen = {
@@ -1837,7 +1837,7 @@ country_event = {
 	trigger = {
 		tag = CZE
 		NOT = { has_completed_focus = FSO_autonomous_revolution }
-		NOT = { has_country_flag = searching_for_trotsky }
+		NOT = { has_country_flag = fso_searching_for_trotsky }
 		focus_progress = {
 			focus = FSO_autonomous_revolution
 			progress > 0.5
@@ -1884,7 +1884,7 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.58.a
-		SOV = { set_country_flag = stalin_angry }
+		SOV = { set_country_flag = fso_stalin_angry }
 	}
 }
 # Autonomous Revolution - Statue ok
@@ -1906,7 +1906,7 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.59.a
-		SOV = { set_country_flag = stalin_not_bad }
+		SOV = { set_country_flag = fso_stalin_not_bad }
 	}
 }
 # Autonomous Revolution - Statue small, stalin happy
@@ -1928,7 +1928,7 @@ country_event = {
 	
 	option = { # Okay
 		name = fso.60.a
-		SOV = { set_country_flag = stalin_happy }
+		SOV = { set_country_flag = fso_stalin_happy }
 	}
 }
 # Send Friends - Start
@@ -5882,6 +5882,10 @@ country_event = {
 				}
 				CZE = {
 					add_to_faction = PREV
+					add_to_war = {
+						targeted_alliance = PREV
+						enemy = event_target:fso_coup_target
+					}
 				}
 				create_country_leader = {
 					name = "Joseph Stalin"
@@ -5901,6 +5905,10 @@ country_event = {
 				}
 				CZE = {
 					add_to_faction = PREV
+					add_to_war = {
+						targeted_alliance = PREV
+						enemy = event_target:fso_coup_target
+					}
 				}
 				create_country_leader = {
 					name = "Adolf Hitler"
@@ -5920,6 +5928,10 @@ country_event = {
 				}
 				CZE = {
 					add_to_faction = PREV
+					add_to_war = {
+						targeted_alliance = PREV
+						enemy = event_target:fso_coup_target
+					}
 				}
 				create_country_leader = {
 					name = "Benito Mussolini"
@@ -5939,6 +5951,10 @@ country_event = {
 				}
 				CZE = {
 					add_to_faction = PREV
+					add_to_war = {
+						targeted_alliance = PREV
+						enemy = event_target:fso_coup_target
+					}
 				}
 				create_country_leader = {
 					name = "Franklin Delano Roosevelt"
@@ -5958,6 +5974,10 @@ country_event = {
 				}
 				CZE = {
 					add_to_faction = PREV
+					add_to_war = {
+						targeted_alliance = PREV
+						enemy = event_target:fso_coup_target
+					}
 				}
 				create_country_leader = {
 					name = "Hirohito"
@@ -12532,7 +12552,9 @@ country_event = {
 				owner = CZE
 			}
 		}
-		unlock_decision_category_tooltip = fso_sirens_song_category
+		hidden_effect = {
+			unlock_decision_category_tooltip = fso_sirens_song_category
+		}
 		hidden_effect = {
 			set_variable = {
 				var = fso_sirens_cost_pp

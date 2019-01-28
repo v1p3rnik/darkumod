@@ -740,7 +740,7 @@ focus_tree = {
 			has_government = communism
 			custom_trigger_tooltip = {
 				tooltip = FSO_rebuilding_alone_tt
-				has_country_flag = moscow_declines
+				has_country_flag = fso_moscow_declines
 			}
 		}
 		
