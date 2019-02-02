@@ -8842,7 +8842,7 @@ country_event = {
 	desc = fso.264.d
 	picture = GFX_fso_house_filia_magia
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -8874,7 +8874,7 @@ country_event = {
 	desc = fso.265.d
 	picture = GFX_fso_house_spiders
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -8908,7 +8908,7 @@ country_event = {
 	desc = fso.266.d
 	picture = GFX_fso_house_hentai
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -8941,7 +8941,7 @@ country_event = {
 	desc = fso.267.d
 	picture = GFX_fso_house_tameria
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	
@@ -8977,7 +8977,7 @@ country_event = {
 	desc = fso.268.d
 	picture = GFX_fso_house_proletariae
 	
-	fire_only_once = yes
+	
 	
 	is_triggered_only = yes
 	

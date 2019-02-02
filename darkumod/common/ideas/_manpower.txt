@@ -123,7 +123,7 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
-					NOT = { has_government = friendship }
+					
 					AND = {
 						has_war = yes
 						enemies_strength_ratio > 0.5
@@ -135,6 +135,7 @@ ideas = {
 						#}
 					}					
 				}
+				NOT = { has_government = friendship }
 				has_war_support > 0.2
 				#Special rules AST in TFV
 				if = {
@@ -208,7 +209,7 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
-					NOT = { has_government = friendship }
+					
 					AND = {
 						has_war = yes
 						enemies_strength_ratio > 0.6
@@ -220,6 +221,7 @@ ideas = {
 						#}
 					}
 				}
+				NOT = { has_government = friendship }
 				OR = {
 					has_war_support > 0.6
 					surrender_progress > 0
